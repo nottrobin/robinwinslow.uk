@@ -12,7 +12,8 @@ Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllb
 ## Update Author Attributes
 
 In `_config.yml` remember to specify your own data:
-    
+
+{% highlight yaml %}
     title : My Blog =)
     
     author :
@@ -20,6 +21,7 @@ In `_config.yml` remember to specify your own data:
       email : blah@email.test
       github : username
       twitter : username
+{% endhighlight %}
 
 The theme should reference these variables whenever needed.
     

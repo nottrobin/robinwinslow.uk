@@ -28,7 +28,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllblog
+      short_name : robingithub
    
   analytics :
     provider : google 

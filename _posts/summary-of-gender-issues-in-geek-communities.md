@@ -1,3 +1,9 @@
+---
+layout: post
+category : lessons
+tags : [intro, beginner, jekyll, tutorial]
+---
+
 Summary of gender issues in geek communities
 ===
 

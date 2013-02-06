@@ -13,4 +13,6 @@ This is usually because of permissions.
 
 This should fix it.
 
+Thanks to [daveb.84](http://our.umbraco.org/forum/developers/razor/24343-'ExamineExamineManager'-threw-an-exception#comment91058).
+
 

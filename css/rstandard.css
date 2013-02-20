@@ -1,0 +1,172 @@
+/* Whole page styles */
+html {
+    background-color: #fff;
+    color: black;
+    font-family: Arvo, garamond, serif;
+    line-height: 1.618;
+    text-align: justify;
+}
+.homepage, .page {
+	background-color: #eee;
+}
+
+h1, h2, p {
+    margin: 1em 0 0 0;
+}
+
+body {
+    margin: 0;
+}
+
+/* Headings */
+h1, h2 {
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+}
+h1, h2 { opacity: 0.8; }
+h1 { font-size: 2.618em; /* golden ^ 2 */ }
+h2, section h1, nav h1 { font-size: 2em; }
+
+/* Hgroup */
+hgroup {
+    overflow: hidden;
+}
+hgroup>* {
+    font-size: 1.618em;
+    float: left;
+    text-transform: lowercase;
+}
+hgroup>*:first-child {
+    padding-right: 1rem;
+    margin-right: 1rem;
+    position: relative;
+}
+hgroup>*:first-child:after {
+    display: block;
+    content: '|';
+    position: absolute;
+    right: -0.16em;
+    top: 0;
+    opacity: 0.3;
+}
+hgroup h1 {
+    opacity: 1;
+}
+hgroup h2 {
+    opacity: 0.5;
+}
+
+/* Links */
+a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.5;
+}
+a:hover {
+    opacity: 1;
+}
+
+/* Address */
+address ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+address li {
+    float: left;
+    overflow: hidden;
+    margin: 0.9rem 1rem 0 0;
+}
+address li:last-child {margin-right: 0;}
+address span {display: none;}
+
+/* Squeezes */
+body>article, header>aside, footer>aside {
+    margin: 0 auto 0 auto;
+    padding: 0 1rem;
+	overflow: hidden;
+}
+body>article { max-width: 42rem; }
+.homepage body>article { max-width: 46rem; }
+.page body>article { padding-right: 0; }
+header>aside, footer>aside { max-width: 46rem; }
+
+/* Header */
+header {
+    background-color: black;
+    padding: 1px 0 7px 0;
+    font-size: 1.3em;
+    overflow: hidden;
+    color: white;
+}
+header a { opacity: 0.8; }
+header h1, header h2, header p {
+    margin-top: 0;
+}
+header address { float: right; }
+header hgroup { float: left; }
+header address li:first-child { margin-left: 0; }
+
+/* Footer */
+footer {
+    margin-top: 2.618rem;
+    color: #333;
+    padding: 0 0 1rem 0;
+    font-size: 0.8rem;
+}
+footer aside {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+section article {
+	margin-bottom: 0.5em;
+	background-color: white;
+	padding: 1rem;
+	margin-top: 1rem;
+}
+section article h1 {
+	font-size: 1.5em;
+	margin-top: 0;
+	text-transform: lowercase;
+}
+section article h1 a { opacity: 1; }
+section nav a { opacity: 1; }
+section article date {
+	display: block;
+	opacity: 0.5;
+	font-size: 0.8em;
+	margin-top: -0.5em;
+}
+
+/* Custom */
+article section {
+	overflow: hidden;
+}
+.homepage article section, .homepage article nav {
+	float: left;
+	margin-top: 1.618em;
+	box-sizing: border-box;
+}
+.homepage article section {
+	padding-right: 1.618em;
+	border-right: 2px solid rgba(255, 255, 255, 0.5);
+}
+.page article section article {
+	float: left;
+	margin-right: 1rem;
+}
+.homepage article section {
+	width: 65%;
+}
+article section h1, article nav h1 {
+	margin-top: 0;
+}
+article nav {
+	padding-left: 1.618em;
+	width: 35%;
+}
+article nav ul {
+	list-style-type: none;
+	padding: 0;
+}

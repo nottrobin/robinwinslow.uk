@@ -1,0 +1,80 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js  {{ page.class }}"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+    	<title>{{ page.title }}</title>
+    	
+    	{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+        <meta name="viewport" content="width=device-width">
+        
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:300,500' />
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Arvo' />
+        <link rel='stylesheet' href='http://fortawesome.github.com/Font-Awesome/assets/css/font-awesome.css' />
+		<link rel='stylesheet' href='/css/rstandard.css' />
+		
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </head>
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <header>
+            <aside class='vcard'>
+                <hgroup>
+                    <h2 class="given-name">Robin</h2>
+                    <h1><a href="/">Blog</a></h1>
+                </hgroup>
+
+                <address>
+                    <ul>
+                        <li title="Email: robin@robinwinslow.co.uk">
+                            <a href="mailto:robin@robinwinslow.co.uk" class="icon-envelope"><span class="email">robin@robinwinslow.co.uk</span></a>
+                        </li>
+                        <li title="Phone: 07795070704">
+                            <a href="tel:07795070704" class="icon-phone"><span class="tel">07795070704</span></a>
+                        </li>
+                        <li title="Twitter: @nottrobin">
+                            <a href="https://twitter.com/nottrobin" class="tel icon-twitter"><span class="twitter">@nottrobin</span></a>
+                        </li>
+                        <li title="Facebook: robinwinslowmorris">
+                            <a href="https://facebook.com/robinwinslowmorris" class="tel icon-facebook"><span class="facebook">robinwinslowmorris</span></a>
+                        </li>
+                        <li title="Address: NG7, Nottingham" class="adr">
+                            <a href="https://maps.google.co.uk/maps?q=ng7" class="icon-home"><span class="postal-code">NG7</span></a>
+                        </li>
+                        <li title="Role: Senior Developer"><a class="icon-suitcase" href="http://en.wikipedia.org/wiki/Web_developer"><span class="role">senior developer</span></a></li>
+                        <li title="Company: Hillarys">
+                            <a href="http://www.hillarys.co.uk/" class="icon-building"><span class="org">Hillarys</span></a>
+                        </li>
+                    </ul>
+                </address>
+            </aside>
+        </header>
+
+        <article>
+            {{ content }}
+        </article>
+
+        <footer>
+            <aside>
+                <p><a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative commons</a></p>
+            </aside>
+        </footer>
+    </body>
+</html>

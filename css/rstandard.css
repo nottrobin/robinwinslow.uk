@@ -7,7 +7,8 @@ html {
     text-align: justify;
 }
 .homepage, .page {
-	background-color: #eee;
+	background-color: #333;
+	color: #fff;
 }
 
 h1, h2, p {
@@ -88,7 +89,7 @@ body>article, header>aside, footer>aside {
 	overflow: hidden;
 }
 body>article { max-width: 42rem; }
-.homepage body>article { max-width: 46rem; }
+.homepage body>article { max-width: 44rem; }
 .page body>article { padding-right: 0; }
 header>aside, footer>aside { max-width: 46rem; }
 
@@ -111,12 +112,14 @@ header address li:first-child { margin-left: 0; }
 /* Footer */
 footer {
     margin-top: 2.618rem;
-    color: #333;
     padding: 0 0 1rem 0;
     font-size: 0.8rem;
 }
 footer aside {
 	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.page footer aside, .homepage footer aside {
+	border-color: rgba(255, 255, 255, 0.1);
 }
 
 section article {
@@ -124,6 +127,8 @@ section article {
 	background-color: white;
 	padding: 1rem;
 	margin-top: 1rem;
+	opacity: 0.9;
+	color: #000;
 }
 section article h1 {
 	font-size: 1.5em;
@@ -150,21 +155,21 @@ article section {
 }
 .homepage article section {
 	padding-right: 1.618em;
-	border-right: 2px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 .page article section article {
 	float: left;
 	margin-right: 1rem;
 }
 .homepage article section {
-	width: 65%;
+	width: 75%;
 }
 article section h1, article nav h1 {
 	margin-top: 0;
 }
 article nav {
 	padding-left: 1.618em;
-	width: 35%;
+	width: 25%;
 }
 article nav ul {
 	list-style-type: none;

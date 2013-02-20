@@ -4,26 +4,25 @@ title: Home page
 ---
 
 <nav>
+    <h1>Categories</h1>
 
-<h1>Categories</h1>
-
-<ul>
+    <ul>
 {% for tag in site.tags %}
-    <li><a href="/categories.html#{{ tag[0] }}">{{ tag[0] }}</a> <small>({{ tag[1].size }})</small></li>
+        <li><a href="/categories.html#{{ tag[0] }}">{{ tag[0] }}</a> <small>({{ tag[1].size }})</small></li>
 {%endfor%}
-</ul>
+    </ul>
 
 </nav>
 
 <section class="headless">
 
 {% for post in site.posts %}
-  <article>
-  	<a href="{{ post.url }}">
-	    <h1>{{ post.title }}</h1>
-	    <date>{{ post.date | date_to_string }}</date>
-    </a>
-  </article>
+    <article>
+        <a href="{{ post.url }}">
+            <h1>{{ post.title }}</h1>
+            <date>{{ post.date | date_to_string }}</date>
+        </a>
+    </article>
 {% endfor %}
 
 </section>

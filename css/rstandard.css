@@ -151,6 +151,7 @@ section {
 }
 section article {
 	float: left;
+	margin-right: 1rem;
 }
 nav {
 	float: right;

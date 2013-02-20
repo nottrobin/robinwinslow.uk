@@ -88,7 +88,7 @@ body>article, header>aside, footer>aside {
     padding: 0 1rem;
 	overflow: hidden;
 }
-body>article { max-width: 42rem; }
+body>article { max-width: 43rem; }
 .page body>article { 
 	padding-right: 0;
 }
@@ -148,15 +148,16 @@ section nav a { opacity: 1; }
 /* Custom */
 section {
 	overflow: hidden;
+	min-width: 20em;
 }
 section article {
 	float: left;
-	margin-right: 1rem;
+	margin-right: 1.618rem;
 }
 nav {
 	float: right;
 	border-left: 1px solid rgba(255, 255, 255, 0.3);
-	padding: 0 1rem;
+	padding: 0 1.618rem;
 	margin-top: 2rem;
 }
 nav h1 {

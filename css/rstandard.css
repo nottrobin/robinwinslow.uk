@@ -89,8 +89,9 @@ body>article, header>aside, footer>aside {
 	overflow: hidden;
 }
 body>article { max-width: 42rem; }
-.homepage body>article { max-width: 44rem; }
-.page body>article { padding-right: 0; }
+.page body>article { 
+	padding-right: 0;
+}
 header>aside, footer>aside { max-width: 46rem; }
 
 /* Header */
@@ -122,6 +123,12 @@ footer aside {
 	border-color: rgba(255, 255, 255, 0.1);
 }
 
+article date {
+	display: block;
+	opacity: 0.5;
+	font-size: 0.8em;
+}
+
 section article {
 	margin-bottom: 0.5em;
 	background-color: white;
@@ -137,41 +144,24 @@ section article h1 {
 }
 section article h1 a { opacity: 1; }
 section nav a { opacity: 1; }
-section article date {
-	display: block;
-	opacity: 0.5;
-	font-size: 0.8em;
-	margin-top: -0.5em;
-}
 
 /* Custom */
-article section {
+section {
 	overflow: hidden;
 }
-.homepage article section, .homepage article nav {
+section article {
 	float: left;
-	margin-top: 1.618em;
-	box-sizing: border-box;
 }
-.homepage article section {
-	padding-right: 1.618em;
-	border-right: 1px solid rgba(255, 255, 255, 0.3);
+nav {
+	float: right;
+	border-left: 1px solid rgba(255, 255, 255, 0.3);
+	padding: 0 1rem;
+	margin-top: 2rem;
 }
-.page article section article {
-	float: left;
-	margin-right: 1rem;
-}
-.homepage article section {
-	width: 75%;
-}
-article section h1, article nav h1 {
+nav h1 {
 	margin-top: 0;
 }
-article nav {
-	padding-left: 1.618em;
-	width: 25%;
-}
-article nav ul {
+nav ul {
 	list-style-type: none;
 	padding: 0;
 }

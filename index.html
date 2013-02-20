@@ -1,20 +1,7 @@
 ---
-layout: homepage
+layout: page
 title: Home page
 ---
-
-<section>
-
-<h1>Recent posts</h1>
-
-{% for post in site.posts %}
-  <article>
-    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-    <date>{{ post.date | date_to_string }}</date>
-  </article>
-{% endfor %}
-
-</section>
 
 <nav>
 
@@ -27,4 +14,17 @@ title: Home page
 </ul>
 
 </nav>
+
+<section>
+
+<h1>Recent posts</h1>
+
+{% for post in site.posts %}
+  <article>
+    <date>{{ post.date | date_to_string }}</date>
+    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  </article>
+{% endfor %}
+
+</section>
 

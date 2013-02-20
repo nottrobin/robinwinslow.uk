@@ -6,7 +6,7 @@ html {
     line-height: 1.618;
     text-align: justify;
 }
-.homepage, .page {
+.dark {
 	background-color: #333;
 	color: #fff;
 }
@@ -24,9 +24,21 @@ h1, h2 {
     font-family: Lato, sans-serif;
     font-weight: 300;
 }
-h1, h2 { opacity: 0.8; }
 h1 { font-size: 2.618em; /* golden ^ 2 */ }
 h2, section h1, nav h1 { font-size: 2em; }
+
+/* Links */
+a {
+    color: #aaa;
+    text-decoration: none;
+}
+.dark a {
+    color: #ccc;
+}
+a:hover {
+	color: inherit;
+}
+
 
 /* Hgroup */
 hgroup {
@@ -48,7 +60,7 @@ hgroup>*:first-child:after {
     position: absolute;
     right: -0.16em;
     top: 0;
-    opacity: 0.3;
+    opacity: 0.5;
 }
 hgroup h1 {
     opacity: 1;
@@ -56,17 +68,6 @@ hgroup h1 {
 hgroup h2 {
     opacity: 0.5;
 }
-
-/* Links */
-a {
-    color: inherit;
-    text-decoration: none;
-    opacity: 0.5;
-}
-a:hover {
-    opacity: 1;
-}
-
 /* Address */
 address ul {
     list-style-type: none;
@@ -89,8 +90,9 @@ body>article, header>aside, footer>aside {
 	overflow: hidden;
 }
 body>article { max-width: 43rem; }
-.page body>article { 
+.dark body>article { 
 	padding-right: 0;
+	max-width: 47rem;
 }
 header>aside, footer>aside { max-width: 47rem; }
 
@@ -102,7 +104,9 @@ header {
     overflow: hidden;
     color: white;
 }
-header a { opacity: 0.8; }
+header a {
+	color: #ccc; /* same as dark theme */
+}
 header h1, header h2, header p {
     margin-top: 0;
 }
@@ -119,7 +123,7 @@ footer {
 footer aside {
 	border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-.page footer aside, .homepage footer aside {
+.dark footer aside {
 	border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -128,32 +132,32 @@ article date {
 	opacity: 0.5;
 	font-size: 0.8em;
 }
-
+section {
+	overflow: hidden;
+	min-width: 20em;
+}
 section article {
-	margin-bottom: 0.5em;
+	padding: 1rem;
+	margin: 1.618rem 1.618rem 0 0;
+	float: left;
+	padding: 0;
+	color: #000;
+}
+.dark section article a {
 	background-color: white;
 	padding: 1rem;
-	margin-top: 1rem;
-	opacity: 0.9;
-	color: #000;
+	display: block;
+	color: inherit;
+}
+section article a:hover {
+	opacity: 0.8;
 }
 section article h1 {
 	font-size: 1.5em;
 	margin-top: 0;
 	text-transform: lowercase;
 }
-section article h1 a { opacity: 1; }
-section nav a { opacity: 1; }
 
-/* Custom */
-section {
-	overflow: hidden;
-	min-width: 20em;
-}
-section article {
-	float: left;
-	margin-right: 1.618rem;
-}
 nav {
 	float: right;
 	border-left: 1px solid rgba(255, 255, 255, 0.3);
@@ -166,4 +170,8 @@ nav h1 {
 nav ul {
 	list-style-type: none;
 	padding: 0;
+}
+
+.headless {
+	margin-top: 1.618rem;
 }

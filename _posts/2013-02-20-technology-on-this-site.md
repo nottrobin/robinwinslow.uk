@@ -1,5 +1,5 @@
 ---
-title: Technology used on this site
+title: Tech on this site
 layout: post
 tags: [development, technology]
 ---

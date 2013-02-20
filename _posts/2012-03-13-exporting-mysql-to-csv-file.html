@@ -1,0 +1,43 @@
+---
+title: Exporting MySql to CSV file
+layout: post
+tags:
+  - PHP
+  - web development
+  - code
+  - documentation
+
+type: regular
+---
+ 
+<p>Another post I wrote a while ago (2011-04-06) on my old Wordpress blog. It's about a script for importing a CSV into MySQL. There may be a better way in native MySQL, I'm not sure.</p>&#13;
+<p><!-- more --></p>&#13;
+<p><strong>Intro</strong></p>&#13;
+<p>I just wrote this script, and it seems pretty generic so I'm going to share it with The Internet. This will import data from a <a href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV</a>into a MySQL database table. Two rules:</p>&#13;
+<ol><li>The first line of the CSV must contain the column names</li>&#13;
+<li>These column names must be exactly the same as the column names in the database table</li>&#13;
+</ol><div><strong>Usage</strong></div>&#13;
+<p>The basic usage is as follows:</p>&#13;
+<p><code> php import.php -f [filename.csv] --database=[db_name] --table=[table_name] </code></p>&#13;
+<p>You also have the following extra options:</p>&#13;
+<p><code> -q (Quiet; no output)<br />-v (Verbose; print out all database insert commands)<br />--host=[hostname] (The host the database is on<br />- defaults to 'localhost')<br />--username=[username] (The username for the database)<br />--password=[password] (The password for the database) </code></p>&#13;
+<p><strong>Example</strong></p>&#13;
+<p>Let's say we have a database called "example_db" containing a table "example_table":</p>&#13;
+<p><code> mysql&gt; desc example_table;<br />+-------+--------------+------+-----+---------+-------+<br />| Field | Type         | Null | Key | Default | Extra |<br />+-------+--------------+------+-----+---------+-------+<br />| id    | int(11)      | YES  |     | NULL    |       |<br />| value | varchar(255) | YES  |     | NULL    |       |<br />+-------+--------------+------+-----+---------+-------+<br /> 2 rows in set (0.00 sec) </code></p>&#13;
+<p>Now we create a CSV of data called "example_csv.csv":</p>&#13;
+<p><code> id,value 1,hello world 2,this is god </code></p>&#13;
+<p>Now we run the import script:</p>&#13;
+<p><code># php import.php -f example_csv.csv --database=example_db --table=example_table</code></p>&#13;
+<p>Resulting in the data being imported into the table:</p>&#13;
+<p><code> mysql&gt; select * from example_table;<br />+------+-------------+<br />| id   | value       |<br />+------+-------------+<br />| 1    | hello world |<br />| 2    | this is god |<br />+------+-------------+<br />2 rows in set (0.00 sec) </code></p>&#13;
+<p>That wasn't too painful was it?</p>&#13;
+<p><strong>Download</strong></p>&#13;
+<p>Download the <a href="http://static.robinwinslow.co.uk/csvimport/import.zip">CSV import script</a> in .zip format.</p>&#13;
+<p><strong>To export from MySQL</strong></p>&#13;
+&#13;
+<p><code>into outfile</code></p>&#13;
+<p>or</p>&#13;
+<p><code>mysql -e '...' &gt; filename</code></p>&#13;
+<p>See: <a href="http://forums.mysql.com/read.php?79,150417,289518#msg-289518">http://forums.mysql.com/read.php?79,150417,289518#msg-289518</a>.</p>&#13;
+&#13;
+ 

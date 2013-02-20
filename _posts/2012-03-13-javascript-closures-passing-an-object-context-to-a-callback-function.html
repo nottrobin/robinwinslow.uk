@@ -1,0 +1,32 @@
+---
+title: "JavaScript closures &#58; Passing an Object context to a callback function"
+layout: post
+tags:
+  - JavaScript
+  - web development
+  - closures
+  - code
+
+type: regular
+---
+ 
+<p>Another re-post from my Wordpress blog - originally posted 2011-05-25. This one's quite technical. It requires good knowledge of JavaScript and also some patience to work out what I'm up to.</p>&#13;
+<p><!-- more --></p>&#13;
+<p>This is the first really useful application for <a href="https://developer.mozilla.org/en/JavaScript/Guide/Closures">JavaScript closures</a> that I've found.</p>&#13;
+<p id="problem"><strong>The problem</strong></p>&#13;
+<p>(You can <a href="#solution">skip straight to the solution</a> if you want).</p>&#13;
+<p>There are many situations when you might use a callback function. For example, to be run after an <a href="https://developer.mozilla.org/en/XMLHttpRequest">XMLHttpRequest</a> (or AJAX call), or on adding an <a href="https://developer.mozilla.org/en/DOM/element.addEventListener">event listener</a>.</p>&#13;
+<p>It is not uncommon to want to create a callback from within an Object instance, and to want all of the methods and properties of that object to be available to the callback function.</p>&#13;
+<p>For example (you can try this example out in your browsers JS console if it has one):</p>&#13;
+<p><code> var myOb = function(aString) {<br />   this.aString = aString;<br /><br />   // Callback for timer<br />   this.callback = function() {<br />     // We can't use "this" because it is just the window object<br />     // But we can access an instance of the object through the global variable<br />     console.log(globalString); <br />   }<br /><br />   // Attempt to make the object available to the callback by creating a global variable<br />   globalString = this.aString;<br /><br />   // Call the callback function after 1 second<br />   window.setTimeout(this.callback, 1000);<br /> }<br /><br /> var obInstance = new myOb('hello'); // Sets "globalString" to "hello"<br /> var anotherObInstance = new myOb('world'); // Sets "globalString" to "world" </code></p>&#13;
+<p>This outputs the following in my Chrome 11 console:</p>&#13;
+<p><code>world<br /> world</code></p>&#13;
+<p>This is because the global variable "globalString" is initially set to "hello", but it gets immediately overridden with "world" when the second instance of the object is called. Therefore, by the time the callbacks fire (a second after the page loads) the variable is "world", so they both return "world". This could very well be a problem.</p>&#13;
+<p id="solution"><strong>The solution</strong></p>&#13;
+<p>The solution is to set the context (i.e. 'this') of the callback function <code>this.callback</code> to be the current object instance, so that the function will inherently have access to all the object's properties.</p>&#13;
+<p>The logic for this is a little complex and I won't fully explain it here, but in short it uses a "<a href="https://developer.mozilla.org/en/JavaScript/Guide/Closures">closure</a>" to capture the object instance in the <code>caller</code> variable, and then the "<a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/apply">apply</a>" method to set the context of the function to be <code>caller</code>.</p>&#13;
+<p>Here it is (once again feel free to try this in your browser's console):</p>&#13;
+<p><code> var myOb = function(aString) {<br />   this.aString = aString;<br /><br />   // Callback for timer<br />   this.callback = function() {<br />     // The arguement passed to this particular instance of myOb<br />     console.log(this.aString);<br />   }<br /><br />   // Call the callback function after 1 second<br />   window.setTimeout((function(caller) { return function() { caller.callback.apply(caller, arguments); } })(this), 1000);<br /> }<br /><br /> var obInstance = new myOb('hello');<br /> var anotherObInstance = new myOb('world'); </code></p>&#13;
+<p>This should successfully output:</p>&#13;
+<p><code>hello<br /> world</code></p>&#13;
+<p>Problem solved.</p> 

@@ -1,0 +1,33 @@
+---
+title: Installing Vagrant on CentOS - the more reliable way
+layout: post
+tags:
+  - web development
+  - devops
+
+type: regular
+---
+ 
+<p>I've been playing around with <a href="http://vagrantup.com/">Vagrant</a> lately. It's a "virtualized development tool" - a tool for quickly configuring and spinning up virtual machines for a software project.</p>&#13;
+<p>Its real strength is that the Vagrant configuration files can be easily committed to a project's repository, allowing anyone who then checks out the project (assuming they have Vagrant installed) to quickly and reliably spin up a virtual machine pre-configured with all the project's dependencies.</p>&#13;
+<p><!-- more --></p>&#13;
+<p>If you want you can <a href="#solution">skip to the solution</a>.</p>&#13;
+<h2 id="problem">The problem</h2>&#13;
+<p>The Vagrant website doesn't give you very much detail about how to install it. There is a <a href="http://downloads.vagrantup.com/tags/v1.0.3">download page</a> with a list of packages for different systems, but when I tried to install this package on CentOS it gave me some sort of Ruby related error (I have zero experience with Ruby).</p>&#13;
+<pre># wget http://files.vagrantup.com/packages/eb590aa3d936ac71cbf9c64cf207f148ddfc000a/vagrant_1.0.3_x86_64.rpm&#13;
+# sudo rpm -i vagrant_1.0.3_x86_64.rpm&#13;
+# /opt/vagrant/bin/vagrant&#13;
+&#13;
+/opt/vagrant/bin/../embedded/bin/ruby: /lib64/libc.so.6: version `GLIBC_2.6' not found (required by /opt/vagrant/embedded/bin/../lib/libruby.so.1.9)</pre>&#13;
+<p>I <a href="https://www.google.co.uk/search?sugexp=chrome,mod=9&amp;sourceid=chrome&amp;ie=UTF-8&amp;q=install+vagrant+on+centos">asked the internet</a> how to install Vagrant on CentOS but it wasn't very helpful. Eventually I found a blog post on <a href="http://www.dejonghenico.be/unix/setup-vagrant-and-small-quick-start">how to setup Vagrant on Ubuntu</a> which gave me my answer, so I thought I'd share it with you.</p>&#13;
+<h2 id="solution">The solution</h2>&#13;
+<p>You need to install Vagrant through Ruby Gems. Thankfully it really is pretty simple:</p>&#13;
+<pre># sudo yum install ruby&#13;
+...&#13;
+# sudo yum install rubygems&#13;
+...&#13;
+# sudo gems update --system&#13;
+...&#13;
+# sudo gems install vagrant</pre>&#13;
+<p>On my system this installed Vagrant to</p>&#13;
+<pre>/usr/local/bin/vagrant</pre> 

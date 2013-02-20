@@ -186,6 +186,13 @@ nav ul {
 		padding-left: 0;
 		border-left: none;
 	}
+	nav ul {
+		overflow: hidden;
+	}
+	nav li {
+		float: left;
+		width: 10rem;
+	}
 	header address, header hgroup {
 		float: none;
 	}

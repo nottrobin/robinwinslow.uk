@@ -85,14 +85,14 @@ address span {display: none;}
 /* Squeezes */
 body>article, header>aside, footer>aside {
     margin: 0 auto 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.618rem;
 	overflow: hidden;
 }
 body>article { max-width: 43rem; }
 .page body>article { 
 	padding-right: 0;
 }
-header>aside, footer>aside { max-width: 46rem; }
+header>aside, footer>aside { max-width: 47rem; }
 
 /* Header */
 header {

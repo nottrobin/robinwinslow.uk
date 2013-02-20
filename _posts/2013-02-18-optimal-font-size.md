@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Optimal font-size
-tags: [intro, beginner]
+tags: [design, typography]
 ---
 
 I googled "Optimal font-size", read first [16 pixels](http://www.smashingmagazine.com/2011/10/07/16-pixels-body-copy-anything-less-costly-mistake/) then [a dao of web design](http://alistapart.com/article/dao) and came to the conclusion that the optimal font-size is *not to specify one*.

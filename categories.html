@@ -11,8 +11,10 @@ title: Home page
 
 {% for post in tag[1] %}
 	<article>
-		<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-		<date>{{ post.date | date_to_string }}</date>
+		<a href="{{ post.url }}">
+			<h1>{{ post.title }}</h1>
+			<date>{{ post.date | date_to_string }}</date>
+		</a>
 	</article>
 {% endfor %}
 </section>

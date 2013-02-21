@@ -87,6 +87,10 @@ address li {
 address li:last-child {margin-right: 0;}
 address span {display: none;}
 
+article h1 {
+    line-height: 1.2;
+}
+
 /* Squeezes */
 body>article, header>aside, footer>aside {
     margin: 0 auto 0 auto;
@@ -160,7 +164,6 @@ section article h1 {
 	font-size: 1.5em;
 	margin-top: 0;
 	text-transform: lowercase;
-    line-height: 1.2;
 }
 
 nav {

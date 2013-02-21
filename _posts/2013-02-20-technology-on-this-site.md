@@ -1,7 +1,8 @@
 ---
 title: Technology on this site
 layout: post
-tags: [development, technology]
+tags: 
+  - development
 ---
 
 Here's a list of technologies and projects that I've used (links to follow):

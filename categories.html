@@ -22,7 +22,7 @@ title: Home page
 		<a href="{{ post.url }}">
 			<h1>{{ post.title }}</h1>
 			<date>{{ post.date | date_to_string }}</date>
-            <p>{{ post.description }}</p>
+            {% if post.description %}<p>{{ post.description }}</p>{% endif %}
 		</a>
 	</article>
 {% endfor %}

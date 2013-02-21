@@ -187,6 +187,12 @@ nav li {
 	margin-top: 1.618rem;
 }
 
+.comments {
+	margin-top: 1.618rem;
+	padding-top: 1.618rem;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 @media all and (max-width: 35rem) {
 	header address, header hgroup {
 		float: none;

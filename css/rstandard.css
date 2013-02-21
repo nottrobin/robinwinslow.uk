@@ -91,6 +91,16 @@ article h1 {
     line-height: 1.2;
 }
 
+.highlight {
+	padding: 1rem;
+	background-color: #ddd;
+	overflow: auto;
+	margin-top: 1rem;
+}
+.highlight pre {
+	margin: 0;
+}
+
 /* Squeezes */
 body>article, header>aside, footer>aside {
     margin: 0 auto 0 auto;

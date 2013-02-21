@@ -1,13 +1,12 @@
 ---
 title: "JavaScript closures &#58; Passing an Object context to a callback function"
 layout: post
+description: "A useful application for JavaScript Closures - passing object context."
 tags:
   - JavaScript
   - development
 ---
  
-Another re-post from my Wordpress blog - originally posted 2011-05-25. This one's quite technical. It requires good knowledge of JavaScript and also some patience to work out what I'm up to.</p>&#13;
-
 This is the first really useful application for [JavaScript closures](https://developer.mozilla.org/en/JavaScript/Guide/Closures) that I've found.
 
 <a id="problem"></a>

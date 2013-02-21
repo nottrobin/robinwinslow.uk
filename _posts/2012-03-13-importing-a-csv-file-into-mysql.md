@@ -1,12 +1,10 @@
 ---
-title: Exporting MySql to CSV file
+title: Importing a CSV file into MySQL
 layout: post
 tags:
   - PHP
   - development
 ---
- 
-Another post I wrote a while ago (2011-04-06) on my old Wordpress blog. It's about a script for importing a CSV into MySQL. There may be a better way in native MySQL, I'm not sure.
 
 Intro
 ---

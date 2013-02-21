@@ -4,8 +4,6 @@ title: Home page
 ---
 
 <nav>
-    <h1>Categories</h1>
-
     <ul>
 {% for tag in site.tags %}
         <li><a href="/categories.html#{{ tag[0] }}">{{ tag[0] }}</a> <small>({{ tag[1].size }})</small></li>
@@ -21,6 +19,7 @@ title: Home page
         <a href="{{ post.url }}">
             <h1>{{ post.title }}</h1>
             <date>{{ post.date | date_to_string }}</date>
+            <p>{{ post.description }}</p>
         </a>
     </article>
 {% endfor %}

@@ -5,6 +5,14 @@ title: Home page
 
 <h1>Categories</h1>
 
+<nav>
+    <ul>
+{% for tag in site.tags %}
+        <li><a href="#{{ tag[0] }}">{{ tag[0] }}</a> <small>({{ tag[1].size }})</small></li>
+{%endfor%}
+    </ul>
+</nav>
+
 {% for tag in site.tags %} 
 <section>
 	<h1 id="{{ tag[0] }}">{{ tag[0] }}</h1>

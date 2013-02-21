@@ -12,6 +12,7 @@ html {
 
 h1, h2, p {
     margin: 1em 0 0 0;
+    line-height: 1.2;
 }
 p {
     text-align: justify;

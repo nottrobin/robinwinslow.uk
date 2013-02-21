@@ -31,7 +31,7 @@ h2, section h1, nav h1 { font-size: 2em; }
 
 /* Links */
 a {
-    color: #aaa;
+    color: #555;
     text-decoration: none;
 }
 .dark a {
@@ -39,6 +39,9 @@ a {
 }
 a:hover {
 	color: inherit;
+}
+p a {
+	border-bottom: 1px dotted #555;
 }
 
 /* Hgroup */

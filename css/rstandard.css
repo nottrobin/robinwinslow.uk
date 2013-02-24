@@ -6,8 +6,8 @@ html {
     line-height: 1.618;
 }
 .dark {
-	background-color: #333;
-	color: #fff;
+    background-color: #333;
+    color: #fff;
 }
 
 h1, h2, p {
@@ -38,10 +38,10 @@ a {
     color: #ccc;
 }
 a:hover {
-	color: inherit;
+    color: inherit;
 }
 p a {
-	border-bottom: 1px dotted #555;
+    border-bottom: 1px dotted #555;
 }
 
 /* Hgroup */
@@ -64,13 +64,13 @@ hgroup>*:first-child:after {
     position: absolute;
     right: -0.16em;
     top: 0;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 hgroup h1 {
     opacity: 1;
 }
 hgroup h2 {
-    opacity: 0.5;
+    opacity: 0.3;
 }
 /* Address */
 address ul {
@@ -91,14 +91,17 @@ article h1 {
     line-height: 1.2;
 }
 
-.highlight {
-	padding: 1rem;
-	background-color: #ddd;
-	overflow: auto;
-	margin-top: 1rem;
+.highlight, blockquote {
+    padding: 1rem;
+    background-color: #ddd;
+    margin: 1rem 0 0 0;
+}
+blockquote p:first-child {
+    margin-top: 0;
 }
 .highlight pre {
-	margin: 0;
+    overflow: auto;
+    margin: 0;
 }
 
 /* Squeezes */
@@ -118,7 +121,7 @@ header {
     color: white;
 }
 header a {
-	color: #ccc; /* same as dark theme */
+    color: #ccc; /* same as dark theme */
 }
 header h1, header h2, header p {
     margin-top: 0;
@@ -134,69 +137,70 @@ footer {
     font-size: 0.8rem;
 }
 footer aside {
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 .dark footer aside {
-	border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 date {
-	display: block;
-	opacity: 0.5;
+    display: block;
+    opacity: 0.5;
 }
 section {
-	overflow: hidden;
-	min-width: 20em;
+    overflow: hidden;
+    min-width: 20em;
 }
 section article {
-	padding: 1rem;
-	margin: 1.618rem 1.618rem 0 0;
-	padding: 0;
-	color: #000;
+    padding: 1rem;
+    margin: 1.618rem 0 0 0;
+    padding: 0;
+    color: #000;
 }
 .dark section article a {
-	background-color: white;
-	padding: 1rem;
-	display: block;
-	color: inherit;
-	opacity: 0.7;
+    background-color: white;
+    padding: 1rem;
+    display: block;
+    color: inherit;
+    opacity: 0.7;
 }
 section article a:hover {
-	opacity: 1;
+    opacity: 1;
 }
 section article h1 {
-	font-size: 1.5em;
-	margin-top: 0;
-	text-transform: lowercase;
+    font-size: 1.5em;
+    margin-top: 0;
+    text-transform: lowercase;
 }
 
 nav {
-	margin-top: 2rem;
+    margin-top: 2rem;
 }
 nav ul {
-	list-style-type: none;
-	padding: 0;
-	overflow: hidden;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
 }
 nav li {
-	float: left;
-	width: 10rem;
+    float: left;
+    width: 10rem;
 }
 
 .headless {
-	margin-top: 1.618rem;
+    margin-top: 1.618rem;
 }
 
 .comments {
-	margin-top: 1.618rem;
-	padding-top: 1.618rem;
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 1.618rem;
+    margin-bottom: -30px;
+    padding-top: 1.618rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 @media all and (max-width: 35rem) {
-	header address, header hgroup {
-		float: none;
-	}
+    header address, header hgroup {
+        float: none;
+    }
 }
 
 /* ==========================================================================

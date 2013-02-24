@@ -1,6 +1,7 @@
 ---
 title: Blog ideas
 layout: post
+description: "A dynamic post containing all my ideas for blogs to write some-day."
 tags:
   - blogging
 ---

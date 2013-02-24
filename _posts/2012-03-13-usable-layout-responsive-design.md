@@ -1,5 +1,6 @@
 ---
 title: Usable layout (responsive design)
+description: Some examples of responsive layouts
 layout: post
 tags:
   - front-end

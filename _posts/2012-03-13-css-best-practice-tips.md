@@ -5,8 +5,6 @@ tags:
   - CSS
   - development
 ---
- 
-Another re-post from my Wordpress (2011-07-25). This post is short and easy to read, and contains some good resources.
 
 Never use IDs.
 ---

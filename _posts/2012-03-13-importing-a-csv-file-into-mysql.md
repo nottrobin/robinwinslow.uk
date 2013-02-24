@@ -1,5 +1,6 @@
 ---
 title: Importing a CSV file into MySQL
+description: A simple PHP command-line script for importing data from a CSV file into a MySQL database. 
 layout: post
 tags:
   - PHP

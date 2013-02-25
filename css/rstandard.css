@@ -22,12 +22,12 @@ body {
 }
 
 /* Headings */
-h1, h2 {
+h1, h2, h3 {
     font-family: Lato, sans-serif;
     font-weight: 300;
 }
 h1 { font-size: 2.618em; /* golden ^ 2 */ }
-h2, section h1, nav h1 { font-size: 2em; }
+h2, h3, section h1, nav h1 { font-size: 1.618em; }
 
 /* Links */
 a {

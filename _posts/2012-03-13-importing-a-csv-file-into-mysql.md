@@ -20,49 +20,61 @@ Usage
 
 The basic usage is as follows:
 
-	php import.php -f [filename.csv] --database=[db_name] --table=[table_name]
+``` php
+php import.php -f [filename.csv] --database=[db_name] --table=[table_name]
+```
 
 You also have the following extra options:
 
-	-q (Quiet; no output)
-	-v (Verbose; print out all database insert commands)
-	--host=[hostname] (The host the database is on
-	- defaults to 'localhost')
-	--username=[username] (The username for the database)
-	--password=[password] (The password for the database)
+```
+-q (Quiet; no output)
+-v (Verbose; print out all database insert commands)
+--host=[hostname] (The host the database is on
+- defaults to 'localhost')
+--username=[username] (The username for the database)
+--password=[password] (The password for the database)
+```
 
 Example
 ---
 
 Let's say we have a database called "example_db" containing a table "example_table":
 
-	mysql> desc example_table;
-	+-------+--------------+------+-----+---------+-------+
-	| Field | Type         | Null | Key | Default | Extra |
-	+-------+--------------+------+-----+---------+-------+
-	| id    | int(11)      | YES  |     | NULL    |       |
-	| value | varchar(255) | YES  |     | NULL    |       |
-	+-------+--------------+------+-----+---------+-------+
-	2 rows in set (0.00 sec)
+```
+mysql> desc example_table;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| id    | int(11)      | YES  |     | NULL    |       |
+| value | varchar(255) | YES  |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+```
 
 Now we create a CSV of data called "example_csv.csv":
 
-	id,value 1,hello world 2,this is god
+```
+id,value 1,hello world 2,this is god
+```
 
 Now we run the import script:
 
-	# php import.php -f example_csv.csv --database=example_db --table=example_table
+```
+$ php import.php -f example_csv.csv --database=example_db --table=example_table
+```
 
 Resulting in the data being imported into the table:
 
-	mysql> select * from example_table;
-	+------+-------------+
-	| id   | value       |
-	+------+-------------+
-	| 1    | hello world |
-	| 2    | this is god |
-	+------+-------------+
-	2 rows in set (0.00 sec)
+```
+mysql> select * from example_table;
++------+-------------+
+| id   | value       |
++------+-------------+
+| 1    | hello world |
+| 2    | this is god |
++------+-------------+
+2 rows in set (0.00 sec)
+```
 
 That wasn't too painful was it?
 
@@ -74,10 +86,14 @@ Download the [CSV import script](http://static.robinwinslow.co.uk/csvimport/impo
 To export from MySQL
 ---
 
-	into outfile
+```
+into outfile
+```
 
 or
 
-	mysql -e '...' &gt; filename
+```
+mysql -e '...' &gt; filename
+```
 
 See: [this MySQL forum post](http://forums.mysql.com/read.php?79,150417,289518#msg-289518).

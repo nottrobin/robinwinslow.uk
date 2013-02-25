@@ -1,5 +1,6 @@
 ---
 title: Technology on this site
+description: A list of some technologies and standard I've employed in the making of this site.
 layout: post
 tags: 
   - development

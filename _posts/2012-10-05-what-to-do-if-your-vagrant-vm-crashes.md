@@ -16,7 +16,7 @@ However, now when I tried to start my VM again, it started trying to import a ne
 1. Get VBoxManage running
 ---
 
-I needed to use the `vboxmanage` command to find the UUID of the existing virtual machine I wanted to associate with my vagrant directory. To do this I added the path containing <code>vboxmanage.exe</code> to my <code>PATH</code> variable, in my case this was `C:\Program Files\Oracle\VirtualBox`.
+I needed to use the `vboxmanage` command to find the UUID of the existing virtual machine I wanted to associate with my vagrant directory. To do this I added the path containing `vboxmanage.exe` to my `PATH` variable, in my case this was `C:\Program Files\Oracle\VirtualBox`.
 
 2. Find the UUID of my virtual machine
 ---

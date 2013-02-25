@@ -1,27 +1,31 @@
 ---
-title: Note to self &#58; technical aspirations
+title: Note to self - technical aspirations
+description: A list of things I'd like to learn and achieve in technology.
 layout: post
 tags:
   - development
 ---
  
-<p>Things for me to learn and achieve.</p>&#13;
-<p><!-- more --></p>&#13;
-<div>To learn:</div>&#13;
-<ul><li>Chef Solo &amp; Server</li>&#13;
-<li>VeeWee...?</li>&#13;
-<li>Require.js (AMD)</li>&#13;
-<li>Composer</li>&#13;
-<li>Design in the browser</li>&#13;
-<li>Ruby &amp; Rails (why not)</li>&#13;
-<li>Dell Cloud Launcher &amp; Profile Tool (https://github.com/sputnik)</li>&#13;
-<li>Behat and related technologies</li>&#13;
-</ul><div>To achieve:</div>&#13;
-<div>&#13;
-<ul><li>Create Jekyll blog</li>&#13;
-<li>Get Pygments working in Windows (blog about it?)</li>&#13;
-<li>Setup a repository for keeping my development environment configuration</li>&#13;
-<li>SASS/Bourbon/Require/AMD-up my site</li>&#13;
-<li>Bootstrap/AMD-up my site</li>&#13;
-<li>Set up some measure of CI for my site, including behat tests?</li>&#13;
-</ul></div> 
+Things for me to learn and achieve.
+
+To learn:
+---
+
+ - Chef Solo & Server
+ - VeeWee...?
+ - Require.js (AMD)
+ - Composer
+ - Design in the browser
+ - Ruby & Rails (why not)
+ - Dell Cloud Launcher & Profile Tool (https://github.com/sputnik)
+ - Behat and related technologies
+
+To achieve:
+---
+
+ - Create Jekyll blog
+ - Get Pygments working in Windows (blog about it?)
+ - Setup a repository for keeping my development environment configuration
+ - SASS/Bourbon/Require/AMD-up my site
+ - Bootstrap/AMD-up my site
+ - Set up some measure of CI for my site, including behat tests?

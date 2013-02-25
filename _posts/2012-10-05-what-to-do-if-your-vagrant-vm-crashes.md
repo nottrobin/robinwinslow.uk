@@ -1,22 +1,28 @@
 ---
 title: What to do if your Vagrant VM crashes
-deescript: If your Vagrant machine crashed and when you force kill it, vagrant forgets about its existence - here's how to fix that.
+description: 
+    If your Vagrant machine crashed and when you force kill it, vagrant forgets about its existence - here's how to fix that.
 layout: post
 tags:
   - development
   - devops
 ---
  
-My vagrant VM crashed. I tried typing `vagrant halt` but it just tried to "gracefully" shut down the machine, and stayed like that, for a long time.
+My vagrant VM crashed. I tried typing `vagrant halt` but it just tried to "gracefully" shut down the machine,
+and stayed like that, for a long time.
 
 What I did was open up the VirtualBox Manager and power off the machine manually.
 
-However, now when I tried to start my VM again, it started trying to import a new base box to create the virtual machine from scratch, which was not what I wanted. I guess it must have not saved the UUID of my VM back to the `.vagrant`. Here's what I had to do to fix that.
+However, now when I tried to start my VM again, it started trying to import a new base box to create the virtual
+machine from scratch, which was not what I wanted. I guess it must have not saved the UUID of my VM back to the
+`.vagrant`. Here's what I had to do to fix that.
 
 1. Get VBoxManage running
 ---
 
-I needed to use the `vboxmanage` command to find the UUID of the existing virtual machine I wanted to associate with my vagrant directory. To do this I added the path containing `vboxmanage.exe` to my `PATH` variable, in my case this was `C:\Program Files\Oracle\VirtualBox`.
+I needed to use the `vboxmanage` command to find the UUID of the existing virtual machine I wanted to associate
+with my vagrant directory. To do this I added the path containing `vboxmanage.exe` to my `PATH` variable, in my
+case this was `C:\Program Files\Oracle\VirtualBox`.
 
 2. Find the UUID of my virtual machine
 ---

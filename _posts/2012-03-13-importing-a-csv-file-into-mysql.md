@@ -7,9 +7,6 @@ tags:
   - development
 ---
 
-Intro
----
-
 I just wrote this script, and it seems pretty generic so I'm going to share it with The Internet. This will import data from a [CSV](http://en.wikipedia.org/wiki/Comma-separated_values) into a MySQL database table. Two rules:
 
  1. The first line of the CSV must contain the column names

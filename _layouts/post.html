@@ -7,6 +7,22 @@ layout: default
 
 {{ content }}
 
+{% if page.tags %}
+<section id="categories">
+    <h1>Read more about</h1>
+    
+    <nav>
+        <ul>
+    {% for tag in site.tags %}
+        {% if page.tags contains tag[0] %}
+            <li><a href="/categories.html#{{ tag[0] }}">{{ tag[0] }}</a> <small>({{ tag[1].size }})</small></li>
+        {% endif %}
+    {%endfor%}
+        </ul>
+    </nav>
+</section>
+{% endif %}
+
 <div id="disqus_thread" class="comments"></div>
 
 <script type="text/javascript">

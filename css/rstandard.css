@@ -136,10 +136,10 @@ footer {
     padding: 0 0 1rem 0;
     font-size: 0.8rem;
 }
-footer aside {
+footer aside, section {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-.dark footer aside {
+.dark footer aside, .dark section {
     border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -150,6 +150,7 @@ date {
 section {
     overflow: hidden;
     min-width: 20em;
+    margin-top: 1.618rem;
 }
 section article {
     padding: 1rem;
@@ -184,10 +185,6 @@ nav ul {
 nav li {
     float: left;
     width: 10rem;
-}
-
-.headless {
-    margin-top: 1.618rem;
 }
 
 .comments {

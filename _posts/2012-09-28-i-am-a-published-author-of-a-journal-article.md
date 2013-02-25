@@ -1,6 +1,6 @@
 ---
 title: I am a published author (of a journal article)!
-discription: Download my paper "Micro-generation schemes: user behaviours and attitudes towards energy consumption" (Stedmon, Winslow and Langley) for free.
+discription: 'Download my paper "Micro-generation schemes: user behaviours and attitudes towards energy consumption" (Stedmon, Winslow and Langley) for free.'
 layout: post
 tags:
   - science

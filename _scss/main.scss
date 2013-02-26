@@ -123,8 +123,6 @@ header a {
 header h1, header h2, header p {
     margin-top: 0;
 }
-header address { float: right; }
-header hgroup { float: left; }
 header address li:first-child { margin-left: 0; }
 
 /* Footer */
@@ -190,7 +188,12 @@ nav li {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-// Responsive
+// Responsive - larger screens
+@media all and (min-width: 35em) {
+    header address { float: right; }
+    header hgroup { float: left; }
+}
+
 @media all and (min-width: 60em) {
   .icon-github, li .icon-github[class^="icon-"] {
       position: absolute;
@@ -205,12 +208,6 @@ nav li {
           display: none;
       }
   }
-}
-
-@media all and (max-width: 35em) {
-    header address, header hgroup {
-        float: none;
-    }
 }
 
 /* ==========================================================================

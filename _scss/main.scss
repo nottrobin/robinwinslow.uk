@@ -190,6 +190,25 @@ nav li {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.github {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+}
+
+// Responsive
+@media all and (max-width: 50rem) {
+    .github {
+        right: auto;
+        left: 0;
+        top: -5px;
+        @include transform(rotate(270deg));
+        
+        img { width: 100px; }
+    }
+}
+
 @media all and (max-width: 35rem) {
     header address, header hgroup {
         float: none;

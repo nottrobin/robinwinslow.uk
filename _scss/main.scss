@@ -104,7 +104,7 @@ blockquote p:first-child {
 /* Squeezes */
 body>article, header>aside, footer>aside {
     margin: 0 auto 0 auto;
-    padding: 0 1.618rem;
+    padding: 0 1rem;
 }
 body>article { max-width: 43rem; }
 header>aside, footer>aside { max-width: 47rem; }
@@ -178,7 +178,9 @@ nav ul {
 }
 nav li {
     float: left;
-    width: 10rem;
+    width: 10em;
+    padding-right: 1rem;
+    @include box-sizing(border-box);
 }
 
 .comments {

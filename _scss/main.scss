@@ -190,23 +190,21 @@ nav li {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.github {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: none;
-}
-
 // Responsive
-@media all and (max-width: 50em) {
-    .github {
-        right: auto;
-        left: 0;
-        top: -5px;
-        @include transform(rotate(270deg));
-        
-        img { width: 100px; }
-    }
+@media all and (min-width: 60em) {
+  .icon-github, li .icon-github[class^="icon-"] {
+      position: absolute;
+      width: 149px;
+      height: 149px;
+      background-image: url('https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png');
+      top: 0;
+      right: 0;
+      border: none;
+      
+      &:before {
+          display: none;
+      }
+  }
 }
 
 @media all and (max-width: 35em) {

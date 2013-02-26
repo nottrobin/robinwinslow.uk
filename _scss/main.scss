@@ -1,42 +1,37 @@
-/* Whole page styles */
-html {
-    background-color: #fff;
-    color: black;
-    font-family: Arvo, garamond, serif;
-    line-height: 1.618;
-}
-.dark {
-    background-color: #333;
-    color: #fff;
-}
+// Libraries
+@import "lib/bourbon/bourbon";
+@import "lib/font-awesome";
+@import "lib/pygments";
 
-h1, h2, p {
-    margin: 1em 0 0 0;
-}
-p {
-    text-align: justify;
-}
+// Settings
+@import "settings";
 
-body {
-    margin: 0;
-}
+// Mixins
+@import "mixins";
+
+// Stylesheets
+/* Base styles */
+html       { @include site-settings; }
+body       { @include layout-body; }
+h1, h2, p  { @include layout-text-block; }
+p          { @include paragraph-text; }
 
 /* Headings */
-h1, h2, h3 {
-    font-family: Lato, sans-serif;
-    font-weight: 300;
-}
-h1 { font-size: 2.618em; /* golden ^ 2 */ }
-h2, h3, section h1, nav h1 { font-size: 1.618em; }
+h1, h2, h3 { @include heading-font; }
+h1         { @include primary-heading; }
+h2, h3,
+section h1,
+nav h1     { @include secondary-heading; }
 
 /* Links */
-a {
-    color: #555;
-    text-decoration: none;
-}
+a          { @include link-text; }
+
+/* Overrides */
+.dark      { @include index-colors; }
 .dark a {
     color: #ccc;
 }
+
 a:hover {
     color: inherit;
 }
@@ -171,7 +166,6 @@ section article a:hover {
     opacity: 1;
 }
 section article h1 {
-    font-size: 1.5em;
     margin-top: 0;
     text-transform: lowercase;
 }

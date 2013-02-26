@@ -1,0 +1,41 @@
+@mixin site-settings {
+    background-color: $post-background;
+    color: $post-font-color;
+    font-family: $main-font;
+    line-height: $line-height;
+}
+
+@mixin index-colors {
+    background-color: $index-background;
+    color: $index-font-color;
+}
+
+@mixin heading-font {
+    font-family: $heading-font;
+    font-weight: 300;
+}
+
+@mixin layout-body {
+    margin: 0;
+}
+
+@mixin layout-text-block {
+    margin: 1em 0 0 0;
+}
+
+@mixin paragraph-text {
+    text-align: justify;
+}
+
+@mixin primary-heading {
+    font-size: $golden-ratio * $golden-ratio * 1em;
+}
+
+@mixin secondary-heading {
+    font-size: $golden-ratio * 1em;
+}
+
+@mixin link-text {
+    color: $link-font-color;
+    text-decoration: none;
+}

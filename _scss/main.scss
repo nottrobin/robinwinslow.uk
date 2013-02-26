@@ -198,7 +198,7 @@ nav li {
 }
 
 // Responsive
-@media all and (max-width: 50rem) {
+@media all and (max-width: 50em) {
     .github {
         right: auto;
         left: 0;
@@ -209,7 +209,7 @@ nav li {
     }
 }
 
-@media all and (max-width: 35rem) {
+@media all and (max-width: 35em) {
     header address, header hgroup {
         float: none;
     }

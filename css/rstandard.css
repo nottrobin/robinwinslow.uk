@@ -99,8 +99,10 @@ article h1 {
 blockquote p:first-child {
     margin-top: 0;
 }
-.highlight pre {
+.highlight {
     overflow: auto;
+}
+.highlight pre {
     margin: 0;
 }
 

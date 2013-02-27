@@ -27,7 +27,7 @@ costing £5/month. We obviously didn't use it, as the only reason we have the ph
 I'm sure this must be in the small print somewhere, but I didn't see it, and you'll just have to believe me when I say that I am as literate as
 one could reasonably expect from a customer, and I am wise to and on the lookout for these sorts of tricks.
 
-Do yourselves a favour...
+TalkTalk, do yourselves a favour...
 ---
 
 I want to say that I have no beef with the guy who answered the phone when I called them.

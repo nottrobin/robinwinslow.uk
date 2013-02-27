@@ -8,6 +8,8 @@
 @mixin index-colors {
     background-color: $index-background;
     color: $index-font-color;
+    
+    a { color: #ccc; }
 }
 
 @mixin heading-font {
@@ -38,4 +40,6 @@
 @mixin link-text {
     color: $link-font-color;
     text-decoration: none;
+    
+    &:hover    { color: inherit; }
 }

@@ -28,13 +28,7 @@ a          { @include link-text; }
 
 /* Overrides */
 .dark      { @include index-colors; }
-.dark a {
-    color: #ccc;
-}
 
-a:hover {
-    color: inherit;
-}
 p a {
     border-bottom: 1px dotted #555;
 }

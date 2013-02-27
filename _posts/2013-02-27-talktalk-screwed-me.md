@@ -43,7 +43,7 @@ to *at least* £7.25's worth. Honestly TalkTalk, do yourselves a favour.
 This isn't even about me. Honest.
 ---
 
-I lost £7.25. I hope you won't think I'm being a horrible snob when I say I *really* don't care about that amount of money.
+I lost £7.25. I hope you won't think I'm being a horrible snob when I say I genuinely hardly care about that amount of money.
 It was not worth the stress of my long phone call with Allen.
 
 What really fucks me off is that this is obviously deliberate. They know hardly anyone actually wants the 1000 minutes bundle.

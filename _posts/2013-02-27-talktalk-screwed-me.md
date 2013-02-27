@@ -38,7 +38,7 @@ but when I call up to say that I never wanted the service and haven't used it, t
 Not so with TalkTalk (I'm not going to them honor with a link) who point blank refused to refund the charges.
 
 This is really stupid because the amount was so small (£7.25) and the potential bad publicity from me bitching about them has to hurt them
-to *at least* £7.25's worth.
+to *at least* £7.25's worth. Honestly TalkTalk, do yourselves a favour.
 
 This isn't even about me. Honest.
 ---
@@ -47,10 +47,10 @@ I lost £7.25. I hope you won't think I'm being a horrible snob when I say I *re
 It was not worth the stress of my long phone call with Allen.
 
 What really fucks me off is that this is obviously deliberate. They know hardly anyone actually wants the 1000 minutes bundle.
-And since they are offering the cheapest and shittest broadband service, these people are going to be those for whom money is tightest.
+And since they are offering the cheapest and shittest broadband service, most of their customers are going to be those for whom money is tightest.
 Add to that that poor people
 [tend to be are less good at looking after their money](http://www.guardian.co.uk/commentisfree/2013/feb/27/banking-while-poor-predatory-payday-lending1)
-and this TalkTalk trick basically amounts to a [Ghetto Tax](http://en.wikipedia.org/wiki/Ghetto_Tax).
+and this TalkTalk trick amounts to a deliberate [Ghetto Tax](http://en.wikipedia.org/wiki/Ghetto_Tax).
 
-Now this is clearly not the worst example of scamsters cheating folk of their money (wonga.com anyway?)
+Now this is clearly not the worst example of scamsters cheating folk of their money (wonga.com anyone?)
 but TalkTalk were the ones to pis me off today, so they get ranted at.

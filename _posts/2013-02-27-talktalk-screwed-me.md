@@ -6,7 +6,7 @@ tags:
     - politics
 ---
 
-Let's be honest. TalkTalk have the
+TalkTalk have the
 [very cheapest broadband bundle available](http://www.moneysavingexpert.com/phones/cheap-broadband#talktalkBundle) - £3.25/month for the broadband part.
 They also have a
 [terrible customer service record](http://www.moneysavingexpert.com/news/phones/2011/06/talktalk-worst-of-big-guns-for-customer-service).

@@ -15,7 +15,7 @@ If you want you can [skip to the solution](#solution).
 
 <a id="problem"></a>
 The problem
----
+===
 
 The Vagrant website doesn't give you very much detail about how to install it. There is a [download page](http://downloads.vagrantup.com/tags/v1.0.3) with a list of packages for different systems, but when I tried to install this package on CentOS it gave me some sort of Ruby related error (I have zero experience with Ruby).
 
@@ -30,7 +30,7 @@ I [asked the internet](https://www.google.co.uk/search?sugexp=chrome,mod=9&amp;s
 
 <a id="solution"></a>
 The solution
----
+===
 
 You need to install Vagrant through Ruby Gems. Thankfully it really is pretty simple:
 

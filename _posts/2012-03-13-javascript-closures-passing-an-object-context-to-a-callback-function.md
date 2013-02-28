@@ -5,13 +5,14 @@ description: "A useful application for JavaScript Closures - passing object cont
 tags:
   - JavaScript
   - development
+  - front-end
 ---
  
 This is the first really useful application for [JavaScript closures](https://developer.mozilla.org/en/JavaScript/Guide/Closures) that I've found.
 
 <a id="problem"></a>
 The problem
----
+===
 
 (You can [skip straight to the solution](#solution) if you want).
 
@@ -52,7 +53,7 @@ This is because the global variable "globalString" is initially set to "hello", 
 
 <a id="solution"></a>
 The solution
----
+===
 
 The solution is to set the context (i.e. 'this') of the callback function `this.callback` to be the current object instance, so that the function will inherently have access to all the object's properties.
 

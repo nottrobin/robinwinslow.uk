@@ -9,7 +9,7 @@ tags:
 Things for me to learn and achieve.
 
 To learn:
----
+===
 
  - Chef Solo & Server
  - VeeWee...?
@@ -21,7 +21,7 @@ To learn:
  - Behat and related technologies
 
 To achieve:
----
+===
 
  - Create Jekyll blog
  - Get Pygments working in Windows (blog about it?)

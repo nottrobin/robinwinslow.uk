@@ -26,7 +26,7 @@ The following make up a list of HTML5 technologies, and the technology that coul
 sub-optimal immitation functionality in browsers that are missing it.
 
 HTML5
----
+===
 
  - localstorage & sessionstorage & web SQL db & indexedDB -> js + cookies
  - placeholder -> simple js (include support for HTML5 styling rules?)
@@ -44,7 +44,7 @@ HTML5
  - microdata, descriptive “rel”, and ARIA attributes -> already full support, but now specified
 
 Unsupportable
----
+===
 
 With most of these, the fact that they only have limited support is not a reason not to implement them,
 because they only provide supplementary functionality, not essential functionality.
@@ -61,7 +61,7 @@ because they only provide supplementary functionality, not essential functionali
  - different inputs on mobile devices for “number”, “email”, “uri”, “tel”
 
 CSS3
----
+===
 
 Can we use purely JavaScript to fix certain CSS problems? Reading CSS files for unknown attributes is
 pretty difficult to do…
@@ -82,6 +82,6 @@ E.g.:
  - Box model orientation and align
 
 Definitely can’t emulate
----
+===
 
  - Web fonts

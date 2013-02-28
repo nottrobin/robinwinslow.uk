@@ -8,7 +8,7 @@ tags:
 ---
 
 Design performance
----
+===
 
  - Write the whole page design in CSS (no images) if at all possible
  - Mobile-first (with no images at all)
@@ -16,7 +16,7 @@ Design performance
  - Obviously don't include unnecessary elements in the page
 
 Architecture
----
+===
 
  - Lazy-load *all* images, depending on visibility
  - Serve all files yourself - then you can bundle them up into a single request

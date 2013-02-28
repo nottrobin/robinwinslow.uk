@@ -18,14 +18,14 @@ machine from scratch, which was not what I wanted. I guess it must have not save
 `.vagrant`. Here's what I had to do to fix that.
 
 1. Get VBoxManage running
----
+===
 
 I needed to use the `vboxmanage` command to find the UUID of the existing virtual machine I wanted to associate
 with my vagrant directory. To do this I added the path containing `vboxmanage.exe` to my `PATH` variable, in my
 case this was `C:\Program Files\Oracle\VirtualBox`.
 
 2. Find the UUID of my virtual machine
----
+===
 
 I ran `vboxmanage list vms` to list all VMs by UUID.
 
@@ -37,7 +37,7 @@ I ran `vboxmanage list vms` to list all VMs by UUID.
 And copied the UUID of the one I wanted: `00b9a111-b18b-4609-becd-f0b77eecab17`
 
 3. Update my .vagrant file
----
+===
 
 ```
 vim .vagrant
@@ -50,7 +50,7 @@ And update it with my new UUID:
 ```
 
 4. Start vagrant again
----
+===
 
 ```
 vagrant up

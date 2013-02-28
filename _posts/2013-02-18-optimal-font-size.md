@@ -7,7 +7,7 @@ tags:
 ---
 
 Font-size
----
+===
 
 I googled "Optimal font-size", read first
 [16 pixels](http://www.smashingmagazine.com/2011/10/07/16-pixels-body-copy-anything-less-costly-mistake/)
@@ -15,7 +15,7 @@ then [a dao of web design](http://alistapart.com/article/dao) and came to the co
 the optimal font-size is *not to specify one*.
 
 Line-height
----
+===
 
 As for optimal line-height - around
 [1.5em is common](http://www.smashingmagazine.com/2009/08/20/typographic-design-survey-best-practices-from-the-best-blogs/),
@@ -23,7 +23,7 @@ but [The Golden Ratio](http://www.pearsonified.com/2011/12/golden-ratio-typograp
 neater. So that's a good standard.
 
 Line-length
----
+===
 
 As for line length - [golden ratio typography](http://www.pearsonified.com/2011/12/golden-ratio-typography.php)
 claims that it should be proportional to line-height, which makes sense, but the equation they suggest

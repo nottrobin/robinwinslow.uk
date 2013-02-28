@@ -5,6 +5,7 @@ layout: post
 tags:
   - development
   - PHP
+  - back-end
 ---
  
 I just made this PHP class. It's extremely simple and easy to use for

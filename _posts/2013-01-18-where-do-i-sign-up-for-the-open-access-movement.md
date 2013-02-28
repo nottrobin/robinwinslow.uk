@@ -7,6 +7,7 @@ layout: post
 tags:
   - development
   - politics
+  - personal
 ---
  
 I really wish I had the emotional eloquence to express what John Grubb Atkinson did so beautifully:

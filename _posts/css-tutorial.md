@@ -23,7 +23,7 @@ there for CSS that have recently emerged, including:
    how to bring them all together for an elegant and scalable CSS strategy.
 
 What is CSS (in brief)
----
+===
 
 In the beginning of the internet there was only HTML. People used tables and <font> tags to make
 their pages look how they wanted:
@@ -55,7 +55,7 @@ header h1 {float: right; font-size: big }
 ```
 
 Problems with CSS
----
+===
 
 CSS is a central part of any modern website project. Modern websites are larger and need more styling
 information. Although there is a recent trend for designs to be simpler, with more repeated elements
@@ -67,10 +67,10 @@ a strong focus on developing usability. This brings a set of problems - it needs
 new and existing style elements while maintaining consistency across the site. 
 
 Inconsistent application
----
+===
 
 Size and structure
----
+===
 
 Nowadays people working on big projects *brag about getting their CSS down to under 10000 lines*.
 
@@ -79,7 +79,7 @@ a styling effect that already exists but have no idea where to find it, so they 
 the bottom of a massive CSS file.
 
 Repeatability
----
+===
 
 CSS solved the problem of repeated styling only at the highest level - if you have 2 elements in the HTML
 that you want to look the same you can give them the same class. However the majority of CSS projects still

@@ -1,28 +1,41 @@
 ---
 layout: page
-title: Home page
+title: All posts
 ---
 
 <nav>
+    <h1>Top tags</h1>
+    
     <ul>
-{% for tag in site.tags %}
-        <li><a href="/categories.html#{{ tag[0] }}">{{ tag[0] }}</a> <small>({{ tag[1].size }})</small></li>
-{%endfor%}
+        <li>
+            <a href="/front-end.html">Front-end</a> <small>({{ site.tags.front-end.size }})</small>
+        </li>
+        <li>
+            <a href="/back-end.html">Back-end</a> <small>({{ site.tags.back-end.size }})</small>
+        </li>
+        <li>
+            <a href="/politics.html">Politics</a> <small>({{ site.tags.politics.size }})</small>
+        </li>
+        <li>
+            <a href="/personal.html">Personal</a> <small>({{ site.tags.personal.size }})</small>
+        </li>
     </ul>
-
+    
+    <p>See <a href="/postsbytag.html">all {{ site.tags.size }} tags</a></p>
 </nav>
 
 <section class="headless">
-
+    <h1>All articles</h1>
+    
 {% for post in site.posts %}
     <article>
         <a href="{{ post.url }}">
             <h1>{{ post.title }}</h1>
             <date>{{ post.date | date_to_string }}</date>
             {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+            <nav><ul>{% for tag in post.tags %}<a href="/postsbytag.html#{{ tag[0] }}">{{ tag[0] }}</a>{% endfor %}</ul></nav>
         </a>
     </article>
 {% endfor %}
 
 </section>
-

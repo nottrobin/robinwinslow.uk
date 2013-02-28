@@ -1,9 +1,23 @@
+// Constants
 $golden-ratio:     1.618;
-$line-height:      $golden-ratio;
-$post-background:  #fff;
-$post-font-color:  #000;
-$link-font-color:  #555;
-$index-background: #333;
-$index-font-color: #fff;
+$golden-em:        $golden-ratio * 1em;
+
+// Main text
 $main-font:        Arvo, garamond, serif;
-$heading-font:     Lato, sans-serif;
+$font-color:       #000;
+$line-height:      $golden-ratio;
+$link-hover-color: #555;
+
+// Headings
+$heading-font:        Lato, sans-serif;
+$title-size:          $golden-ratio * $golden-em;
+$first-heading-size:  $golden-em;
+$second-heading-size: 1em;
+
+// Backgrounds
+$article-background:  #fff;
+
+// Overrides
+// - dark
+$dark-background: #333;
+$dark-font-color: #fff;

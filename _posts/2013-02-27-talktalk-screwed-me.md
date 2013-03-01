@@ -16,7 +16,7 @@ We were going to have to accept terrible connection speeds anyway, because of ou
 and I thought being a highly technical user, I'd have little need for customer service.
 
 You can't avoid our small print
----
+===
 
 For a while I've been wondering why our broadband bills tended to be closer to £8 than £3.
 Today I finally got up the botheredness to phone them about it.
@@ -28,7 +28,7 @@ I'm sure this must be in the small print somewhere, but I didn't see it, and you
 one could reasonably expect from a customer, and I am wise to and on the lookout for these sorts of tricks.
 
 TalkTalk, do yourselves a favour...
----
+===
 
 I want to say that I have no beef with the guy who answered the phone when I called them.
 I think his name was Allen. He was pretty slow, but otherwise very friendly, and he forwarded all my complaints on to his supervisor faithfully.
@@ -41,7 +41,7 @@ This is really stupid because the amount was so small (£7.25) and the potential
 to *at least* £7.25's worth. Honestly TalkTalk, do yourselves a favour.
 
 This isn't even about me. Honest.
----
+===
 
 I lost £7.25. I hope you won't think I'm being a horrible snob when I say I genuinely hardly care about that amount of money.
 It was not worth the stress of my long phone call with Allen.

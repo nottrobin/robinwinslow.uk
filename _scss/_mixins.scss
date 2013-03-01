@@ -41,14 +41,16 @@
 @mixin article-block {
     background-color: $article-background;
     color:            $font-color;
-    padding: 1rem; 
+    padding:          1rem;
     @include layout-content-block;
 }
 
 @mixin layout-body-block {
-    max-width: 43rem;
-    margin-left: auto;
-    margin-right: auto;
+    max-width:     43rem;
+    padding-left:  1rem;
+    padding-right: 1rem;
+    margin-left:   auto;
+    margin-right:  auto;
     @include layout-content-block;
 }
 @mixin layout-content-block { margin-top: $golden-em; }
@@ -57,27 +59,25 @@
 @mixin site-header {
     @include layout-thin-strip;
     
-    background-color: black;
-    font-size: 1.3em;
-    overflow: hidden;
-    color: white;
+    background-color:  black;
+    font-size:         1.3em;
+    overflow:          hidden;
+    color:             white;
     
-    a {
-        border-bottom: none;
-    }
+    a { border-bottom: none; }
 }
 
 @mixin address-list {
     ul {
         list-style-type: none;
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
+        padding:         0;
+        margin:          0;
+        overflow:        hidden;
     }
     li {
-        float: left;
+        float:    left;
         overflow: hidden;
-        margin: 0.4rem 0 0 1rem;
+        margin:   0.4rem 0 0 1rem;
         &:first-child {margin-right: 0;}
     }
 
@@ -85,8 +85,44 @@
 }
 
 @mixin article-list {
-    article>a {
-        display: block;
-        border-bottom: none;
+    article {
+        &>a {
+            display:       block;
+            border-bottom: none;
+            padding:       1rem;
+            margin:        -1rem -1rem 0 -1rem;
+            &:hover { opacity: 1; }
+        }
+        
+        &:hover { background-color: #ddd; }
+        
+        nav {
+            margin-top: 0;
+            
+            h1 {
+                float: left;
+                font-size: 1em;
+                margin-right: $golden-em;
+                line-height: $golden-ratio;
+                
+                &:after {
+                    content: ':';
+                }
+            }
+            
+            ul {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            li {
+                float: left;
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-right: 1rem;
+                width: auto;
+                
+                &:last-child {margin-left: 0;}
+            }
+        }
     }
 }

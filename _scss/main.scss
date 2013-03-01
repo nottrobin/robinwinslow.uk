@@ -24,14 +24,11 @@ h2         { @include secondary-heading; }
 
 /* Links */
 a          { @include link-text; }
-
 article    { @include article-block; }
 
 /* Layout blocks */
 body>nav, body>article, body>section { @include layout-body-block; }
-
-section    { @include article-list; }
-
+section     { @include article-list; }
 .index-page { @include dark-page; }
 
 /* Address */
@@ -95,7 +92,7 @@ header>aside, footer>aside { max-width: 47rem; }
 /* Header */
 body>header { @include site-header }
 body>header a {
-    color: #ccc; /* same as dark theme */
+    color: #fff; /* same as dark theme */
 }
 body>header h1, body>header h2, body>header p {
     margin-top: 0;
@@ -111,7 +108,7 @@ footer {
 footer aside, section {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-.dark footer aside, .dark section {
+.index-page footer aside, .index-page section {
     border-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -140,14 +137,19 @@ nav li {
     float: left;
     width: 10em;
     padding-right: 1rem;
+    
     @include box-sizing(border-box);
 }
+
+body>nav ul a { border-bottom: none; }
 
 .comments {
     margin-top: 1.618rem;
     margin-bottom: -30px;
     padding-top: 1.618rem;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+    
+    @include layout-body-block;
 }
 
 // Responsive - larger screens
@@ -156,23 +158,32 @@ nav li {
     header hgroup { float: left; }
 }
 
-@media all and (min-width: 60em) {
-  .icon-github, li .icon-github[class^="icon-"] {
+@media all and (min-width: 64em) {
+  .github {
       position: absolute;
-      width: 149px;
-      height: 149px;
       background-image: url('https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png');
       top: 0;
       right: 0;
       border: none;
+      margin: 0;
+      overflow: hidden;
+      width: 149px;
+      height: 149px;
       
-      &:before {
-          display: none;
+      a {
+          width:       100%;
+          height:      100%;
+          text-indent: 100%;
       }
   }
   address li:nth-last-child(2) {
       margin-right: 0;
   }
+}
+
+header+section {
+    border-top: none;
+    margin-top: 0;
 }
 
 /* ==========================================================================

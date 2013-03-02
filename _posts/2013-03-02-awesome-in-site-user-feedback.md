@@ -30,7 +30,7 @@ or you can submit your own suggestion on the right. It's perfect.
 
 The feedback link is totally customisable, and easy to include in your site with a simple Javascript snippet.
 
-I use the service on this very site - look to the right ---->  
+I use the service on this very site (look to the right).
 Please click it to see Uservoice in action and please leave me some feedback :).
 
 The missing link - Github Issues integration

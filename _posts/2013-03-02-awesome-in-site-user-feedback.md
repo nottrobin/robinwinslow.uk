@@ -1,5 +1,5 @@
 ---
-title: 'Awesome in-site user feedback as Github Issues with Uservoice and Zapier'
+title: 'An awesome in-site user feedback tool - with Github integration'
 description: 'How I discovered the Uservoice in-site feedback widget, and integrated it with Github Issues using Zapier'
 layout: post
 tags:

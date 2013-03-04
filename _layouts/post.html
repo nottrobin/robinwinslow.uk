@@ -13,13 +13,31 @@ layout: default
 
 {% if page.tags %}
 <section id="categories">
+    <h1>Similar posts</h1>
+    
+    <nav>
+        <ul>
+    {% for tag in site.tags %}{% if tag[0] == page.tags[0] %}
+        {% for post in tag[1] %}
+            {% if forloop.index < 4  and post.title != page.title %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+    {% endif %}{% endfor %}
+        </ul>
+    </nav>
+</section>
+{% endif %}
+
+{% if page.tags %}
+<section id="categories">
     <h1>Read more about</h1>
     
     <nav>
         <ul>
     {% for tag in site.tags %}
-        {% if page.tags contains tag[0] %}
-            <li><a href="/categories.html#{{ tag[0] }}">{{ tag[0] }}</a> <small>({{ tag[1].size }})</small></li>
+        {% if page.tags contains tag[0] and tag[1].size > 1 %}
+            <li><a href="/postsbytag.html#{{ tag[0] }}">{{ tag[0] }}</a> <small>({{ tag[1].size }})</small></li>
         {% endif %}
     {%endfor%}
         </ul>

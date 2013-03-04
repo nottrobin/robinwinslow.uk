@@ -32,11 +32,9 @@ section     { @include article-list; }
 .index-page { @include dark-page; }
 
 /* Address */
-address { @include address-list; }
+address     { @include address-list; }
 
-a:hover {
-    color: inherit;
-}
+a:hover     { color: inherit; }
 
 /* Hgroup */
 hgroup {

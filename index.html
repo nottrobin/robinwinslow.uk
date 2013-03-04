@@ -1,7 +1,7 @@
 ---
 layout: page
-title: All blog articles
-description: Articles about web development, articles about politics. Also general rants and ramblings.
+title: "A developer's blog"
+description: 'Blog articles about client- and server-side web-site development. Also some about politics. Also general rants and ramblings.'
 ---
 
 <nav>
@@ -30,6 +30,11 @@ description: Articles about web development, articles about politics. Also gener
     
 {% for post in site.posts %}
     {% include list-article.html %}
+
+    <nav>
+        <h1>Tagged</h1>
+        <ul>{% for tag in post.tags %}<li><a href="/postsbytag.html#{{ tag }}">{{ tag }}</a></li>{% endfor %}</ul>
+    </nav>
 {% endfor %}
 
 </section>

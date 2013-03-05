@@ -39,8 +39,8 @@ use the built-in functionality when it's there, with fall-backs for browsers tha
 
 ``` javascript
 if (!Modernizr.inputtypes['date']) {
-    $('input[type=date]').datepicker();   
-}​
+    $('input[type=date]').datepicker();
+}
 ```
 
 This is a solid approach I strongly believe in.

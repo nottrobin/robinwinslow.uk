@@ -1,5 +1,4 @@
 // Libraries
-@import "lib/bourbon/bourbon";
 @import "lib/font-awesome";
 @import "lib/pygments";
 
@@ -141,7 +140,9 @@ nav li {
     width: 10em;
     padding-right: 1rem;
     
-    @include box-sizing(border-box);
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
 }
 
 body>nav ul a { border-bottom: none; }

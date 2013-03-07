@@ -24,16 +24,6 @@ $borderColor:       #eee;
 $iconMuted:         #eee;
 @mixin border-radius($radius) { -webkit-border-radius: $radius; -moz-border-radius: $radius; border-radius: $radius; }
 
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('#{$fontAwesomePath}/fontawesome-webfont.eot?v=3.0.1');
-  src: url('#{$fontAwesomePath}/fontawesome-webfont.eot?#iefix&v=3.0.1') format("embedded-opentype"),
-    url('#{$fontAwesomePath}/fontawesome-webfont.woff?v=3.0.1') format("woff"),
-    url('#{$fontAwesomePath}/fontawesome-webfont.ttf?v=3.0.1') format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 /*  Font Awesome styles
     ------------------------------------------------------- */
 [class^="icon-"],

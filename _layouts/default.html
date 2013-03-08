@@ -13,8 +13,6 @@
     	{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
         <meta name="viewport" content="width=device-width">
         
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:300,500' />
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Arvo' />
         <link rel='stylesheet' href='/css/main.css' />
 
         <script>
@@ -23,9 +21,13 @@
                 ['_setAccount','UA-2993676-8'],
                 ['_trackPageview']
             ];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = '//google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
         </script>
     </head>
 

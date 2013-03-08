@@ -1,7 +1,11 @@
 // Libraries
-@import "lib/bourbon/bourbon";
 @import "lib/font-awesome";
 @import "lib/pygments";
+
+// Fonts
+@import "fonts/lato";
+@import "fonts/arvo";
+@import "fonts/fontawesome";
 
 // Settings
 @import "settings";
@@ -147,7 +151,9 @@ nav li {
     width: 10em;
     padding-right: 1rem;
     
-    @include box-sizing(border-box);
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
 }
 
 body>nav ul a { border-bottom: none; }
@@ -170,7 +176,7 @@ body>nav ul a { border-bottom: none; }
 @media all and (min-width: 64em) {
   .github {
       position: absolute;
-      background-image: url('https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png');
+      background-image: url('/images/forkme.png');
       top: 0;
       right: 0;
       border: none;

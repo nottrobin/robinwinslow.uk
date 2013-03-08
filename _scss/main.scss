@@ -37,9 +37,7 @@ address     { @include address-list; }
 a:hover     { color: inherit; }
 
 /* Hgroup */
-hgroup {
-    overflow: hidden;
-}
+hgroup      { overflow: hidden; }
 hgroup>*, hgroup>h1 {
     font-size: 1.618em;
     float: left;
@@ -69,6 +67,19 @@ hgroup h2 {
     padding: 1rem;
     background-color: #ddd;
     margin: 1rem 0 0 0;
+}
+blockquote {
+    position: relative;
+    text-indent: 1rem;
+
+    &:before {
+        content: '\201C';
+        position: absolute;
+        text-indent: 0;
+        font-size: $golden-em * $golden-ratio;
+        top: 0;
+        left: 0.5rem;
+    }
 }
 blockquote p:first-child {
     margin-top: 0;

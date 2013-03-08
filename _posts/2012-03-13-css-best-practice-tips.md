@@ -4,6 +4,8 @@ description: Some (slightly contentious) general rules for writing good CSS.
 layout: post
 tags:
   - CSS
+  - front-end
+  - best-practice
   - development
 ---
 
@@ -13,7 +15,7 @@ Never use IDs
 They are useless. You get no performance benefit from using IDs, and you confuse yourself by
 adding more specificity rules that you have to think about (IDs bind harder than classes).
 There is no situation where you use an ID that you could not instead use a class. Only use IDs
-in mark-up to show sections in the document - for # hashtags. Never use them for CSS. Hello.
+in mark-up to show sections in the document - for # hashtags. Never use them for CSS.
 
 Always make rules as generic as possible
 ===
@@ -25,9 +27,13 @@ using really specific rules makes it more likely that your CSS is going to get r
 Use class with semantics in mind
 ===
 
-From the W3C: "Good names don't change. Think about why you want something to look a certain way,
-and not really about how it should look. Looks can always change, but the reasons for giving
-something a look stay the same." You might have to break this rule if using CSS frameworks.
+From the W3C:
+
+> Good names don't change. Think about why you want something to look a certain way,
+> and not really about how it should look. Looks can always change, but the reasons for giving
+> something a look stay the same.
+
+You might have to break this rule if using CSS frameworks.
 I'll leave that one up to you.
 
 Useful resources for CSS best practice

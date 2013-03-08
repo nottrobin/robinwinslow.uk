@@ -27,7 +27,7 @@ using really specific rules makes it more likely that your CSS is going to get r
 Use class with semantics in mind
 ===
 
-From the W3C:
+From [the W3C](http://www.w3.org/QA/Tips/goodclassnames#id01):
 
 > Good names don't change. Think about why you want something to look a certain way,
 > and not really about how it should look. Looks can always change, but the reasons for giving

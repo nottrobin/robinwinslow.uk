@@ -51,7 +51,7 @@ This is where I communicated terribly:
 > 
 > -- <cite>nottrobin</cite>
 
-I can see from my second reply there that she might have thought I had opened the iPad's manufacturer box
+I can see from my second reply there that she might have thought I had opened the iPad's manufacturer box (I hadn't), 
 which led to...
 
 The part where they try to steal £10

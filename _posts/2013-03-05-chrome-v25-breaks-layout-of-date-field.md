@@ -25,7 +25,7 @@ I think this is, if not "best", at least a pretty common practice.
 
 So one day we realised our date fields looked broken in Chrome, and it was because of this issue. So my boss said:
 
-> "If we can't rely on the date control not to break, we have to abandon the HTML5 date field altogether"
+> If we can't rely on the date control not to break, we have to abandon the HTML5 date field altogether
 
 And that's entirely fair reasoning.
 

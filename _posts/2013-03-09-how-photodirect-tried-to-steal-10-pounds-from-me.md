@@ -109,7 +109,7 @@ This is important
 Fortunately for me I am the sort of person who will look up my rights in situations like this.
 
 Lots of other people don't have the time or the inclination,
-and probably the socially dis empowered are the least likely to do so.
+and probably the socially dis-empowered are the least likely to do so.
 
 In this situation, photodirect could have got away with stealing from them by not giving them a full refund.
 That is why I think this is important, and why I think this was particularly disgusting behaviour on the part of photodirect.

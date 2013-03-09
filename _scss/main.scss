@@ -76,6 +76,10 @@ blockquote {
     position: relative;
     text-indent: 1rem;
 
+    & *:not(:first-child) {
+        text-indent: 0;
+    }
+
     &:before {
         content: '\201C';
         position: absolute;

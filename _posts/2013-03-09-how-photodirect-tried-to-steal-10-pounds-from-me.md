@@ -12,12 +12,12 @@ tags:
 
 I feel like I've been having a lot of arguments with companies lately.
 
-On Tuesday I bought an iPad from [PhotoDirect on eBay](http://www.ebay.co.uk/sch/i.html?_nkw=photodirect) and on Wednesday it arrived (wonderful service).
+On Tuesday I bought an iPad from [PhotoDirect on eBay](http://www.ebay.co.uk/sch/i.html?_nkw=photodirect) as a birthday present for my girlfriend and on Wednesday it arrived (wonderful service).
 
 iPad browsing problems
 ===
 
-However, then we realised that her core online learning resource - [e-learning for healthcare](http://e-lfh.org.uk)
+However, then we realised that my girlfriend's core online learning resource - [e-learning for healthcare](http://e-lfh.org.uk)
 - doesn't work on an iPad (incidentally it works fine on [Jelly Bean](http://www.android.com/about/jelly-bean/) but that's another story).
 
 Returning an iPad

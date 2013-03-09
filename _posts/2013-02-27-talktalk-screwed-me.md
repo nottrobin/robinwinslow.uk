@@ -3,7 +3,9 @@ title: TalkTalk screwed me - and the country
 description: How TalkTalk absolutely delivered on their promise of shockingly bad customer service
 layout: post
 tags:
+    - "consumer rights"
     - politics
+    - personal
 ---
 
 TalkTalk have the

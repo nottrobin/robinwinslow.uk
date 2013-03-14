@@ -39,9 +39,9 @@ $ sudo yum install ruby
 ...
 $ sudo yum install rubygems
 ...
-$ sudo gems update --system
+$ sudo gem update --system
 ...
-$ sudo gems install vagrant
+$ sudo gem install vagrant
 ```
 
 On my system this installed Vagrant to:

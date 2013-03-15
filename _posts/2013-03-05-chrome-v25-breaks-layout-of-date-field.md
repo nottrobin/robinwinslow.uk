@@ -12,7 +12,7 @@ Chrome version 25 appears to have made a pretty serious change to how the [HTML5
 
 Now the `date` type defaults to `display: -webkit-inline-flex`, and (this is the bad bit) if you use `display: block` the layout breaks:
 
-![date field layout broken](/images/chrome-date-field-broken-layout.png)
+![date field layout broken](http://farm9.staticflickr.com/8374/8560632520_e4bf8f71ee_m.jpg)
 
 ([try it yourself](http://jsfiddle.net/nottrobin/zjHbv/2/))
 

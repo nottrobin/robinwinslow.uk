@@ -49,6 +49,9 @@ use Rack::Rewrite do
     r301 %r{^/post/29652660939},     '/2012/08/06/finding-a-free-version-of-gill-sans'
 end
 
+if defined?(Encoding)
+  Encoding.default_internal = Encoding.default_external = "UTF-8"
+end
 
 # Serve files
 # ---
@@ -57,8 +60,17 @@ use Rack::TryStatic,
     :urls         => %w[/],         # match all requests
     :index        => 'index.html',  # index.html is index (/)
     :try          => ['.html'],     # try adding .html
-    :header_rules => [              # Cache CSS and JS for a year
-        [['css', 'js'], {'Cache-Control' => 'public, max-age=29030400'}]
+    :header_rules => [
+        [['html'],      {'Content-Type' => 'text/html; charset=utf-8'}], # Specify encoding for HTML 
+        # Cache CSS and JS for a year
+        [['css'], {
+            'Content-Type' => 'text/css; charset=utf-8',
+            'Cache-Control' => 'public, max-age=29030400'}
+        ],
+        [['js'], {
+            'Content-Type' => 'text/javascript; charset=utf-8',
+            'Cache-Control' => 'public, max-age=29030400'}
+        ],
     ]
 
 # Deleted or not found

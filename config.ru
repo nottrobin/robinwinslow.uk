@@ -2,6 +2,9 @@ require 'rack'
 require 'rack/rewrite'
 require 'rack/contrib/try_static'
 
+# Enable compression
+use Rack::Deflater
+
 # Rewrites
 # ---
 use Rack::Rewrite do
@@ -47,10 +50,6 @@ use Rack::Rewrite do
     r301 %r{^/post/19243192502},    '/2012/03/13/usable-layout-responsive-design'
     r301 %r{^/post/40557407998},    '/2013/01/18/where-do-i-sign-up-for-the-open-access-movement'
     r301 %r{^/post/29652660939},     '/2012/08/06/finding-a-free-version-of-gill-sans'
-end
-
-if defined?(Encoding)
-  Encoding.default_internal = Encoding.default_external = "UTF-8"
 end
 
 # Serve files

@@ -13,7 +13,9 @@
     	{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
         <meta name="viewport" content="width=device-width">
         
-        <link rel='stylesheet' href='/css/main.css' />
+        {% css_asset_tag main %}
+        - /_css/main.css
+        {% endcss_asset_tag %}
 
         <script>
             var _gaq=[

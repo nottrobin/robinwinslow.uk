@@ -8,6 +8,12 @@ use Rack::Deflater
 # Rewrites
 # ---
 use Rack::Rewrite do
+
+    # Redirect www to apex
+    r301 %r{.*}, 'http://robinwinslow.co.uk$&', :if => Proc.new {|rack_env|
+        rack_env['SERVER_NAME'] == 'www.robinwinslow.co.uk'
+    }
+
     # Remove HTML extensions
     r301 %r{^/(\w+).html$},     '/$1'
 

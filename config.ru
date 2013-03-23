@@ -23,7 +23,7 @@ use Rack::Rewrite do
     r301 '/tagged/tmux',                        '/postsbytag.html#unix'
     r301 '/tagged/open-access',                 '/postsbytag.html#politics'
     r301 '/page/2',                             '/'
-    r301 '/categories.html',                    '/postsbytag.html'
+    r301 '/categories',                         '/postsbytag.html'
     r301 '/2011/05/25/javascript-passing-an-object-context-to-a-callback-function/feed/', '/2012/03/13/javascript-closures-passing-an-object-context-to-a-callback-function'
 
     # Regex rewrites

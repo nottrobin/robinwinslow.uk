@@ -48,7 +48,7 @@ This isn't even about me. Honest.
 I lost £7.25. I hope you won't think I'm being a horrible snob when I say I genuinely hardly care about that amount of money.
 It was not worth the stress of my long phone call with Allen.
 
-What really fucks me off is that this is obviously deliberate. They know hardly anyone actually wants the 1000 minutes bundle.
+What really pisses me off is that this is obviously deliberate. They know hardly anyone actually wants the 1000 minutes bundle.
 And since they are offering the cheapest and shittest broadband service, most of their customers are going to be those for whom money is tightest.
 Add to that that poor people
 [tend to be are less good at looking after their money](http://www.guardian.co.uk/commentisfree/2013/feb/27/banking-while-poor-predatory-payday-lending1)

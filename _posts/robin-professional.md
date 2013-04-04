@@ -12,9 +12,9 @@ I am excited by The Internet.
 
 I enjoy creating class structures to be easily maintainable and extendible. I like critically analysing design patterns and principles of software design, and enjoy thinking about levels of abstraction and the way layers interact within an application. I like designing APIs based on RESTful principles (within reason) and statelessness.
 
-I like functional designs and **I love usability**. I enjoy using HTML5, CSS3, responsive design and progressive enhancement to create neat and flexible web pages.
+I like functional designs and love usability. I enjoy creating simple, intuitive and responsive designs. I love creating neat and flexible web pages that work efficiently on any interface.
 
-I love the Agile manifesto. I'm interested in modern radical methods for managing projects and people. I value small self-managed teams, short and regular meetings and pair-programming. I believe in striving for friendly, flexible and diverse work environments with a truly no-blame culture. I want to champion transparency, measurement and continuous improvement.
+I love the Agile manifesto. I'm interested in modern radical methods for managing projects and people. I value small self-managed teams, short and regular meetings and pair-programming. I believe in striving for friendly, flexible and diverse work environments with a truly no-blame culture. I want to champion transparency, experimentation and continuous improvement.
 
 I like optimising web applications and work-flows. I enjoy configuring environments and servers for rapid and frequent releases. I like designing branching models for version control.
 

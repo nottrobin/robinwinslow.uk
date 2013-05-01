@@ -1,10 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    RedCloth (4.2.9)
     RedCloth (4.2.9-x86-mingw32)
     classifier (1.3.3)
       fast-stemmer (>= 1.0.0)
-    directory_watcher (1.4.1)
+    directory_watcher (1.5.1)
     fast-stemmer (1.0.2)
     jekyll (0.12.1)
       classifier (~> 1.3)
@@ -13,10 +14,14 @@ GEM
       liquid (~> 2.3)
       maruku (~> 0.5)
       pygments.rb (~> 0.3.2)
+    jekyll-asset-pipeline (0.1.6)
+      jekyll (~> 0.12)
+      liquid (~> 2.4)
     kramdown (0.14.2)
     liquid (2.5.0)
     maruku (0.6.1)
       syntax (>= 1.0.0)
+    newrelic_rpm (3.6.1.87)
     posix-spawn (0.3.6)
     pygments.rb (0.3.7)
       posix-spawn (~> 0.3.6)
@@ -26,15 +31,20 @@ GEM
       rack (>= 0.9.1)
     rack-rewrite (1.3.3)
     redcarpet (2.2.2)
+    sass (3.2.8)
     syntax (1.0.0)
+    yajl-ruby (1.1.0)
     yajl-ruby (1.1.0-x86-mingw32)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
   RedCloth
-  jekyll
+  jekyll-asset-pipeline
+  newrelic_rpm
   rack-contrib
   rack-rewrite
   redcarpet
+  sass

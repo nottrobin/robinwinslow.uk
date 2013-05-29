@@ -18,7 +18,7 @@ The bootstrap script
 I suggest you create the bootstrap as its own script so you can include it in all your little scripts:
 
 ``` bash
-# from magento root
+# from magento project root
 mkdir scripts
 touch scripts/bootstrap.php
 ```
@@ -58,7 +58,9 @@ Once you've done this, you can use the `Mage` static to [do whatever you like](h
 A use-case
 ===
 
-Here's a useless example - you need to put your :
+Here's a simple example that just retrieves child IDs of the default category.
+
+Note how this script includes the bootstrap script that we just made at the top:
 
 ``` php
 // scripts/default-category-children.php
@@ -72,6 +74,7 @@ $defaultCategory = Mage::getModel('catalog/category')->getCollection()->addAttri
 
 // Show a list of IDs of its children
 echo $defaultCategory->getChildren();
+?>
 ```
 
 And now you can run this directly from the command-line:
@@ -79,7 +82,6 @@ And now you can run this directly from the command-line:
 ``` bash
 $ php scripts/default-category-children.php
 3,7,8
-?>
 ```
 
 There are many useful things you can do with these scripts - not to mention writing them will increase your understanding of Magento like nothing else.

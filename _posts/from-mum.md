@@ -1,0 +1,27 @@
+Sun Aug 23rd
+Dear Robin,
+You asked if I would write down something about our conversation. ..........well..........my experience is, I suppose, that I can start anywhere and the threads tend to come out.........
+You spoke about seeing yourself as ‘narcissistic’ and I wondered which element of ‘narcissism’ you related to most strongly. You seemed to be saying both that you didn’t feel you really related to people, that you used them as a distraction, but you were concerned because you didn’t really feel you cared about anybody. And also that you had a strong feeling about having a ‘false self’ (you didn’t use that term) which was a long distance away from your ‘true self’, an authentic sense of who you were and what you wanted. So these are two elements of ‘narcissism’, two sides of the same coin – an alienation from yourself and from others, and a self-centredness. Would that be what you were saying?  You said that when you were depressed or down you felt that life was meaningless.
+(to my mind, although not all forms of depression are involved with a sense of meaninglessness,  nevertheless one of the most central issues and causes of depression is a sense of meaninglessness. But it is easy for us to imagine that a sense of meaning is something to do with the intellect; and for the most part, it isn’t.)
+That is one small paragraph and yet at the moment it seems to summarize most of what you said.  I am sure I am missing something .........but basically, you seemed to be speaking about authenticity and a longing for it. You said you did so many things basically because other people wanted you too and that you had noticed that you were doing slightly fewer things for other people and sticking up for yourself more and that sometimes the effects of that were uncomfortable, that people didn’t like it.
+You said that you did feel you were being genuine in your therapy sessions and that was really the only place that you felt genuine? And that you didn’t feel judged there. But that in certain moods that all seemed useless too, that the therapy is pointless too. I feel as though I can understand that. You seemed to be saying that you accepted that your experiences of being detached (I am not sure that is quite an accurate expression though of what you were saying or mean.) or alienated from what you are ‘meant’ to be doing  are form of depression; and that furthermore, you accepted the depression as having some sort of meaning, some kind of information to give about what you are not/haven’t been in touch with. It sounded as though in a sense you wanted life to come to some sort of ‘stop’ where you could work things out from scratch – what you value and want and aim for.
+I’m not sure I can add much more ...........you told me a bit at the end about your relationship with Subha and the fall-out you had had. When I think about how she likes to talk to you on the phone, I think that she must especially want her connection needs met through verbal exchange. But for you, you find it easier to open up verbally or feel connected verbally if you have a physical connection, rather than the other way around. 
+You said that she (and others such as some of your housemates) didn’t really have a clue why you found it difficult to get down to things, so you got very little sympathy or understanding or respect with it.
+ 
+I felt a whole mixture of feelings\reactions and thoughts about what you were saying but none of them feel surprising, or particularly relevant to share. But Iets talk again.
+I was really glad we made the effort to actually get to the Peak District together and I enjoyed it, and meeting you since.
+I wondered if you had ever considered going to any sort of meditation class – there must be some in Nottingham. Or whether you ever write about yourself? (I picked up a book on journal writing as spiritual practice when I was at Quaker Summer Gathering because I wanted to re-inspire myself. It can be hard to take yourself seriously, but in a way you can’t take others, or the ‘world out there’ seriously either until you take yourself seriously.) It is an achievement to be able to take yourself seriously in therapy.
+ 
+I still have this book on Procrastination which I really brought for you. It is v good but a bit complex, maybe – working through different parts of the ‘action cycle’ which hold particular blocks.  I think you said you hadn’t actually read the book I brought for you some years ago called ‘Sunrise of Wonder’ and I wonder whether you would like to have that back too.  Thought I might pop it/them in the post.
+ 
+(There are a couple of other books I would really like to give you sometime but I don’t want to give you indigestion.)
+ 
+It sounded very basic the stuff you were saying.
+There was also the bit about doubting what sense you were making or whether it was really true, and we discussed the difference between something being spoken truthfully in the moment,and something being a known and enduring truth.
+Words are not facts, nor an accurate map of facts,  but pointers to some reality that is never accurately depicted nor for all time, but which we can sometime capture a flavour of.
+ 
+Hope this is of some ‘use’ & rings some bells .........get back to me on any of it you want to...
+ 
+With lots of love
+Mum
+ 

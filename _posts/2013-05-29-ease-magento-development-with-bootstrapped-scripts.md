@@ -1,0 +1,87 @@
+---
+layout: post
+title: Ease Magento development with bootstrapped scripts
+description: Mini 
+tags
+    - development
+    - magento
+    - back-end
+---
+
+If you work in Magento a lot, you'll come to many many points when you need to manipulate the models in Magento programmatically.
+
+This could be because you need to inspect the raw-data, but it's probably because you need to edit or add existing models.
+
+The bootstrap script
+===
+
+I suggest you create the bootstrap as its own script so you can include it in all your little scripts:
+
+``` bash
+# from magento root
+mkdir scripts
+touch scripts/bootstrap.php
+```
+
+Bootstrapping Magento requires a few lines - you can tweak the individual settings if you like:
+
+
+``` php
+// scripts/bootstrap.php
+
+<?php
+ini_set('memory_limit', '1024M');
+set_time_limit(0);
+
+/* Includes */
+require_once realpath(dirname(__FILE__)) . '/../app/Mage.php';
+
+/* Enable developer mode */
+Mage::setIsDeveloperMode(true);
+
+Mage::app('admin')->setUseSessionInUrl(false);
+
+$userModel = Mage::getModel('admin/user');
+$userModel->setUserId(0);
+Mage::getSingleton('admin/session')->setUser($userModel);
+
+Mage::app()->setCurrentStore(Mage_Core_Model_App::ADMIN_STORE_ID);
+
+/* Undo Magento's hiding of errors */
+error_reporting(-1);
+ini_set('display_errors', 1);
+?>
+```
+
+Once you've done this, you can use the `Mage` static to [do whatever you like](http://www.magentocommerce.com/knowledge-base/entry/magento-for-dev-part-1-introduction-to-magento). 
+
+A use-case
+===
+
+Here's a useless example - you need to put your :
+
+``` php
+// scripts/default-category-children.php
+
+<?php
+// Bootstrap Magento
+require_once(realpath(__DIR__) . '/bootstrap.php');
+
+// Get default category model
+$defaultCategory = Mage::getModel('catalog/category')->getCollection()->addAttributeToSelect('*')->addFieldToFilter('category_code','default')->getFirstItem();
+
+// Show a list of IDs of its children
+echo $defaultCategory->getChildren();
+```
+
+And now you can run this directly from the command-line:
+
+``` bash
+$ php scripts/default-category-children.php
+3,7,8
+?>
+```
+
+There are many useful things you can do with these scripts - not to mention writing them will increase your understanding of Magento like nothing else.
+
+I will also post some good example scripts here in the near future, and I'll try to remember to add the links below.

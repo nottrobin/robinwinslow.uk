@@ -27,3 +27,19 @@ Skills
  love
  sex
  ass
+
+Keywords
+===
+
+There are going to be a lot of these:
+
+unix
+php
+vagrant
+heroku ([PaaS](http://en.wikipedia.org/wiki/Platform_as_a_service))
+
+Concepts
+---
+Agile
+scrum
+release-early-release-often

@@ -15,3 +15,5 @@ bundle install
 rake assets:precompile
 foreman start
 
+Now browse to http://0.0.0.0:5000
+

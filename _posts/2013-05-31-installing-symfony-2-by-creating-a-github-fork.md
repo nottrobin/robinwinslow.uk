@@ -27,11 +27,11 @@ I'm doing all this on [Ubuntu](http://www.ubuntu.com/) Raring Ringtail (13.04). 
 Install packages
 ===
 
-Before we start, you'll need a [github](https://github.com/) account, and you'll need to install [git](http://git-scm.com/), [MySQL](http://www.mysql.com/), [php5-dev](https://launchpad.net/ubuntu/raring/+package/php5-dev), [php5-mysql](https://launchpad.net/ubuntu/raring/+package/php5-mysql), [php5-intl](https://launchpad.net/ubuntu/raring/+package/php5-intl) and [php-apc](https://launchpad.net/ubuntu/raring/+package/php-apc) on your local computer:
+Before we start, you'll need a [github](https://github.com/) account, and you'll need to install [git](http://git-scm.com/), [MySQL](http://www.mysql.com/), [php5-cli](https://launchpad.net/ubuntu/raring/+package/php5-cli), [php5-dev](https://launchpad.net/ubuntu/raring/+package/php5-dev), [php5-mysql](https://launchpad.net/ubuntu/raring/+package/php5-mysql), [php5-intl](https://launchpad.net/ubuntu/raring/+package/php5-intl) and [php-apc](https://launchpad.net/ubuntu/raring/+package/php-apc) on your local computer:
 
 ``` bash
 # Install packages
-$ sudo apt-get install git php5-dev mysql-server php5-mysql php5-intl php-apc
+$ sudo apt-get install git php5-cli php5-dev mysql-server php5-mysql php5-intl php-apc
 ```
 
 PHP configuration

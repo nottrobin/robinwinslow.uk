@@ -1,3 +1,4 @@
 markdown: redcarpet
 future: true
 exclude: [config.ru, Gemfile, Gemfile.lock, LICENSE.txt, Procfile, Rakefile, README.md, vendor]
+permalink: pretty

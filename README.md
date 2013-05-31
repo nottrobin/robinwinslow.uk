@@ -13,8 +13,13 @@ Local testing
 You'll need to have [Ruby](http://www.ruby-lang.org/en/), [Bundler](http://gembundler.com/), [Rake](http://rake.rubyforge.org/) and [Foreman](http://theforeman.org/) installed.
 
 ``` bash
+# Install dependencies
 $ bundle install
+
+# Build the static site - do this every time something changes
 $ rake assets:precompile
+
+# Run the server
 $ foreman start
 ```
 

@@ -15,24 +15,27 @@ The Symfony 2 [standard project](https://github.com/nottrobin/symfony-standard) 
 
 However, as I'm a developer, I'm used to using github, and as I'm just playing around with this code-base - I have no need for stability at the moment - I chose a third option:
 
-Installing from a fork of the Symfony 2 standard project
-===
-
-I'm doing all this on [Ubuntu](http://www.ubuntu.com/) Raring Ringtail (13.04).
+- Installing from a fork of the Symfony 2 standard project
 
 The danger of forking the actual repository is that it might not be stable. There could be unfixed bugs that aren't in the official releases.
 
-Apt dependencies
----
+The environment
+===
+
+I'm doing all this on [Ubuntu](http://www.ubuntu.com/) Raring Ringtail (13.04). This post will almost certainly work in a similar way for any modern debian-based OS, but it will be fairly useless for yum-based OSes, and completely useless for Windows.
+
+Install packages
+===
 
 Before we start, you'll need a [github](https://github.com/) account, and you'll need to install [git](http://git-scm.com/, [php5-dev](https://launchpad.net/ubuntu/raring/+package/php5-dev), [MySQL](http://www.mysql.com/) and [php5-mysql](https://launchpad.net/ubuntu/raring/+package/php5-mysql) on your local computer:
 
 ``` bash
-$ sudo apt-get install git php5-dev mysql-server php5-mysql # Install git and php5-dev
+# Install packages
+$ sudo apt-get install git php5-dev mysql-server php5-mysql
 ```
 
 PHP configuration
----
+===
 
 First let's make sure that `date.timezone` is set. Open php.ini:
 
@@ -61,33 +64,39 @@ Symfony also recommends that you set `short_open_tag` to `Off` (at about line 21
 short_open_tag = Off
 ```
 
-PHP dependencies
----
+PHP extensions
+===
 
 Some PHP dependencies ( [intl](http://www.php.net/manual/en/intro.intl.php) and [APC](http://www.php.net/manual/en/intro.apc.php)) need to be installed through [PECL](http://pecl.php.net/):
 
 ``` bash
-$ sudo pecl install intl pecl           # Install intl PHP extension
-$ echo 'extension=intl.so' | sudo tee -a /etc/php5/mods-available/intl.ini              # Create PHP intl config file
-$ echo 'extension=apc.so' | sudo tee -a /etc/php5/mods-available/apc.ini                # Create PHP apc config file
-$ echo "xdebug.max_nesting_level=250" | sudo tee -a /etc/php5/mods-available/xdebug.ini # Make sure xdebug is setup properly
-$ sudo php5enmod intl apc               # Enable the intl and apc modules
+# Install PHP extensions
+$ sudo pecl install intl pecl
+
+# PHP configurations
+$ echo 'extension=intl.so' | sudo tee -a /etc/php5/mods-available/intl.ini              
+$ echo 'extension=apc.so' | sudo tee -a /etc/php5/mods-available/apc.ini                
+$ echo "xdebug.max_nesting_level=250" | sudo tee -a /etc/php5/mods-available/xdebug.ini 
+
+# Enable PHP modules
+$ sudo php5enmod intl apc
 ```
 
 Setup MySQL database
----
+===
 
 You'll need a MySQL database ready for symfony to use:
 
 ``` bash
-$ mysql -u root -p # password will be as you set it when you installed mysql-server
+$ mysql -u root -p 
+# the password will as you set on installation
 ...
 mysql> create database symfony;
 mysql> grant all on symfony.* to symfony@localhost identified by 'PASSWORD'; # Set your password to whatever you want or leave it blank
 ```
 
 Fork the repository
----
+===
 
 [Forking a github repository](https://help.github.com/articles/fork-a-repo) is as easy as clicking the "fork" button. Note down the URL for your repository and clone it and change to the directory, e.g.:
 
@@ -97,7 +106,7 @@ $ cd symfony-standard
 ```
 
 Install dependencies and configure
----
+===
 
 Now you'll need `composer` to install dependencies:
 
@@ -122,8 +131,9 @@ mailer_password (null):
 locale (en):en-gb
 secret (ThisTokenIsNotSoSecretChangeIt):somesecretkeyorother
 ```
+
 Check everything works
----
+===
 
 Now hopefully if you run the check, you'll see a long line of "OK"s:
 
@@ -135,20 +145,21 @@ $ php ./app/check.php
 *                              *
 ********************************
 ... 
-
  OK       PHP version must be at least 5.3.3 (5.4.9-4ubuntu2 installed)
  OK       PHP version must not be 5.3.16 as Symfony won't work properly with it
  OK       Vendor libraries must be installed
-
 ... etc
 ```
 
-If that's the case, then you can just go ahead and run the webserver:
+If you get `error`s you must fix them, if you get `warnings` you could continue without if you like.
+
+Run the PHP server
+---
+
+If the PHP version listed in the output of `check.php` is at least `5.4` (see above, mine is `5.4.9-4ubuntu2`) then you can run the PHP server. [You can update](http://askubuntu.com/questions/109404/how-do-i-install-latest-php-in-supported-ubuntu-versions-like-5-4-x-in-ubuntu-1) to `5.4` if you don't have it already.
 
 ```
 $ php ./app/console server:run
 ```
 
-And then browse to [localhost:8000](http://localhost:8000/)
-
-If the above line throws an error, it's probably because you don't have PHP 5.4. You can check with `php -v` and then [update](http://askubuntu.com/questions/109404/how-do-i-install-latest-php-in-supported-ubuntu-versions-like-5-4-x-in-ubuntu-1) if you don't have it.
+And then browse to [localhost:8000](http://localhost:8000/).

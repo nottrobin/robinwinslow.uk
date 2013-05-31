@@ -27,11 +27,11 @@ I'm doing all this on [Ubuntu](http://www.ubuntu.com/) Raring Ringtail (13.04). 
 Install packages
 ===
 
-Before we start, you'll need a [github](https://github.com/) account, and you'll need to install [git](http://git-scm.com/, [php5-dev](https://launchpad.net/ubuntu/raring/+package/php5-dev), [MySQL](http://www.mysql.com/) and [php5-mysql](https://launchpad.net/ubuntu/raring/+package/php5-mysql) on your local computer:
+Before we start, you'll need a [github](https://github.com/) account, and you'll need to install [git](http://git-scm.com/), [MySQL](http://www.mysql.com/), [php5-dev](https://launchpad.net/ubuntu/raring/+package/php5-dev), [php5-mysql](https://launchpad.net/ubuntu/raring/+package/php5-mysql), [php5-intl](https://launchpad.net/ubuntu/raring/+package/php5-intl) and [php-apc](https://launchpad.net/ubuntu/raring/+package/php-apc) on your local computer:
 
 ``` bash
 # Install packages
-$ sudo apt-get install git php5-dev mysql-server php5-mysql
+$ sudo apt-get install git php5-dev mysql-server php5-mysql php5-intl php-apc
 ```
 
 PHP configuration
@@ -43,18 +43,11 @@ First let's make sure that `date.timezone` is set. Open php.ini:
 $ sudo gedit /etc/php5/cli/php.ini
 ```
 
-At about line 873 is the relevant section:
+Find `date.timezone` (line 876 for me) and make sure it's uncommented and set to a [valid timezone](http://www.php.net/manual/en/timezones.europe.php):
 
 ``` ini
 [Date]
-; Defines the default timezone used by the date functions
-; http://php.net/date.timezone
-;date.timezone = 
-```
-
-You should uncomment the `date.timezone` line and set it to one of the [valid timezomes](http://www.php.net/manual/en/timezones.europe.php), e.g.:
-
-``` ini
+; ..
 date.timezone = Europe/London
 ```
 
@@ -64,22 +57,11 @@ Symfony also recommends that you set `short_open_tag` to `Off` (at about line 21
 short_open_tag = Off
 ```
 
-PHP extensions
-===
-
-Some PHP dependencies ( [intl](http://www.php.net/manual/en/intro.intl.php) and [APC](http://www.php.net/manual/en/intro.apc.php)) need to be installed through [PECL](http://pecl.php.net/):
+And that you configure `xdebug` to allow a high nesting level:
 
 ``` bash
-# Install PHP extensions
-$ sudo pecl install intl pecl
-
-# PHP configurations
-$ echo 'extension=intl.so' | sudo tee -a /etc/php5/mods-available/intl.ini              
-$ echo 'extension=apc.so' | sudo tee -a /etc/php5/mods-available/apc.ini                
+# Add to PHP configuration      
 $ echo "xdebug.max_nesting_level=250" | sudo tee -a /etc/php5/mods-available/xdebug.ini 
-
-# Enable PHP modules
-$ sudo php5enmod intl apc
 ```
 
 Setup MySQL database

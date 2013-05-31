@@ -7,20 +7,7 @@ description: 'Articles on client- and server-side web development. Also some abo
 <nav>
     <h1>Top tags</h1>
     
-    <ul>
-        <li>
-            <a href="/front-end.html">Front-end</a> <small>({{ site.tags.front-end.size }})</small>
-        </li>
-        <li>
-            <a href="/back-end.html">Back-end</a> <small>({{ site.tags.back-end.size }})</small>
-        </li>
-        <li>
-            <a href="/politics.html">Politics</a> <small>({{ site.tags.politics.size }})</small>
-        </li>
-        <li>
-            <a href="/personal.html">Personal</a> <small>({{ site.tags.personal.size }})</small>
-        </li>
-    </ul>
+    {% include top-tags.html %}
     
     <p>See <a href="/postsbytag.html">all {{ site.tags.size }} tags</a></p>
 </nav>

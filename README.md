@@ -11,6 +11,8 @@ and is hosted using as a [Heroku](https://www.heroku.com/) app.
 Local testing
 ---
 
+You'll need to have [Ruby](http://www.ruby-lang.org/en/), [Bundler](http://gembundler.com/), [Rake](http://rake.rubyforge.org/) and [Foreman](http://theforeman.org/) installed.
+
 ``` bash
 $ bundle install
 $ rake assets:precompile

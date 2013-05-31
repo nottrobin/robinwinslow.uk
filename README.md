@@ -17,7 +17,7 @@ You'll need to have [Ruby](http://www.ruby-lang.org/en/), [Bundler](http://gembu
 $ bundle install
 
 # Build the static site - do this every time something changes
-$ rake assets:precompile
+$ rake
 
 # Run the server
 $ foreman start

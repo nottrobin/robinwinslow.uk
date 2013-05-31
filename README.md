@@ -19,4 +19,4 @@ $ rake assets:precompile
 $ foreman start
 ```
 
-Now browse to http://localhost:5000
+Now browse to [localhost:5000](http://localhost:5000).

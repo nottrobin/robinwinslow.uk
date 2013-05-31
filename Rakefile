@@ -5,3 +5,5 @@ namespace :assets do
     sh "bundle exec jekyll"
   end
 end
+
+task :default => ["assets:precompile"]

@@ -1,0 +1,154 @@
+---
+layout: post
+title: "Installing Symfony 2 by creating a github fork"
+description: "How to fork the Symfony 2 standard PHP project and install dependencies locally using Composer on Ubuntu"
+tags:
+    - development
+    - back-end
+    - symfony
+---
+
+The Symfony 2 [standard project](https://github.com/nottrobin/symfony-standard) suggests that you install it in [one of two ways](https://github.com/nottrobin/symfony-standard/blob/380038dc9ab26dc6791a2772bce4daa1ecd3ee22/README.md):
+
+- Install it using [Composer](http://getcomposer.org/) - which will install from [packigist](https://packagist.org/)
+- Download as an [archive](http://symfony.com/download) from the [symfony website](http://symfony.com/)
+
+However, as I'm a developer, I'm used to using github, and as I'm just playing around with this code-base - I have no need for stability at the moment - I chose a third option:
+
+Installing from a fork of the Symfony 2 standard project
+===
+
+I'm doing all this on [Ubuntu](http://www.ubuntu.com/) Raring Ringtail (13.04).
+
+The danger of forking the actual repository is that it might not be stable. There could be unfixed bugs that aren't in the official releases.
+
+Apt dependencies
+---
+
+Before we start, you'll need a [github](https://github.com/) account, and you'll need to install [git](http://git-scm.com/, [php5-dev](https://launchpad.net/ubuntu/raring/+package/php5-dev), [MySQL](http://www.mysql.com/) and [php5-mysql](https://launchpad.net/ubuntu/raring/+package/php5-mysql) on your local computer:
+
+``` bash
+$ sudo apt-get install git php5-dev mysql-server php5-mysql # Install git and php5-dev
+```
+
+PHP configuration
+---
+
+First let's make sure that `date.timezone` is set. Open php.ini:
+
+``` bash
+$ sudo gedit /etc/php5/cli/php.ini
+```
+
+At about line 873 is the relevant section:
+
+``` ini
+[Date]
+; Defines the default timezone used by the date functions
+; http://php.net/date.timezone
+;date.timezone = 
+```
+
+You should uncomment the `date.timezone` line and set it to one of the [valid timezomes](http://www.php.net/manual/en/timezones.europe.php), e.g.:
+
+``` ini
+date.timezone = Europe/London
+```
+
+Symfony also recommends that you set `short_open_tag` to `Off` (at about line 213):
+
+```
+short_open_tag = Off
+```
+
+PHP dependencies
+---
+
+Some PHP dependencies ( [intl](http://www.php.net/manual/en/intro.intl.php) and [APC](http://www.php.net/manual/en/intro.apc.php)) need to be installed through [PECL](http://pecl.php.net/):
+
+``` bash
+$ sudo pecl install intl pecl           # Install intl PHP extension
+$ echo 'extension=intl.so' | sudo tee -a /etc/php5/mods-available/intl.ini              # Create PHP intl config file
+$ echo 'extension=apc.so' | sudo tee -a /etc/php5/mods-available/apc.ini                # Create PHP apc config file
+$ echo "xdebug.max_nesting_level=250" | sudo tee -a /etc/php5/mods-available/xdebug.ini # Make sure xdebug is setup properly
+$ sudo php5enmod intl apc               # Enable the intl and apc modules
+```
+
+Setup MySQL database
+---
+
+You'll need a MySQL database ready for symfony to use:
+
+``` bash
+$ mysql -u root -p # password will be as you set it when you installed mysql-server
+...
+mysql> create database symfony;
+mysql> grant all on symfony.* to symfony@localhost identified by 'PASSWORD'; # Set your password to whatever you want or leave it blank
+```
+
+Fork the repository
+---
+
+[Forking a github repository](https://help.github.com/articles/fork-a-repo) is as easy as clicking the "fork" button. Note down the URL for your repository and clone it and change to the directory, e.g.:
+
+``` bash
+$ git clone git@github.com:nottrobin/symfony-standard.git
+$ cd symfony-standard
+```
+
+Install dependencies and configure
+---
+
+Now you'll need `composer` to install dependencies:
+
+``` bash
+$ curl -sS https://getcomposer.org/installer | php
+$ php composer.phar install
+```
+When it prompts you for input, you'll probably want to leave most things as default (blank), except the database username and password:
+
+``` bash
+Some parameters are missing. Please provide them.
+database_driver (pdo_mysql):
+database_host (127.0.0.1):
+database_port (null):
+database_name (symfony):
+database_user (root):symfony
+database_password (null):PASSWORD
+mailer_transport (smtp):
+mailer_host (127.0.0.1):
+mailer_user (null):
+mailer_password (null):
+locale (en):en-gb
+secret (ThisTokenIsNotSoSecretChangeIt):somesecretkeyorother
+```
+Check everything works
+---
+
+Now hopefully if you run the check, you'll see a long line of "OK"s:
+
+```
+$ php ./app/check.php
+********************************
+*                              *
+*  Symfony requirements check  *
+*                              *
+********************************
+... 
+
+ OK       PHP version must be at least 5.3.3 (5.4.9-4ubuntu2 installed)
+ OK       PHP version must not be 5.3.16 as Symfony won't work properly with it
+ OK       Vendor libraries must be installed
+
+... etc
+```
+
+If that's the case, then you can just go ahead and run the webserver:
+
+```
+$ php ./app/console server:run
+```
+
+And then browse to [localhost:8000](http://localhost:8000/)
+
+If the above line throws an error, it's probably because you don't have PHP 5.4. You can check with `php -v` and then [update](http://askubuntu.com/questions/109404/how-do-i-install-latest-php-in-supported-ubuntu-versions-like-5-4-x-in-ubuntu-1) if you don't have it.

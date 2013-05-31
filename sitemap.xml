@@ -5,7 +5,7 @@
     {% for post in site.posts %}
     <url>
         <loc>http://robinwinslow.co.uk{{ post.url | remove: 'index.html' }}</loc>
-        <lastmod>{{ post.date | date_to_xmlschema }}}</lastmod>
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
     </url>
 
     <priority>0.6</priority>

@@ -9,7 +9,7 @@ use Rack::Deflater
 # ---
 use Rack::Rewrite do
     # Remove HTML extensions from posts
-    r301 %r{^/(\d{4}/\d{2}/\d{2}/.*).html$},     '/$1/'
+    r301 %r{^/(\d{4}/\d{2}/\d{2}/[^/.]+)(.html)?$},     '/$1/'
 
     # Make sure index.html => /
     r301 %r{^/index(.html)?$},  '/'

@@ -60,7 +60,7 @@ date.timezone = Europe/London
 
 Symfony also recommends that you set `short_open_tag` to `Off` (at about line 213):
 
-```
+``` ini
 short_open_tag = Off
 ```
 

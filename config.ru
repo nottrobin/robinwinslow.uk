@@ -9,7 +9,7 @@ use Rack::Deflater
 # ---
 use Rack::Rewrite do
     # Remove HTML extensions from posts
-    r301 %r{^/(\d{4}/\d{2}/\d{2}/[^/.]+)(.html)?$},     '/$1/'
+    r301 %r{^/([^.]+[^./])(.html)?$},     '/$1/'
 
     # Make sure index.html => /
     r301 %r{^/index(.html)?$},  '/'
@@ -129,10 +129,10 @@ run lambda { |env|
     if deleted.include? request.path
         # File deleted
         # ---
-        [410, {'Content-Type' => 'text/html'}, File.open('_site/410.html', File::RDONLY)]
+        [410, {'Content-Type' => 'text/html'}, File.open('_site/410/index.html', File::RDONLY)]
     else
         # File not found
         # ---
-        [404, {'Content-Type' => 'text/html'}, File.open('_site/404.html', File::RDONLY)]
+        [404, {'Content-Type' => 'text/html'}, File.open('_site/404/index.html', File::RDONLY)]
     end
 }

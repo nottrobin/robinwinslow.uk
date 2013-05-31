@@ -1,0 +1,25 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    
+    <title type="text" xml:lang="en">robin | blog</title>
+    <link type="application/atom+xml" href="http://robinwinslow.co.uk/rss.xml" rel="self"/>
+    <link type="text/html" href="http://robinwinslow.co.uk" rel="alternate"/>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <id>http://robinwinslow.co.uk/</id>
+    <author>
+        <name>Robin Winslow</name>
+    </author>
+    <rights>Creative commons Attribution-ShareAlike 3.0: Please copy, modify and reshare my work.</rights>
+    
+    {% for post in site.posts %}
+    <entry>
+        <title type="html">{{ post.title | xml_escape }}</title>
+        <link href="http://robinwinslow.co.uk{{ post.url }}"/>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <id>http://robinwinslow.co.uk{{ post.id }}</id>
+        <content type="html">{{ post.content | xml_escape }}</content>
+    </entry>
+    {% endfor %}
+</feed>

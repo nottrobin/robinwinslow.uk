@@ -10,7 +10,7 @@ Running the site locally
 
 First you'll need to have [Ruby](http://www.ruby-lang.org/en/), [Bundler](http://gembundler.com/), [Rake](http://rake.rubyforge.org/) and [Foreman](http://theforeman.org/) installed.
 
-Now you can build and run the site as follows:
+Then you can build and run the site as follows:
 
 ``` bash
 # Install dependencies - you only need to do this once

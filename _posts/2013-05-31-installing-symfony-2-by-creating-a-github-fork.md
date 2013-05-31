@@ -132,6 +132,13 @@ locale (en):en-gb
 secret (ThisTokenIsNotSoSecretChangeIt):somesecretkeyorother
 ```
 
+Now you can commit your [`composer.lock`](http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file) into your repository fork to make sure your dependency versions stay reliable:
+
+``` bash
+$ git add composer.lock
+$ git commit -m 'Add composer.lock: dependency versions'
+```
+
 Check everything works
 ===
 

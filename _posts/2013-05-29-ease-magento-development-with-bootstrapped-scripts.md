@@ -10,7 +10,7 @@ tags:
 
 If you work in Magento a lot, you'll come to many many points when you need to manipulate the models in Magento programmatically.
 
-This could be because you need to inspect the raw-data, but it's probably because you need to edit or add existing models.
+This could help you inspect the raw data stored against the models (Magento's database structure is [hideously complex](http://www.magentocommerce.com/wiki/2_-_magento_concepts_and_architecture/magento_database_diagram)), or it could be because you need to edit existing models or create new ones.
 
 The bootstrap script
 ===
@@ -25,7 +25,6 @@ touch scripts/bootstrap.php
 
 Bootstrapping Magento requires a few lines - you can tweak the individual settings if you like:
 
-
 ``` php
 // scripts/bootstrap.php
 
@@ -34,7 +33,7 @@ ini_set('memory_limit', '1024M');
 set_time_limit(0);
 
 /* Includes */
-require_once realpath(dirname(__FILE__)) . '/../app/Mage.php';
+require_once realpath(__DIR__) . '/../app/Mage.php';
 
 /* Enable developer mode */
 Mage::setIsDeveloperMode(true);
@@ -58,7 +57,7 @@ Once you've done this, you can use the `Mage` static to [do whatever you like](h
 A use-case
 ===
 
-Here's a simple example that just retrieves child IDs of the default category.
+Here's a simple example that just retrieves the child IDs of the default category.
 
 Note how this script includes the bootstrap script that we just made at the top:
 
@@ -86,4 +85,4 @@ $ php scripts/default-category-children.php
 
 There are many useful things you can do with these scripts - not to mention writing them will increase your understanding of Magento like nothing else.
 
-I will also post some good example scripts here in the near future, and I'll try to remember to add the links below.
+I will also post some good example scripts on this blog in the near future, and I'll try to remember to add the links to those posts below.

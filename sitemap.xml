@@ -6,9 +6,9 @@
     <url>
         <loc>http://robinwinslow.co.uk{{ post.url | remove: 'index.html' }}</loc>
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        <priority>0.6</priority>
     </url>
 
-    <priority>0.6</priority>
     {% endfor %}
 
     {% for page in site.pages %}

@@ -10,14 +10,14 @@ tags:
 
 The Symfony 2 [standard project](https://github.com/nottrobin/symfony-standard) suggests that you install it in [one of two ways](https://github.com/nottrobin/symfony-standard/blob/380038dc9ab26dc6791a2772bce4daa1ecd3ee22/README.md):
 
-- Install it using [Composer](http://getcomposer.org/) - which will install from [packigist](https://packagist.org/)
+- Install it using [Composer](http://getcomposer.org/) (which will retrieve the version that's on [packigist](https://packagist.org/))
 - Download as an [archive](http://symfony.com/download) from the [symfony website](http://symfony.com/)
 
-However, as I'm a developer, I'm used to using github, and as I'm just playing around with this code-base - I have no need for stability at the moment - I chose a third option:
+However, as I'm a developer, I'm used to using github, and I don't need the code-base to be particularly stable at the moment - I chose a third option:
 
 - Installing from a fork of the Symfony 2 standard project
 
-The danger of forking the actual repository is that it might not be stable. There could be unfixed bugs that aren't in the official releases.
+The danger of forking the actual repository is that it might not be stable. There could be unfixed bugs that aren't in the official releases. The advantage is that it's particularly easy to pull in new changes from the Symfony repository.
 
 The environment
 ===

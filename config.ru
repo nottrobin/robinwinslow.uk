@@ -81,7 +81,13 @@ run lambda { |env|
 
     deleted = [
         '/post/37901151578/open-letter-thank-you-wired-re-adverts',
+        '/2013/02/20/technology-on-this-site/',
         '/disable_mobile_interface',
+        '/technical',
+        '/tagged/continuous-improvement',
+        '/tagged/project-management',
+        'tagged/tdd',
+        '/archive/2012/9',
         '/2011/05/02/68-revision-8/',
         '/2011/05/02/68-revision-5/',
         '/2011/05/02/68-revision-9/',

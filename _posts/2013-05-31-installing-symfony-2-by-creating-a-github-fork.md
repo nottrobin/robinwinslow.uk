@@ -144,7 +144,7 @@ Check everything works
 
 Now hopefully if you run the check, you'll see a long line of "OK"s:
 
-```
+``` bash
 $ php ./app/check.php
 ********************************
 *                              *
@@ -165,7 +165,7 @@ Run the PHP server
 
 If the PHP version listed in the output of `check.php` is at least `5.4` (see above, mine is `5.4.9-4ubuntu2`) then you can run the PHP server. [You can update](http://askubuntu.com/questions/109404/how-do-i-install-latest-php-in-supported-ubuntu-versions-like-5-4-x-in-ubuntu-1) to `5.4` if you don't have it already.
 
-```
+``` bash
 $ php ./app/console server:run
 ```
 

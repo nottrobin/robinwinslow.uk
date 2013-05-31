@@ -142,10 +142,13 @@ $ git commit -m 'Add composer.lock: dependency versions'
 Check everything works
 ===
 
-Now hopefully if you run the check, you'll see a long line of "OK"s:
+Now hopefully if you run the check, you'll see a long list of "OK"s:
 
 ``` bash
 $ php ./app/check.php
+```
+
+```
 ********************************
 *                              *
 *  Symfony requirements check  *
@@ -158,7 +161,7 @@ $ php ./app/check.php
 ... etc
 ```
 
-If you get `error`s you must fix them, if you get `warnings` you could continue without if you like.
+If you get `error`s you must fix them. If you get `warning`s feel free to ignore them.
 
 Run the PHP server
 ---

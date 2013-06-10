@@ -27,63 +27,58 @@ I'm doing all this on [Ubuntu](http://www.ubuntu.com/) Raring Ringtail (13.04). 
 Install packages
 ===
 
-Before we start, you'll need a [github](https://github.com/) account, and you'll need to install [git](http://git-scm.com/), [MySQL](http://www.mysql.com/), [php5-dev](https://launchpad.net/ubuntu/raring/+package/php5-dev), [php5-mysql](https://launchpad.net/ubuntu/raring/+package/php5-mysql), [php5-intl](https://launchpad.net/ubuntu/raring/+package/php5-intl) and [php-apc](https://launchpad.net/ubuntu/raring/+package/php-apc) on your local computer:
+Before we start, you'll need a [github](https://github.com/) account, and you'll need to install [git](http://git-scm.com/), [MySQL](http://www.mysql.com/), [php5-cli](https://launchpad.net/ubuntu/raring/+package/php5-cli), [php5-dev](https://launchpad.net/ubuntu/raring/+package/php5-dev), [php5-mysql](https://launchpad.net/ubuntu/raring/+package/php5-mysql), [php5-intl](https://launchpad.net/ubuntu/raring/+package/php5-intl) and [php-apc](https://launchpad.net/ubuntu/raring/+package/php-apc) on your local computer:
 
 ``` bash
 # Install packages
-$ sudo apt-get install git php5-dev mysql-server php5-mysql php5-intl php-apc
+$ sudo apt-get install git php5-cli php5-dev mysql-server php5-mysql php5-intl php-apc
 ```
 
-PHP configuration
+Configuration tweaks
 ===
 
-First let's make sure that `date.timezone` is set. Open php.ini:
-
-``` bash
-$ sudo gedit /etc/php5/cli/php.ini
-```
-
-Find `date.timezone` (line 876 for me) and make sure it's uncommented and set to a [valid timezone](http://www.php.net/manual/en/timezones.europe.php):
+We must make sure that `date.timezone` is set to a [valid timezone](http://www.php.net/manual/en/timezones.europe.php). Symfony recommends that we set `short_open_tag` to `Off`, so we might as well change that at the same time:
 
 ``` ini
+; /etc/php5/cli/php.ini
+
+[php]
+; around line 213
+; change the value to "off"
+short_open_tag = Off
+
 [Date]
-; ..
+; around line 876
+; uncomment and change value
 date.timezone = Europe/London
 ```
 
-Symfony also recommends that you set `short_open_tag` to `Off` (at about line 213):
-
-``` ini
-short_open_tag = Off
-```
-
-And that you configure `xdebug` to allow a high nesting level:
+Symfony also recommends that we set XDebug to allow a high nesting level:
 
 ``` bash
 # Add to PHP configuration      
 $ echo "xdebug.max_nesting_level=250" | sudo tee -a /etc/php5/mods-available/xdebug.ini 
 ```
 
-Setup MySQL database
-===
+And that MySQL is set to UTF-8 by default:
 
-You'll need a MySQL database ready for symfony to use:
+``` ini
+; /etc/mysql/my.cnf
 
-``` bash
-$ mysql -u root -p 
-# the password will as you set on installation
-...
-mysql> create database symfony;
-mysql> grant all on symfony.* to symfony@localhost identified by 'PASSWORD'; # Set your password to whatever you want or leave it blank
+[mysqld]
+; around line 30
+; add these new keys
+collation-server = utf8_general_ci
+character-set-server = utf8
 ```
 
 Fork the repository
 ===
 
-[Forking a github repository](https://help.github.com/articles/fork-a-repo) is as easy as clicking the "fork" button. Note down the URL for your repository and clone it and change to the directory, e.g.:
+[Forking a github repository](https://help.github.com/articles/fork-a-repo) is as easy as navigating to the [repository page](https://github.com/nottrobin/symfony-standard) and clicking the "fork" button. Note down the URL for your repository and clone it and change to the directory, e.g.:
 
 ``` bash
-$ git clone git@github.com:nottrobin/symfony-standard.git
+$ git clone git@github.com:<yourusername>/symfony-standard.git
 $ cd symfony-standard
 ```
 
@@ -96,7 +91,7 @@ Now you'll need `composer` to install dependencies:
 $ curl -sS https://getcomposer.org/installer | php
 $ php composer.phar install
 ```
-When it prompts you for input, you'll probably want to leave most things as default (blank), except the database username and password:
+When it prompts you for input, you'll probably want to leave most things as default (blank), except the database password for `root` user if you set one:
 
 ``` bash
 Some parameters are missing. Please provide them.
@@ -104,8 +99,8 @@ database_driver (pdo_mysql):
 database_host (127.0.0.1):
 database_port (null):
 database_name (symfony):
-database_user (root):symfony
-database_password (null):PASSWORD
+database_user (root):
+database_password (null):<yourRootDbPassword>
 mailer_transport (smtp):
 mailer_host (127.0.0.1):
 mailer_user (null):
@@ -145,6 +140,15 @@ $ php ./app/check.php
 
 If you get `error`s you must fix them. If you get `warning`s feel free to ignore them.
 
+Create the database
+---
+
+You can now, if you want, use Doctrine to create the database:
+
+``` bash
+php app/console doctrine:database:create
+```
+
 Run the PHP server
 ---
 
@@ -155,3 +159,4 @@ $ php ./app/console server:run
 ```
 
 And then browse to [localhost:8000](http://localhost:8000/).
+

@@ -3,13 +3,13 @@ $golden-ratio:     1.618;
 $golden-em:        $golden-ratio * 1em;
 
 // Main text
-$main-font:        Arvo, garamond, serif;
+$main-font:        'raleway', sans-serif;
 $font-color:       #000;
 $line-height:      $golden-ratio;
 $link-hover-color: #555;
 
 // Headings
-$heading-font:        Lato, sans-serif;
+$heading-font:        'lato light', sans-serif;
 $title-size:          $golden-ratio * $golden-em;
 $first-heading-size:  $golden-em;
 $second-heading-size: 1em;

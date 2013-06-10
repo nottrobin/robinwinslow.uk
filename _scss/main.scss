@@ -4,7 +4,7 @@
 
 // Fonts
 @import "fonts/lato";
-@import "fonts/arvo";
+@import "fonts/raleway";
 @import "fonts/fontawesome";
 
 // Settings
@@ -46,7 +46,6 @@ hgroup      { overflow: hidden; }
 hgroup>*, hgroup>h1 {
     font-size: 1.618em;
     float: left;
-    text-transform: lowercase;
 }
 hgroup>*:first-child {
     padding-right: 1rem;
@@ -109,12 +108,6 @@ header>aside, footer>aside { max-width: 47rem; }
 
 /* Header */
 body>header { @include site-header }
-body>header a {
-    color: #fff; /* same as dark theme */
-}
-body>header h1, body>header h2, body>header p {
-    margin-top: 0;
-}
 header address li:first-child { margin-left: 0; }
 
 /* Footer */
@@ -140,7 +133,6 @@ section {
 }
 section article h1 {
     margin-top: 0;
-    text-transform: lowercase;
 }
 
 nav {
@@ -178,7 +170,7 @@ body>nav ul a { border-bottom: none; }
     header hgroup { float: left; }
 }
 
-@media all and (min-width: 64em) {
+@media all and (min-width: 70em) {
   .github {
       position: absolute;
       background-image: url('http://i.imgur.com/AXvxumN.png');

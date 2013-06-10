@@ -3,6 +3,7 @@
     color:            $font-color;
     font-family:      $main-font;
     line-height:      $line-height;
+    font-size:        1.1em;
 }
 
 @mixin index-colors {
@@ -62,8 +63,17 @@
     font-size:         1.3em;
     overflow:          hidden;
     color:             white;
-    
-    a { border-bottom: none; }
+
+    a {
+        color: #fff; /* same as dark theme */
+        border-bottom: none;
+    }
+    h1, h2, p {
+        margin-top: 0;
+    }
+    h1, h2 {
+        text-transform: lowercase;
+    }
 }
 
 @mixin address-list {

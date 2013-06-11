@@ -5,6 +5,7 @@ description: "Here's a unix command to create a GitHub repository from the comma
 tags:
     - development
     - back-end
+    - git
 ---
 
 [Git](http://git-scm.com) and [GitHub](https://GitHub.com) are fantastic tools for any kind of project. As soon as you start any piece of text-based work - be it a program, a diary or a novel - it makes sense to keep version control, and to have it backed up online somewhere.

@@ -11,6 +11,8 @@ I have so many ideas for blogs to write, but I never write them. So this is goin
 Ideas
 ===
 
+ - Client-to-client encryption
+ - HTTPS Everywhere and free SSLing...
  - I should *definitely* do a blog post for each of [my Prezis](http://prezi.com/user/n7e3zerc5e9t/).
  - OSes of the future - more like ChromeOS? But considerably more slick...
  - What do we think of the Wphone7 "tile" type interface?

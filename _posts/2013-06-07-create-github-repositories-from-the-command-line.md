@@ -24,7 +24,14 @@ That's great. I've got version control. But the real dream is to put that reposi
 
 The standard way isn't that difficult. Browse to GitHub, login, click "new repo" or whatever, type a name, copy the URL, then come back to the command-line. It only takes a minute or two, but it's kinda annoying to do that every time. I don't like touching the mouse if I can help it.
 
-The solution
+Updated solution: Hub
+===
+
+After I posted my solution (below) my friend [@timmow](https://twitter.com/timmow) mentioned that there is an existing project that provides a whole bunch of extension commands for Github - including creating repositories and managing pull requests.
+
+It's called ["Hub"](https://github.com/defunkt/hub), and to be honest it might be simpler for you to just use that rather than my solution below.
+
+My solution
 ===
 
 So I found [this solution on StackOverflow](http://stackoverflow.com/a/10325316/613540) (of course). The following command uses `curl` to talk to the GitHub API to create a repository:

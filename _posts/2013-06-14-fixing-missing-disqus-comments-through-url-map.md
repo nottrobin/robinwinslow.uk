@@ -30,9 +30,9 @@ Incidentally I think that this was a bit shit of Disqus - they should use 301 Pe
 Solution outline
 ===
 
-Disqus, to their credit, [created a plugin called "URL map"](http://blog.disqus.com/post/870654196/migrate-your-threads-by-uploading-a-url-map).
+Disqus, to their credit, [created a tool called "URL map"](http://blog.disqus.com/post/870654196/migrate-your-threads-by-uploading-a-url-map).
 
-You can find the plugin inside your Disqus admin area under [Discussions -> Tools](http://robin-blog.disqus.com/admin/discussions/migrate/) and use it to replace old incorrect URLs with the new ones.
+You can find the tool inside your Disqus admin area under [Discussions -> Tools](http://robin-blog.disqus.com/admin/discussions/migrate/) and use it to replace old incorrect URLs with the new ones.
 
 Solution details
 ===
@@ -77,6 +77,6 @@ Which made it so much easier. If your requirements are similar to mine you can p
 Upload the file
 ---
 
-Now I uploaded the file back to Disqus through [the URL map plugin](http://robin-blog.disqus.com/admin/discussions/migrate/), waited a few minutes, and voila! My old comments showed up under my new URLs!
+Now I uploaded the file back to Disqus through [the URL map tool](http://robin-blog.disqus.com/admin/discussions/migrate/), waited a few minutes, and voila! My old comments showed up under my new URLs!
 
-As the plugin will tell you, the only way to check this is to check if the missing comments start showing up again.
+As the tool will tell you, the only way to check this is to check if the missing comments start showing up again.

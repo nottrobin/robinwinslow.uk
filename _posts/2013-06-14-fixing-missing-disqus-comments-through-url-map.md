@@ -23,7 +23,7 @@ I had very carefully made sure all the old URLs [redirected properly to the new 
 The problem
 ===
 
-Disqus didn't care that I'd taken all this care to create redirects. All it knew was that people had commented on an article at `../optimal-font-size.html` and now they were asking to see comments at `../optimal-font-size.html`, which wasn't the same thing at all.
+Disqus didn't care that I'd taken all this care to create redirects. All it knew was that people had commented on an article at `../optimal-font-size.html` and now they were asking to see comments at `../optimal-font-size/` (with a `/` in place of `.html`), which isn't the same thing at all, apparently.
 
 Incidentally I think that this was a bit shit of Disqus - they should use 301 Permanent redirects to link URLs automatically to avoid this issue.
 
@@ -67,12 +67,12 @@ Make it easier using regex in sublime
 
 I edited it using [sublime text](http://www.sublimetext.com/) - a fantastic editor, which support [regular expressions](http://en.wikipedia.org/wiki/Regular_expressions). I used the following find and replace statement to transform the file into what I wanted it to be:
 
-``` regex
+```
 ^(http://[^/]+)([^ .\n]+[^/.\n])/?(.html)?[^\n]*$
 \1\2\3, http://robinwinslow.co.uk\2/
 ```
 
-Which made it so much easier.
+Which made it so much easier. If your requirements are similar to mine you can probably manage to copy this and tweak it slightly yourself. If they're different, you'll have to [learn regex](http://www.regular-expressions.info/tutorial.html) to use this solution if you don't already know it.
 
 Upload the file
 ---

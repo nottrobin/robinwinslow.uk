@@ -38,7 +38,7 @@ We discussed it for days, on IRC and in comments and edits on a [Google Document
 The statement of values
 ===
 
-I am really proud of what we produced, and I had a lot of fun doing it. I think it sums up my values really rather well. I think it's firm without being offensive, and it's fairly far-reaching. I'd love to know what you think of it - please let me know in the comments.
+I am proud of what we produced, and I had a lot of fun doing it. I think it sums up my values rather well. I think it's firm and clear without being offensive or inflamatory. I'd love to know what you think of it - please let me know in the comments.
 
 It can be seen [on the blackgate foundation website](http://blackgatefoundation.org/post/51405181240/about) or [in our GitHub repositority](https://github.com/blackgate-foundation/charter/blob/master/statement-of-values.md), but I'm also reproducing it here in its current form (we may decide to change it in the future):
 

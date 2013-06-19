@@ -11,6 +11,15 @@ I have so many ideas for blogs to write, but I never write them. So this is goin
 Ideas
 ===
 
+- My transition to believing in the importance of privacy
+  > The ideal world where privacy is unneccesary
+  > Loss of pirvacy inevitably gives someone power
+  > The importance of trust
+  > The untrustworthiness of governments
+  > The importance of personal choice in what to keep private
+  > How to achieve that
+- The Charter
+- Do my CV page
 - A letter to The Friend about their marketing strategy
 - Update post to include Tim Mower's note
 - Creating a launchpad PPA (for megatools)

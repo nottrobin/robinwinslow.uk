@@ -8,12 +8,12 @@ tags:
     - fonts
 ---
 
-With the advent of [web fonts](https://en.wikipedia.org/wiki/Web_typography#Web_fonts) thankfully, web designers are no longer tied to a limited set of "web safe" fonts.
+With the advent of [web fonts](https://en.wikipedia.org/wiki/Web_typography#Web_fonts) (e.g. from [Google Fonts](https://www.google.com/fonts/)), thankfully web designers are no longer tied to a limited set of "web safe" fonts.
 
 Fonts and performance
 ===
 
-However, there is a potential performance hit with this. You will need to link your CSS files to the font files. The problem here isn't os much the size of the font file (they are typically under 100 KB), it's more that each new HTTP request that a page [effects performance](http://developer.yahoo.com/performance/rules.html)
+However, there is a potential performance hit with this. You will need to link your CSS files to the font files. The problem here isn't so much the size of the font file (they are typically under 100 KB), it's more that each new HTTP request that a page [effects performance](http://developer.yahoo.com/performance/rules.html)
 
 Also, when loading web fonts externally you will sometimes see a flicker where the page loads initially with the default browser fonts, and then the new fonts are downloaded and applied afterwards. This flicker can look quite unprofessional.
 

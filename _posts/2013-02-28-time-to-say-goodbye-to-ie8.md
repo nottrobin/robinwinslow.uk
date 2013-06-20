@@ -35,7 +35,7 @@ Dropping comes with significant advantages:
  - Use [practically all of the CSS selectors](http://kimblim.dk/css-tests/selectors/)
  - Use HTML5 semantic elements without a [shim](https://code.google.com/p/html5shim/)
  - Use [much more of HTML5](http://people.mozilla.com/~prouget/ie9/) confidently
- - Serve web-fonts in [only WOFF format](http://caniuse.com/#search=woff) - making it much easier to include them in CSS through [Data URLs](http://dataurl.net/) (more on that later)
+ - Use [WOFF format](http://caniuse.com/#search=woff) exclusively - making it easier to [use Data URLs](/2013/06/20/loading-fonts-as-data-urls/)
 
 These four points will effect your debugging time for front-end development dramatically.
 

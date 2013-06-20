@@ -33,7 +33,7 @@ I also think that this diversity of interest means I'm much more likely to be un
 So what are my skills?
 ===
 
-This still leaves me with an obvious problem - if I haven't specialised, it's difficult for me to explain exactly what I skills are. I'm going to try to outline my skills in this section to see how difficult I find it.
+This still leaves me with an obvious problem - if I haven't specialised, it's difficult for me to explain exactly what I skills are.
 
 Areas of interest
 ---
@@ -45,3 +45,10 @@ My desire for elegance and usability fuels my interest in programming languages.
 In communications technology there are always complex interactions between different systems. There are always many different ways to solve a problem, but some solutions will inherently work better with the given systems than others. I love trying to map out all the possible ways to solve a problem, finding the most efficient way and trying to derive general rules.
 
 I'm interested in human systems too. I love thinking about social structures and interactions between people. I also like thinking of new and more flexible ways to manage projects. People are extremely complex, and projects can be too. It's therefore challenging trying to optimise output, motivation and personal development together within a team and a project.
+
+My skills
+---
+
+These interests led me to learn the languages of the web for marking up information and designing web pages (HTML and CSS), and then very quickly on to learning various different programming languages, with different syntaxes and object models (JavaScript, C#, PHP, Ruby, Python). 
+
+I also became interested in technical systems

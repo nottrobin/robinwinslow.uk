@@ -13,7 +13,7 @@ With the advent of [web fonts](https://en.wikipedia.org/wiki/Web_typography#Web_
 Fonts and performance
 ===
 
-However, there is a potential performance hit with this. You will need to link your CSS files to the font files. The problem here isn't so much the size of the font file (they are typically under 100 KB), it's more that each new HTTP request that a page [effects performance](http://developer.yahoo.com/performance/rules.html)
+However, there is a potential performance hit with this. You will need to link your CSS files to the font files. The problem here isn't so much the size of the font file (they are typically under 100 KB), it's more that each new HTTP request that a page makes [effects performance](http://developer.yahoo.com/performance/rules.html)
 
 Also, when loading web fonts externally you will sometimes see a flicker where the page loads initially with the default browser fonts, and then the new fonts are downloaded and applied afterwards. This flicker can look quite unprofessional.
 

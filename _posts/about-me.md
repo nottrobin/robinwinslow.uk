@@ -3,7 +3,7 @@ layout: post
 title: about me
 ---
 
-I'm an experienced and devoted web developer with widw-ranging interests and expertise. I'm interested in finding simple and elegant solutions within complex systems, and I care deeply about the internet.
+I'm an experienced web developer and team leader with wide-ranging expertise and interests. I enjoy finding elegant solutions within complex systems, and I [care deeply](/2013/05/30/why-i-love-the-internet/) about communications technology.
 
 I want to be a part of a progressive and ambitious organisation who truly care about their members and their customers. 
 

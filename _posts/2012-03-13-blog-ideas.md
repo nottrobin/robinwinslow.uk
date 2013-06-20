@@ -11,6 +11,11 @@ I have so many ideas for blogs to write, but I never write them. So this is goin
 Ideas
 ===
 
+- About downtime and meditation
+http://lifehacker.com/why-we-should-rethink-the-eight-hour-workday-515742249
+https://en.wikipedia.org/wiki/Research_on_meditation
+http://justinjackson.ca/the-principle-that-changed-my-life/
+https://twitter.com/nimbu/status/347359068966494210
 - My transition to believing in the importance of privacy
   > The ideal world where privacy is unneccesary
   > Loss of pirvacy inevitably gives someone power

@@ -15,11 +15,11 @@ This is the story of how my friends and I created and agreed on a [statement of 
 The foundation
 ===
 
-A couple of months ago, I was in an IRC chat room with some friends of mine (do people actually still use IRC? tell me in the comments), and [@0atman](https://twitter.com/0atman) aired an idea for a **charitable project**. We all thought it was a good one, and long a discussion ensued about the best way to run the project.
+A couple of months ago, I was in an IRC chat room with some friends of mine (do people actually still use IRC? tell me in the comments), and [@0atman](https://twitter.com/0atman) aired an idea for a charitable project. We all thought it was a good one, and long a discussion ensued about the best way to run the project.
 
 We all felt that it should be run democratically to some extent - that is, largely owned by its members - but we were worried about the project being hijacked and becoming something that none of us wanted it to be.
 
-A potential solution, we felt, was to first create a foundation with exclusive membership and a solid stated set of values. That way, the project could be started by the foundation, but not inherently attached to it, meaning that if the project took a different direction, the foundation would remain intact. This would allow us to either create a fork of the project, bringing it back in line with our values, or start a completely new one, whil allowing the existing project to continue in its new direction with our blessing.
+A potential solution, we felt, was to first create a foundation with exclusive membership and a solid stated set of values. That way, the project could be started by the foundation, but not inherently attached to it, meaning that if the project took a different direction, the foundation would remain intact. This would allow us to either create a fork of the project, bringing it back in line with our values, or start a completely new one, while allowing the existing project to continue in its new direction with our blessing.
 
 Thus was formed the [Blackgate Foundation](http://blackgatefoundation.org/).
 
@@ -34,7 +34,8 @@ Politically and morally we have a lot of things in common, but it was surprising
 
 We discussed it for days, on IRC and in comments and edits on a [Google Document](http://en.wikipedia.org/wiki/Google_document) (I don't want to advertise Google particularly, but Google Documents really are an amazingly effective way to collaborate with people). It got kinda heated at times. But eventually we came out with a largely agreed upon statement of values, and I think our individual values all changed a little along the way.
 
-<a name="statement"/>
+<a name="statement"></a>
+
 The statement of values
 ===
 

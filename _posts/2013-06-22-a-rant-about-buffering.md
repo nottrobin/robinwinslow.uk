@@ -9,7 +9,7 @@ tags:
     - personal
 ---
 
-I'm currently trying to watch [Murray vs. Djokovic [US Open Final 2012] on Youtube](https://www.youtube.com/watch?v=CHQJko7xc4c), but there are two difficulties I'm having:
+I'm currently trying to watch [Murray vs. Djokovic [US Open Final 2012] on Youtube](https://www.youtube.com/watch?v=CHQJko7xc4c), but I'm struggling because of two limitations:
 
 - My internet connection sucks (probably 3mbps or lower?)
 - I need to watch it in 720p HD because otherwise I can't see the ball properly

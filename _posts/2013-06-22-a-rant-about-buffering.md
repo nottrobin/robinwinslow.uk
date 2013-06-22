@@ -61,4 +61,4 @@ Telling youtube
 
 Of course, if I'm going to complain about this, I should probably let Youtube know.
 
-[Yahoo Answers told me](http://answers.yahoo.com/question/index?qid=20090716122339AAO5rDB) to post it on [their Facebook page](https://www.facebook.com/youtube) so that's [what I did]().
+[Yahoo Answers told me](http://answers.yahoo.com/question/index?qid=20090716122339AAO5rDB) to post it on [their Facebook page](https://www.facebook.com/youtube) so that's [what I did](https://www.facebook.com/youtube/posts/10151771568201754).

@@ -54,11 +54,11 @@ I think Youtube need to:
 And they can do that as follows:
 
 - Allow the user to explicitly tell a video to "buffer" - this would be distinct from pausing: You can "pause" the video when you aren't having buffering problems but you just don't want to watch it right now. But you can "buffer" when you explicitly need to build up a buffer - and for this option there would be no limit on how much you can buffer.
-- By default *never* change the video quality while there is any sort of buffer built up. By all means, choose an initial quality based on what you know about the connection speed - but once the video has started playing and has buffered some, don't change the quality and discard the buffer if they go full-screen, for example.
+- By default *never* change the video quality while there is any sort of buffer built up. By all means, choose an initial quality based on what you know about the connection speed - but once the video has started playing and has buffered some, don't change the quality and discard the buffer automatically - e.g. if the user goes full-screen.
 
 Telling youtube
 ===
 
 Of course, if I'm going to complain about this, I should probably let Youtube know.
 
-I [Yahoo Answers told me](http://answers.yahoo.com/question/index?qid=20090716122339AAO5rDB) to post it on [their Facebook page](https://www.facebook.com/youtube) so that's [what I did]().
+[Yahoo Answers told me](http://answers.yahoo.com/question/index?qid=20090716122339AAO5rDB) to post it on [their Facebook page](https://www.facebook.com/youtube) so that's [what I did]().

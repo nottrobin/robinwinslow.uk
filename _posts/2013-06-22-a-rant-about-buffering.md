@@ -16,7 +16,7 @@ I'm currently trying to watch [Murray vs. Djokovic [US Open Final 2012] on Youtu
 
 This it causing me a lot of frustration. Because of the way Youtube handles video buffering, I'm having to watch it in 1.5 minute bursts.
 
-I don't think Youtube are the only culprit here - [BBC iPlayer](http://www.bbc.co.uk/iplayer/) also take a lot of control away from the user. 
+I don't think Youtube are the only culprit here - other players, like [BBC iPlayer](http://www.bbc.co.uk/iplayer/), also cause similar issues by not giving the user any control over buffering. 
 
 Youtube's strategy
 ===

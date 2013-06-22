@@ -17,6 +17,7 @@ http://lifehacker.com/why-we-should-rethink-the-eight-hour-workday-515742249
 https://en.wikipedia.org/wiki/Research_on_meditation
 http://justinjackson.ca/the-principle-that-changed-my-life/
 https://twitter.com/nimbu/status/347359068966494210
+http://www.bbc.co.uk/news/uk-23002796#?utm_source=twitterfeed&utm_medium=twitter
 - My transition to believing in the importance of privacy
   > The ideal world where privacy is unneccesary
   > Loss of pirvacy inevitably gives someone power

@@ -41,7 +41,7 @@ Elements of this strategy are great. That they support multiple qualities is gre
 
 However, they completely fail in their goal to make video playback smooth and flawless. Everyone I know of has had to pause Youtube video to try to build up a buffer. Youtube clearly think everyone is on a decent broadband internet connection (like [Google Fibre](https://fiber.google.com/)) - which is a bit silly given that even in America the average quality of broadband internet is not that high.
 
-Also, the Youtube player tries to make too many of these decisions for the user. Anyone who watches a lot of online video knows what a buffer is and would be able to control it well if they were given then chance.
+Also, the Youtube player tries to make too many of these decisions for the user. Anyone who watches a lot of online video knows what a buffer is and would be able to control it well if they were given the chance.
 
 The solution
 ===

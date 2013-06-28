@@ -61,7 +61,7 @@ use Rack::TryStatic,
     :index        => 'index.html',  # index.html is index (/)
     :try          => ['.html'],     # try adding .html
     :header_rules => [
-        [['html'],      {'Content-Type' => 'text/html; charset=utf-8'}], # Specify encoding for HTML 
+        [['html'], {'Content-Type' => 'text/html; charset=utf-8'}], # Specify encoding for HTML 
         # Cache CSS and JS for a year
         [['css'], {
             'Content-Type' => 'text/css; charset=utf-8',
@@ -71,6 +71,7 @@ use Rack::TryStatic,
             'Content-Type' => 'text/javascript; charset=utf-8',
             'Cache-Control' => 'public, max-age=29030400'}
         ],
+        ['/', {'Cache-Control' => 'no-cache'}]
     ]
 
 # Deleted or not found

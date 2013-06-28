@@ -11,6 +11,7 @@ I have so many ideas for blogs to write, but I never write them. So this is goin
 Ideas
 ===
 
+- Can I make money out of AdSense?
 - Serving fonts as data URIs
 - About downtime and meditation
 http://lifehacker.com/why-we-should-rethink-the-eight-hour-workday-515742249

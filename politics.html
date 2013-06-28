@@ -5,10 +5,11 @@ description: 'Politics politics politics. Blog posts all about political stuff.'
 ---
 
 <section class="headless">
-    <h1>Articles about politics</h1>
+    <header>
+        <h1>Political posts</h1>
+    </header>
     
 {% for post in site.tags.politics %}
     {% include list-article.html %}
 {% endfor %}
-
 </section>

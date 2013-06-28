@@ -5,8 +5,6 @@ description: 'Blog articles grouped by tags'
 ---
 
 <nav>
-    <h1>Tags</h1>
-    
     <ul>
 {% for tag in site.tags %}
         <li><a href="#{{ tag[0] }}">{{ tag[0] }}</a> <small>({{ tag[1].size }})</small></li>
@@ -16,7 +14,9 @@ description: 'Blog articles grouped by tags'
 
 {% for tag in site.tags %} 
 <section>
-	<h1 id="{{ tag[0] }}">{{ tag[0] }}</h1>
+    <header>
+	   <h1 id="{{ tag[0] }}">{{ tag[0] }}</h1>
+    </header>
 
 {% for post in tag[1] %}
     {% include list-article.html %}

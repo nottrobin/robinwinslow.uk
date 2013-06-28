@@ -7,17 +7,13 @@ $main-font:        'raleway', sans-serif;
 $font-color:       #000;
 $line-height:      $golden-ratio;
 $link-hover-color: #555;
+$small:            0.8em;
+
+// Colors
+$background-colour: #fff;
 
 // Headings
 $heading-font:        'lato light', sans-serif;
 $title-size:          $golden-ratio * $golden-em;
 $first-heading-size:  $golden-em;
 $second-heading-size: 1em;
-
-// Backgrounds
-$article-background:  #fff;
-
-// Overrides
-// - dark
-$dark-background: #333;
-$dark-font-color: #fff;

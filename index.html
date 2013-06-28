@@ -4,24 +4,16 @@ title: "web dev and politics"
 description: 'Articles on client- and server-side web development. Also some about politics. And general rants and ramblings.'
 ---
 
-<nav>
-    <h1>Top tags</h1>
-    
-    {% include top-tags.html %}
-    
-    <p>See <a href="/postsbytag.html">all {{ site.tags.size }} tags</a></p>
-</nav>
-
-<section class="headless">
-    <h1>Articles</h1>
-    
-{% for post in site.posts %}
-    {% include list-article.html %}
-
+<section>
     <nav>
-        <h1>Tagged</h1>
-        <ul>{% for tag in post.tags %}<li><a href="/postsbytag.html#{{ tag }}">{{ tag }}</a></li>{% endfor %}</ul>
+        <h1>Topics</h1>
+        
+        {% include top-tags.html %}
+        
+        <p>See <a href="/postsbytag.html">all {{ site.tags.size }} tags</a></p>
     </nav>
-{% endfor %}
 
+    {% for post in site.posts %}
+        {% include list-article.html %}
+    {% endfor %}
 </section>

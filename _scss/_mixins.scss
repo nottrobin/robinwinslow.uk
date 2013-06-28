@@ -1,14 +1,9 @@
 @mixin site-settings {
-    background-color: $article-background;
+    background-color: $background-colour;
     color:            $font-color;
     font-family:      $main-font;
     line-height:      $line-height;
     font-size:        1.1em;
-}
-
-@mixin index-colors {
-    background-color: $dark-background;
-    color:            $dark-font-color;
 }
 
 @mixin heading-font {
@@ -37,8 +32,6 @@
     }
 }
 
-@mixin dark-page { @include index-colors; }
-
 @mixin article-block {
     color:            $font-color;
     padding:          1rem;
@@ -47,8 +40,8 @@
 
 @mixin layout-body-block {
     max-width:     43rem;
-    padding-left:  1rem;
-    padding-right: 1rem;
+    padding-left:  $golden-em;
+    padding-right: $golden-em;
     margin-left:   auto;
     margin-right:  auto;
     @include layout-content-block;
@@ -95,20 +88,36 @@
 
 @mixin article-list {
     article {
-        padding: 0;
+        margin-top: $golden-em;
+        padding: $golden-em 0 0 0;
+
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
 
         &>a {
+            border-left: 1px solid rgba(0, 0, 0, 0.3);
+            padding: 0 0 0 $golden-em;
+            margin-left: -$golden-em;
             display:          block;
             border-bottom:    none;
-            padding:          1rem;
-            background-color: $article-background;
 
-            &:hover { opacity: 0.8; }
+            &:hover {
+                border-color: rgba(255,100,0,1);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            margin-top: 1rem;
+
+            ul {
+                font-size: $small;
+                line-height: 1.25 * $line-height;
+            }
         }
     }
     
     nav {
-        margin-top: 1em;
+        margin-top: $golden-em;
         overflow: hidden;
 
         h1 {

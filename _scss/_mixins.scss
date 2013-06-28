@@ -94,14 +94,10 @@
 
 @mixin article-list {
     article {
-        margin-top: 1rem;
-        padding: 1rem 0 0 0;
+        margin-top: $golden-em;
+        padding: $golden-em 0 0 0;
 
         border-top: 1px solid rgba(0, 0, 0, 0.1);
-
-        &:first-of-type {
-            border-top: none;
-        }
 
         &>a {
             border-left: 1px solid rgba(0, 0, 0, 0.3);
@@ -115,10 +111,19 @@
                 opacity: 1;
             }
         }
+
+        nav {
+            margin-top: 1rem;
+
+            ul {
+                font-size: $small;
+                line-height: 1.25 * $line-height;
+            }
+        }
     }
     
     nav {
-        margin-top: 1em;
+        margin-top: $golden-em;
         overflow: hidden;
 
         h1 {

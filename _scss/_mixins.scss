@@ -8,7 +8,6 @@
 
 @mixin index-colors {
     background-color: $dark-background;
-    color:            $dark-font-color;
 }
 
 @mixin heading-font {
@@ -47,8 +46,8 @@
 
 @mixin layout-body-block {
     max-width:     43rem;
-    padding-left:  1rem;
-    padding-right: 1rem;
+    padding-left:  $golden-em;
+    padding-right: $golden-em;
     margin-left:   auto;
     margin-right:  auto;
     @include layout-content-block;
@@ -95,15 +94,26 @@
 
 @mixin article-list {
     article {
-        padding: 0;
+        margin-top: 1rem;
+        padding: 1rem 0 0 0;
+
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+        &:first-of-type {
+            border-top: none;
+        }
 
         &>a {
+            border-left: 1px solid rgba(0, 0, 0, 0.3);
+            padding: 0 0 0 $golden-em;
+            margin-left: -$golden-em;
             display:          block;
             border-bottom:    none;
-            padding:          1rem;
-            background-color: $article-background;
 
-            &:hover { opacity: 0.8; }
+            &:hover {
+                border-color: rgba(255,100,0,1);
+                opacity: 1;
+            }
         }
     }
     

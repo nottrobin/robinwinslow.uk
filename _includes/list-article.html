@@ -4,4 +4,9 @@
         <date>{{ post.date | date_to_string }}</date>
         {% if post.description %}<p>{{ post.description }}</p>{% endif %}
     </a>
+
+    <nav>
+        <h1>Tagged</h1>
+        <ul>{% for tag in post.tags %}<li><a href="/postsbytag.html#{{ tag }}">{{ tag }}</a></li>{% endfor %}</ul>
+    </nav>
 </article>

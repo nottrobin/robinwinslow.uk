@@ -34,7 +34,6 @@ article    { @include article-block; }
 /* Layout blocks */
 body>nav, body>article, body>section { @include layout-body-block; }
 section     { @include article-list; }
-.index-page { @include dark-page; }
 
 /* Address */
 address     { @include address-list; }

@@ -1,13 +1,9 @@
 @mixin site-settings {
-    background-color: $article-background;
+    background-color: $background-colour;
     color:            $font-color;
     font-family:      $main-font;
     line-height:      $line-height;
     font-size:        1.1em;
-}
-
-@mixin index-colors {
-    background-color: $dark-background;
 }
 
 @mixin heading-font {
@@ -35,8 +31,6 @@
         opacity: 0.5;
     }
 }
-
-@mixin dark-page { @include index-colors; }
 
 @mixin article-block {
     color:            $font-color;

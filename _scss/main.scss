@@ -169,14 +169,14 @@ body>nav ul a { border-bottom: none; }
 @media all and (min-width: 70em) {
   .github {
       position: absolute;
-      background-image: url('http://i.imgur.com/AXvxumN.png');
+      background: transparent url('http://i.imgur.com/AXvxumN.png') no-repeat top right;
       top: 0;
       right: 0;
       border: none;
       margin: 0;
       overflow: hidden;
       width: 149px;
-      height: 149px;
+      height: 148px;
       
       a {
           width:       100%;

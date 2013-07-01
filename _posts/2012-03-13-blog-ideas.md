@@ -11,6 +11,8 @@ I have so many ideas for blogs to write, but I never write them. So this is goin
 Ideas
 ===
 
+- how to be a good online citizen (basically - link a lot (without no-follow), write good markup, don't cheat - be careful of just following the stats)
+- Websockets
 - Can I make money out of AdSense?
 - Serving fonts as data URIs
 - About downtime and meditation

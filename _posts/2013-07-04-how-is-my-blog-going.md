@@ -1,9 +1,13 @@
 ---
 layout: post
-title: "How is my blog going? A review"
+title: "How is my blog going? An exploration"
+description: "A little personal wondering about how my blog's going, what I would like it to be, and how to make it so."
+tags:
+    - personal
+    - blogging
 ---
 
-I've [previously explored][existential-blog] the problem of prolific vs quality blogging before. Now, over 6 months later, I still have a very similar problem.
+I've done some [existential exploration][existential-blog] about this blog before. Now, over 6 months later, I still have very similar problems.
 
 Very modest success
 ===
@@ -32,3 +36,6 @@ Where from here?
 So I need to set myself challenges. I need to ask people to encourage me to blog about topics that I'm interested in, and maybe even ask friends to read and comment on my posts. I need to make sure I'm writing and publishing *at least* a blog post a week.
 
 I'll leave it here for now, and see how I get on.
+
+[existential-blog]: /2012/12/07/a-blogs-existential-quest/ "A blog's existential quest"
+[analytics]: /2013/06/28/public-analytics-data-for-this-site/ "Public analytics for robinwinslow.co.uk"

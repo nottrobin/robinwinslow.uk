@@ -8,6 +8,18 @@ title: "Magento searches"
 - magento collection to array
 - magento change shipping rates programatically
 - magento indexer.php reindex price tables
+- magento where are template files located?
+
+Magento CMS block tips
+===
+
+Include config options:
+{{config path='general/store_information/phone'}}
+
+Include templates:
+`{{block type='core/template' template='cms/my-directory/store-telephone.phtml'}}`
+Template file located at:
+`app/design/frontend/enterprise/<project>/template/cms/my-directory/store-telephone.phtml`
 
 Magento admin configuration
 ===
@@ -15,6 +27,8 @@ Magento admin configuration
 (write a document about how to handle config - including how to dump all config values and then get them or set them by store)
 
 Mention ->getCollection()->toArray()
+select * from core_config_data where path = 'general/country/optional_zip_countries'
+->getConfig()->reinit();
 
 Magento indexer
 ===
@@ -70,4 +84,13 @@ Where the output is saved on order creation (in local environment)
 public/var/log/sap_requests_xml.log
 
 
+Get stores for CMS block / CMS page
+===
+
+class Hillarys_Cms_Model_Page extends Mage_Cms_Model_Page
+{
+    public function getStores() {
+        return $this->getResource()->lookupStoreIds($this->getId());
+    }
+}
 

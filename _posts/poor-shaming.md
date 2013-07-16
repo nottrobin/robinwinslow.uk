@@ -1,0 +1,1 @@
+http://everydayfeminism.com/2013/07/how-we-ignore-poverty-and-blame-poor-people/

@@ -60,7 +60,7 @@ Conclusion
 
 Down and Out is the second book by Cory Doctorow that I've read. The first was [Little Brother][wiki-lb]. I would definitely recommend Little Brother over Down and Out - it is a longer and more mature work, and it succeeds in being a more engaging read. This is not entirely surprising as Cory was 5 years and 5 novels more experienced when he wrote Little Brother.
 
-However, this is probably to be expected as Little Brother was written by a Down and Out is nonetheless a very interesting exploration of a possible future and future technology, and will definitely interest fans of the author. And it is a very respectable first novel.
+Down and Out is nonetheless a very interesting exploration of a possible future and future technology, and will definitely interest fans of the author. And it is a very respectable first novel.
 
 [downpage]: http://craphound.com/down/ "Down and out in the Magic Kingdom new page"
 [corytwitter]: https://twitter.com/doctorow "Cory's twitter profile"

@@ -24,7 +24,8 @@ A quick summary
 ===
 
 > This [future history][wikifh] book takes place in the 22nd century, mostly in [Walt Disney World][wikiwdw]. Disney World is run by rival [adhocracies][wikiadhoc], each dedicated to providing the best experience to the park's visitors and competing for the Whuffie the guests offer.
-(From the book's [Wikipedia page][wikidown])
+
+<small>(From the book's [Wikipedia page][wikidown])</small>
 
 The book is set in a future where:
 

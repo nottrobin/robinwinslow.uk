@@ -21,18 +21,20 @@
         <script async="true" defer="true" src="//survey.g.doubleclick.net/async_survey?site=2h33lvpnn35to"></script>
 
         <script>
-            var _gaq=[
-                ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
-                ['_setAccount','UA-2993676-8'],
-                ['_trackPageview']
-            ];
-            (function() {
-                var ga = document.createElement('script');
-                ga.type = 'text/javascript';
-                ga.async = true;
-                ga.src = '//www.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
+            if (location.hostname=="robinwinslow.co.uk") {
+                var _gaq=[
+                    ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
+                    ['_setAccount','UA-2993676-8'],
+                    ['_trackPageview']
+                ];
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = '//www.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
         </script>
 
          <link type="application/atom+xml" rel="alternative" href="http://robinwinslow.co.uk/rss.xml" />

@@ -9,6 +9,9 @@ title: "Magento searches"
 - magento change shipping rates programatically
 - magento indexer.php reindex price tables
 - magento where are template files located?
+- magento tables to truncate
+- magento regenerate cache from command-line?
+- Is it possible to delete root category? - http://magento.stackexchange.com/questions/803/is-it-possible-to-delete-root-category
 
 Magento CMS block tips
 ===

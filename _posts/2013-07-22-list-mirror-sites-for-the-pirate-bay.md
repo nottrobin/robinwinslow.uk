@@ -9,7 +9,7 @@ tags:
 
 Today [two more domains were blocked by ISPs](http://www.bbc.co.uk/news/technology-23408107). This is a worrying trend in [internet censorship](https://en.wikipedia.org/wiki/Internet_censorship). A free internet [should be protected](http://www.dontcensorthenet.com/)!
 
-I'm responding to is by sharing a lot of links to mirrors of The Pirate Bay (the most famous torrent site) and links to some other lists and some other torrent sites. I [also had](/2012/07/16/my-piratebay-mirror/) a mirror of The Pirate Bay, but it doesn't seem to be working at the moment.
+I'm responding to this by sharing a lot of links to mirrors of The Pirate Bay (the most famous torrent site) and links to some other lists and some other torrent sites. I [also had](/2012/07/16/my-piratebay-mirror/) a mirror of The Pirate Bay, but it doesn't seem to be working at the moment.
 
 If you don't know about torrenting, there's a [bittorrent guide on Lifehacker.com](http://lifehacker.com/285489/a-beginners-guide-to-bittorrent)
 

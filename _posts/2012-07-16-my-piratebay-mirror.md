@@ -6,7 +6,15 @@ tags:
   - development
   - politics
 ---
- 
+
+Update (2013-07-29)
+===
+
+My mirror isn't working at the moment. I'll fix it when I get a chance.
+
+Original post
+===
+
 I tried to visit thepiratebay to download a torrent just now but I was
 greeted with an extremely amateur looking "Error - site blocked" page.
 So I set up my own at [http://thepiratebay.robinwinslow.co.uk/](http://thepiratebay.robinwinslow.co.uk/).
@@ -23,17 +31,12 @@ know by simply taking 5 minutes to copy the code to set up our own
 mirrors.
 
 If you would like to do this yourself (please do) then you can
-easily [download the code](http://unblockedpiratebay.com/external/) yourself. [Email me](mailto:robin@robinwinslow.co.uk) the URL to your
-mirror and I will gladly add it to the below list.
-
-
+easily [download the code](http://unblockedpiratebay.com/external/) yourself. [Email me](mailto:robin@robinwinslow.co.uk) the URL to your mirror and I will gladly add it to the below list.
 
 Obviously I am not the first to do this. You can download the code and
 see instructions of how to set it up from many of the existing mirrors:
 
- - [http://tpb.laurencemillward.co.uk](http://tpb.laurencemillward.co.uk)
- - [http://unblockedpiratebay.com/](http://unblockedpiratebay.com/)
- - [https://piratereverse.info/](https://piratereverse.info/)
- - [http://pirateproxy.net/](http://pirateproxy.net/)
- - [http://thepiratebay.se.nyud.net/](http://thepiratebay.se.nyud.net/)
- - [http://labaia.ws/](http://labaia.ws/)
+PirateBay Mirrors
+===
+
+I also keep a list of [other Pirate Bay mirrors](/2013/07/22/list-mirror-sites-for-the-pirate-bay/). 

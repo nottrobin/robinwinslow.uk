@@ -19,5 +19,3 @@ Next time you see someone driving a Ferrari - think of this as somebody who's in
 "Meritocracy - makes failure seem much more crushing"
 DON'T FUCKING JUDGE PEOPLE
 http://www.ted.com/talks/alain_de_botton_a_kinder_gentler_philosophy_of_success.html
-
-

@@ -17,22 +17,21 @@
         - /_css/main.css
         {% endcss_asset_tag %}
 
-        <script src="//dihq71mhvy8o7.cloudfront.net/js/modal-embed.js" charset="utf-8"></script>
-        <script async="true" defer="true" src="//survey.g.doubleclick.net/async_survey?site=2h33lvpnn35to"></script>
-
         <script>
-            var _gaq=[
-                ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
-                ['_setAccount','UA-2993676-8'],
-                ['_trackPageview']
-            ];
-            (function() {
-                var ga = document.createElement('script');
-                ga.type = 'text/javascript';
-                ga.async = true;
-                ga.src = '//www.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
+            if (location.hostname=="robinwinslow.co.uk") {
+                var _gaq=[
+                    ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
+                    ['_setAccount','UA-2993676-8'],
+                    ['_trackPageview']
+                ];
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = '//www.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
         </script>
 
          <link type="application/atom+xml" rel="alternative" href="http://robinwinslow.co.uk/rss.xml" />
@@ -83,14 +82,5 @@
                 <p>By <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a></a>
             </aside>
         </footer>
-
-        <script type="text/javascript">
-            var uvOptions = {};
-            (function() {
-                var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
-                uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/Rm6Disp6BQiUN8YWxwHurA.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-            })();
-        </script>
     </body>
 </html>

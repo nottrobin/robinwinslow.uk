@@ -14,9 +14,10 @@ My positions
 What does "x over y" mean?
 ---
 
-<<<<<<< HEAD
 When I say "principle A *over* principle B" what I mean is this:
 
 There are many situations where one has the choice between a path that favours *principle A* and one which favours *principle B*. I believe that *principle A* is more important, and the path which favours *principle A* will tend to be more fruitful. This is not to say that *principle B* has no value, or that one should follow *principle A* to a destructive extreme, or in every situation.
 
 You may feel that *principle B* is more important, or that the two principles I have juxtaposed have no relation. If that is the case, feel free to say so in the comments.
+
+In saying "A *over* B" I am not saying that B has no value (although I may believe that it doesn't), or that A is infallible (although I may believe that it is), but simply that A takes precedence.

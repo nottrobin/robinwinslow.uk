@@ -59,3 +59,4 @@ Other torrent sites
 - [torrentz.eu](https://torrentz.eu/) (secure)
 - [scrapetorrent.com](http://www.scrapetorrent.com/)
 - [sumotorrent.com](http://www.sumotorrent.com/)
+- [torrentus.to](http://torrentus.to/)

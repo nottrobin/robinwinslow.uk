@@ -48,7 +48,7 @@ Redirecting output
 `linkchecker` seems to be expecting you to redirect its output to a file. If you do so, it will only put the actual warnings and errors in the file, and report status to the command-line:
 
 ``` bash
-$ linkchecker > siteerrors.log
+$ linkchecker http://example.com > siteerrors.log
 35 URLs active,     0 URLs queued, 13873 URLs checked, runtime 1 hour, 51 minutes
 ```
 
@@ -58,7 +58,7 @@ Timeout
 If you're testing a development site, it's quite likely it will be fairly slow to respond and `linkchecker` may experience many timeouts, so you probably want to up that timeout time:
 
 ``` bash
-$ linkchecker --timeout=300 > siteerrors.log
+$ linkchecker --timeout=300 http://example.com > siteerrors.log
 ```
 
 Ignore warnings
@@ -67,7 +67,7 @@ Ignore warnings
 I don't know about you, but the sites I work on have loads of errors. I want to find 404s and 50*s before I worry about redirect warnings.
 
 ``` bash
-$ linkchecker --timeout=300 --no-warnings > siteerrors.log
+$ linkchecker --timeout=300 --no-warnings http://example.com > siteerrors.log
 ```
 
 Output type
@@ -76,7 +76,7 @@ Output type
 The default `text` output is fairly verbose. For easy readability, you probably want the logging to be in CSV format:
 
 ``` bash
-$ linkchecker --timeout=300 --no-warnings -o=csv > siteerrors.csv
+$ linkchecker --timeout=300 --no-warnings -o=csv http://example.com > siteerrors.csv
 ```
 
 Other options

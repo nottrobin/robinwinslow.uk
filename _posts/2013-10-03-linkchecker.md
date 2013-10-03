@@ -76,7 +76,7 @@ Output type
 The default `text` output is fairly verbose. For easy readability, you probably want the logging to be in CSV format:
 
 ``` bash
-$ linkchecker --timeout=300 --no-warnings -o=csv http://example.com > siteerrors.csv
+$ linkchecker --timeout=300 --no-warnings -ocsv http://example.com > siteerrors.csv
 ```
 
 Other options

@@ -12,6 +12,8 @@ title: "Magento searches"
 - magento tables to truncate
 - magento regenerate cache from command-line?
 - Is it possible to delete root category? - http://magento.stackexchange.com/questions/803/is-it-possible-to-delete-root-category
+- check if category is active in current store scope?
+- magento template load block by identifier
 
 Magento CMS block tips
 ===

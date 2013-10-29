@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "BBC publishing misinformation on knife crime"
-description: "The BBC wrote an article about a couple"
+description: "The BBC reported on a fight and stabbings in Nottingham, but quoted the sensationalist and misleading comments from the club owner. I object."
 tags: politics
 ---
 
@@ -34,4 +34,4 @@ Similarly, [the Office for National Statistics has stats](http://www.ons.gov.uk/
 
 So, Knife crime is not "becoming" any kind of problem. It's an old problem, but it's improving. So shut-up Simon Raine.
 
-Also, I don't believe "toucher custodial sentences" have ever been the best solution. I don't have time to find the evidence now, but I believe custodial sentences only harden criminals, and that rehabilitation is the way forward. And the police and the justice system are slowly realising this - which may be partly helping the knife crime stats. Don't let stupid opinions like these derail that effort.
+Also, I don't believe "tougher custodial sentences" have ever been the best solution. I don't have time to find the evidence now, but I believe custodial sentences only harden criminals, and that rehabilitation is the way forward. And the police and the justice system are slowly realising this - which may be partly helping the knife crime stats. Don't let stupid opinions like these derail that effort.

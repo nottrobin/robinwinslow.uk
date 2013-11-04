@@ -1,5 +1,8 @@
 ---
-title: "Are the constitution's days numbered?"
+title: "Are the U.S constitution's days numbered?"
+layout: post
+tags:
+    - politics
 description: "I was just reading a very interesting article in The Atlantic about the prospect of rewriting the constitution. It made quite a compelling argument."
 ---
 

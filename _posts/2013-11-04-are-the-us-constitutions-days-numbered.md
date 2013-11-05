@@ -6,9 +6,9 @@ tags:
 description: "I was just reading a very interesting article in The Atlantic about the prospect of rewriting the constitution. It made quite a compelling argument."
 ---
 
-America's governmental system could be said to be doing pretty badly. [1% of the population is in prison](http://en.wikipedia.org/wiki/List_of_countries_by_incarceration_rate), inequality [is growing](http://en.wikipedia.org/wiki/List_of_countries_by_income_equality) which is [arguably leading to](http://inequality.org/inequality-health/) lagging [life expectancy](http://en.wikipedia.org/wiki/List_of_countries_by_life_expectancy) (33rd in the world).
+America's governmental system could be said to be doing pretty badly. [1% of the population is in prison](http://en.wikipedia.org/wiki/List_of_countries_by_incarceration_rate), inequality [is growing](http://en.wikipedia.org/wiki/List_of_countries_by_income_equality) which is [arguably leading to](http://inequality.org/inequality-health/) lagging [life expectancy](http://en.wikipedia.org/wiki/List_of_countries_by_life_expectancy) (33rd in the world) among other things.
 
-An article by Alex Seitz-Wald appeared in The Atlantic a couple of days ago entitled ["The U.S. Needs a New Constitution—Here's How to Write It"](http://www.theatlantic.com/politics/archive/2013/11/the-us-needs-a-new-constitution-heres-how-to-write-it/281090/).
+An article by Alex Seitz-Wald appeared in [The Atlantic](http://www.theatlantic.com/) a couple of days ago entitled ["The U.S. Needs a New Constitution—Here's How to Write It"](http://www.theatlantic.com/politics/archive/2013/11/the-us-needs-a-new-constitution-heres-how-to-write-it/281090/).
 
 An outdated model
 ===

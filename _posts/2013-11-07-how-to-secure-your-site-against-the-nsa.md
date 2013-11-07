@@ -34,7 +34,7 @@ The worry
 
 On the face of it this sounds like the NSA's geniuses have reverse-engineered some core cryptographic principles - e.g. worked out how to quickly deduce prime factors from a public key ([read an explanation of RSA][cryp-explained-prime-factors]).
 
-This would be very serious. I was sceptical though, because I believe that the if there were key vulnerabilities in public algorythms, the public would have found them long before the NSA. They don't have a monopoly on good mathematicians. This is, after all, why open-source code and public algorythms are inherently more secure.
+This would be very serious. I was sceptical though, because I believe that if there were key vulnerabilities in public algorythms, the public would have found them long before the NSA. They don't have a monopoly on good mathematicians. This is, after all, why open-source code and public algorythms are inherently more secure.
 
 The truth
 ===

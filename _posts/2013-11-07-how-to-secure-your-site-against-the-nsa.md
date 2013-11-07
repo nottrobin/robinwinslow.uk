@@ -13,7 +13,7 @@ In the last couple of months I've had a number of discussions with people who we
 The story
 ===
 
-The story originated at the begining of September from some slightly inaccurate from the Guardian:
+The story originated at the begining of September from a slightly inaccurate statement in the Guardian:
 
 > NSA and GCHQ unlock encryption used to protect emails, banking and medical records
 
@@ -32,7 +32,7 @@ The worry
 
 On the face of it this sounds (to anyone who has a basic understanding of cryptography) like the NSA has some geniuses who have worked out a new formula to reverse-engineer some of the mathematical principles underlying cryptography. For example, they could have worked out how to quickly deduce prime factors from a public key ([read an explanation of RSA][cryp-explained-prime-factors]).
 
-If this were true, this would indeed be extremely serious. However, I was sceptical because I believe that the combined capability of all the academics, company employees and hobbyist cryptographers who are not employed by the NSA to find vulnerabilities in mathematical theory will always vastly outstrip what the NSA can hope to achieve. This is why open-source code and public algorythms are inherently more secure.
+If this were true, this would indeed be extremely serious. However, I was sceptical because I believe that the combined capability to find vulnerabilities of all the academics, company employees and hobbyist cryptographers who are not employed by the NSA in mathematical theory will always vastly outstrip what the NSA can hope to achieve. This is why open-source code and public algorythms are inherently more secure.
 
 The truth
 ===

@@ -79,9 +79,9 @@ What you can do
 
 Now that we know this is going on, it only means that we should be more stringent about the security best-practices that already existed:
 
-- Use only open-source, tried and tested programs and algorythms (many eyes make light work?)
-- Use 2048 or longer RSA keys
-- Configure secure servers to prefer ["perfect forward secrecy" cyphers][se-https-pfs]
+- Use only public, open-source, tried and tested programs and algorythms
+- Use 2048-bit or longer RSA keys
+- [Configure secure servers to prefer "perfect forward secrecy" cyphers][se-https-pfs]
 - Avoid the mainstream service providers (Google, Yahoo, Microsoft) where you can
 - Secure your end-points: disable your root login; use secure passwords; know who has access to your private keys
 

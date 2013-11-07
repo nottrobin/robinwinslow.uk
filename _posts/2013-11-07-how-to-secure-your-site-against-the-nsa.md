@@ -8,52 +8,53 @@ tags:
     - politics
 ---
 
-In the last couple of months I've had a number of discussions with people who were under the impression that *encryption has been cracked* by the NSA.
+In the last couple of months I've had a number of discussions with people who were under the impression that *encryption has been cracked* by the NSA. (Skip to [What you can do](#what-you-can-do)).
 
 The story
 ===
 
-The story originated at the begining of September from a slightly inaccurate statement in the Guardian:
+The story started in September, in the Guardian:
 
 > NSA and GCHQ unlock encryption used to protect emails, banking and medical records
 
-([Guardian - Revealed: how US and UK spy agencies defeat internet privacy and security][guardian-defeat-privacy], James Ball, Julian Borger and Glenn Greenwald, 5th September 2013)
+<small>([Guardian - Revealed: how US and UK spy agencies defeat internet privacy and security][guardian-defeat-privacy], James Ball, Julian Borger and Glenn Greenwald, 5th September 2013)</small>
 
 This came up again today, because [Sir Tim Berners-Lee](http://en.wikipedia.org/wiki/Tim_berners_lee) made a statement:
 
 > In an interview with the Guardian, he expressed particular outrage that GCHQ and the NSA had weakened online security by cracking much of the online encryption on which hundreds of millions of users rely to guard data privacy.
 
-([Guardian - Tim Berners-Lee condemns spy agencies as heads face MPs][guardian-berners-lee], Ed Pilkington, 7th November 2013)
+<small>([Guardian - Tim Berners-Lee condemns spy agencies as heads face MPs][guardian-berners-lee], Ed Pilkington, 7th November 2013)</small>
 
 And something very similar to this was stated in the Radio 4 news program I was listening to this morning.
 
 The worry
 ===
 
-On the face of it this sounds (to anyone who has a basic understanding of cryptography) like the NSA has some geniuses who have worked out a new formula to reverse-engineer some of the mathematical principles underlying cryptography. For example, they could have worked out how to quickly deduce prime factors from a public key ([read an explanation of RSA][cryp-explained-prime-factors]).
+On the face of it this sounds like the NSA's geniuses have reverse-engineered some core cryptographic principles - e.g. worked out how to quickly deduce prime factors from a public key ([read an explanation of RSA][cryp-explained-prime-factors]).
 
-If this were true, this would indeed be extremely serious. However, I was sceptical because I believe that the combined capability to find vulnerabilities of all the academics, company employees and hobbyist cryptographers who are not employed by the NSA in mathematical theory will always vastly outstrip what the NSA can hope to achieve. This is why open-source code and public algorythms are inherently more secure.
+This would be very serious. I was sceptical though, because I believe that the if there were key vulnerabilities in public algorythms, the public would have found them long before the NSA. They don't have a monopoly on good mathematicians. This is, after all, why open-source code and public algorythms are inherently more secure.
 
 The truth
 ===
 
-Helpfully, Massachusetts Institute of Technology published an article 4 days later explaining exactly what the NSA had likely achieved:
+Helpfully, Massachusetts Institute of Technology published an article 4 days later clarifying what the NSA had likely achieved:
 
 > New details of the NSA’s capabilities suggest encryption can still be trusted. But more effort is needed to fix problems with how it is used.
 
-([NSA Leak Leaves Crypto-Math Intact but Highlights Known Workarounds][mit-crypto-math], Tom Simonite, 9th September 2013)
+<small>([NSA Leak Leaves Crypto-Math Intact but Highlights Known Workarounds][mit-crypto-math], Tom Simonite, 9th September 2013)</small>
 
-This shows that (still as far as we know) *the NSA have done nothing mathematically impressive*. However, the they have gone to huge lengths to exploit every known vulnerability in security systems, regardless of legality. Mostly, these vulnerability are with the end-point systems - 
+This shows that (still as far as we know) **the NSA have done nothing unprecendented**. They have, however, gone to huge lengths to exploit every known vulnerability in security systems, regardless of legality. Mostly, these vulnerability are with the end-point systems.
 
 What the NSA have done
 ---
 
-In order of severity to the global community:
+I've tried to list these in order of severity:
 
-- Used network taps to get hold of Google and Yahoo's private data as it's transferred between their servers
-- Acquired private-keys wherever they can, presumably through hacking / brute-forcing passwords etc.
-- Built back doors into certain commercial encryption software products (notably, Microsoft)
-- Used brute-force attacks to decrypt the weaker (1024-bit) RSA keys
+- Intercepted huge amounts of encrypted and unencrypted internet traffic
+- Used network taps to get hold of Google and Yahoo's (and probably others') unencrypted private data as it's transferred between their servers
+- Acquired private-keys wherever they can, presumably through traditional hacking methods like brute-forcing passwords, social engineering, or inside contacts.
+- Built back doors into certain commercial encryption software products (most notably, [Microsoft](http://www.wired.co.uk/news/archive/2013-07/12/microsoft-nsa-collusion))
+- Used brute-force attacks to find weaker (1024-bit) RSA private keys
 - Used court orders to force companies to give up personal information
 
 A word about RSA brute-forcing
@@ -67,9 +68,11 @@ However, MIT also claim that these weaker keys are:
 
 > used by most websites that offer secure SSL connections
 
-This surprises me, as I know that [GoDaddy](http://uk.godaddy.com/) at least won't sell you a certificate for a key shorter than 2048-bit.
+This surprises me, as I know that [GoDaddy](http://uk.godaddy.com/) at least won't sell you a certificate for a key shorter than 2048-bit - and I would assume other certificate vendors would follow suit. But maybe this is fairly recent.
 
-However, even if "most websites" use RSA-1024, it *doesn't mean* that the NSA is decrypting all of this traffic, because it still requires a huge amount of resources to do, and the sheer number of such keys being used will also be huge. This means the NSA can *only* be decrypting data from specifically targeted sites. They won't have decrypted all of it.
+However, even if "most websites" use RSA-1024, it *doesn't mean* that the NSA is decrypting all of this encrypted traffic, because it still requires a huge amount of resources (and time) to do, and the sheer number of such keys being used will also be huge. This means the NSA can *only* be decrypting data from *specifically targeted* sites. They won't have decrypted all of it.
+
+<span id="what-you-can-do"></span>
 
 What you can do
 ===

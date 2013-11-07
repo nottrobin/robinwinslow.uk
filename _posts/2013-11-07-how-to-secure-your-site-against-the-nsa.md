@@ -3,9 +3,9 @@ layout: post
 title: "How to secure your site against the NSA and GCHQ"
 description: "There has been some misinformation going around about the state of our cryptographic technology following certain revelations about the NSA. I'm here to clear that up."
 tags:
+    - politics
     - technology
     - nsa
-    - politics
 ---
 
 In the last couple of months I've had a number of discussions with people who were under the impression that *encryption has been cracked* by the NSA. (Skip to [What you can do](#what-you-can-do)).

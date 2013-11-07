@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to secure your site against the NSA"
+title: "How to secure your site against the NSA and GCHQ"
 description: "There has been some misinformation going around about the state of our cryptographic technology following certain revelations about the NSA. I'm here to clear that up."
 tags:
     - technology
@@ -45,13 +45,13 @@ Helpfully, Massachusetts Institute of Technology published an article 4 days lat
 
 This shows that (still as far as we know) **the NSA have done nothing unprecendented**. They have, however, gone to huge lengths to exploit every known vulnerability in security systems, regardless of legality. Mostly, these vulnerability are with the end-point systems.
 
-What the NSA have done
+What the NSA and GCHQ have done
 ---
 
 I've tried to list these in order of severity:
 
 - Intercepted huge amounts of encrypted and unencrypted internet traffic
-- Used network taps to get hold of Google and Yahoo's (and probably others') unencrypted private data as it's transferred between their servers
+- [Used network taps][ind-network-taps] to get hold of Google and Yahoo's (and probably others') unencrypted private data as it's transferred between their servers
 - Acquired private-keys wherever they can, presumably through traditional hacking methods like brute-forcing passwords, social engineering, or inside contacts.
 - Built back doors into certain commercial encryption software products (most notably, [Microsoft](http://www.wired.co.uk/news/archive/2013-07/12/microsoft-nsa-collusion))
 - Used brute-force attacks to find weaker (1024-bit) RSA private keys
@@ -91,3 +91,4 @@ Now that we know this is going on, it only means that we should be more stringen
 [mit-crypto-math]: http://www.technologyreview.com/news/519171/nsa-leak-leaves-crypto-math-intact-but-highlights-known-workarounds/
 [guardian-defeat-privacy]: http://www.theguardian.com/world/2013/sep/05/nsa-gchq-encryption-codes-security
 [guardian-berners-lee]: http://www.theguardian.com/world/2013/nov/06/tim-berners-lee-encryption-spy-agencies
+[ind-network-taps]: http://www.independent.co.uk/news/world/americas/nsa-hacked-google-and-yahoos-data-centre-links-snowden-documents-say-8913998.html

@@ -45,7 +45,7 @@ Helpfully, Massachusetts Institute of Technology published an article 4 days lat
 
 <small>([NSA Leak Leaves Crypto-Math Intact but Highlights Known Workarounds][mit-crypto-math], Tom Simonite, 9th September 2013)</small>
 
-This shows that (still as far as we know) **the NSA have done nothing unprecendented**. They have, however, gone to huge lengths to exploit every known vulnerability in security systems, regardless of legality. Mostly, these vulnerability are with the end-point systems.
+This shows that (still as far as we know) **the NSA have done nothing unprecendented**. They have, however, gone to huge lengths to exploit every known vulnerability in security systems, regardless of legality. Mostly, these vulnerabilities are with the end-point systems, not the cryptography itself.
 
 What the NSA and GCHQ have done
 ---

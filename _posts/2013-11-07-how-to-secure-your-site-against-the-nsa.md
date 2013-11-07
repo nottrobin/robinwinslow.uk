@@ -8,7 +8,9 @@ tags:
     - nsa
 ---
 
-In the last couple of months I've had a number of discussions with people who were under the impression that *encryption has been cracked* by the NSA. (Skip to [What you can do](#what-you-can-do)).
+In the last couple of months I've had a number of discussions with people who were under the impression that *encryption has been cracked* by the NSA.
+
+If you like, jump straight to [what you can do about it](#what-you-can-do).
 
 The story
 ===

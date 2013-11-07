@@ -32,7 +32,7 @@ The worry
 
 On the face of it this sounds (to anyone who has a basic understanding of cryptography) like the NSA has some geniuses who have worked out a new formula to reverse-engineer some of the mathematical principles underlying cryptography. For example, they could have worked out how to quickly deduce prime factors from a public key ([read an explanation of RSA][cryp-explained-prime-factors]).
 
-If this were true, this would indeed be extremely serious. However, I was extremely sceptical because I believe that the combined capability of all the academics, company employees and hobbyist cryptographers who are not employed by the NSA to find vulnerabilities in mathematical theory will always vastly outstrip what the NSA can hope to achieve. This is why open-source code and public algorythms are inherently more secure.
+If this were true, this would indeed be extremely serious. However, I was sceptical because I believe that the combined capability of all the academics, company employees and hobbyist cryptographers who are not employed by the NSA to find vulnerabilities in mathematical theory will always vastly outstrip what the NSA can hope to achieve. This is why open-source code and public algorythms are inherently more secure.
 
 The truth
 ===

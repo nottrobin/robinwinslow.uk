@@ -34,7 +34,7 @@ The worry
 
 On the face of it this sounds like the NSA's geniuses have reverse-engineered some core cryptographic principles - e.g. worked out how to quickly deduce prime factors from a public key ([read an explanation of RSA][cryp-explained-prime-factors]).
 
-This would be very serious. I was sceptical though, because I believe that if there were key vulnerabilities in public algorythms, the public would have found them long before the NSA. They don't have a monopoly on good mathematicians. This is, after all, why open-source code and public algorythms are inherently more secure.
+This would be very serious. I was sceptical though, because I believe that if there were key vulnerabilities in public algorithms, the public would have found them long before the NSA. They don't have a monopoly on good mathematicians. This is, after all, why open-source code and public algorithms are inherently more secure.
 
 The truth
 ===
@@ -45,7 +45,7 @@ Helpfully, Massachusetts Institute of Technology published an article 4 days lat
 
 <small>([NSA Leak Leaves Crypto-Math Intact but Highlights Known Workarounds][mit-crypto-math], Tom Simonite, 9th September 2013)</small>
 
-This shows that (still as far as we know) **the NSA have done nothing unprecendented**. They have, however, gone to huge lengths to exploit every known vulnerability in security systems, regardless of legality. Mostly, these vulnerabilities are with the end-point systems, not the cryptography itself.
+This shows that (still as far as we know) **the NSA have done nothing unprecedented**. They have, however, gone to huge lengths to exploit every known vulnerability in security systems, regardless of legality. Mostly, these vulnerabilities are with the end-point systems, not the cryptography itself.
 
 What the NSA and GCHQ have done
 ---
@@ -64,7 +64,7 @@ A word about RSA brute-forcing
 
 We have [known for a while][se-rsa-length] that 1024-bit RSA keys could feasibly be brute-forced by anyone with enough resources - and many assumed that the U.S security agencies would almost certainly be doing it. So for the more paranoid among us, this should be no surprise.
 
-> “RSA 1024 is entirely too weak to be used anywhere with any confidence in its security,” says Tom Ritter
+> “RSA 1024 is entirely too weak to be used anywhere with any confidence in its security” says Tom Ritter
 
 However, MIT also claim that these weaker keys are:
 
@@ -81,7 +81,7 @@ What you can do
 
 Now that we know this is going on, it only means that we should be more stringent about the security best-practices that already existed:
 
-- Use only public, open-source, tried and tested programs and algorythms
+- Use only public, open-source, tried and tested programs and algorithms
 - Use 2048-bit or longer RSA keys
 - [Configure secure servers to prefer "perfect forward secrecy" cyphers][se-https-pfs]
 - Avoid the mainstream service providers (Google, Yahoo, Microsoft) where you can

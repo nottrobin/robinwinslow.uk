@@ -225,7 +225,7 @@ Can be simplified with the Linq library:
 ``` csharp
 using System.Linq;
 
-var brownFish = fishes.First(x => x.colour == "brown");
+var brownFish = fishes.First(fish => fish.colour == "brown");
 ```
 
 The latter is clearly simpler, and hopefully not too difficult to understand, but its does require:

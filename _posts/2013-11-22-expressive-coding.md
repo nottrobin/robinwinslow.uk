@@ -30,7 +30,7 @@ $user->loadFromSession(session); // update the user from the session
 if ($user->isAuthenticated()) { ... } // If the user is authenticated...
 ```
 
-However, as a recent discussion with [a friend of mine](http://twitter.com/karlwilliams) highlighted to me, expressive code is not a *replacement* for comments. Always write as expresively as you can, but *also* always document where it makes sense. Methods, functions and objects should always be summarised with a comment.
+However, as a recent discussion with [a friend of mine](http://twitter.com/karlwilliams) highlighted to me, expressive code is not a *replacement* for comments. Always write as expresively as you can, but *also* always document where it makes sense. Methods, functions and classes should always be summarised with a comment.
 
 Wording
 ===

@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Writing expressive code
+title: "Writing expressive code"
+description: "Reading some legacy code today reminded me of some general principles that programmers could follow to make code easier to manage for future developers. I may have got a bit carried away..."
 tags: 
   - development
 published: true

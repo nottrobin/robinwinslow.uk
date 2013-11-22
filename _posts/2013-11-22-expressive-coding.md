@@ -132,7 +132,7 @@ While encapsulation is often a good thing, to make programs easier to understand
 
 For example, one could write:
 
-``` c#
+``` csharp
 var user = new User();
 user.UpdateFromForm(); // Imports user data from the page form
 user.SaveToDatabase();
@@ -145,7 +145,7 @@ While this is both short and fairly clear, it suffers from two other problems:
 
 In general you should always pass objects around, rather than instantiating them inside each other:
 
-``` c#
+``` csharp
 var user = new User();
 var userData = Request.Form;
 var database = new DatabaseManager();
@@ -208,7 +208,7 @@ Both of these constructs are much more succinct than a full `if .. else` constru
 
 For example, in C#:
 
-``` C#
+``` csharp
 var brownFish;
 
 foreach (var fish in fishes) {
@@ -221,7 +221,7 @@ foreach (var fish in fishes) {
 
 Can be simplified with the Linq library:
 
-``` C#
+``` csharp
 using System.Linq;
 
 var brownFish = fishes.First(x => x.colour == "brown");

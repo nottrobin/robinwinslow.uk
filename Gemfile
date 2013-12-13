@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem 'newrelic_rpm'
+gem 'jekyll'
 gem 'jekyll-asset-pipeline'
 gem 'sass'
 gem 'rack-contrib'

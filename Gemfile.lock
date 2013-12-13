@@ -19,7 +19,6 @@ GEM
     kramdown (0.14.2)
     liquid (2.6.0)
     maruku (0.7.0)
-    newrelic_rpm (3.7.0.177)
     posix-spawn (0.3.8)
     pygments.rb (0.3.7)
       posix-spawn (~> 0.3.6)
@@ -39,7 +38,6 @@ DEPENDENCIES
   RedCloth
   jekyll
   jekyll-asset-pipeline
-  newrelic_rpm
   rack-contrib
   rack-rewrite
   redcarpet

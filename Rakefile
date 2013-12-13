@@ -4,10 +4,6 @@ namespace :assets do
     sh "bundle exec sass --update _scss:_css --style compressed"
     sh "bundle exec jekyll"
   end
-  task :devcompile do
-    sh "bundle exec sass --update _scss:_css --debug-info"
-    sh "bundle exec jekyll"
-  end
 end
 
 task :default => ["assets:precompile"]

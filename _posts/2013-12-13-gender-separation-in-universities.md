@@ -1,5 +1,6 @@
 ---
 title: 'Why sex-specific seating in university halls should be allowed'
+layout: post
 tags:
  - politics
 description: 'I believe that Universities UK were right to advise universities not to disallow events where the audience would be separated by sex, as long as there is no clear prioritisation of one sex over the other.'

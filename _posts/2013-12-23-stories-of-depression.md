@@ -2,6 +2,8 @@
 title: "Stories of depression"
 description: "I've been thinking about depression lately. Here are a few of my favourite stories about depression."
 layout: post
+tags:
+ - personal
 ---
 
 I've been thinking about depression recently.

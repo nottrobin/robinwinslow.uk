@@ -56,7 +56,7 @@ end
 # Serve files
 # ---
 use Rack::TryStatic,
-    :root         => '_site',       # Serve files from _site folder
+    :root         => '_site/files',       # Serve files from _site folder
     :urls         => %w[/],         # match all requests
     :index        => 'index.html',  # index.html is index (/)
     :try          => ['.html'],     # try adding .html
@@ -130,10 +130,10 @@ run lambda { |env|
     if deleted.include? request.path
         # File deleted
         # ---
-        [410, {'Content-Type' => 'text/html'}, File.open('_site/410/index.html', File::RDONLY)]
+        [410, {'Content-Type' => 'text/html'}, File.open('_site/files/410/index.html', File::RDONLY)]
     else
         # File not found
         # ---
-        [404, {'Content-Type' => 'text/html'}, File.open('_site/404/index.html', File::RDONLY)]
+        [404, {'Content-Type' => 'text/html'}, File.open('_site/files/404/index.html', File::RDONLY)]
     end
 }

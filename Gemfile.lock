@@ -17,10 +17,10 @@ GEM
       jekyll (~> 0.12)
       liquid (~> 2.4)
     kramdown (0.14.2)
-    liquid (2.5.3)
+    liquid (2.6.0)
     maruku (0.7.0)
-    newrelic_rpm (3.6.8.168)
-    posix-spawn (0.3.6)
+    newrelic_rpm (3.7.1.180)
+    posix-spawn (0.3.8)
     pygments.rb (0.3.7)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
@@ -29,7 +29,7 @@ GEM
       rack (>= 0.9.1)
     rack-rewrite (1.4.01)
     redcarpet (3.0.0)
-    sass (3.2.12)
+    sass (3.2.13)
     yajl-ruby (1.1.0)
 
 PLATFORMS

@@ -6,9 +6,9 @@ tags:
  - political
 ---
 
-I've been using GiffGaff for over a year now. Today I say this for the first time:
+I've been using GiffGaff for over a year now. Today I saw this for the first time:
 
-![GiffGaff - Time to tether](http://imgur.com/nottrobin/)
+![GiffGaff - Time to tether](http://i.imgur.com/zOSCtXF.png)
 
 So now I'm offline for a few minutes - so I'm using that time to write this blog post as a first-step to switching provider.
 
@@ -31,9 +31,16 @@ The redeeming feature of GiffGaff was always the internet. The speeds are pretty
 
 And while it's true that their terms of service say you can't tether, I tether often (on trains, in coffee shops, when my home internet is down for some reason etc.) and it's so very useful to be able to do so.
 
+Also, I don't like the idea of limiting your internet usage by what device you decide to use. Either you can afford to offer unlimited internet or you can't. How I use the internet is my business, and none of yours GiffGaff (or O2).
+
 I'm leaving GiffGaff
 ===
 
 So if I can't tether, I'm afraid, on balance, GiffGaff is just no longer worth it. It might be true that no other provider provides as good quality unlimited internet at the same price, but I'm sure I can find one that provides fairly high usage and doesn't mind me tethering.
 
-When I've picked a new provider, I'll update this post.
+Fortunately, another good feature of GiffGaff is that you can leave whenever you like. So that's exactly what I'm going to do.
+
+Hello Three
+===
+
+Three also offer unlimited internet, but they don't mind you tethering. So I'm going to get myself an [£18 monthly SIM](http://store.three.co.uk/view/searchSimOnly?tariff=2281) from Three.

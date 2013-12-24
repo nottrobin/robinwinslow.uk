@@ -3,7 +3,7 @@ title: "GiffGaff - Time to untether"
 layout: post
 description: "Why it's time to switch away from GiffGaff"
 tags:
- - political
+ - politics
 ---
 
 I've been using GiffGaff for over a year now. Today I saw this for the first time:
@@ -31,12 +31,12 @@ The redeeming feature of GiffGaff was always the internet. The speeds are pretty
 
 And while it's true that their terms of service say you can't tether, I tether often (on trains, in coffee shops, when my home internet is down for some reason etc.) and it's so very useful to be able to do so.
 
-Also, I don't like the idea of limiting your internet usage by what device you decide to use. Either you can afford to offer unlimited internet or you can't. How I use the internet is my business, and none of yours GiffGaff (or O2).
+Also, I don't like the idea of limiting people's internet usage by what device they decide to use. Either GiffGaff can afford to offer unlimited internet or they can't. How people choose to use their internet, or indeed what device they are using it from, is their business, and none of GiffGaff's (or O2's).
 
-I'm leaving GiffGaff
+Goodbye GiffGaff
 ===
 
-So if I can't tether, I'm afraid, on balance, GiffGaff is just no longer worth it. It might be true that no other provider provides as good quality unlimited internet at the same price, but I'm sure I can find one that provides fairly high usage and doesn't mind me tethering.
+So if I can't tether, I'm afraid, on balance, GiffGaff is just no longer worth it. And we are now ideologically at odds.
 
 Fortunately, another good feature of GiffGaff is that you can leave whenever you like. So that's exactly what I'm going to do.
 

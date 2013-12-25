@@ -36,7 +36,7 @@ $ bundle exec rake # Build the static site
 
 ### Run the site
 
-```
+``` bash
 $ bundle exec rackup -p 9254 # Run the server
 ```
 

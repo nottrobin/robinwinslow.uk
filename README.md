@@ -8,11 +8,9 @@ It uses [Jekyll](https://github.com/mojombo/jekyll) static site generator, and i
 Running the site locally
 ---
 
-Here's how to setup your system to run this project from scratch.
+After cloning this repository and changing to the project folder:
 
 ### Install dependencies
-
-First you'll need to have [Ruby](http://www.ruby-lang.org/en/) and [Bundler](http://gembundler.com/) installed:
 
 ``` bash
 $ sudo apt-get install ruby-dev # Install Ruby and Gems

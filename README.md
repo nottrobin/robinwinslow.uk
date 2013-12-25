@@ -10,22 +10,14 @@ Running the site locally
 
 Here's how to setup your system to run this project from scratch.
 
-### System dependencies
+### Install dependencies
 
-First you'll need to have [Ruby](http://www.ruby-lang.org/en/) and [Bundler](http://gembundler.com/) installed.
+First you'll need to have [Ruby](http://www.ruby-lang.org/en/) and [Bundler](http://gembundler.com/) installed:
 
 ``` bash
-# E.g. on Ubuntu:
 $ sudo apt-get install ruby-dev # Install Ruby and Gems
 $ gem install bundler           # Install bundler
-```
-
-### Setup the project
-
-Then you can build and run the site as follows:
-
-``` bash
-$ bundle install # Install dependencies
+$ bundle install                # Install project dependencies
 ```
 
 ### Build the site (do this whenever something changes)

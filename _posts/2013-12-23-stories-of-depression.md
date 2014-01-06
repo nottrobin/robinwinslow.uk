@@ -58,7 +58,7 @@ Read more of [Dickinson's poetry on CUNY's website](http://academic.brooklyn.cun
 Allie's story (from Hyperbole and a Half)
 ===
 
-This is Allie's illustrated story of his own depression. It might be the first story of depression I read in full. I think it's so fantastically well-put and illustrated.
+This is Allie's illustrated story of her own depression. It might be the first story of depression I read in full. I think it's so fantastically well-put and illustrated.
 
 [Adventures in depression](http://hyperboleandahalf.blogspot.co.uk/2011/10/adventures-in-depression.html)
 

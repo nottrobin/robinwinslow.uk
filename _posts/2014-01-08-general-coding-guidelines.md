@@ -18,7 +18,7 @@ Beware [code bloat](http://en.wikipedia.org/wiki/Code_bloat) - adhere to the [YA
 
 Practicing [Behaviour-Driven Development](http://en.wikipedia.org/wiki/Behaviour-driven_development) can help with both of these aims.
 
-[Do less](https://www.gov.uk/designprinciples#second): before writing any new class, assume that it probably already exists and go and look for it.
+[Do less](https://www.gov.uk/designprinciples#second): Before writing a new piece of functionality, go and look for similary solutions that already exist and extend them.
 
 Code architecture
 ---
@@ -34,12 +34,12 @@ Some useful design patterns:
 - [MVC](http://en.wikipedia.org/wiki/MVC_Pattern) (obviously)
 - [The observer pattern](http://en.wikipedia.org/wiki/Observer_pattern) (events)
 - [The adapter pattern](http://en.wikipedia.org/wiki/Adapter_pattern) (for useful abstraction of layers - like the data layer)
-- [The factory method pattern](http://en.wikipedia.org/wiki/Factory_pattern) - but consider that creating too many factory classes might well be often over-engineering
+- [The factory method pattern](http://en.wikipedia.org/wiki/Factory_pattern) (although be careful: Creating multiple factory classes is often [overengineering](http://en.wikipedia.org/wiki/Overengineering))
 
 Tools
 ===
 
-Try to use an [IDE](http://en.wikipedia.org/wiki/Integrated_development_environment) with advanced features:
+Try to learn an [IDE](http://en.wikipedia.org/wiki/Integrated_development_environment) with advanced features. These can really save you a lot of time:
 
 - Syntax highlighting
 - Auto-complete for function, class and method names

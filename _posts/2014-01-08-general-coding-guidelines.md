@@ -44,10 +44,11 @@ Code architecture
 
 Try to learn and comply with all 5 principles of [SOLID](http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) (watch [this great video](http://vimeo.com/12350535#at=0)).
 
-Make interfaces (both programming interfaces and user-interfaces) [as simple as possible](https://www.gov.uk/designprinciples#fourth)
+Make interfaces (both programming interfaces and user-interfaces) [as simple as possible](https://www.gov.uk/designprinciples#fourth).
 
 Learn about as many [Design Patterns](http://en.wikipedia.org/wiki/Design_patterns) as you can to inform your coding, [but beware of implementing them blindly](http://discuss.joelonsoftware.com/default.asp?joel.3.219431). Developers can be over-zealous in their use of Design Patterns and may [end up over-engineering](http://loosely-coupled.blogspot.co.uk/2009/03/over-engineering-and-design-patterns.html) a solution. Examples of useful design patterns:
-    [MVC](http://en.wikipedia.org/wiki/MVC_Pattern) (obviously)
-    [The observer pattern](http://en.wikipedia.org/wiki/Observer_pattern) (events)
-    [The adapter pattern](http://en.wikipedia.org/wiki/Adapter_pattern) (for useful abstraction of layers - like the data layer)
-    [The factory method pattern](http://en.wikipedia.org/wiki/Factory_pattern) - but beware of creating factory classes - that's often over-engineering
+
+- [MVC](http://en.wikipedia.org/wiki/MVC_Pattern) (obviously)
+- [The observer pattern](http://en.wikipedia.org/wiki/Observer_pattern) (events)
+- [The adapter pattern](http://en.wikipedia.org/wiki/Adapter_pattern) (for useful abstraction of layers - like the data layer)
+- [The factory method pattern](http://en.wikipedia.org/wiki/Factory_pattern) - but beware of creating factory classes - that's often over-engineering

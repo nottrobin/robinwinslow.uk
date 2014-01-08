@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "Some good general coding principles"
-description: ""
+description: "A bunch of useful tips for programming well (written in 2012)"
+tags:
+    - development
+    - back-end
 ---
 
 Tools

@@ -16,7 +16,13 @@ Another thing I re-discovered today was my [answer to "Programming vs Planning" 
 The philosophy centers around [the agile manifesto](http://en.wikipedia.org/wiki/Agile_software_development#Agile_Manifesto):
 
 > We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:
-That is, while there is value in the items on the right, we value the items on the left more.
+>
+> - Individuals and interactions over Processes and tools
+> - Working software over Comprehensive documentation
+> - Customer collaboration over Contract negotiation
+> - Responding to change over Following a plan
+>
+> That is, while there is value in the items on the right, we value the items on the left more.
 
 Of the various [software development methodologies](http://en.wikipedia.org/wiki/Software_development_methodology) out there, [Scrum](http://en.wikipedia.org/wiki/Scrum_(development)) and [Extreme programming](http://en.wikipedia.org/wiki/Extreme_Programming) particularly try to follow agile software development principles.
 

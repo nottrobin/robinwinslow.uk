@@ -7,7 +7,7 @@ tags:
     - back-end
 ---
 
-The following are a set of best practices for coding in PHP specifically. This is meant to compliment and extend the [general programming principles](LINK NEEDED).
+The following are a set of best practices for coding in PHP specifically. This is meant to compliment and extend the [general programming principles](/2014/01/08/general-coding-guidelines/).
 
 - Read through [PHP The Right Way](http://www.phptherightway.com/), which contains so many point of best practice. Particularly useful for their advice on security and caching.
 - Try to stay on [the latest version of PHP](http://www.php.net/downloads.php), and upgrade early when new versions come out.

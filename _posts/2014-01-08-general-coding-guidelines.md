@@ -11,15 +11,17 @@ Tools
 ===
 
 Try to use an [IDE](http://en.wikipedia.org/wiki/Integrated_development_environment) with advanced features:
-    - Syntax highlighting
-    - Auto-complete for function, class and method names
-    - Auto-formatting
-    - Code navigation help - e.g. jump to class declaration
-    - Collapsing of code blocks
-    - Overviews of code, e.g. a list of all methods within a class
-    - Debugging tools like break points
+
+- Syntax highlighting
+- Auto-complete for function, class and method names
+- Auto-formatting
+- Code navigation help - e.g. jump to class declaration
+- Collapsing of code blocks
+- Overviews of code, e.g. a list of all methods within a class
+- Debugging tools like break points
 
 Some suggestions:
+
 - [Sublime](http://www.eclipse.org/projects/project.php?id=tools.pdt), [Visual Studio](http://www.microsoft.com/visualstudio/en-us)
 - [Eclipse](http://www.eclipse.org/projects/project.php?id=tools.pdt)
 - [Netbeans](http://www.eclipse.org/projects/project.php?id=tools.pdt)

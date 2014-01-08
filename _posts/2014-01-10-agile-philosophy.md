@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Agile philosophy - a summary"
+title: "Agile philosophy: A summary"
 description: "This is a short description of what Agile philosophy is all about, distinct from any Agile methodologies (like Scrum or Kanban). I wrote this in September of 2012."
 tags: development
 ---

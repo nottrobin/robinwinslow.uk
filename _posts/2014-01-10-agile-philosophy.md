@@ -42,7 +42,7 @@ The 7 principles of lean software development are:
 Agile practices and principles
 ===
 
-Without choosing to follow any one defined methodology for project management, here are some common practices that could be adopted with the team:
+Without choosing to follow any one defined methodology for project management, here are some common practices that could be adopted by an agile team:
 
 - Maintain a prioritised backlog of work with a single backlog manager
 - Have a team whiteboard with sticky notes for keeping track of your tasks and blockers - it really helps to have visibility of the work taking place

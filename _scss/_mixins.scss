@@ -23,9 +23,8 @@
 @mixin secondary-heading { font-size: $second-heading-size; }
 
 @mixin link-text {
-    color: inherit;
+    color: #366;
     text-decoration: none;
-    border-bottom: 1px dotted;
     
     &:hover {
         opacity: 0.5;
@@ -99,10 +98,10 @@
             margin-left: -$golden-em;
             display:          block;
             border-bottom:    none;
+            color: inherit;
 
             &:hover {
-                border-color: rgba(255,100,0,1);
-                opacity: 1;
+                border-color: #366;
             }
         }
 

@@ -5,13 +5,11 @@ description: "This is a short description of what Agile philosophy is all about,
 tags: development
 ---
 
-Following are some guidelines about Agile philosophy that I wrote for my team back in September 2012. Reading it back to myself today, it still stands up fairly well, so I thought I'd post it.
-
-Another thing I re-discovered today was my [answer to "Programming vs Planning" on Programmers.StackOverflow.com](http://programmers.stackexchange.com/questions/166570/programming-vs-planning/166591#166591), which is also a very useful resource for anyone thinking about how to implement Agile. This is currently my highest-voted answer on any StackExchange site.
+Following are some guidelines about Agile philosophy that I wrote for my team back in September 2012. If you're thinking about implementing Agile, you might also find [this StackExchange answer](http://programmers.stackexchange.com/questions/166570/programming-vs-planning/166591#166591) helpful.
 
 ---
 
-[Agile software development](http://en.wikipedia.org/wiki/Agile_web_development) is a philosophy for managing software development. The philosophy (along with lean) has been influenced by manufacturing practices at Toyota's factories for "eliminating waste".
+[Agile software development](http://en.wikipedia.org/wiki/Agile_web_development) is a philosophy for managing software projects and teams. It has similarities to [lean manufacturing](http://en.wikipedia.org/wiki/Lean_manufacturing) principles for "eliminating waste".
 
 The philosophy centers around [the agile manifesto](http://en.wikipedia.org/wiki/Agile_software_development#Agile_Manifesto):
 
@@ -29,7 +27,7 @@ Of the various [software development methodologies](http://en.wikipedia.org/wiki
 Lean philosophy
 ===
 
-Heavily influenced by the Toyota production system, lean software development is rapidly gaining support within the agile community.
+Heavily influenced by the Toyota production system, [lean software development](http://en.wikipedia.org/wiki/Lean_software_development) is rapidly gaining support within the agile community.
 
 The 7 principles of lean software development are:
 

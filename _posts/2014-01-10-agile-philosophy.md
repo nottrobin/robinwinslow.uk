@@ -27,7 +27,7 @@ Of the various [software development methodologies](http://en.wikipedia.org/wiki
 Lean philosophy
 ===
 
-Heavily influenced by the Toyota production system, [lean software development](http://en.wikipedia.org/wiki/Lean_software_development) is rapidly gaining support within the agile community.
+[Lean software development](http://en.wikipedia.org/wiki/Lean_software_development) is rapidly gaining support within the agile community.
 
 The 7 principles of lean software development are:
 

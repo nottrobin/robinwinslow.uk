@@ -19,10 +19,10 @@ Code is poetry
 
 Writing expressive code may help future coders to understand what's going on. It may even help you in the future. But it may also help you simply to understand the problem. Thinking carefully about how to define and encapsulate the components of your solution will often help you to understand the problem better, leading to a more logical solution.
 
-The "self-documenting code" myth
+"Self-documenting code"
 ===
 
-Expressive code is sometimes called "self-documenting code" because in some simple cases if you write expressive enough code it may be immediately obvious what's going on without comments. Some comments are obviously a waste of time:
+["Self-documenting code"](http://en.wikipedia.org/wiki/Self-documenting_code) is about structuring your code and choosing your method and variable names so that your code will be largely self-describing. This is a great practice, and can make some comments redundant:
 
 ``` php
 $user = new User(); // create a new user object
@@ -30,7 +30,7 @@ $user->loadFromSession(session); // update the user from the session
 if ($user->isAuthenticated()) { ... } // If the user is authenticated...
 ```
 
-However, as a recent discussion with [a friend of mine](http://twitter.com/karlwilliams) highlighted to me, expressive code is not a *replacement* for comments. Always write as expresively as you can, but *also* always document where it makes sense. Methods, functions and classes should always be summarised with a comment.
+However, as a recent discussion with [a friend of mine](http://twitter.com/karlwilliams) highlighted to me, expressive code is not a *replacement* for comments - no code is *entirely* "self-documenting". Always write as expresively as you can, but *also* always document where it makes sense. Methods, functions and classes should always be summarised with a comment - as mentioned in the [Python coding conventions](/2014/01/05/summary-of-python-code-style-conventions/#toc_3).
 
 Wording
 ===

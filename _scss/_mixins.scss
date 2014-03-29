@@ -69,6 +69,8 @@
 }
 
 @mixin address-list {
+    padding: 0.5em 0 0.2em 0;
+
     ul {
         list-style-type: none;
         padding:         0;
@@ -76,9 +78,10 @@
         overflow:        hidden;
     }
     li {
+        line-height: 1em;
         float:    left;
         overflow: hidden;
-        margin:   0.4rem 0 0 1rem;
+        margin:   0 0 0 1rem;
         &:first-child {margin-right: 0;}
     }
 

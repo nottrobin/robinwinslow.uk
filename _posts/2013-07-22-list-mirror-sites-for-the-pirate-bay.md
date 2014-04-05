@@ -27,6 +27,7 @@ Secure
 - [xadeath.net](https://xadeath.net:444/)
 - [tpb.partidopirata.com.ar](https://tpb.partidopirata.com.ar/) (invalid certificate)
 - [through hidemyass.com](https://7.hidemyass.com/ip-1/encoded/czovL3RoZXBpcmF0ZWJheS5zeC8%3D&f=norefer)
+- [piratebayproxy.co](https://piratebayproxy.co)
 
 Insecure
 ---
@@ -43,6 +44,20 @@ Insecure
 - [tpb.ic0nic.de](http://tpb.ic0nic.de/)
 - [tpb.piraten.lu](http://tpb.piraten.lu/) (annoying popups)
 - [through webproxy.net](http://webproxy.net/view?q=http%3A%2F%2Fthepiratebay.sx)
+- [EasyPirateBay.com](http://EasyPirateBay.com)
+- [PirateBayGuru.com](http://PirateBayGuru.com)
+- [SimplePirateBay.com](http://SimplePirateBay.com)
+- [SmartPirateBay.com](http://SmartPirateBay.com)
+- [pirate-bay-proxy.com](http://pirate-bay-proxy.com)
+- [pirate-proxy.org](http://pirate-proxy.org)
+- [proxy-bay.net](http://proxy-bay.net)
+- [the-pirate-bay.net](http://the-pirate-bay.net)
+- [tpb-proxy.com](http://tpb-proxy.com)
+- [my-pirate-bay.com](http://my-pirate-bay.com)
+- [thepb.eu](http://thepb.eu)
+- [mypirateproxy.com](http://mypirateproxy.com)
+- [bt.mojoris.in](http://bt.mojoris.in)
+- [pirateshore.nl](http://www.pirateshore.nl)
 
 Other lists
 ---
@@ -54,6 +69,7 @@ Other lists
 Other torrent sites
 ---
 
+- [torrentbox.sx](http://torrentbox.sx)
 - [come.in proxies](http://come.in)
 - [isohunt.com](https://isohunt.com/) (secure)
 - [torrentz.eu](https://torrentz.eu/) (secure)

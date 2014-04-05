@@ -32,17 +32,24 @@ Secure
 Insecure
 ---
 
-- [pirateproxy.net](http://pirateproxy.net/)
-- [thepiratebay.come.in](http://thepiratebay.come.in/)
+### Tested recently
+
+- [mypirateproxy.com](http://mypirateproxy.com)
+- [pirateshore.nl](http://www.pirateshore.nl)
 - [malaysiabay.org](http://malaysiabay.org)
-- [tpb.occupyuk.co.uk](http://tpb.occupyuk.co.uk/)
-- [pirateproxy.se](http://pirateproxy.se)
 - [unblockedpiratebay.com](http://unblockedpiratebay.com/)
 - [pirateproxy.net](http://pirateproxy.net/)
-- [thepiratebay.sx.nyud.net](http://thepiratebay.sx.nyud.net/)
 - [baymirror.com](http://baymirror.com/)
 - [tpb.ic0nic.de](http://tpb.ic0nic.de/)
 - [tpb.piraten.lu](http://tpb.piraten.lu/) (annoying popups)
+
+### May not work
+
+- [thepiratebay.come.in](http://thepiratebay.come.in/)
+- [tpb.occupyuk.co.uk](http://tpb.occupyuk.co.uk/)
+- [pirateproxy.se](http://pirateproxy.se)
+- [pirateproxy.net](http://pirateproxy.net/)
+- [thepiratebay.sx.nyud.net](http://thepiratebay.sx.nyud.net/)
 - [through webproxy.net](http://webproxy.net/view?q=http%3A%2F%2Fthepiratebay.sx)
 - [EasyPirateBay.com](http://EasyPirateBay.com)
 - [PirateBayGuru.com](http://PirateBayGuru.com)
@@ -55,9 +62,7 @@ Insecure
 - [tpb-proxy.com](http://tpb-proxy.com)
 - [my-pirate-bay.com](http://my-pirate-bay.com)
 - [thepb.eu](http://thepb.eu)
-- [mypirateproxy.com](http://mypirateproxy.com)
 - [bt.mojoris.in](http://bt.mojoris.in)
-- [pirateshore.nl](http://www.pirateshore.nl)
 
 Other lists
 ---

@@ -84,6 +84,32 @@ Other options
 
 If you find and fix all your basic 404 and 50* errors, you might then want to turn warnings back on (remove `--no-warnings`) and start using `--check-html` and `--check-css`.
 
+Checking websites with OpenID (2014-04-17 update)
+---
+
+Today I had to use `linkchecker` to check a site which required authentication with [Canonical's OpenID system](https://login.ubuntu.com/). To do this, [a StackOverflow answer](http://stackoverflow.com/questions/9119998/using-wget-in-conjunction-with-an-openid-login) helped me immensely.
+
+I first accessed the site as normal with [Chromium](http://www.chromium.org/Home), opened [the console window](https://developers.google.com/chrome-developer-tools/docs/console) and dumped all the cookies that were set in that site:
+
+``` javascript
+> document.cookie
+"__utmc="111111111"; pysid=1e53e0a04bf8e953c9156ea841e41157;"
+```
+
+I then saved these cookies in `cookies.txt` in a format that linkchecker will understand:
+
+```
+Host:example.com
+Set-cookie: __utmc="111111111"
+Set-cookie: pysid="1e53e0a04bf8e953c9156ea841e41157"
+``` 
+
+And included it in my `linkchecker` command with `--cookiefile`:
+
+``` bash
+linkchecker --cookiefile=cookies.txt --timeout=300 --no-warnings -ocsv http://example.com > siteerrors.csv
+```
+
 Use it!
 ===
 

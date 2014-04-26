@@ -8,8 +8,6 @@ It uses [Jekyll](https://github.com/mojombo/jekyll) static site generator, and i
 Running the site locally
 ---
 
-After cloning this repository and changing to the project folder:
-
 ### Install dependencies
 
 ``` bash
@@ -31,3 +29,15 @@ $ bundle exec rackup -p 9254    # Run the server
 ```
 
 Now browse to [127.0.0.1:9254](http://127.0.0.1:9254).
+
+Publishing to robinwinslow.co.uk
+---
+
+``` bash
+rm -rf _site
+git submodule update --init
+cd _site
+git add -A .
+git commit -m 'Some changes'
+git push # Publish!
+```

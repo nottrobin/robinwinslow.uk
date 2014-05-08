@@ -8,7 +8,7 @@ tags:
 
 I've been using GiffGaff for over a year now. Today I saw this for the first time:
 
-![GiffGaff - Time to tether](http://i.imgur.com/zOSCtXF.png)
+![GiffGaff - Time to tether](//i.imgur.com/zOSCtXF.png)
 
 So now I'm offline for a few minutes - so I'm using that time to write this blog post as a first-step to switching provider.
 

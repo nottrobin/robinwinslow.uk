@@ -245,6 +245,10 @@ blockquote {
         @include muted;
     }
 
+    h1 {
+        font-size: 2.8em;
+    }
+
     max-width: $max-width;
     margin: 0 auto;
 }

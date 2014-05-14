@@ -3,7 +3,7 @@ title: Note to self - technical aspirations
 description: A list of things I'd like to learn and achieve in technology.
 layout: post
 tags:
-  - development
+  - dev
 ---
  
 Things for me to learn and achieve.

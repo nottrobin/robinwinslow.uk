@@ -3,7 +3,7 @@ title: My piratebay mirror
 description: A link to my mirror of the PirateBay search engine, and a list of other such mirrors.
 layout: post
 tags:
-  - development
+  - dev
   - politics
 ---
 

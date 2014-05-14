@@ -7,7 +7,7 @@ description:
 tags:
     - CSS
     - front-end
-    - development
+    - dev
 ---
 
 The idea here is to provide a JavaScript library extension (probably for YUI3) that will emulate

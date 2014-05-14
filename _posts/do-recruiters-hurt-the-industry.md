@@ -3,7 +3,7 @@ layout: post
 title: 'Do recruiters hurt the industry?'
 descript: 'A speculative post about whether the use of recruiters hurts the web development industry'
 tags:
-    - development
+    - dev
     - politics
 ---
 

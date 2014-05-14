@@ -5,7 +5,7 @@ description:
     do more for the Open Access movement. Where do I sign up?
 layout: post
 tags:
-  - development
+  - dev
   - politics
   - personal
 ---

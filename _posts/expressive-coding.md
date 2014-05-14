@@ -2,7 +2,7 @@
 layout: post
 title: 'Writing expressive ("self documenting") code'
 tags:
-	- development
+	- dev
 ---
 
 As any coder gains experience, they inevitebly become more and more aware of all the different ways in which a logical problem can be solved.

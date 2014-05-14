@@ -3,7 +3,7 @@ layout: post
 title: "PHP best practices"
 description: "A bunch of best practices for PHP which I wrote back in 2012"
 tags:
-    - development
+    - dev
     - back-end
 ---
 

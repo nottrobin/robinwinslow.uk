@@ -3,7 +3,7 @@ layout: post
 title: 'Ease Magento development with bootstrapped scripts'
 description: 'Mini scripts are super-helpful in magento development. This will explain how to bootstrap them and give a simple example of how to select a category and get its children.'
 tags:
-    - development
+    - dev
     - magento
     - back-end
 ---

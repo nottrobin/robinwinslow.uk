@@ -2,7 +2,7 @@
 title: "Hosting my Jekyll static site on Heroku"
 description: "The way I was hosting my blog on Heroku suddenly stopped working. I don't know why, but I've found a better way of doing things."
 tags:
- - development
+ - dev
  - server-side
 layout: post
 ---

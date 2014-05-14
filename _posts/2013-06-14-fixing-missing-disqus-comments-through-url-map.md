@@ -4,7 +4,7 @@ title: "Fixing missing Disqus comments though the URL map tool"
 description: "I spent a while working out why comments stopped showing up on my blog posts. I eventually discovered the cause and worked out how to fix it through the Disqus URL map tool."
 tags:
     - blogging
-    - development
+    - dev
 ---
 
 I noticed the other day that [Disqus](http://disqus.com/) comments that were appearing on my site stopped showing up. Articles that had had 2 or 3 comments had started saying "no comments".

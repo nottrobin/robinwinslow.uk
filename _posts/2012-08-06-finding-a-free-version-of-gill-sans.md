@@ -3,7 +3,7 @@ title: Finding a free version of Gill Sans
 description: Many sites use Gill Sans. Here are some suggestions of how to use it for free.
 layout: post
 tags:
-  - development
+  - dev
   - front-end
 ---
  

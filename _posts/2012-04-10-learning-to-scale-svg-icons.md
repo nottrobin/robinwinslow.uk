@@ -3,7 +3,7 @@ title: Learning to scale SVG icons
 description: Some examples of how to mitigate issues with managing SVG icons in mark-up.
 layout: post
 tags:
-  - development
+  - dev
   - front-end
 ---
  

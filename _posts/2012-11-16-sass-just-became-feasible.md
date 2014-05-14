@@ -3,7 +3,7 @@ title: Sass just became feasible
 description: Now that Chrome Developer Tools and Firebug support Sass debugging, CSS pre-processors have a viable future.
 layout: post
 tags:
-  - development
+  - dev
   - CSS
   - front-end
 ---

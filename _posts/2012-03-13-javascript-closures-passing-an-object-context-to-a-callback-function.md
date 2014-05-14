@@ -4,7 +4,7 @@ layout: post
 description: "A useful application for JavaScript Closures - passing object context."
 tags:
   - JavaScript
-  - development
+  - dev
   - front-end
 ---
  

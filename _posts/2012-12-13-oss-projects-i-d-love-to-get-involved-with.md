@@ -3,7 +3,7 @@ title: OSS projects I'd love to get involved with...
 description: ... if I had the time (this list will grow)
 layout: post
 tags:
-  - development
+  - dev
 ---
  
 ... if I had the time (this list will grow)

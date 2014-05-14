@@ -6,7 +6,7 @@ tags:
   - CSS
   - front-end
   - best-practice
-  - development
+  - dev
 ---
 
 Never use IDs

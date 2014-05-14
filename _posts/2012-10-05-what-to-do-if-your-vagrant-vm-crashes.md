@@ -4,7 +4,7 @@ description:
     If your Vagrant machine crashed and when you force kill it, vagrant forgets about its existence - here's how to fix that.
 layout: post
 tags:
-  - development
+  - dev
   - devops
 ---
  

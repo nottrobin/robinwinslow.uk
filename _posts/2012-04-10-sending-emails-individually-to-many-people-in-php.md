@@ -3,7 +3,7 @@ title: Sending emails individually to many people in PHP
 description: Introducing an open-source mailer script written in PHP and hosted on Github.
 layout: post
 tags:
-  - development
+  - dev
   - PHP
   - back-end
 ---

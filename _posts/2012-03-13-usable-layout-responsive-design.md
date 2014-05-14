@@ -4,7 +4,7 @@ description: Some examples of responsive layouts
 layout: post
 tags:
   - front-end
-  - development
+  - dev
 ---
  
 I originally wrote this post in June 2010 on my Wordpress blog. I like to think it was before the internet caught onto the idea of responsive design. I'm now re-posting it on Tumblr (My wordpress has been decommissioned).

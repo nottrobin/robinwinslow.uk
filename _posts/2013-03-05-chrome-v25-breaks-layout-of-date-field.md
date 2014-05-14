@@ -3,7 +3,7 @@ title: 'Chrome v25 breaks layout of date field'
 description: 'Chrome ruined my day by introducing a serious breaking change in the update to v25. The HTML5 input date type is likely to display wrong.'
 tags:
     - front-end
-    - development
+    - dev
     - progressive enhancement
 layout: post
 ---

@@ -4,7 +4,7 @@ title: "Loading fonts as Data URLs for performance"
 description: "Including your fonts inside your CSS files as Data URLs can help with performance"
 tags:
     - front-end
-    - development
+    - dev
     - fonts
 ---
 

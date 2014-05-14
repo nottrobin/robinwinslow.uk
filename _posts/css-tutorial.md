@@ -7,7 +7,7 @@ description:
 tags:
     - CSS
     - front-end
-    - development
+    - dev
 ---
 
 This is a re-introduction to CSS in the modern context. There are a bunch of new ideas and tools out

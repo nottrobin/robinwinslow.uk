@@ -4,7 +4,7 @@ title: "My interests - should I specialise?""
 description: "Is it a good idea to employ specialists? Should I be a specialist? If I'm not a specialist, then what exactly are my skills?"
 tags:
     - personal
-    - development
+    - dev
     - professional
 ---
 

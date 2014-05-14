@@ -3,7 +3,7 @@ layout: post
 title: "Installing Symfony 2 by creating a github fork"
 description: "How to fork the Symfony 2 standard PHP project and install dependencies locally using Composer on Ubuntu"
 tags:
-    - development
+    - dev
     - back-end
     - symfony
 ---

@@ -2,7 +2,7 @@
 title: "Using a virtual environment with Python 3.4"
 layout: post
 tags:
- - development
+ - dev
  - back-end
 description: "I recently started learning Python and Django, and so I've been working out how to setup a good virtual environment. Here's how to do it the native way in Python 3.4."
 ---

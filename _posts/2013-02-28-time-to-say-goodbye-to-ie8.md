@@ -2,7 +2,7 @@
 title: What you can do if you stop supporting IE8
 description: The arguments for dropping support for IE8 in your website
 tags:
-    - development
+    - dev
     - front-end
 layout: post
 ---

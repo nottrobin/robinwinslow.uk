@@ -3,7 +3,7 @@ layout: post
 title: 'Why I love the internet'
 description: 'A little brain-dump about my passions and how it all adds up to absolutely loving the internet and everything it stands for'
 tags:
-    - development
+    - dev
     - politics
     - personal
 ---

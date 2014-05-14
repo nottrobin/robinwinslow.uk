@@ -3,7 +3,7 @@ layout: post
 title: "Using Github's API to create repositories from the command-line"
 description: "Here's a unix command to create a GitHub repository from the command-line. You can even set it to be a git alias, for even more convenience."
 tags:
-    - development
+    - dev
     - back-end
     - git
 ---

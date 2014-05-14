@@ -3,7 +3,7 @@ layout: post
 title: "Best-practice tips for programmers"
 description: "A bunch of useful tips for programming well (written in 2012)"
 tags:
-    - development
+    - dev
     - back-end
 ---
 

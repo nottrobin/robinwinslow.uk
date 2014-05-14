@@ -4,7 +4,7 @@ description: Introduction to Marcello's code workshops at Session Digital, and t
 layout: post
 tags:
   - agile
-  - development
+  - dev
 ---
  
 So, having just accompanied my blog on

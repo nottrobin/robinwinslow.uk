@@ -2,7 +2,7 @@
 title: Website front-end performance tips
 layout: post
 tags:
-  - development
+  - dev
   - performance
   - front-end
 ---

@@ -4,7 +4,7 @@ description: The steps necessary to get TMUX ssh-agent correctly configured.
 layout: post
 tags:
   - unix
-  - development
+  - dev
   - back-end
 ---
  

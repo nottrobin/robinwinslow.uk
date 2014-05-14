@@ -4,7 +4,7 @@ description: A simple PHP command-line script for importing data from a CSV file
 layout: post
 tags:
   - PHP
-  - development
+  - dev
   - back-end
   - MySQL
 ---

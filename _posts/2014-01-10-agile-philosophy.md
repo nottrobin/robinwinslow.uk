@@ -2,7 +2,7 @@
 layout: post
 title: "Agile philosophy: A summary"
 description: "This is a short description of what Agile philosophy is all about, distinct from any Agile methodologies (like Scrum or Kanban). I wrote this in September of 2012."
-tags: development
+tags: dev
 ---
 
 Following are some guidelines about Agile philosophy that I wrote for my team back in September 2012. If you're thinking about implementing Agile, you might also find [this StackExchange answer](http://programmers.stackexchange.com/questions/166570/programming-vs-planning/166591#166591) helpful.

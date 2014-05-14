@@ -3,7 +3,7 @@ title: Technology on this site
 description: A list of some technologies and standard I've employed in the making of this site.
 layout: post
 tags: 
-  - development
+  - dev
 ---
 
 Here's a list of technologies and projects that I've used (links to follow):

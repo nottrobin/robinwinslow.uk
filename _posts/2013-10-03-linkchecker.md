@@ -3,7 +3,7 @@ layout: post
 title: "How to use unix linkchecker to thoroughly check any site"
 description: "I just discovered the unix linkchecker tool. It's a very useful and thorough tool for checking websites that more people should use."
 tags:
-  - development
+  - dev
   - back-end
 ---
 

@@ -4,13 +4,12 @@ title: 'Articles about personal stuff'
 descrpition: 'My more personal blog posts'
 ---
 
-<section>
-    <header>
-        <h1>Personal posts</h1>
-    </header>
-    
-{% for post in site.tags.personal %}
+<nav class="article-index">
+    <h1>Articles about web development</h1>
+
+    <ul>
+{% for post in site.tags.dev %}
     {% include list-article.html %}
 {% endfor %}
-
-</section>
+    </ul>
+</nav>

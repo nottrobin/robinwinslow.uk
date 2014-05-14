@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
-gem 'jekyll-asset-pipeline'
+gem 'jekyll'
+gem 'jekyll-assets'
 gem 'sass'
 gem 'rack-contrib'
 gem 'rack-rewrite'

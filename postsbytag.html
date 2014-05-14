@@ -4,7 +4,11 @@ title: 'Posts by tag'
 description: 'Blog articles grouped by tags'
 ---
 
-<nav>
+<header class="page-header">
+    <h1>All articles by tag</h1>
+</header>
+
+<nav class="tags-list">
     <ul>
 {% for tag in site.tags %}
         <li><a href="#{{ tag[0] }}">{{ tag[0] }}</a> <small>({{ tag[1].size }})</small></li>
@@ -12,14 +16,14 @@ description: 'Blog articles grouped by tags'
     </ul>
 </nav>
 
-{% for tag in site.tags %} 
-<section>
-    <header>
-	   <h1 id="{{ tag[0] }}">{{ tag[0] }}</h1>
-    </header>
+{% for tag in site.tags %}
+<nav class="related-nav article-index">
+	<h1 id="{{ tag[0] }}">{{ tag[0] }}</h1>
 
+    <ul>
 {% for post in tag[1] %}
     {% include list-article.html %}
 {% endfor %}
-</section>
+    </ul>
+</nav>
 {% endfor %}

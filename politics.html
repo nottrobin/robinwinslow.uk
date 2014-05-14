@@ -4,12 +4,12 @@ title: 'Articles about politics'
 description: 'Politics politics politics. Blog posts all about political stuff.'
 ---
 
-<section class="headless">
-    <header>
-        <h1>Political posts</h1>
-    </header>
-    
+<nav class="article-index">
+    <h1>Articles about politics and sociology</h1>
+
+    <ul>
 {% for post in site.tags.politics %}
     {% include list-article.html %}
 {% endfor %}
-</section>
+    </ul>
+</nav>

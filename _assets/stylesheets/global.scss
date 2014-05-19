@@ -26,7 +26,7 @@ $super-light-grey: rgba(240,240,240, 0.3);
 body {
     font-family: "Source Sans Pro";
     font-size: 1.3em;
-    line-height: 1.4;
+    line-height: 1.5;
     margin: 0;
 }
 h1, h2, h3, h4 {
@@ -115,6 +115,7 @@ blockquote {
     h1 {
         margin: 0.3em 0.3em 0 0.3em;
         padding: 0;
+        line-height: 1em;
         font-size: 2.3em;
     }
 }
@@ -123,6 +124,7 @@ blockquote {
 
     h1 {
         font-size: 2.8em;
+        line-height: inherit;
     }
 }
 
@@ -130,7 +132,7 @@ blockquote {
     margin-top: 1em;
 
     ul {
-        padding: 0.5em 1em;
+        padding: 0 1em;
         background-color: $header-footer-background;
 
         a {
@@ -148,7 +150,7 @@ blockquote {
             height: 0;
             width: 0;
             left: 50%;
-            bottom: -0.5em;
+            bottom: 0;
             margin-left: -14px;
             border-color: transparent transparent white transparent;
             border-style: solid;

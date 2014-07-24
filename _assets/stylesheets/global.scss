@@ -25,9 +25,10 @@ $super-light-grey: rgba(240,240,240, 0.3);
  */
 body {
     font-family: "Source Sans Pro";
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1.5;
     margin: 0;
+    background-color: #fdfdfd;
 }
 h1, h2, h3, h4 {
     font-family: "Lato";
@@ -49,7 +50,8 @@ article {
     max-width: $max-width;
     margin: 0 auto;
     padding: 2em;
-    box-shadow: -31px 0 30px -50px black, 31px 0 30px -50px black;
+    background-color: #fff;
+    box-shadow: -35px 0 30px -50px black, 35px 0 30px -50px black;
 }
 @media (max-width: $max-width) {
     article {

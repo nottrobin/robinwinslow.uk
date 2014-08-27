@@ -30,4 +30,6 @@ Edit your selected domain name and upload the certificate, chain file and privat
 Pushing your site
 ===
 
-Now you can [push](https://www.openshift.com/developers/deploying-and-building-applications) any website to the created application and it should be securely hosted. Given that you only get 1-3 gears for free, if you have a [static site](/2013/06/15/static-site-generators/), it's more likely to handle high load.
+Now you can [push](https://www.openshift.com/developers/deploying-and-building-applications) any website to the created application and it should be securely hosted.
+
+Given that you only get 1-3 gears for free, if you have a [static site](/2013/06/15/static-site-generators/), it's more likely to handle high load. For instance, this site [gets about 250 visitors a day](https://robinwinslow.co.uk/2013/06/28/public-analytics-data-for-this-site/) and runs perfectly fine on the free resources from OpenShift.

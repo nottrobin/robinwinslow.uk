@@ -1,15 +1,15 @@
 ---
 layout: post
 title: "Host your site with HTTPS for free"
-description: "How to get completely free HTTPS (SSL or TLS) website hosting with Redhat Openshift."
+description: "How to get completely free HTTPS (SSL or TLS) encrypted website hosting with Redhat Openshift."
 tags:
     - back-end
     - dev
 ---
 
-If you glance up to the address bar, you will see that this post is being served securely. I've done this because I believe strongly in the importance of [internet privacy](http://en.wikipedia.org/wiki/Internet_privacy), and I support the [HTTPS everywhere campaign](https://www.eff.org/https-everywhere).
+If you glance up to the address bar, you will see that this post is being served securely. I've done this because I believe strongly in the importance of [internet privacy](http://en.wikipedia.org/wiki/Internet_privacy), and I support the [Reset The Net](https://www.resetthenet.org/) campaign to encrypt the web.
 
-But most importantly, I've done it *completely for free*. Here's how:
+I've done this *completely for free*. Here's how:
 
 Get a free certificate
 ===

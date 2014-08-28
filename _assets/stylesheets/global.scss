@@ -44,6 +44,10 @@ p {
     line-height: 1.5;
 }
 
+li {
+    margin: 0 0 0.5em 0;
+}
+
 a, a:hover, a:link, a:visited {
     color: #399;
     text-decoration: none;
@@ -69,6 +73,7 @@ nav ul {
 
     li {
         list-style-type: none;
+        margin: 0 0 0 0;
     }
 }
 

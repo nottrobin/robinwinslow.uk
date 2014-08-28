@@ -7,7 +7,12 @@ tags:
     - dev
 ---
 
-When [Docker](https://www.docker.com/) is unable to use the host OS's DNS resolver, it should fall back to using Google's DNS servers at `8.8.8.8`. However, within some networks (for example, [Canonical](http://www.canonical.com/about)'s London office) this doesn't work correctly, resulting in a DNS resolve error within your Docker container:
+[Docker](https://www.docker.com/) is really useful for a great many things - including, but not limited to, [quickly testing older versions of Ubuntu](/2014/08/28/using-docker-to-spin-up-light-ubuntu-containers/). If you've not used it before, why not [try out the online demo](https://docker.com/tryit/)?.
+
+Networking issues
+===
+
+Sometimes docker is unable to use the host OS's DNS resolver, resulting in a DNS resolve error within your Docker container:
 
 ``` bash
 $ sudo docker run -i -t ubuntu /bin/bash  # Start a docker container
@@ -21,7 +26,9 @@ W: Some index files failed to download. They have been ignored, or old ones used
 How to fix it
 ===
 
-When this happens, it's fairly simple to fix.
+We can fix this by explicitly telling Docker to use Google's DNS public server (`8.8.8.8`).
+
+However, within some networks (for example, [Canonical](http://www.canonical.com/about)'s London office) all public DNS will be blocked, so we should find and explicitly add the network's DNS server as a backup as well:
 
 Get the address of your current DNS server
 ---
@@ -50,7 +57,7 @@ Now open up the docker config file at `/etc/default/docker`, and update or repla
 # ...
 # Use DOCKER_OPTS to modify the daemon startup options.
 DOCKER_OPTS="--dns 8.8.8.8 --dns 192.168.100.102"
-# 1st DNS is Google ^, but add ours ^ as the second
+# Google's DNS first ^, and ours ^ second
 ```
 
 Restart Docker

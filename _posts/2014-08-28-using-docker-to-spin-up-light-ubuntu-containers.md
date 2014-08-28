@@ -20,7 +20,7 @@ The simplest way to [install Docker](DOCKER_INSTALL_PAGE) on Ubuntu is using the
 curl -sSL https://get.docker.io/ubuntu/ | sudo sh
 ```
 
-You may then want to authorise your user to run Docker directly (as opposed to using `sudo`) by adding yourself to the `docker` group:
+You may then want to [authorise your user to run Docker directly](https://docs.docker.com/installation/ubuntulinux/#giving-non-root-access) (as opposed to using `sudo`) by adding yourself to the `docker` group:
 
 ``` bash
 sudo gpasswd -a [YOUR-USERNAME] docker
@@ -34,10 +34,12 @@ Spinning up an old version of Ubuntu
 With docker installed, you should be able to run it as follows. The below example is for Ubuntu Precise, but you can replace "precise" with any [available ubuntu version](https://registry.hub.docker.com/_/ubuntu/):
 
 ``` bash
-mkdir share  # Shared folder with docker image
+mkdir share  # Shared folder with docker image - optional
 docker run -v `pwd`/share:/share -i -t ubuntu:precise /bin/bash  # Run ubuntu, with a shared folder
 root@cba49fae35ce:/#  # We're in!
 ```
+
+The ``-v `pwd`/share:/share`` part [mounts](https://docs.docker.com/userguide/dockervolumes/#mount-a-host-directory-as-a-data-volume) the local `./share/` folder at `/share/` within the Docker instance, for easily sharing files with the host OS. Setting this up is optional, but might well be useful.
 
 There are some import things to note:
 

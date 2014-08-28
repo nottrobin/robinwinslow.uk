@@ -5,6 +5,7 @@ description: "Docker is really useful for quickly trying things on different ver
 tags:
     - back-end
     - dev
+    - canonical
 ---
 
 [Docker](https://www.docker.com/) is a fantastic tool for running [virtual images](https://registry.hub.docker.com/) and managing light [Linux containers](https://linuxcontainers.org/) extremely quickly.

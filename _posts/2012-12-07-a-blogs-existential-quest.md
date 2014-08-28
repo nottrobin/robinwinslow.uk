@@ -4,6 +4,7 @@ description: An introduction and exploration of my blog's purpose.
 layout: post
 tags:
   - blogging
+  - canonical
 ---
  
 I'm not entirely sure why I have a blog. Not to mention that it's on Tumblr,

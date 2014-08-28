@@ -6,6 +6,7 @@ tags:
     - blogging
     - personal
     - analytics
+    - canonical
 ---
 
 [SeeTheStats](http://www.seethestats.com/) is a great free service for exposing your [Google Analytics](http://www.google.co.uk/analytics/) data (the only way to do Analytics) to the public.

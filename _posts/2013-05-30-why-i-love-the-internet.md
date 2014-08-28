@@ -6,6 +6,7 @@ tags:
     - dev
     - politics
     - personal
+    - canonical
 ---
 
 I have many interests, but I think there are two common thread running through them all:

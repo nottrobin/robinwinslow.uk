@@ -6,6 +6,7 @@ tags:
     - dev
     - front-end
     - UX
+    - canonical
 ---
 
 I was just entering an expense on [Splitwise](http://splitwise.com/)

@@ -5,6 +5,7 @@ tags:
     - front-end
     - dev
     - progressive enhancement
+    - canonical
 layout: post
 ---
 

@@ -5,6 +5,7 @@ description: "Within certain networks, docker is unable to resolve DNS correctly
 tags:
     - back-end
     - dev
+    - canonical
 ---
 
 [Docker](https://www.docker.com/) is really useful for a great many things - including, but not limited to, [quickly testing older versions of Ubuntu](/2014/08/28/using-docker-to-spin-up-light-ubuntu-containers/). If you've not used it before, why not [try out the online demo](https://docker.com/tryit/)?.

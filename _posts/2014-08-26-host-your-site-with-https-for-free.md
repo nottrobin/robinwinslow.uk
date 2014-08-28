@@ -5,6 +5,7 @@ description: "How to get completely free HTTPS (SSL or TLS) encrypted website ho
 tags:
     - back-end
     - dev
+    - canonical
 ---
 
 If you glance up to the address bar, you will see that this post is being served securely. I've done this because I believe strongly in the importance of [internet privacy](http://en.wikipedia.org/wiki/Internet_privacy), and I support the [Reset The Net](https://www.resetthenet.org/) campaign to encrypt the web.

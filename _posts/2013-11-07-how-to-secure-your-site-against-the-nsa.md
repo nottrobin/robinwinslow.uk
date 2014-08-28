@@ -6,6 +6,7 @@ tags:
     - politics
     - technology
     - nsa
+    - canonical
 ---
 
 In the last couple of months I've had a number of discussions with people who were under the impression that *encryption has been cracked* by the NSA.

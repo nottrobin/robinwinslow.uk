@@ -7,6 +7,7 @@ layout: post
 tags:
   - science
   - personal
+  - canonical
 ---
  
 Woop!

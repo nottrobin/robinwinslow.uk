@@ -5,6 +5,7 @@ tags:
   - dev
   - performance
   - front-end
+  - canonical
 ---
 
 Design performance

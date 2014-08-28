@@ -2,7 +2,9 @@
 layout: post
 title: "BBC publishing misinformation on knife crime"
 description: "The BBC reported on a fight and stabbings in Nottingham, but quoted the sensationalist and misleading comments from the club owner. I object."
-tags: politics
+tags:
+    - politics
+    - canonical
 ---
 
 On Saturday night, there was a big fight outside one of our night-clubs here in Nottingham, in which 3 people were stabbed.

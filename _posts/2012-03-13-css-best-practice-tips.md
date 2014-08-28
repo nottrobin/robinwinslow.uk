@@ -7,6 +7,7 @@ tags:
   - front-end
   - best-practice
   - dev
+  - canonical
 ---
 
 Never use IDs

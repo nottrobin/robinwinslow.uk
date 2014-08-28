@@ -5,6 +5,7 @@ description: "A bunch of useful tips for programming well (written in 2012)"
 tags:
     - dev
     - back-end
+    - canonical
 ---
 
 I wrote this set of programming principles for my team to follow back in 2012. I'm sure there are many like it, but this one is mine. May you find it useful.

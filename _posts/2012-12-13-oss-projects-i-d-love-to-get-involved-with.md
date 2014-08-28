@@ -4,6 +4,7 @@ description: ... if I had the time (this list will grow)
 layout: post
 tags:
   - dev
+  - canonical
 ---
  
 ... if I had the time (this list will grow)

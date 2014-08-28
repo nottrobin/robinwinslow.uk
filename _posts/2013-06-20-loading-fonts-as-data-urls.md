@@ -6,6 +6,7 @@ tags:
     - front-end
     - dev
     - fonts
+    - canonical
 ---
 
 With the advent of [web fonts](https://en.wikipedia.org/wiki/Web_typography#Web_fonts) (e.g. from [Google Fonts](https://www.google.com/fonts/)), thankfully web designers are no longer tied to a limited set of "web safe" fonts.

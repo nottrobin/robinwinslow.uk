@@ -5,6 +5,7 @@ layout: post
 tags:
   - agile
   - dev
+  - canonical
 ---
  
 So, having just accompanied my blog on

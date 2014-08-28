@@ -4,6 +4,7 @@ description: An exploration of how to achieve the ultimate optimal font-size and
 title: Optimal font-size, line-height and line-length
 tags: 
   - front-end
+  - canonical
 ---
 
 Font-size

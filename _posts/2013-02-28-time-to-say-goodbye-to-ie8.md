@@ -4,6 +4,7 @@ description: The arguments for dropping support for IE8 in your website
 tags:
     - dev
     - front-end
+    - canonical
 layout: post
 ---
 

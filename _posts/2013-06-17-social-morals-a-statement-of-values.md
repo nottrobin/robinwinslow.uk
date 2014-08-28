@@ -6,6 +6,7 @@ tags:
     - personal
     - politics
     - blogging
+    - canonical
 ---
 
 I am always thinking about good general rules for making the world a better place, but it's extremely difficult to succinctly communicate them to anyone.

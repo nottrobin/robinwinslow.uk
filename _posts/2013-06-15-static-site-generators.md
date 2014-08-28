@@ -6,6 +6,7 @@ tags:
     - dev
     - blogging
     - server-side
+    - canonical
 ---
 
 Static site generators (like [Jekyll](http://jekyllrb.com/) and [Hyde](http://ringce.com/hyde)) offer a much simpler and more transparent way to create a website. There's a small learning curve, but it's totally worth it. Especially if you're a developer already.

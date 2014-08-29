@@ -35,7 +35,7 @@ Can everything be done client-side?
 
 Our first thought was to embed the entire mirror list in the [thank-you page](http://ubuntu.com/download/desktop/thank-you) and use [JavaScript](http://en.wikipedia.org/wiki/Javascript) in the users' browsers to select an appropriate mirror. This would drastically reduce the load on the application, because the download page would then be effectively [static](http://en.wikipedia.org/wiki/Static_web_page) and cache-able like every other page.
 
-The only way to reliably get the user's location [client-side](http://en.wikipedia.org/wiki/Client-side_scripting) is with the [geolocation API](https://developer.mozilla.org/en/docs/WebAPI/Using_geolocation), which [is only supported by 84% of users' browsers](http://caniuse.com/#search=geolocation). Another slight issue is that the user has to give permission before they could be assigned a mirror, which would slightly hindering their experience.
+The only way to reliably get the user's location [client-side](http://en.wikipedia.org/wiki/Client-side_scripting) is with the [geolocation API](https://developer.mozilla.org/en/docs/WebAPI/Using_geolocation), which [is only supported by 85% of users' browsers](http://caniuse.com/#search=geolocation). Another slight issue is that the user has to give permission before they could be assigned a mirror, which would slightly hinder their experience.
 
 This solution would inconvenience users just a bit too much. So we found a trade-off:
 

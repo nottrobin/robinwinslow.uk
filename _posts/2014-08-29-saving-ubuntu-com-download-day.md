@@ -11,7 +11,7 @@ tags:
 
 <small>(This article is was <a href="http://design.canonical.com/2014/08/saving-ubuntu-com-on-download-day-caching-location-specific-pages/">originally posted on design.canonical.com</a>)</small>
 
-On release day we can get up to 8,000 requests second to [ubuntu.com](http://ubuntu.com) from people trying to download the new release. In fact, last October ([13.10](http://en.wikipedia.org/wiki/Ubuntu_13.10_Saucy_Salamander#Ubuntu_13.10_.28Saucy_Salamander.29)) was the first release day in a long time that the site didn't crash under the load at some point during the day (huge credit to the [infrastructure team](http://www.ubuntu.com/management/ubuntu-advantage)).
+On release day we can get up to 8,000 requests a second to [ubuntu.com](http://ubuntu.com) from people trying to download the new release. In fact, last October ([13.10](http://en.wikipedia.org/wiki/Ubuntu_13.10_Saucy_Salamander#Ubuntu_13.10_.28Saucy_Salamander.29)) was the first release day in a long time that the site didn't crash under the load at some point during the day (huge credit to the [infrastructure team](http://www.ubuntu.com/management/ubuntu-advantage)).
 
 Ubuntu.com has been running on [Drupal](http://drupal.org), but we've been gradually migrating it to a more bespoke [Django](http://django.org) based system. In March we started work on migrating the download section in time for the release of [Trusty Tahr](http://en.wikipedia.org/wiki/List_of_Ubuntu_releases#Ubuntu_14.04_LTS_.28Trusty_Tahr.29). This was a prime opportunity to look for ways to reduce some of the load on the servers.
 

@@ -18,7 +18,7 @@ Ubuntu.com has been running on [Drupal](http://drupal.org), but we've been gradu
 Choosing [geolocated](http://en.wikipedia.org/wiki/Geolocation) download mirrors is hard work for an application
 ---
 
-When someone download Ubuntu from ubuntu.com (on [a thank-you page](http://ubuntu.com/download/desktop/thank-you)), they are actually sent to one of the [300 or so mirror sites](https://launchpad.net/ubuntu/+cdmirrors) that's [nearby](http://en.wikipedia.org/wiki/Geolocation).
+When someone downloads Ubuntu from ubuntu.com (on [a thank-you page](http://www.ubuntu.com/download/desktop/thank-you?version=14.04.1&architecture=amd64)), they are actually sent to one of the [300 or so mirror sites](https://launchpad.net/ubuntu/+cdmirrors) that's [nearby](http://en.wikipedia.org/wiki/Geolocation).
 
 To pick a mirror for the user, the [application](https://en.wikipedia.org/wiki/Web_application) has to:
 

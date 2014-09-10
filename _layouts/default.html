@@ -33,11 +33,6 @@
         </script>
 
         <link type="application/atom+xml" rel="alternative" href="{{ page.rss_link }}" />
-
-        <script type="text/javascript">
-            var _bftn_options = { animation: 'banner', theme: 'dark' }
-        </script>
-        <script src="//fightforthefuture.github.io/battleforthenet-widget/widget.min.js" async></script>
     </head>
 
     <body class="{{ page.body_class }}">
@@ -97,5 +92,22 @@
 
             <p><a href="https://github.com/nottrobin/robin-blog/" class="github-fork">Fork me on github.</a></p>
         </footer>
+
+        <script type="text/javascript">
+            /* Internet defense league campaigns
+             * ==
+             * See: https://members.internetdefenseleague.org/
+             **/
+            window._idl = {};
+            _idl.variant = "modal";
+            (function() {
+                var idl = document.createElement('script');
+                idl.type = 'text/javascript';
+                idl.async = true;
+                console.log(document.getElementsByTagName('body')[0]);
+                idl.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'members.internetdefenseleague.org/include/?url=' + (_idl.url || '') + '&campaign=' + (_idl.campaign || '') + '&variant=' + (_idl.variant || 'modal');
+                document.getElementsByTagName('body')[0].appendChild(idl);
+            })();
+        </script>
     </body>
 </html>

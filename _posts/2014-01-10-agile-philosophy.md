@@ -7,7 +7,9 @@ tags:
     - canonical
 ---
 
-Following are some guidelines about Agile philosophy that I wrote for my team back in September 2012. If you're thinking about implementing Agile, you might also find [this StackExchange answer](http://programmers.stackexchange.com/questions/166570/programming-vs-planning/166591#166591) helpful.
+Following are some guidelines about Agile philosophy that I wrote for my team back in September 2012.
+
+I also wrote a popular [StackExchange answer about Agile project planning](http://programmers.stackexchange.com/questions/166570/programming-vs-planning/166591#166591) which you might fine useful if you're thinking about implementing Agile.
 
 ---
 

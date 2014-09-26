@@ -7,6 +7,7 @@ tags:
     - dev
     - blogging
     - politics
+    - canonical
 ---
 
 Following are my long-form notes for a [short presentation](http://prezi.com/rkxcaj2hebal/the-information-superhighway/) I gave to the [team here at Canonical](http://design.canonical.com/team).

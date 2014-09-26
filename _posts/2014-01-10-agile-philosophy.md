@@ -26,32 +26,20 @@ The philosophy centers around [the agile manifesto](http://en.wikipedia.org/wiki
 
 Of the various [software development methodologies](http://en.wikipedia.org/wiki/Software_development_methodology) out there, [Scrum](http://en.wikipedia.org/wiki/Scrum_(development)) and [Extreme programming](http://en.wikipedia.org/wiki/Extreme_Programming) particularly try to follow agile software development principles.
 
-Lean philosophy
-===
-
-[Lean software development](http://en.wikipedia.org/wiki/Lean_software_development) is rapidly gaining support within the agile community.
-
-The 7 principles of lean software development are:
-
-1. Eliminate waste
-2. Amplify learning
-3. Decide as late as possible
-4. Deliver as fast as possible
-5. Empower the team
-6. Build integrity in
-7. See the whole
+[Lean software development](http://en.wikipedia.org/wiki/Lean_software_development) is also rapidly gaining support within the agile community.
 
 Agile practices and principles
 ===
 
 Without choosing to follow any one defined methodology for project management, here are some common practices that could be adopted by an agile team:
 
-- Maintain a prioritised backlog of work with a single backlog manager
-- Have a team whiteboard with sticky notes for keeping track of your tasks and blockers - it really helps to have visibility of the work taking place
-- Break down work into manageable chunks - each less than a day's work
-- Try to use relative sizing to size up work, rather than actual concrete amounts of time. Here's why.
-- Have a daily scrum including as many stake-holders as possible so everyone knows what's going on and how things are progressing
-- Try to produce the minimum viable product (this principle is linked to release early release often and iterative development)
-- Fixed time-scales, variable requirements - have fixed production deadlines and structure work such that chunks can be dropped from the iteration if they're not ready
-- Measure the team's velocity and use it to estimate work
-- Use pair-programming for knowledge-sharing and for working through blockers
+- Maintain a [prioritised backlog](http://guide.agilealliance.org/guide/backlog.html) of work with a single backlog manager.
+- Have a team [whiteboard](http://www.allaboutagile.com/the-power-of-a-whiteboard/) with sticky notes for keeping track of your tasks and blockers - it really helps to have visibility of the work taking place.
+- Break down work into [manageable chunks](http://pivotallabs.com/epic-sharding/) - each less than a day's work.
+- Structure your stories so they they [depend on each other as little as possible](http://itsadeliverything.com/user-story-dependencies-are-more-apparent-than-real).
+- Try to use [relative sizing](http://guide.agilealliance.org/guide/relative.html) to size up work, rather than actual concrete amounts of time. [Here's why](https://www.youtube.com/watch?v=90Xx8QVnXRc).
+- Have a daily [stand-up meeting](http://en.wikipedia.org/wiki/Stand-up_meeting) including as many stake-holders as possible so everyone knows what's going on and how things are progressing.
+- Try to produce the [minimum viable product](http://en.wikipedia.org/wiki/Minimum_viable_product) (this principle is linked to [release early release often](http://en.wikipedia.org/wiki/Release_early,_release_often) and [iterative development](http://en.wikipedia.org/wiki/Iterative_and_incremental_development)).
+- [Fixed timescales, variable requirements](http://www.allaboutagile.com/agile-principle-3-time-waits-for-no-man/) - have fixed production deadlines and structure work such that chunks can be dropped from the iteration if they're not ready.
+- Measure the team's [velocity](http://en.wikipedia.org/wiki/Velocity_(software_development)) and use it to estimate work.
+- Use [pair-programming](http://en.wikipedia.org/wiki/Pair_programming) for knowledge-sharing and for working through [impediments](http://www.leanagiletraining.com/scrum/what-are-impediments/).

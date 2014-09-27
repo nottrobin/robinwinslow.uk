@@ -4,7 +4,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for post in site.posts %}
     <url>
-        <loc>http://robinwinslow.co.uk{{ post.url | remove: 'index.html' }}</loc>
+        <loc>https://robinwinslow.co.uk{{ post.url | remove: 'index.html' }}</loc>
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
         <priority>0.6</priority>
     </url>
@@ -13,7 +13,7 @@
 
     {% for page in site.pages %}
     <url>
-        <loc>http://robinwinslow.co.uk{{ page.url | remove: 'index.html' }}</loc>
+        <loc>https://robinwinslow.co.uk{{ page.url | remove: 'index.html' }}</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>

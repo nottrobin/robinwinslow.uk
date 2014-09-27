@@ -16,7 +16,7 @@ Here's what I wanted to achieve:
  - [tmux](http://tmux.sourceforge.net/), my terminal multiplexer, starts up automatically
  - I can then SSH between my environments <strong>without</strong> typing in a password every time.
 
-This is harder than you might think, as it requires several things to work together. After reading [through](http://spin.atomicobject.com/2012/01/28/less-perplexing-terminal-multiplexing-with-tmux/) [loads](http://dpc.ucore.info/post/14988791712/make-tmux-and-ssh-agent-work-smoothly) [of](http://superuser.com/questions/237822/how-can-i-get-ssh-agent-working-over-ssh-and-in-tmux-on-os-x) [blog](http://blog.codersbase.com/2012/03/tmux-ssh-agent.html) [posts](http://www.opsbs.com/2011/04/terminal-multiplexing-with-ssh-agent-my-tmux-setup/) I worked out how to do it:
+This is harder than you might think, as it requires several things to work together. After reading [through](http://spin.atomicobject.com/2012/01/28/less-perplexing-terminal-multiplexing-with-tmux/) loads [of](http://superuser.com/questions/237822/how-can-i-get-ssh-agent-working-over-ssh-and-in-tmux-on-os-x) blog [posts](http://www.opsbs.com/2011/04/terminal-multiplexing-with-ssh-agent-my-tmux-setup/) I worked out how to do it:
 
  - A password-less private key setup in your .ssh/ directory (e.g. ~/.ssh/id_dsa)
  - The public key added to the authorised_keys for each destination box

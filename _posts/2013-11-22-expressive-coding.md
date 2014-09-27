@@ -93,7 +93,7 @@ if (!user.deleteArticle(article)) {
 }
 ```
 
-In cases where a `switch` is used, or multiple `if .. else if` statements, you could consider [using different types](http://www.antiifcampaign.com/2007/11/the-simplest-anti-if-code.html) instead:
+In cases where a `switch` is used, or multiple `if .. else if` statements, you could consider [using different types](http://haacked.com/archive/2013/11/08/death-to-the-if-statement.aspx/) instead:
 
 ``` php
 class User {

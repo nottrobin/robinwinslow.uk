@@ -101,7 +101,7 @@ refund as long as I wish to cancel the order within 7 days of receiving it:
 > .. even if the customer fails to take reasonable care of the goods, they still have a right to cancel and receive a full refund.
 > However, you may have a claim for damages against them.
 > 
-> -- <cite>[The Office of Fair Trading](http://www.oft.gov.uk/business-advice/treating-customers-fairly/dshome/inpractice/?id=808330)</cite>
+> -- <cite>[TradingStandards.gov.uk](http://dshub.tradingstandards.gov.uk/in_practice/return-not-original-packaging)</cite>
 
 This is important
 ===

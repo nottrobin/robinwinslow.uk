@@ -15,7 +15,7 @@ One thing this has been very useful for in my job [at Canonical](http://design.c
 Installing Docker
 ===
 
-The simplest way to [install Docker](DOCKER_INSTALL_PAGE) on Ubuntu is using the automatic script:
+The simplest way to [install Docker](https://docs.docker.com/installation/ubuntulinux/) on Ubuntu is using the automatic script:
 
 ``` bash
 curl -sSL https://get.docker.io/ubuntu/ | sudo sh

@@ -11,9 +11,8 @@ I've been playing around with [Vagrant](http://vagrantup.com/) lately. It's a 
 
 Its real strength is that the Vagrant configuration files can be easily committed to a project's repository, allowing anyone who then checks out the project (assuming they have Vagrant installed) to quickly and reliably spin up a virtual machine pre-configured with all the project's dependencies.
 
-If you want you can [skip to the solution](#solution).
+If you want you can [skip to the solution](#the-solution).
 
-<a id="problem"></a>
 The problem
 ===
 
@@ -26,9 +25,8 @@ $ /opt/vagrant/bin/vagrant
 /opt/vagrant/bin/../embedded/bin/ruby: /lib64/libc.so.6: version `GLIBC_2.6' not found (required by /opt/vagrant/embedded/bin/../lib/libruby.so.1.9)
 ```
 
-I [asked the internet](https://www.google.co.uk/search?sugexp=chrome,mod=9&amp;sourceid=chrome&amp;ie=UTF-8&amp;q=install+vagrant+on+centos) how to install Vagrant on CentOS but it wasn't very helpful. Eventually I found a blog post on <a href="http://www.dejonghenico.be/unix/setup-vagrant-and-small-quick-start">how to setup Vagrant on Ubuntu</a> which gave me my answer, so I thought I'd share it with you.
+I [asked the internet](https://www.google.co.uk/search?sugexp=chrome,mod=9&amp;sourceid=chrome&amp;ie=UTF-8&amp;q=install+vagrant+on+centos) how to install Vagrant on CentOS but it wasn't very helpful. Eventually I found a blog post on [how to setup Vagrant on Ubuntu](http://www.dejonghenico.be/blog/detail/setup-vagrant-and-a-small-quick-start) which gave me my answer, so I thought I'd share it with you.
 
-<a id="solution"></a>
 The solution
 ===
 

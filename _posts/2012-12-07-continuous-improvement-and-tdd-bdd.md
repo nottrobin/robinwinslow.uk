@@ -9,7 +9,7 @@ tags:
 ---
  
 So, having just accompanied my blog on
-[its existential quest](http://blog.robinwinslow.co.uk/post/37412613737/a-blogs-existential-quest)
+[its existential quest](/2012/12/07/a-blogs-existential-quest/)
 I have decided to start writing down rambling thoughts just for the process of solidifying them in
 my mind - and not worry about their quality as prose.
 

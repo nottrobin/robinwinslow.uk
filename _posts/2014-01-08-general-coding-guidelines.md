@@ -13,7 +13,7 @@ I wrote this set of programming principles for my team to follow back in 2012. I
 Writing code
 ===
 
-Try to write [expressive code](/http://en.wikipedia.org/wiki/Self-documenting).
+Try to write [expressive code](http://en.wikipedia.org/wiki/Self-documenting).
 
 Beware [code bloat](http://en.wikipedia.org/wiki/Code_bloat) - adhere to the [YAGNI](http://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) principle
 

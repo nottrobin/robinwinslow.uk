@@ -37,7 +37,7 @@ http://www.bbc.co.uk/news/uk-23002796#?utm_source=twitterfeed&utm_medium=twitter
 - The Hope not Hate meeting
 - Client-to-client encryption
 - HTTPS Everywhere and free SSLing...
-- I should *definitely* do a blog post for each of [my Prezis](http://prezi.com/user/n7e3zerc5e9t/).
+- I should *definitely* do a blog post for each of [my Prezis](http://prezi.com/user/robinwinslow/).
 - OSes of the future - more like ChromeOS? But considerably more slick...
 - What do we think of the Wphone7 "tile" type interface?
 - Phone OSes should allow you to explicitly control apps that are in memory...?

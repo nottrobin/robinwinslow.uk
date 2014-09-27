@@ -8,7 +8,7 @@ tags:
     - symfony
 ---
 
-The Symfony 2 [standard project](https://github.com/nottrobin/symfony-standard) suggests that you install it in [one of two ways](https://github.com/nottrobin/symfony-standard/blob/380038dc9ab26dc6791a2772bce4daa1ecd3ee22/README.md):
+The Symfony 2 [standard project](https://github.com/symfony/symfony-standard) suggests that you install it in [one of two ways](https://github.com/symfony/symfony-standard/blob/900fc9d3cafa06a4b6d023b99d5e75fffaf74fe1/README.md#1-installing-the-standard-edition):
 
 - Install it using [Composer](http://getcomposer.org/) (which will retrieve the version that's on [packigist](https://packagist.org/))
 - Download as an [archive](http://symfony.com/download) from the [symfony website](http://symfony.com/)

@@ -17,7 +17,7 @@ This is a full repost of the article by Daily Mail columnist [Richard Littlejohn
 Why repost?
 ---
 
-The Daily Mail have since removed the article and [redirected its URL to a different article](http://www.seologic.com/webmaster-tools/url-redirect?utf8=%E2%9C%93&url=http%3A%2F%2Fwww.dailymail.co.uk%2Fdebate%2Farticle-2251347%2FNathan-Uptons-wrong-body--hes-wrong-job.html).
+The Daily Mail have since removed the article and redirected its URL to a different article.
 
 I believe in open and uncensored access to information, even for controversial content, and since I found it so hard to find the contents of this article (I eventually found [it on archive.org](http://web.archive.org/web/20121226073921/http:/www.dailymail.co.uk/debate/article-2251347/Nathan-Uptons-wrong-body--hes-wrong-job.html)), I'm reposting it here to help someone else find it.
 

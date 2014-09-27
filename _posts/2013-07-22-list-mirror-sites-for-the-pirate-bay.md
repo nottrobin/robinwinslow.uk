@@ -69,7 +69,6 @@ Insecure
 - [tpb.occupyuk.co.uk](http://tpb.occupyuk.co.uk/)
 - [pirateproxy.se](http://pirateproxy.se)
 - [pirateproxy.net](http://pirateproxy.net/)
-- [thepiratebay.sx.nyud.net](http://thepiratebay.sx.nyud.net/)
 - [through webproxy.net](http://webproxy.net/view?q=http%3A%2F%2Fthepiratebay.sx)
 - [EasyPirateBay.com](http://EasyPirateBay.com)
 - [PirateBayGuru.com](http://PirateBayGuru.com)
@@ -81,8 +80,6 @@ Insecure
 - [the-pirate-bay.net](http://the-pirate-bay.net)
 - [tpb-proxy.com](http://tpb-proxy.com)
 - [my-pirate-bay.com](http://my-pirate-bay.com)
-- [thepb.eu](http://thepb.eu)
-- [bt.mojoris.in](http://bt.mojoris.in)
 
 Other lists
 ---

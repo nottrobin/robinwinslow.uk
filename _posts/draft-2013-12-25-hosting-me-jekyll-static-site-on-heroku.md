@@ -7,7 +7,7 @@ tags:
 layout: post
 ---
 
-For many moons I have been hosting my [Jekyll site](https://github.com/nottrobin/robin-blog) on a [Heroku cedar stack](https://devcenter.heroku.com/articles/cedar). Recently the setup I had stopped working, and I'm still not sure why. However, I solved it by simplifying things, and now I think my new solution is more simple and more robust.
+For many moons I have been hosting my [Jekyll site](https://github.com/nottrobin/robinwinslow.co.uk) on a [Heroku cedar stack](https://devcenter.heroku.com/articles/cedar). Recently the setup I had stopped working, and I'm still not sure why. However, I solved it by simplifying things, and now I think my new solution is more simple and more robust.
 
 How Jekyll works
 ===

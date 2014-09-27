@@ -12,13 +12,13 @@ I noticed the other day that [Disqus](http://disqus.com/) comments that were app
 Minor URL changes
 ===
 
-After looking into it for a while, and googling a little bit, I realised that the reason was because I had made a [slight change to the way my URLs are structured](https://github.com/nottrobin/robin-blog/commit/3255ec30f3ae1f7faa13c942e4a5e9db07290a6e). For example:
+After looking into it for a while, and googling a little bit, I realised that the reason was because I had made a [slight change to the way my URLs are structured](https://github.com/nottrobin/robinwinslow.co.uk/commit/3255ec30f3ae1f7faa13c942e4a5e9db07290a6e). For example:
 
 ```
 https://robinwinslow.co.uk/2013/02/18/optimal-font-size.html -> https://robinwinslow.co.uk/2013/02/18/optimal-font-size/
 ```
 
-I had very carefully made sure all the old URLs [redirected properly to the new ones](https://github.com/nottrobin/robin-blog/commit/af062d575f0b15e54027a2c3df0697162bb312b0).
+I had very carefully made sure all the old URLs [redirected properly to the new ones](https://github.com/nottrobin/robinwinslow.co.uk/commit/af062d575f0b15e54027a2c3df0697162bb312b0).
 
 The problem
 ===

@@ -61,7 +61,7 @@ There are many static site generators out there written in many different langua
 - python: [hyde](http://ringce.com/hyde) | [pelican](http://getpelican.com/)
 - php: [phrozen](http://www.phrozn.info/en/) | [sculpin](https://sculpin.io/)
 
-Personally I use [jekyll for my website](https://github.com/nottrobin/robin-blog). Originally this was because it is [natively supported in Github Pages](https://help.github.com/articles/using-jekyll-with-pages).
+Personally I use [jekyll for my website](https://github.com/nottrobin/robinwinslow.co.uk). Originally this was because it is [natively supported in Github Pages](https://help.github.com/articles/using-jekyll-with-pages).
 
 I'm not going to go into how to use a [Jekyll](http://jekyllrb.com/) in depth in this post, but I'll try to write another couple of posts soon:
 

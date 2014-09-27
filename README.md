@@ -1,7 +1,7 @@
 robin | blog
 ===
 
-This is all the code behind [my blog](http://robinwinslow.co.uk).
+This is all the code behind [my blog](https://robinwinslow.co.uk).
 
 It uses [Jekyll](https://github.com/mojombo/jekyll) static site generator, and is hosted as a [Heroku](https://www.heroku.com/) app.
 

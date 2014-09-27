@@ -22,4 +22,3 @@ Here are my initial designs:
 I've since made other designs that follow the same idea:
 
  - http://static.robinwinslow.co.uk/oilgreen/index.html
- - http://robinwinslow.co.uk

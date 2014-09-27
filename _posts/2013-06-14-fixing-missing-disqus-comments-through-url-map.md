@@ -15,7 +15,7 @@ Minor URL changes
 After looking into it for a while, and googling a little bit, I realised that the reason was because I had made a [slight change to the way my URLs are structured](https://github.com/nottrobin/robin-blog/commit/3255ec30f3ae1f7faa13c942e4a5e9db07290a6e). For example:
 
 ```
-http://robinwinslow.co.uk/2013/02/18/optimal-font-size.html -> http://robinwinslow.co.uk/2013/02/18/optimal-font-size/
+https://robinwinslow.co.uk/2013/02/18/optimal-font-size.html -> https://robinwinslow.co.uk/2013/02/18/optimal-font-size/
 ```
 
 I had very carefully made sure all the old URLs [redirected properly to the new ones](https://github.com/nottrobin/robin-blog/commit/af062d575f0b15e54027a2c3df0697162bb312b0).
@@ -47,18 +47,18 @@ Now you can **download the CSV** of your existing URLs by clicking "you can down
 Open it up in your favourite text editor. It will look just like a list of URLs:
 
 ```
-http://robinwinslow.co.uk/2013/05/31/installing-symfony-2-by-creating-a-github-fork.html
-http://robinwinslow.co.uk/2013/05/30/why-i-love-the-internet.html
-http://robin-blog.herokuapp.com/2013/05/29/ease-magento-development-with-bootstrapped-scripts.html
+https://robinwinslow.co.uk/2013/05/31/installing-symfony-2-by-creating-a-github-fork.html
+https://robinwinslow.co.uk/2013/05/30/why-i-love-the-internet.html
+https://robin-blog.herokuapp.com/2013/05/29/ease-magento-development-with-bootstrapped-scripts.html
 ...
 ```
 
 You want to edit it to add in replacement URLs, so it looks something like this:
 
 ```
-http://robinwinslow.co.uk/2013/05/31/installing-symfony-2-by-creating-a-github-fork.html, http://robinwinslow.co.uk/2013/05/31/installing-symfony-2-by-creating-a-github-fork/
-http://robinwinslow.co.uk/2013/05/30/why-i-love-the-internet.html, http://robinwinslow.co.uk/2013/05/30/why-i-love-the-internet/
-http://robin-blog.herokuapp.com/2013/05/29/ease-magento-development-with-bootstrapped-scripts.html, http://robinwinslow.co.uk/2013/05/29/ease-magento-development-with-bootstrapped-scripts/
+https://robinwinslow.co.uk/2013/05/31/installing-symfony-2-by-creating-a-github-fork.html, https://robinwinslow.co.uk/2013/05/31/installing-symfony-2-by-creating-a-github-fork/
+https://robinwinslow.co.uk/2013/05/30/why-i-love-the-internet.html, https://robinwinslow.co.uk/2013/05/30/why-i-love-the-internet/
+https://robin-blog.herokuapp.com/2013/05/29/ease-magento-development-with-bootstrapped-scripts.html, https://robinwinslow.co.uk/2013/05/29/ease-magento-development-with-bootstrapped-scripts/
 ...
 ```
 
@@ -69,7 +69,7 @@ I edited it using [sublime text](http://www.sublimetext.com/) - a fantastic edit
 
 ```
 ^(http://[^/]+)([^ .\n]+[^/.\n])/?(.html)?[^\n]*$
-\1\2\3, http://robinwinslow.co.uk\2/
+\1\2\3, https://robinwinslow.co.uk\2/
 ```
 
 Which made it so much easier. If your requirements are similar to mine you can probably manage to copy this and tweak it slightly yourself. If they're different, you'll have to [learn regex](http://www.regular-expressions.info/tutorial.html) to use this solution if you don't already know it.

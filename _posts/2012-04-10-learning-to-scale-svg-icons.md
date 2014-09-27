@@ -7,7 +7,7 @@ tags:
   - front-end
 ---
  
-I had this idea to make [my homepage](http://robinwinslow.co.uk) actually just an index of all my online profiles - a link to Facebook, a link to Github, a link to this Tumblr blog etc. - Partly to comply with the [relMeAuth microformat](http://microformats.org/wiki/RelMeAuth).
+I had this idea to make my homepage actually just an index of all my online profiles - a link to Facebook, a link to Github, a link to this Tumblr blog etc. - Partly to comply with the [relMeAuth microformat](http://microformats.org/wiki/RelMeAuth).
 
 It seems to me a good way to do this would be to have really big icons. Everyone recognises the Facebook "F", or the Twitter bird. So I went in search of really big Icons.
 

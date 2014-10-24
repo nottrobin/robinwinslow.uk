@@ -24,7 +24,7 @@ Sign up to a [RedHat OpenShift Bronze account](https://www.openshift.com/product
 
 Once you have an account, create a new application. On the application screen, [open the list of domain aliases](https://www.openshift.com/blogs/domain-names-and-ssl-in-the-openshift-web-console) by clicking on the aliases link (might say "change"):
 
-![Application page - click on aliases](http://i.imgur.com/61cdNL8.png)
+![Application page - click on aliases](//i.imgur.com/61cdNL8.png)
 
 Edit your selected domain name and upload the certificate, chain file and private key. *NB: Make sure you upload the chain file*. If the chain file isn't uploaded initially it may not register later on.
 

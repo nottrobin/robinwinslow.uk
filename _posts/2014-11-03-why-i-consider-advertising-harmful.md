@@ -1,5 +1,5 @@
 ---
-title: Why I consider advertising harmful
+title: Why I consider advertising to be harmful
 description: I state my case for why I think advertising harms society.
 layout: post
 tags:

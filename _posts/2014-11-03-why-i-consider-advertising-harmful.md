@@ -60,6 +60,8 @@ Given my ethical position on ads, I disagree with this. I think that one of the 
 [AB]: https://adblockplus.org/
 [Bing]: http://www.bing.com/
 [G]: https://www.google.com
+[GH]: https://github.com/
+[HB]: https://www.humblebundle.com/
 [FB]: https://www.facebook.com/
 [IIWY]: http://ifiwereyoushow.com/
 [Tw]: https://twitter.com/

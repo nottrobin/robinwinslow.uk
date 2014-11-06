@@ -15,9 +15,11 @@ Selling consumers
 
 By choosing to add an advertisement to a magazine article, TV show or podcast, the content creator is choosing to sell a portion of their audience's attention. The audience has devoted their time to watch the actual content, but they are instead subjected to watching an advertisement for a random product.
 
-Now you could argue that everyone who watches any media with ads knows that this is the deal. They are choosing to watch the show, knowing it is ad-supported, so they should be allowed to make that choice.
+Now you could argue that everyone who watches any media with ads knows that this is the deal. They are choosing to watch the show, knowing it is ad-supported, so they should be allowed to make that choice. Where's the harm?
 
 My problem with it is the insidious effect that it has on that audience, and society at large. The advertising space is up for sale, often simply to the highest bidder. That means that whoever is willing to pay the most gets to subtly manipulate that audience. Are all those audience members aware that that's what they're signing up for? And even if they are, what about the wider effect on society?
+
+Advertising contributes hugely to obesity, the most serious health problem facing western nations, eating disorders and other psychological problems.
 
 Societal capture
 ---
@@ -26,9 +28,16 @@ While it is true (and a great thing) that we are all becoming wiser to the trick
 
 While possibly not quite as harmful as campaign adverts, I believe the same theory applies to advertising at large. The biggest companies can afford to buy more of these random advertising slots than anyone else, and it has a huge effect on society. Is there anyone who hasn't heard of Coke or McDonalds? How many women don't feel a constant pressure to look slim and beautiful? And this advertising also helps the massive corporations keep their monopolies.
 
-Society is genuinely shaped by the media, and the media is made up of a huge amount of advertisements. In my opinion this is a major factor in many societal problems, including over-consumption, obesity, eating disorders and other psychological problems.
+Society is genuinely shaped by the media, and the media is made up of a huge amount of advertisements. This means that the corporations with the most money get to shape society in a way that suits them. And that model for society is always based on bigger profits for those companies, not the interests of society.
 
-If there were fewer media spots up for sale, I believe the whole of society would benefit immesurably. 
+If there were fewer media spots up for sale, I believe the whole of society would benefit immesurably.
+
+Advertising is a major culprit in runaway climate change
+---
+
+The biggest and most obvious problem is that advertising, beyond a shadow of a doubt, fuels consumerism and therefore over-consumption. And this consumerism is terribly bad for the climate - the number one danger facing humanity. We are at a point where developed nations are producing emissions at a catastrophic rate. And there's no one culprit - our societies are simply structured to be wasteful. We consume more food than we need, and buy a lot more than we consume. We all fly all over the planet all the time. We buy new clothes, and throw out old ones, far more often than we need to.
+
+And all of this is because big corporations, who are solely interested in us continuing to consume in ever greater quantities, get to be constantly manipulating everyone within society with their money through paid advertisments.
 
 Financing without ads
 ---

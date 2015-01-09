@@ -1,0 +1,92 @@
+---
+title: Some of my ideas for projects
+layout: post
+description: "I often have ideas for digital projects or organisations, and I really see no point keeping them secret, so I'm going to start trying to share them here."
+tags:
+  - blogging
+  - dev
+  - politics
+---
+ 
+Ideas are cheap. Everyone has lots of ideas, but only a few of them are genuinely really valuable. I don't believe that having good ideas is particularly strongly linked to people's genius, it's probably more luck than anything. Therefore, it makes sense to me that whenever anyone has an idea, they should share it, see if anyone else wants to contribute or pick it up for themselves.
+
+To this end, I'm going to try to continually share my stupid little ideas on this page:
+
+Project idea sharing website
+===
+
+Some people are very protective of their ideas because why would they give away their potential fortune-making opportunity? But I actually believe that most people know that ideas are cheap, and would rather see their ideas get out there and potentially be implemented by *someone* than to tightly hold on to some minuscule chance of making their fortune.
+
+Idea description
+---
+
+An ideas sharing site for sharing ideas openly, and voting on others' ideas. And encourage collaboration with  I think people could retain copyright if they want, or release the idea openly with a creative commons or any license they want.
+
+Features
+---
+
+- Registration, or anonymous posting
+- Choose how liberally you want to share your idea (public domain; attribution; percentage of proceeds; keep full ownership)
+- Voting on ideas
+- Tagging
+- Commenting on ideas
+- Integration with Kickstarter or other crowd-funding site
+- Other features to encourage collaboration? People signing up to help with an idea?
+- Extend to be a platform for ideas actually in development? (Maybe not...)
+
+Implementation
+---
+
+Since up-voting and tagging are fairly central features, it could be based on [AskBot](https://askbot.com/) - a [StackOverflow](http://stackoverflow.com/) clone.
+
+Open letters website
+===
+
+Quite a few people write open letters. Whether they're to MPs, GPs, organisations or individuals. By creating an open letter these people are clearly hoping that people will read their letter, but beyond sharing it on their social media platform, they don't have that much reach. I think it would be great to help people have a nice platform for sharing ideas.
+
+Idea description
+---
+
+A website for posting open letters, and for finding other peoples' open letters.
+
+Features
+---
+
+- Email someone at the same time as publishing your open letter on the website
+- Publish to the website by simply BCCing the site
+- Anonymous posting
+- Tagging, searching, listing by tag
+
+A completely open company
+===
+
+So I work at [Canonical](http://www.canonical.com/), which is basically the full-time hobby of [almost-billionaire Mark Shuttleworth](http://www.markshuttleworth.com/). I've often thought that if I somehow came into huge wealth, I would like to start a company, to see how radically I could challenge standard corporate practices and still be at least modestly successful.
+
+Organisations and Coorporations can now be significant seats of power within society (after all part of the point of Capitalism is to take that power away from governments). So far, most coorporations don't exactly have a reputation for being civic-minded or ethical. I organisations should look after their employees as the *first* concern, and society as their second, that flat hierarchies work better, that companies should be either employee-owned or non-profit (meaning profits are either distributed among employee salaries or paid back into the business rather than going to shareholders).
+
+However, I believe that all organisations will eventually become self-protective (and therefore bad for society at large) without oversight. So above all, I believe that companies should be open and transparent in all their practices, so they remain answerable to society, and that this idea should be pushed as far as possible.
+
+Idea description
+---
+
+Create a company or organisation that genuinely pushes the boundaries of how transparent, collaborative and community-sensitive an organisation can be. Open up financial records, salaries and company processes. Have a democratic process for decision-making within the company, and also one for community input. Encourage communication and debate with society at large.
+
+Features
+---
+
+- A charter-like set of founding principles which codify the democratic ideas of the organisation
+- Easily accessible open financial records, profits, including tax payments, salaries
+- An enforced flat heirarchy and low maximum pay disparity
+- A culture of openness and collaboration with the community - rather than the company having a public voice, its employees will be encouraged to have public voices. No-one will speak "for the company", but everyone can speak "as a member of the company"
+- A mechanism for protecting employees from personal attack as a result of the above point (hmm... tricky)
+- Mechanisms for facilitating employee discussion
+- Mechanisms for raising employee and community concerns with the organisation
+- Online system for community members to request data from the organisation
+- Data should only be withheld if there's a strong moral (rather than profit-based) reason for doing so (an obvious example would be that it exposes personal information)
+
+Implementation
+---
+
+So this is a tricky one. If I had a billion dollars, I would create this company. But in the absence of that, you really need an idea to collaborate on before you create an organisation.
+
+I could start by creating the charter I mentioned above. I will try to do that in one of my blog posts. Then if this idea gains traction, one or many companies could take all or parts of that charter and run with it. That would be partial implementation, which would still be awesome.

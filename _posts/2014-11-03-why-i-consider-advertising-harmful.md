@@ -37,7 +37,7 @@ Advertising is a major culprit in runaway climate change
 
 The biggest and most obvious problem is that advertising, beyond a shadow of a doubt, fuels consumerism and therefore over-consumption. And this consumerism is terribly bad for the climate - the number one danger facing humanity. We are at a point where developed nations are producing emissions at a catastrophic rate. And there's no one culprit - our societies are simply structured to be wasteful. We consume more food than we need, and buy a lot more than we consume. We all fly all over the planet all the time. We buy new clothes, and throw out old ones, far more often than we need to.
 
-And all of this is because big corporations, who are solely interested in us continuing to consume in ever greater quantities, get to be constantly manipulating everyone within society with their money through paid advertisments.
+And all of this is because bit corporations, who are solely interested in us continuing to consume in ever greater quantities, get to be constantly manipulating everyone within society with their money through paid advertisments.
 
 Financing without ads
 ---

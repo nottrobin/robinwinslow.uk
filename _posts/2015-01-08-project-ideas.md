@@ -8,19 +8,25 @@ tags:
   - politics
 ---
  
-Ideas are cheap. Everyone has lots of ideas, but only a few of them are genuinely really valuable. I don't believe that having good ideas is particularly strongly linked to people's genius, it's probably more luck than anything. Therefore, it makes sense to me that whenever anyone has an idea, they should share it, see if anyone else wants to contribute or pick it up for themselves.
+Ideas are cheap.
 
-To this end, I'm going to try to continually share my stupid little ideas on this page:
+Lots of people have ideas, but only a few of them are genuinely valuable. I don't believe in a strong link between intelligence and having good ideas - there's a lot of luck in there too.
+
+So whenever anyone has an idea, they should share it to get feedback. That way they'll be able to see if an idea is bad more quickly, and the occasional really good idea won't be lost.
+
+To this end, I'm going to try to share my stupid little ideas on this page.
 
 Project idea sharing website
 ===
 
-Some people are very protective of their ideas because why would they give away their potential fortune-making opportunity? But I actually believe that most people know that ideas are cheap, and would rather see their ideas get out there and potentially be implemented by *someone* than to tightly hold on to some minuscule chance of making their fortune.
+Some people protect their ideas jealously, thinking "why would I give away my fortune-making opportunity?". If they share it, they'll lose it. But I don't think either of these assertions are true - sharing an idea does not mean losing it, and even if you had a really good idea, it doesn't mean you'd make any money from it. And actually I believe most people realise this. I actually think most people don't share ideas because they're worried that the idea is stupid.
+
+Maybe if there was a simple way to share ideas, as anonymously as you like, more of these people with little ideas would share them just in case they turned out to be great?
 
 Idea description
 ---
 
-An ideas sharing site for sharing ideas openly, and voting on others' ideas. And encourage collaboration with  I think people could retain copyright if they want, or release the idea openly with a creative commons or any license they want.
+A website for sharing ideas openly, and voting and commenting on other ideas. People could retain copyright over their idea if they want, or they could openly post ideas anonymously.
 
 Features
 ---
@@ -30,7 +36,7 @@ Features
 - Voting on ideas
 - Tagging
 - Commenting on ideas
-- Integration with Kickstarter or other crowd-funding site
+- Integration with KickStarter or other crowd-funding site
 - Other features to encourage collaboration? People signing up to help with an idea?
 - Extend to be a platform for ideas actually in development? (Maybe not...)
 
@@ -47,13 +53,13 @@ Quite a few people write open letters. Whether they're to MPs, GPs, organisation
 Idea description
 ---
 
-A website for posting open letters, and for finding other peoples' open letters.
+A website for posting open letters really easily, and for finding other peoples' open letters.
 
 Features
 ---
 
-- Email someone at the same time as publishing your open letter on the website
-- Publish to the website by simply BCCing the site
+- Publish to the website by simply BCCing the site - anonymously or for your account. Email confirmation.
+- When submitting your letter online, option to send Email someone at the same time
 - Anonymous posting
 - Tagging, searching, listing by tag
 

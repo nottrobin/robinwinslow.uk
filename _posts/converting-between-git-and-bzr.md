@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using Git within Canonical, and converting projects between Git and Bazaar"
+title: "Converting projects between Git and Bazaar"
 description: "In my team, we often work in both git and bzr version control systems. This is a little guide about managing both together."
 tags:
     - front-end
@@ -9,9 +9,11 @@ tags:
     - canonical
 ---
 
-Here in the [design team](http://design.canonical.com/team/) we wok on projects in both Launchpad (mostly as [canonical-webmonkeys](https://launchpad.net/~canonical-webmonkeys)) and Github (as [UbuntuDesign](https://github.com/ubuntudesign)). This means that we have some projects using [Bazaar](http://en.wikipedia.org/wiki/GNU_Bazaar), some using [Git](http://git-scm.com/) (the respective [version control systems](http://en.wikipedia.org/wiki/Revision_control) for the two hosts), and some projects using both.
+Here in the [design team](http://design.canonical.com/team/) we keep projects in both [Launchpad](https://launchpad.net/) (mostly as [canonical-webmonkeys](https://launchpad.net/~canonical-webmonkeys)) and [Github](https://github.com/) (as [UbuntuDesign](https://github.com/ubuntudesign)).
 
-This means we quite often end up coverting our projects from Bazaar to Git or vice-versa. Fortunately, this actually really easy.
+This means some of our projects use [Bazaar](http://en.wikipedia.org/wiki/GNU_Bazaar), some use [Git](http://git-scm.com/) (the hosts' respective [version control systems](http://en.wikipedia.org/wiki/Revision_control)), and some projects use both.
+
+We quite often end up coverting our projects from Bazaar to Git or vice-versa. Fortunately, this is actually really easy.
 
 Converting between Git and Bazaar
 ===
@@ -24,13 +26,13 @@ Install `bzr-fastimport`
 In either case, you need the `fastimport` plugin for Bazaar, which installs both `bzr fast-import` and `bzr fast-export`:
 
 ``` bash
-sudo apt-get install bzr-fastimport
+sudo apt install bzr-fastimport
 ```
 
 Git to Bazaar
 ---
 
-To convert a Bazaar branch to Git, first open a Bazaar branch for your project and do the following:
+To convert a Bazaar branch to Git, open a Bazaar branch of your project and do the following:
 
 ``` bash
 git init                                        # Initialise a new git repo
@@ -43,7 +45,7 @@ Now you should have all the revision history for that Bazaar branch in Git:
 git log  # Check your revision history is in Git
 ```
 
-(I got this solution off [Astrofloyd's blog](http://astrofloyd.wordpress.com/2012/09/06/convert-bzr-to-git/).)
+<small>(From [Astrofloyd's blog](http://astrofloyd.wordpress.com/2012/09/06/convert-bzr-to-git/))</small>
 
 Bazaar to Git
 ---
@@ -62,7 +64,7 @@ cd bzr-repo/trunk  # Open the "trunk" branch (equivalent of "master")
 bzr log | less     # Check your revision history is in Bazaar
 ```
 
-(I got this solution off [the Bazaar wiki](http://wiki.bazaar.canonical.com/Scenarios/ConvertFromGit).)
+<small>(From [the Bazaar wiki](http://wiki.bazaar.canonical.com/Scenarios/ConvertFromGit))</small>
 
 Working in Git but duplicating to Bazaar
 ===
@@ -98,7 +100,7 @@ As Git is the main system we'll be working in, you should create this first:
 git init
 git add .
 git commit -m "Project's genesis"
-git push <your-remote-host>
+git push {your-remote-host}
 ```
 
 Now copy history to the Bazaar repo in the `bzr-repo` folder:
@@ -108,7 +110,7 @@ bzr init-repo bzr-repo                                       # Create a new Baza
 git fast-export -M --all | (cd bzr-repo; bzr fast-import -)  # Export Git history into Bazaar
 cd bzr-repo/trunk                                            # Open the "trunk" branch (equivalent of "master")
 bzr log | less                                               # Check your revision history is in Bazaar
-bzr push lp:<example-project>                                # Push your Bazaar history to Launchpad
+bzr push lp:{example-project}                                # Push your Bazaar history to Launchpad
 cd ../..                                                     # Back to the original project folder
 ```
 
@@ -125,8 +127,10 @@ One gotcha with the above method is that, if someone else updates the Bazaar rep
 The Bazaar synchroniser
 ===
 
-We've created a [rudimentary server project](https://github.com/ubuntudesign/bzr-sync) to synchronise Git projects to Bazaar whenever we commit to Github by setting up a [Webhook](https://help.github.com/articles/about-webhooks/) for our Github projects to ping a URL of the form:
+We've created a simple [web-service project to synchronise Git projects to Bazaar](https://github.com/ubuntudesign/bzr-sync) by setting up a [Webhook](https://help.github.com/articles/about-webhooks/) for our Github projects to ping the service.
+
+The service understands URLs of the form:
 
 ```
-https://sync-server.example.com/?token={secret-token}&git_url={url-of-github-repo}&bzr_url=lp:~{launchpad-branch-location}
+https://sync-server.example.com/?token={secret-token}&git_url={url-of-github-repository}&bzr_url=lp:{launchpad-branch-location}
 ```

@@ -9,16 +9,14 @@ tags:
     - canonical
 ---
 
-Here at Canonical, we inevitable use our very own [Launchpad](https://launchpad.net) as the primary host for our software projects. All of our release processes are based off Launchpad, and the standard way of reporting bugs with Canonical products is through Launchpad's rich bug system. At the time of writing, the only [version control system](http://en.wikipedia.org/wiki/Revision_control) supported by Launchpad is [Bazaar](http://en.wikipedia.org/wiki/GNU_Bazaar).
+Here in the [design team](http://design.canonical.com/team/) we wok on projects in both Launchpad (mostly as [canonical-webmonkeys](https://launchpad.net/~canonical-webmonkeys)) and Github (as [UbuntuDesign](https://github.com/ubuntudesign)). This means that we have some projects using [Bazaar](http://en.wikipedia.org/wiki/GNU_Bazaar), some using [Git](http://git-scm.com/) (the respective [version control systems](http://en.wikipedia.org/wiki/Revision_control) for the two hosts), and some projects using both.
 
-As any open-source developer knows, [Git](http://git-scm.com/) (not Bazaar) is actually the most popular and best distributed VCS, and we as a team enjoy using Git whenever we can get away with it. Not to mention that if we want to produce open source projects that have visibility and respect within the community, they really need to be at least in a Git repository, and ideally hosted on [Github](https://github.com/) rather than Launchpad.
+This means we quite often end up coverting our projects from Bazaar to Git or vice-versa. Fortunately, this actually really easy.
 
-To this end we have created an [UbuntuDesign Github account](https://github.com/ubuntudesign), and we are in the process of modularising and open-sourcing much of the code we use for our websites.
-
-Converting between Git and Bzr
+Converting between Git and Bazaar
 ===
 
-If we want to use Git wherever possible, it is often necessary for us to be maintaining a project in both Git and Bazaar, and ideally we'd like to avoid losing any revision history along the way. Fortunately, it is actually very easy to convert revision history between Git and Bazaar, using their [respective](http://wiki.bazaar.canonical.com/BzrFastImport) [`fast-import`](https://www.kernel.org/pub/software/scm/git/docs/git-fast-import.html) features.
+To convert revision history between Git and Bazaar, we will use their respective [fast](http://wiki.bazaar.canonical.com/BzrFastImport)-[import](https://www.kernel.org/pub/software/scm/git/docs/git-fast-import.html) features.
 
 Install `bzr-fastimport`
 ---
@@ -36,10 +34,10 @@ To convert a Bazaar branch to Git, first open a Bazaar branch for your project a
 
 ``` bash
 git init                                        # Initialise a new git repo
-bzr fast-export --plain . | git fast-import     # Import Bzr history into Git
+bzr fast-export --plain . | git fast-import     # Import Bazaar history into Git
 ```
 
-Now you should have all the revision history for that Bzr branch in Git:
+Now you should have all the revision history for that Bazaar branch in Git:
 
 ``` bash
 git log  # Check your revision history is in Git
@@ -123,3 +121,12 @@ Only have one person update Launchpad
 ---
 
 One gotcha with the above method is that, if someone else updates the Bazaar repository, Launchpad will consider the Bazaar history to have changed, and you will need to `--overwrite` the remote Bazaar repository to push again, which is a dangerous operation. To be on the safe side, keep only one person responsible for copying the revision history to Bazaar.
+
+The Bazaar synchroniser
+===
+
+We've created a [rudimentary server project](https://github.com/ubuntudesign/bzr-sync) to synchronise Git projects to Bazaar whenever we commit to Github by setting up a [Webhook](https://help.github.com/articles/about-webhooks/) for our Github projects to ping a URL of the form:
+
+```
+https://sync-server.example.com/?token={secret-token}&git_url={url-of-github-repo}&bzr_url=lp:~{launchpad-branch-location}
+```

@@ -128,7 +128,7 @@ Now to use this sync server to automatically synchronise your Github projects to
 https://{server-domain}/?token={secret-token}&git_url={url-of-github-repository}&bzr_url=lp:{launchpad-branch-location}
 ```
 
-![Creating a webhook](http://i.imgur.com/INt6lPs.png)
+![Creating a webhook](http://i.imgur.com/7SgeZu5.png)
 
 In your repository settings, select "Webhooks and Services", then "Add webhook", and enter the following information:
 
@@ -138,7 +138,7 @@ In your repository settings, select "Webhooks and Services", then "Add webhook",
 - Select **Just the push event**
 - Tick **Active**
 
-![Saving a webhook](http://i.imgur.com/2agEAsp.png)
+![Saving a webhook](http://i.imgur.com/AIGTTRr.png)
 
 **NB**: Notice the `Disable SSL verification` button. By default, the hook will only work if your server has a *valid* certificate. If you are testing with a self-signed one then you'll need to disable this SSL verification.
 

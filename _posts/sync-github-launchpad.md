@@ -128,7 +128,7 @@ Now to use this sync server to automatically synchronise your Github projects to
 https://{server-domain}/?token={secret-token}&git_url={url-of-github-repository}&bzr_url=lp:{launchpad-branch-location}
 ```
 
-![Creating a webhook](http://i.imgur.com/7SgeZu5.png)
+![Creating a webhook](http://i.imgur.com/b9ylshF.png)
 
 In your repository settings, select "Webhooks and Services", then "Add webhook", and enter the following information:
 

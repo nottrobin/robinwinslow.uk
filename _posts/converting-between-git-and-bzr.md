@@ -9,11 +9,9 @@ tags:
     - canonical
 ---
 
-Here in the [design team](http://design.canonical.com/team/) we keep projects in both [Launchpad](https://launchpad.net/) (mostly as [canonical-webmonkeys](https://launchpad.net/~canonical-webmonkeys)) and [Github](https://github.com/) (as [UbuntuDesign](https://github.com/ubuntudesign)).
+Here in the [design team](http://design.canonical.com/team/) we use both [Bazaar](http://en.wikipedia.org/wiki/GNU_Bazaar) and [Git](http://git-scm.com/) to keep track our projects' hostory.
 
-This means some of our projects use [Bazaar](http://en.wikipedia.org/wiki/GNU_Bazaar), some use [Git](http://git-scm.com/) (the hosts' respective [version control systems](http://en.wikipedia.org/wiki/Revision_control)), and some projects use both.
-
-We quite often end up coverting our projects from Bazaar to Git or vice-versa. Fortunately, this is actually really easy.
+We quite often end up coverting our projects from Bazaar to Git or vice-versa. Here are some tips on how to do that.
 
 Converting between Git and Bazaar
 ===
@@ -66,10 +64,10 @@ bzr log | less     # Check your revision history is in Bazaar
 
 <small>(From [the Bazaar wiki](http://wiki.bazaar.canonical.com/Scenarios/ConvertFromGit))</small>
 
-Working in Git but duplicating to Bazaar
+Keeping a project in both Git and Bazaar
 ===
 
-Something we've been doing a fair bit is doing our actual work in Git, but regularly copying the revision history to Bazaar. Here's how:
+You may wish to keep a project in both Git and Bazaar.
 
 Create ignore files for both systems
 ---
@@ -91,46 +89,7 @@ bzr-repo/
 
 And keep both ignore files in all versions of the project.
 
-Create your repository first in Git, then copy to Bazaar
+Only work in one repository
 ---
 
-As Git is the main system we'll be working in, you should create this first:
-
-``` bash
-git init
-git add .
-git commit -m "Project's genesis"
-git push {your-remote-host}
-```
-
-Now copy history to the Bazaar repo in the `bzr-repo` folder:
-
-``` bash
-bzr init-repo bzr-repo                                       # Create a new Bazaar repository tree
-git fast-export -M --all | (cd bzr-repo; bzr fast-import -)  # Export Git history into Bazaar
-cd bzr-repo/trunk                                            # Open the "trunk" branch (equivalent of "master")
-bzr log | less                                               # Check your revision history is in Bazaar
-bzr push lp:{example-project}                                # Push your Bazaar history to Launchpad
-cd ../..                                                     # Back to the original project folder
-```
-
-Updating the Bazaar repo
----
-
-After you've made a few more commits to your Git repository, you should be able to follow the above steps again to update the Bazaar repository with the new commits.
-
-Only have one person update Launchpad
----
-
-One gotcha with the above method is that, if someone else updates the Bazaar repository, Launchpad will consider the Bazaar history to have changed, and you will need to `--overwrite` the remote Bazaar repository to push again, which is a dangerous operation. To be on the safe side, keep only one person responsible for copying the revision history to Bazaar.
-
-The Bazaar synchroniser
-===
-
-We've created a simple [web-service project to synchronise Git projects to Bazaar](https://github.com/ubuntudesign/bzr-sync) by setting up a [Webhook](https://help.github.com/articles/about-webhooks/) for our Github projects to ping the service.
-
-The service understands URLs of the form:
-
-```
-https://sync-server.example.com/?token={secret-token}&git_url={url-of-github-repository}&bzr_url=lp:{launchpad-branch-location}
-```
+It is not practical to be doing your actual work in both systems, because converting from one to the other will overwrite any history in the destination repository. For this reason you need to choose to do all your work in either Git or Bazaar, and then regularly convert it to the other using the above conversion instructions.

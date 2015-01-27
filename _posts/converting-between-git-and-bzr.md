@@ -24,7 +24,8 @@ Install `bzr-fastimport`
 In either case, you need the `fastimport` plugin for Bazaar, which installs both `bzr fast-import` and `bzr fast-export`:
 
 ``` bash
-sudo apt install bzr-fastimport
+cd ~/.bazaar/plugins
+bzr branch lp:bzr-fastimport fastimport
 ```
 
 Git to Bazaar

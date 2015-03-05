@@ -51,8 +51,10 @@ But of course the main limiting factor will, as usual, be [browsers](http://en.w
 
 As usual the main limiting factor will be waiting for [market share of older versions of Internet Explorer to drop off](http://www.theie9countdown.com/). Braver organisations may want to be progressive by deliberately slowing down the experience for people on older browsers to speed up the more up-to-date and hence push adoption of good technology.
 
-If you want to get really clever, you could server a different website structure based on the user agent string, but this would really be a pain to implement and I doubt many people would want to do this.
+If you want to get really clever, you could serve a different website structure based on the user agent string, but this would really be a pain to implement and I doubt many people would want to do this.
 
-Even with the most progressive strategy, I doubt anyone will be brave enough to drop decent HTTP/1 performance until at least 2016.
+Even with the most progressive strategy, I doubt anyone will be brave enough to drop decent HTTP/1 performance until at least 2016, as this is when nginx support should land; Windows 10 and therefore IE 11 will have had some time to gain traction and of course Internet Explorer market share in general will have [continued to drop][1] in favour of Chrome and Firefox.
 
 So TL;DR: be ready to change your ways, but don't worry about it just yet.
+
+[1]: http://en.wikipedia.org/wiki/Usage_share_of_web_browsers#mediaviewer/File:Usage_share_of_web_browsers_(Source_StatCounter).svg

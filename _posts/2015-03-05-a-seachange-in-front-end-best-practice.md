@@ -55,6 +55,6 @@ If you want to get really clever, you could serve a different website structure 
 
 Even with the most progressive strategy, I doubt anyone will be brave enough to drop decent HTTP/1 performance until at least 2016, as this is when nginx support should land; Windows 10 and therefore IE 11 will have had some time to gain traction and of course Internet Explorer market share in general will have [continued to drop][1] in favour of Chrome and Firefox.
 
-So TL;DR: be ready to change your ways, but don't worry about it just yet.
+So TL;DR: Front-end developers should be ready to change our ways, but we don't worry about it just yet.
 
 [1]: http://en.wikipedia.org/wiki/Usage_share_of_web_browsers#mediaviewer/File:Usage_share_of_web_browsers_(Source_StatCounter).svg

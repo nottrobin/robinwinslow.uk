@@ -26,10 +26,10 @@ Changes in long-held performance practices
 
 I read [a very informative post](https://mattwilcox.net/web-development/http2-for-front-end-web-developers) today (via [Web Operations Weekly](http://webopsweekly.com/)) which laid out all the ways this will change some deeply embedded performance principles for front-end developers. Namely:
 
-- Concatenation of CSS and Javascript
-- Spriting (concatenation of images)
-- Serving assets from a cookie-less domain
-- Sharding - serving assets from many different domains
+- [Combining CSS and Javascript](https://developer.yahoo.com/performance/rules.html#num_http) into one file
+- [Image sprites](http://alistapart.com/article/sprites) (concatenation of images together in the same file)
+- Serving assets [from a cookie-less domain](http://www.ravelrumba.com/blog/static-cookieless-domain/)
+- [Sharding](http://www.stevesouders.com/blog/2009/05/12/sharding-dominant-domains/) - serving assets from many different domains
 
 Each of these practices are hacks which make website setups more complex and more opaque, but with the goal of speeding up front-end performance by working around limitations in HTTP. Fortunately, these somewhat ugly practices are no longer necessary with HTTP/2.
 

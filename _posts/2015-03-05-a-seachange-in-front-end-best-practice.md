@@ -1,5 +1,5 @@
 ---
-title: A seachange in front-end best practice - but not until at least 2016
+title: A seachange in front-end best practice - but not for a while
 layout: post
 description: "With the advent of HTTP/2, many front-end performance best practices will change. But we should only switch over when the browser support is there."
 tags:

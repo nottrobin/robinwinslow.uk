@@ -5,7 +5,7 @@ description: "With the advent of HTTP/2, many front-end performance best practic
 tags:
   - dev
   - front-end
-  - politics
+  - back-end
 ---
 
 Despite [some reservations](https://queue.acm.org/detail.cfm?id=2716278), it looks like [HTTP/2](http://en.wikipedia.org/wiki/HTTP/2) is very definitely the future of the Internet.
@@ -36,7 +36,7 @@ Each of these practices are hacks which make website setups more complex and mor
 Importantly, Matt Wilcox points out that in an HTTP/2 world, these practices might actually slow down your website, for the following reasons:
 
 - If you serve concatenated CSS, Javascript or image files, it's likely you're sending more content than you strictly need to for each page
-- Serving assets from different domains prevents HTTP/2 from reusing existing connections, forcing it to open extra ones. 
+- Serving assets from different domains prevents HTTP/2 from reusing existing connections, forcing it to open extra ones
 
 But not yet...
 ===

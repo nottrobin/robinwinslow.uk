@@ -40,7 +40,7 @@ Although Minister of Parliamentary Affairs M. Venkaiah Naidu's sheds more light 
 
 So the government are worried about hurting India's reputation (which this documentary probably does do to some extent, but with good cause), but I suspect this ban also has a lot to do with the Indian officials not liking their own cultural beliefs being challenged quite so starkly.  And this push for international censorship has already had some effect, resulting the BBC [pulling the documentary from YouTube](http://qz.com/357437/now-nobody-can-watch-the-controversial-bbc-documentary-indias-daughter/).
 
-Ultimately I suspect this ban really [do more damage than the film itself](http://qz.com/357973/indias-attempt-to-censor-indias-daughter-may-have-done-more-damage-than-the-film-itself/) not only because of the standard [Streisand Effect](http://en.wikipedia.org/wiki/Streisand_effect) meaning that more people will watch it as a result, but also because the banning of it does far more harm to India's reputation than anything that could be revealed in the documentary.
+Ultimately I suspect this ban really will [do more damage than the film itself](http://qz.com/357973/indias-attempt-to-censor-indias-daughter-may-have-done-more-damage-than-the-film-itself/) not only because of the standard [Streisand Effect](http://en.wikipedia.org/wiki/Streisand_effect) meaning that more people will watch it as a result, but also because the banning of it does far more harm to India's reputation than anything that could be revealed in the documentary.
 
 Watch it now
 ===

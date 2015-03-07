@@ -1,10 +1,12 @@
 ---
-title: Watch the "India's Daughter" documentary (banned in India) here
+title: Watch the documentary "India's Daughter" which has been banned in India
 layout: post
 description: "Links to download and watch 'India's Daughter', which, naturally, some editorial commentary."
 tags:
   - politics
 ---
+
+([Skip to the end](#watch-it-now) for links to watch the documentary)
 
 I just watched the documentary [banned in India](http://www.cbc.ca/news/world/india-s-daughter-ban-on-gang-rape-film-rattles-fight-for-equality-1.2984447), ["India's Daughter"](http://en.wikipedia.org/wiki/India%27s_Daughter) by [Leslee Udwin](http://en.wikipedia.org/wiki/Leslee_Udwin) about the [brutal gang-rape](http://en.wikipedia.org/wiki/2012_Delhi_gang_rape) and murder of Jyoti Singh.
 

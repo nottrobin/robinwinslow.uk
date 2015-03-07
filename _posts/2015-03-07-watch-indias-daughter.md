@@ -17,8 +17,9 @@ I think the documentary is really good. The makers went to a lot of effort to ge
 - One of Jyoti's tutors
 - One of the rapists
 - That rapists' parents
+- The above juvenile rapist's parents
+- Parents of the other rapists
 - Two of the rapists' lawyers
-- The jeuvenile rapist's parents
 - A psychiatrist for the rapists in jail
 - A senior police officer (I think)
 - Two members of the review committee responsible for reforming the laws in India

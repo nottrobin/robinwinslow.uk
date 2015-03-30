@@ -18,7 +18,7 @@ This is [clearly the wrong way](http://www.theguardian.com/society/2014/oct/10/f
 Hurting the UK's reputation
 ---
 
-> The new fee is bound to hit the already dipping market of Indian students visiting Britain for higher education.
+> "The new fee is bound to hit the already dipping market of Indian students visiting Britain for higher education."
 
 (["For 6-month stay in UK, pay health surcharge", the Times of India](http://timesofindia.indiatimes.com/world/uk/For-6-month-stay-in-UK-pay-health-surcharge/articleshow/46641211.cms))
 
@@ -36,4 +36,6 @@ To say nothing of the hugely damaging message the UK is sending to the internati
 Doing something about it
 ---
 
-If you agree that this is a terrible policy, [for the next 12 hours you can sign this petition](http://epetitions.direct.gov.uk/petitions/76086). After that, I guess there may be another petition. Or, on May 7th, vote for [a party](https://www.greenparty.org.uk/news/2014/02/10/natalie-bennett-speech-immigration-policy-time-for-the-facts,-time-for-humanity/) that doesn't [hate immigrants](http://labourlist.org/2015/03/i-hate-labours-immigration-mug-but-i-hate-their-immigration-pledge-even-more/.
+If you agree that this is a terrible policy, [for the next 12 hours you can sign this petition](http://epetitions.direct.gov.uk/petitions/76086). After that, I guess there may be another petition.
+
+Or, on May 7th, vote for [a party](https://www.greenparty.org.uk/news/2014/02/10/natalie-bennett-speech-immigration-policy-time-for-the-facts,-time-for-humanity/) that doesn't [hate immigrants](http://labourlist.org/2015/03/i-hate-labours-immigration-mug-but-i-hate-their-immigration-pledge-even-more/).

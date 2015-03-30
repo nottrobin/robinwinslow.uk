@@ -7,7 +7,7 @@ tags:
   - personal
 ---
 
-([12 hours left to sign the petition](http://epetitions.direct.gov.uk/petitions/76086))
+([Petition ends midnight on March 30th](http://epetitions.direct.gov.uk/petitions/76086))
 
 Starting in April, migrants and foreign students [will have to pay extra for the NHS](http://felixonline.co.uk/news/5313/150-nhs-student-visa-charge-starts-in-april/). £200 for migrants and £150 for students will be added to the cost of [already prohibitively expensive UK visas](http://www.australiantimes.co.uk/uk-visas-fee-increase-2015/).
 
@@ -36,6 +36,6 @@ To say nothing of the hugely damaging message the UK is sending to the internati
 Doing something about it
 ---
 
-If you agree that this is a terrible policy, [for the next 12 hours you can sign this petition](http://epetitions.direct.gov.uk/petitions/76086). After that, I guess there may be another petition.
+If you agree that this is a terrible policy, [you can sign this petition until March 30th](http://epetitions.direct.gov.uk/petitions/76086). After that, I guess there may be another petition.
 
 Or, on May 7th, vote for [a party](https://www.greenparty.org.uk/news/2014/02/10/natalie-bennett-speech-immigration-policy-time-for-the-facts,-time-for-humanity/) that doesn't [hate immigrants](http://labourlist.org/2015/03/i-hate-labours-immigration-mug-but-i-hate-their-immigration-pledge-even-more/).

@@ -19,8 +19,8 @@ Hurting the UK's reputation
 ---
 
 > "The new fee is bound to hit the already dipping market of Indian students visiting Britain for higher education."
-
-(["For 6-month stay in UK, pay health surcharge", the Times of India](http://timesofindia.indiatimes.com/world/uk/For-6-month-stay-in-UK-pay-health-surcharge/articleshow/46641211.cms))
+> 
+> (The Times of India: [For 6-month stay in UK, pay health surcharge](http://timesofindia.indiatimes.com/world/uk/For-6-month-stay-in-UK-pay-health-surcharge/articleshow/46641211.cms))
 
 We live in an international world, where the long-term success of any country lies in its ability to cooperate with and support the international community. This is a complex web of relationships, but it undoubtedly begins at home.
 

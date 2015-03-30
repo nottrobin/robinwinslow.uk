@@ -1,5 +1,5 @@
 ---
-title: "Racist Britain: Migrants made to pay to use the NHS"
+title: "Racist Britain: Migrants made to pay for the NHS"
 layout: post
 description: "What a xenophobic message this sends."
 tags:

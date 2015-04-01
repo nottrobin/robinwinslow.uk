@@ -54,4 +54,7 @@ So because I believe this is a great documentary that everyone should see - for 
 - If you know how to use Torrents (e.g. with [uTorrent](http://www.utorrent.com/)), either:
   * Go and search for it on a [torrent](http://kickasstorrent.1080p-downloads.com/usearch/india%27s%20daughter/) [site](http://baytorrent.website/s/?q=indias+daughter)
   * Use this [magnet link](magnet:?xt=urn:btih:EB5FAF2AD480DA8D83693676BD1DD758C866AA53&dn=storyville+2015+s22e10+india+s+daughter+720p+pxg&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce) or download [the torrent file](https://transfer.sh/Ocree/indias-daughter.torrent).
-- Download it directly [from my mega.co.nz account](https://mega.co.nz/#!HhI1wagB!S_1yu_OayTArguhEJBkCX98X30NUFKDu3kRS_bjLEQo).
+- Download it directly [from my mega.co.nz account](https://mega.co.nz/#!HhI1wagB!S_1yu_OayTArguhEJBkCX98X30NUFKDu3kRS_bjLEQo) or [my static server](http://static.robinwinslow.co.uk/indias-daughter.mp4).
+- Stream it from my poor little VPS:
+
+<video src="http://static.robinwinslow.co.uk/indias-daughter.mp4" controls></video>

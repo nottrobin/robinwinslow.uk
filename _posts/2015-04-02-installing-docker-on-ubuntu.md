@@ -15,7 +15,8 @@ So here's a quick guide to all the commands I find I have to run to get it worki
 sudo apt update && sudo apt install wget  # Install wget just in case you don't have it
 wget -qO- https://get.docker.com/ | sh    # Install docker - NB: doesn't actually start the docker service
 sudo usermod -aG docker `whoami`          # Add yourself to the docker group
-# Now log out and back in again - this should also start the service
+# Now log out and back in again
+sudo service docker start                 # Make sure the docker service is running
 ```
 
 You should now be set to go, unless you're inside a corporate network that doesn't let you use public DNS servers. You can test this with:

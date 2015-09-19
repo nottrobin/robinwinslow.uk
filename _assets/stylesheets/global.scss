@@ -52,6 +52,9 @@ a, a:hover, a:link, a:visited {
     color: #399;
     text-decoration: none;
 }
+a:hover {
+    text-decoration: underline;
+}
 
 article {
     max-width: $max-width;
@@ -343,7 +346,7 @@ blockquote {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
 
 /**
- * fonts 
+ * fonts
  */
 
 @font-face {

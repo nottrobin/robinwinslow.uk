@@ -7,8 +7,6 @@ tags:
   - politics
 ---
 
-# Letters about refugees
-
 I believe very strongly in participating in politics. Well maybe I should say "participating in discussions about society". I think what you write on Twitter and Facebook and blog about are very powerful actions and help shape society.
 
 I was [prompted by Avaaz][] to email my MP about the current refugee crisis. It's something I feel very strongly about, so I put rather more effort than usual into these emails.

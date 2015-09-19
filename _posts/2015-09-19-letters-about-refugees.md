@@ -9,11 +9,17 @@ tags:
 
 I believe very strongly in participating in politics. Well maybe I should say "participating in discussions about society". I think what you write on Twitter and Facebook and blog about are very powerful actions and help shape society.
 
-I was [prompted by Avaaz][] to email my MP about the current refugee crisis. It's something I feel very strongly about, so I put rather more effort than usual into these emails.
+I was [prompted by Avaaz][] to [email my MP][] about the current refugee crisis. It's something I feel very strongly about, so I put rather more effort than usual into these emails.
 
-I hope I had some impact on David, but ultimately I was surprised and a bit disappointed that he simply gave up discussing the point so quickly. He didn't try to counter my objections with any statistics or evidence. Which is a shame.
+I hope I had some impact on [David][], but ultimately I was surprised and a bit disappointed that he simply gave up discussing the point so quickly. He didn't try to counter my objections with any statistics or evidence. Which is a shame.
 
-In case anyone else is interested I'm publishing the emails below (as well as on gist.github.com [here][letter1], [here][letter2] and [here][letter3]).
+I uptimately came away with the impression that David is a very standard Conservative-party-line MP, with not much independence. As [TheyWorkForYou puts it][David], he:
+
+> Consistently voted for a reduction in spending on welfare benefits
+> Consistently voted for replacing Trident with a new nuclear weapons system
+> David Mackintosh never rebelled against their party in this parliament
+
+In case anyone else is interested I'm publishing the emails below (as well as on [gist.github.com][] [here][letter1], [here][letter2] and [here][letter3]).
 
 ---
 
@@ -145,3 +151,6 @@ Robin
 [EU directive 2001/51/EC]: https://youtu.be/eziPJOE5woI?t=1m35s
 [tents in Calais]: http://www.bbc.com/news/uk-29074736
 [a final response]: https://gist.github.com/nottrobin/1404ddc422a8a5b40822
+[email my MP]: https://www.writetothem.com/
+[David]: http://www.theyworkforyou.com/mp/25347/david_mackintosh/northampton_south
+[gist.github.com]: https://gist.github.com

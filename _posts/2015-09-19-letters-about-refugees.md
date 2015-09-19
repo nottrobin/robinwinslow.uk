@@ -15,8 +15,8 @@ I hope I had some impact on [David][], but ultimately I was surprised and a bit 
 
 I uptimately came away with the impression that David is a very standard Conservative-party-line MP, with not much independence. As [TheyWorkForYou puts it][David], he:
 
-> Consistently voted for a reduction in spending on welfare benefits
-> Consistently voted for replacing Trident with a new nuclear weapons system
+> Consistently voted for a reduction in spending on welfare benefits  
+> Consistently voted for replacing Trident with a new nuclear weapons system  
 > David Mackintosh never rebelled against their party in this parliament
 
 In case anyone else is interested I'm publishing the emails below (as well as on [gist.github.com][] [here][letter1], [here][letter2] and [here][letter3]).

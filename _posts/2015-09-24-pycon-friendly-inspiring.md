@@ -1,5 +1,5 @@
 ---
-title: My first PyCon - friendly and inspiring
+title: Keynotes from my first PyCon - friendly and inspiring
 description: "A report on my experience of the keynote speeches at my first PyCon."
 layout: post
 tags:

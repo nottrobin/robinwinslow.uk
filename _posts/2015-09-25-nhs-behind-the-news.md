@@ -4,6 +4,7 @@ description: "The NHS's 'behind the news' series attempts to provide a more accu
 layout: post
 tags:
   - politics
+  - science
 ---
 
 I fairly often find myself searching for information on health topics. Two

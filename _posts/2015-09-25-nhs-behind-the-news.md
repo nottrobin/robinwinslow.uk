@@ -15,7 +15,7 @@ recent searches I made were
 The first result on fidgeting was, unsurprisingly, from
 the Mail Online, but *amazingly* the 1st result from my paracetamol
 query, and the 3rd result on fidgeting, were from [NHS choices][c9fd35db], in their
-[Behind the Headlines][4bdfcb8a] series:
+[Behind the Headlines][4bdfcb8a] series.
 
 # Comparing headlines
 

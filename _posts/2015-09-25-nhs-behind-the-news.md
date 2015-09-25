@@ -12,10 +12,17 @@ recent searches I made were
 [does fidgeting have health benefits like exercise][614b94c3] and
 [what are the risks of extended paracetamol use][c4823254].
 
-The first result on fidgeting was, unsurprisingly, from [the Daily Mail][dbc01221],
-but *amazingly* the 1st result from my paracetamol query, and the 3rd result
-on fidgeting, were [from nhs.uk][5be6a04b], in their
+The first result on fidgeting was, unsurprisingly, from
+[the Mail Online][dbc01221], but *amazingly* the 1st result from my paracetamol
+query, and the 3rd result on fidgeting, were [from nhs.uk][5be6a04b], in their
 [Behind the Headlines][4bdfcb8a] series.
+
+> Mail Online: How fidgeting can help you stay healthy
+> NHS choices: Fidgeting probably not a useful alternative to proper exercise
+
+> Telegraph: Long term use of paracetamol can lead to high blood pressure and stroke
+> Mail Online: Paracetamol linked to heart attack risk
+> NHS choices: Is long term paracetamol use not as safe as we thought?
 
 You can see from the titles of the respective articles that the NHS are making
 a clear effort here to mitigate the damage done by sensationalist headlines.
@@ -24,6 +31,8 @@ from the dangers of not exercising. And while some studies have suggested
 a small link between extended paracetamol use and some health conditions,
 the evidence is far from solid - paracetamol should still be considered
 a very safe painkiller to take.
+
+# Combating sensationalism
 
 Sensationalist headlines [are a problem][1980338f] but the fact that these more
 informative analyses are appearing so high up in search results is really

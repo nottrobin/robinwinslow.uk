@@ -17,11 +17,11 @@ The first result on fidgeting was, unsurprisingly, from
 query, and the 3rd result on fidgeting, were [from nhs.uk][5be6a04b], in their
 [Behind the Headlines][4bdfcb8a] series.
 
-> Mail Online: How fidgeting can help you stay healthy
+> Mail Online: How fidgeting can help you stay healthy  
 > NHS choices: Fidgeting probably not a useful alternative to proper exercise
 
-> Telegraph: Long term use of paracetamol can lead to high blood pressure and stroke
-> Mail Online: Paracetamol linked to heart attack risk
+> Telegraph: Long term use of paracetamol can lead to high blood pressure and stroke  
+> Mail Online: Paracetamol linked to heart attack risk  
 > NHS choices: Is long term paracetamol use not as safe as we thought?
 
 You can see from the titles of the respective articles that the NHS are making

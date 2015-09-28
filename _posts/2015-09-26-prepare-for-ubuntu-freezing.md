@@ -9,7 +9,7 @@ tags:
 ---
 
 I routinely have at least 20 tabs open in Chrome, 10 files open in
-[Atom][e107dbd4], my editor of choice, and I'm often running virtual machines
+[Atom][e107dbd4] (my editor of choice) and I'm often running virtual machines
 as well. This means my poor little [X1 Carbon][fbd87bd9] often runs out of
 memory, at which point Ubuntu completely freezes up, preventing me from doing
 anything at all.
@@ -19,7 +19,8 @@ system froze, because Atom [doesn't yet][ea6f49f0] recover documents after
 crashes.
 
 If this sounds at all familiar to you, **I now have a solution**! (Although
-it didn't save me in the above case because )
+it didn't save me in this case because it needs to be enabled first - see
+below.)
 
 # oom_kill
 
@@ -75,7 +76,7 @@ it.
   [55eb561d]: http://askubuntu.com/questions/11002/alt-sysrq-reisub-doesnt-reboot-my-laptop/11194#11194 "Stack Overflow: Alt + sysrq + REISUB doesn't reboot my laptop"
   [7b2ffc42]: http://www.ubuntu.com/ "Ubuntu"
   [e107dbd4]: https://atom.io/ "Atom: A hackable text editor"
-  [fbd87bd9]: MISSING "Thinkpad X1 Carbon"
+  [fbd87bd9]: http://shop.lenovo.com/gb/en/laptops/thinkpad/x-series/x1-carbon/ "Thinkpad X1 Carbon"
   [ea6f49f0]: https://github.com/atom/atom/issues/4161 "Feature Request: add crash restore"
   [95cedafa]: https://en.wikipedia.org/wiki/Magic_SysRq_key "Wikipedia: Magic SysRq key"
   [a957abbb]: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/194676 "SysRq should be limited by default like openSUSE"

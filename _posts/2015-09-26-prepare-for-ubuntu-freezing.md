@@ -8,6 +8,8 @@ tags:
   - canonical
 ---
 
+(Also posted [on design.canonical.com][aa27f6b4])
+
 I routinely have at least 20 tabs open in Chrome, 10 files open in
 [Atom][e107dbd4] (my editor of choice) and I'm often running virtual machines
 as well. This means my poor little [X1 Carbon][fbd87bd9] often runs out of
@@ -80,3 +82,4 @@ it.
   [ea6f49f0]: https://github.com/atom/atom/issues/4161 "Feature Request: add crash restore"
   [95cedafa]: https://en.wikipedia.org/wiki/Magic_SysRq_key "Wikipedia: Magic SysRq key"
   [a957abbb]: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/194676 "SysRq should be limited by default like openSUSE"
+  [aa27f6b4]: http://design.canonical.com/2015/09/prepare-for-when-ubuntu-freezes/ "Ubuntu Design: Prepare for when Ubuntu freezes"

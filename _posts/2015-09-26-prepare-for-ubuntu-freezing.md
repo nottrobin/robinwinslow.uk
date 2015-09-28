@@ -52,7 +52,7 @@ kernel.sysrq = 1
 And to enable the new config run:
 
 ``` bash
-sysctl --system
+sudo sysctl --system
 ```
 
 # SysRq for Thinkpads

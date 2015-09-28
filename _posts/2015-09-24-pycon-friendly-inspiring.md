@@ -157,7 +157,7 @@ many talented people may be too scared to contribute to open source.
 As Naomi [pointed out][b9f66008], impostor syndrome is a socially created
 condition - when people are expected to do badly, [they do badly][aa1d1a6a].
 In fact I completely agree with [her suggestion][b2404f29] that the
-[existing Wikipedia definition of impostor syndrome][9b221b02] (at the time)
+[existing Wikipedia definition of impostor syndrome][9b221b02] (at the time
 of writing) could be more sensitively phrased to define it as a
 "social condition" rather than a "psychological phenomenon", as well as
 avoiding singling out women.

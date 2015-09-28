@@ -63,9 +63,8 @@ a quirk that the `SysRq` key is only "pressed" when you release.
 So to run `oom_kill` on a Thinkpad, after enabling it, do the following:
 
 - Press and hold `alt`
-- Press `fn` and `s` keys together
-- Release `fn` and `s`  (keep holding `alt`)
-- Press 'f'
+- To emulate `SysRq`, press `fn` and `s` keys together, then release them  (keep holding `alt`)
+- Press `f`
 
 This will kill the most expensive process (usually the browser tab running
 `inbox.google.com` in my case), and freeup some memory.

@@ -55,10 +55,10 @@ And to enable the new config run:
 sudo sysctl --system
 ```
 
-# SysRq for Thinkpads
+# SysRq shortcut for the Thinkpad X1
 
 Most laptops don't have a physical `SysRq` key. Instead they offer a keyboard
-combination to emulate the key. On Thinkpads, this is `fn + s`. However, there's
+combination to emulate the key. On my Thinkpad, this is `fn + s`. However, there's
 a quirk that the `SysRq` key is only "pressed" when you release.
 
 So to run `oom_kill` on a Thinkpad, after enabling it, do the following:

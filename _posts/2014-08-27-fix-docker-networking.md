@@ -44,7 +44,7 @@ $ nm-tool
     Prefix:          21 (255.255.248.0)
     Gateway:         192.168.100.101
 
-    DNS:             192.168.100.101  # This is my DNS server address
+    DNS:             192.168.100.102  # This is my DNS server address
 ...
 ```
 

@@ -8,6 +8,8 @@ tags:
   - canonical
 ---
 
+(Also published [on Canonical's design team blog][c0d53c6a])
+
 The weekend before last, I went to [PyCon UK 2015][0783455a].
 
 I already wrote about [the keynotes][f3697c15], which were more abstract. Here
@@ -232,3 +234,4 @@ an interactive browser-based visualisation.
   [c156c3ca]: #11-00-how-not-to-argue-a-recipe-for-more-productive-tech-conversations-harry-percival "How (not) to argue - a recipe for more productive tech conversations - Harry Percival"
   [24c62219]: #11-30-fido-the-dog-ate-my-password-alex-willmer "FIDO - The dog ate my password - Alex Willmer"
   [145bb3cd]: #14-30-data-visualisation-with-python-and-javascript-crafting-a-data-visualisation-for-the-web-kyran-dale "Data Visualisation with Python and Javascript - crafting a data-visualisation for the web - Kyran Dale"
+  [c0d53c6a]: http://design.canonical.com/2015/10/python-learnings-from-pycon/ "design.canonical.com: Python learnings from PyCon"

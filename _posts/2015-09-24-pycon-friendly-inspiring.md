@@ -9,6 +9,8 @@ tags:
   - canonical
 ---
 
+(Also published [on Canonical's design team blog][75548106])
+
 Last weekend I went to my first [Pycon][0783455a], my [second conference
 in a fortnight][simone-dconstruct].
 
@@ -219,3 +221,4 @@ If you want you can now go and [read about the other talks][0c34ba81].
   [b2404f29]: https://youtu.be/4KErxatqBcs?t=14m40s "Let's go back to the Wikipedia definition"
   [1abc06b5]: https://en.wikipedia.org/wiki/Stereotype_threat#Mitigation "Wikipedia: Stereotype threat - mitigation"
   [0c34ba81]: /2015/09/29/pycon-python-learnings/ "Python learnings from PyCon"
+  [75548106]: http://design.canonical.com/2015/10/keynotes-from-my-first-pycon-friendly-and-inspiring/ "design.canonical.com: Keynotes from my first PyCon – friendly and inspiring"

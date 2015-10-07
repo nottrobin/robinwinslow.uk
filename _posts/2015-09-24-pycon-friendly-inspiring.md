@@ -39,9 +39,9 @@ Saturday and Sunday. And interestingly none of them were really about Python,
 instead covering future technology, space travel and the psychology of power
 and impostor syndrome.
 
-But of course there were plenty of Python talks throughout the rest of the day,
-(which I'll try to write about in a different post soon)
-and I think it was a good decision to have more abstract keynotes. It shows that
+But of course there were plenty of Python talks throughout the rest of the day -
+you can read about them on [my other post][0c34ba81].
+And I think it was a good decision to have more abstract keynotes. It shows that
 the Python community really is more of a general community than just a special
 interest group.
 
@@ -182,7 +182,7 @@ Overall, the conference was exhausting, but I'm very grateful that I got to
 attend. It was inspiring and informative, and a great example of how to
 maintain a great community.
 
-And as I said, I will try to write about the other talks I attended soon.
+If you want you can now go and [read about the other talks][0c34ba81].
 
   [aa1d1a6a]: https://en.wikipedia.org/wiki/Stereotype_threat "Wikipedia: Steriotype threat"
   [1594e6aa]: https://en.wikipedia.org/wiki/Impostor_syndrome "Wikipedia: Imposter syndrome"
@@ -218,3 +218,4 @@ And as I said, I will try to write about the other talks I attended soon.
   [9b221b02]: https://en.wikipedia.org/w/index.php?title=Impostor_syndrome&oldid=681534618 "Wikipedia: Imposter syndrome (at 23:00 BST, 2015-09-24)"
   [b2404f29]: https://youtu.be/4KErxatqBcs?t=14m40s "Let's go back to the Wikipedia definition"
   [1abc06b5]: https://en.wikipedia.org/wiki/Stereotype_threat#Mitigation "Wikipedia: Stereotype threat - mitigation"
+  [0c34ba81]: /2015/09/29/pycon-python-learnings/ "Python learnings from PyCon"

@@ -18,15 +18,25 @@ This means that this change in contract effects the majority of doctors in the c
 How much do junior doctors earn?
 ===
 
-This is a somewhat complex question. Because "junior" doctors have anything from 0 to over 9 years of experience, their pay varies by their grade. But NHS.uk [explains it fairly well][]:
+This is a somewhat complex question. Because "junior" doctors have anything from 0 to over 9 years of experience after their 5 or 6 year degree, so their pay varies by their grade. But NHS.uk [explains it fairly well][]:
 
 > All doctors in training earn a basic salary and may be paid an additional supplement depending on their working pattern.  
-> In the most junior hospital trainee post (Foundation Year 1) the basic starting salary is £22,636. This increases in Foundation Year 2 to £28,076. For a doctor in specialist training the basic salary is between £30,002 and £47,175.
-> 
+> In the most junior hospital trainee post (Foundation Year 1) the basic starting salary is £22,636. This increases in Foundation Year 2 to £28,076. For a doctor in specialist training the basic salary is between £30,002 and £47,175.  
+> Doctors in the specialty doctor grade earn a basic salary of between £37,176 and £69,325.
 
+This is very much in line with other professions. For example, a graduate civil engineer with a 4-year degree [may earn £23,500][], or £26,500 with a year's experience.
+
+This pay level is then further complicated by two things:
+
+- Doctors [have to pay a lot][] for mamberships and insurance
+- Doctors often work overtime and antisocial hours, and are [paid extra accordingly][].
+
+[paid extra accordingly]: http://bma.org.uk/support-at-work/pay-fees-allowances/pay-banding "BMA: Pay banding"
+[have to pay a lot]: https://en.wikipedia.org/wiki/Junior_doctor#Costs_and_concerns "Wikipedia: Junior doctor - Costs and concerns"
 [probably going to strike]: https://bma.org.uk/news-views-analysis/news/2015/september/junior-doctors-plan-to-ballot-for-industrial-action "Junior doctors plan to ballot for industrial action"
 [anaesthetist]: https://en.wikipedia.org/wiki/Anesthesiologist "Wikipedia: Anesthesiologist"
 [a website developer]: http://design.canonical.com/author/nottrobin/ "Ubuntu Design team: Robin Winslow"
 [doctors in the UK]: https://docs.google.com/a/robinwinslow.co.uk/spreadsheets/d/1KEr5RzFEuC2AKmicUm-0pZSUmNY1-YXEALFl2930LvE/edit?usp=sharing "Spreadsheet: NHS Workforce Statistics - July 2015, Provisional statistics: Doctors by grade and specialty"
 ["Junior" doctors]: https://en.wikipedia.org/wiki/Junior_doctor "Wikipedia: Junior doctor"
 [explains it fairly well]: http://www.nhscareers.nhs.uk/explore-by-career/doctors/pay-for-doctors/ "NHS Careers: Pay for doctors"
+[may earn £23,500] http://www.prospects.ac.uk/consulting_civil_engineer_salary.htm "Consulting civil engineer: Salary and conditions"

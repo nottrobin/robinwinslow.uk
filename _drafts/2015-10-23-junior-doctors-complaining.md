@@ -15,7 +15,7 @@ The somewhat confusing term refers to any graduate doctor until they fully compl
 
 This means that this change in contract effects the majority of doctors in the country.
 
-How much do junior doctors earn?
+How much do junior doctors earn (basic pay)?
 ===
 
 This is a somewhat complex question. Because "junior" doctors have anything from 0 to over 9 years of experience after their 5 or 6 year degree, so their pay varies by their grade. But NHS.uk [explains it fairly well][]:
@@ -26,11 +26,17 @@ This is a somewhat complex question. Because "junior" doctors have anything from
 
 This is very much in line with other professions. For example, a graduate civil engineer with a 4-year degree [may earn £23,500][], or £26,500 with a year's experience.
 
-This pay level is then further complicated by two things:
+Doctors also [have to pay a lot][] out of their salary for memberships and insurance.
 
-- Doctors [have to pay a lot][] for mamberships and insurance
-- Doctors often work overtime and antisocial hours, and are [paid extra accordingly][].
+What hours do doctors work?
+===
 
+Doctors often work overtime and ["unsocial hours"][], and are [paid extra accordingly][], as a percentage of their basic pay. Currently, any hours outside 8am to 6pm on a weekday are considered unsocial, although Jeremy Hunt is trying to change that (see below).
+
+The [European Working Time Directive in theory means that][] doctors are limited to working an *average* of 48 hours a week, and a *possible maximum* of 91 hours. However, 
+
+[European Working Time Directive in theory means that]: http://bma.org.uk/support-at-work/ewtd/ewtd-juniors "BMA: EWTD for junior doctors"
+["unsocial hours"]: http://www.nhsemployers.org/your-workforce/pay-and-reward/nhs-terms-and-conditions/nhs-terms-and-conditions-of-service-handbook/unsocial-hours-payments "NHS Employers: Unsocial hours payments - Section 2(a) (England)"
 [paid extra accordingly]: http://bma.org.uk/support-at-work/pay-fees-allowances/pay-banding "BMA: Pay banding"
 [have to pay a lot]: https://en.wikipedia.org/wiki/Junior_doctor#Costs_and_concerns "Wikipedia: Junior doctor - Costs and concerns"
 [probably going to strike]: https://bma.org.uk/news-views-analysis/news/2015/september/junior-doctors-plan-to-ballot-for-industrial-action "Junior doctors plan to ballot for industrial action"

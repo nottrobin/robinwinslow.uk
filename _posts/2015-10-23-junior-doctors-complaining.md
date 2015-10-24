@@ -1,5 +1,10 @@
 ---
-published: false
+layout: post
+title: 'What are "junior" doctors complaining about?'
+description: "I answer a bunch of potential questions about junior doctors and the changes to their contract."
+tags:
+  - politics
+  - personal
 ---
 
 Junior doctors are [probably going to strike][ballot] against changes to their contracts. But most of the public don't really know what a junior doctor is, let alone why they might want to strike. So I'm going to try to explain (like [others before me][]) what I know about the issues.
@@ -12,7 +17,7 @@ What is a "junior" doctor
 ["Junior" doctors][] make up 60% of [all NHS doctors][], and will include most doctors that you've met.
 
 The somewhat confusing term refers to any doctor from when they graduate from their 5 or 6 year degree until they fully complete their training, potentially 9 or more years after graduating.  Almost any doctor who isn't yet a consultant is a junior doctor.
- 
+
 Therefore, this new contract will effect the majority of doctors in the country.
 
 How much do junior doctors earn (basic pay)?
@@ -20,8 +25,10 @@ How much do junior doctors earn (basic pay)?
 
 This is a somewhat complex question. Because "junior" doctors have anything from 0 to over 9 years of experience on top of their 5-6 year degree. However, NHS.uk [explains it fairly well][]:
 
-> All doctors in training earn a basic salary and may be paid an additional supplement depending on their working pattern.  
-> In the most junior hospital trainee post (Foundation Year 1) the basic starting salary is £22,636. This increases in Foundation Year 2 to £28,076. For a doctor in specialist training the basic salary is between £30,002 and £47,175.  
+> All doctors in training earn a basic salary and may be paid an additional supplement depending on their working pattern.
+
+> In the most junior hospital trainee post (Foundation Year 1) the basic starting salary is £22,636. This increases in Foundation Year 2 to £28,076. For a doctor in specialist training the basic salary is between £30,002 and £47,175.
+
 > Doctors in the specialty doctor grade earn a basic salary of between £37,176 and £69,325.
 
 This is very much in line with other skilled professions. For example, a graduate civil engineer with a 4-year degree [may earn £23,500][], or £26,500 with a year's experience.
@@ -47,9 +54,9 @@ All in all, being a doctor is a fairly all-consuming profession. You have to ded
 What are these contract changes?
 ===
 
-Coming hot on the heels of [his attempts to force consultants][] to work weekends, Jeremy Hunt wants to impose a new contract on "junior" (most) doctors. 
+Coming hot on the heels of [his attempts to force consultants][] to work weekends, Jeremy Hunt wants to impose a new contract on "junior" (most) doctors.
 
-The main thing this contract will do is change the definition of "social hours" from 8am-6pm on a weekday, to 8am-10pm Monday through Saturday. This is a step towards the government's [promise of "seven-day NHS services"][pledge] 
+The main thing this contract will do is change the definition of "social hours" from 8am-6pm on a weekday, to 8am-10pm Monday through Saturday. This is a step towards the government's [promise of "seven-day NHS services"][pledge]
 
 Jeremy has [tried to reassure doctors][] that basic pay will be adjusted so that the average doctor won't see a pay cut, and that doctors won't be working longer hours.
 
@@ -70,6 +77,8 @@ What's this 7-day NHS thing about?
 The reason the government is making these changes is because of [a Conservative campaign pledge][pledge] that David Cameron made to deliver for 7-day NHS services. This is a confusing pledge, because as many have pointed out, [NHS hospitals already operate 7-days a week][].
 
 Jeremy Hunt clarified that what he meant was that "patients are more likely to die if they turn up to hospital at the weekend". A claim for which he's now being accused of [misleading parliament][].
+
+I'm hoping to write more about the 7-day NHS pledge more in depth (and in a less neutral tone) soon.
 
 In summary
 ===

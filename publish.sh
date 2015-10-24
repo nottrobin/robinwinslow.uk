@@ -9,16 +9,18 @@ if [ -z "$commit_message" ]; then
     exit 1
 fi
 
-# First commit the actual site
+echo "= Build the site ="
 jekyll build
+
 (
+    echo "= Commit and push to website ="
     cd _site
     git add -A .
     git commit -m "${commit_message}"
     git push
 )
 
-# Now commit to project
+echo "= Commit and push to project  ="
 git add -A .
 git commit -m "${commit_message}"
 git push

@@ -7,12 +7,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-       
+
      	<title>{{ page.title }} | the blog of robin</title>
-    	
+
     	{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
         <meta name="viewport" content="width=device-width">
-        
+
         <link rel="canonical" href="https://robinwinslow.co.uk{{ page.url }}" />
 
         {% stylesheet global %}
@@ -41,7 +41,7 @@
         <!--[if lt IE 9]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-        
+
         <header class="site-header">
             <h1>The blog of <a href="/">Robin</a></h1>
 
@@ -89,29 +89,12 @@
             </nav>
 
             <p>
-                All articles are written by me, <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a>, unless otherwise stated. Feel free to use any of my writing, but please <a href="http://creativecommons.org/licenses/by/4.0/">give me attribution</a>. 
+                All articles are written by me, <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a>, unless otherwise stated. Feel free to use any of my writing, but please <a href="http://creativecommons.org/licenses/by/4.0/">give me attribution</a>.
             </p>
 
             <p>You're free to download this entire site <a href="https://github.com/nottrobin/robinwinslow.co.uk/">from github</a>, and <a href="http://creativecommons.org/publicdomain/zero/1.0/">do whatever you like</a> with the code.</p>
 
             <p><a href="https://github.com/nottrobin/robinwinslow.co.uk/" class="github-fork">Fork me on github.</a></p>
         </footer>
-
-        <script type="text/javascript">
-            /* Internet defense league campaigns
-             * ==
-             * See: https://members.internetdefenseleague.org/
-             **/
-            window._idl = {};
-            _idl.variant = "modal";
-            (function() {
-                var idl = document.createElement('script');
-                idl.type = 'text/javascript';
-                idl.async = true;
-                console.log(document.getElementsByTagName('body')[0]);
-                idl.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'members.internetdefenseleague.org/include/?url=' + (_idl.url || '') + '&campaign=' + (_idl.campaign || '') + '&variant=' + (_idl.variant || 'modal');
-                document.getElementsByTagName('body')[0].appendChild(idl);
-            })();
-        </script>
     </body>
 </html>

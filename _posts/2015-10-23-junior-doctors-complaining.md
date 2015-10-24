@@ -114,7 +114,7 @@ Doctors are rightfully unhappy about it, have protested in huge numbers nad will
 [ballot]: https://bma.org.uk/news-views-analysis/news/2015/september/junior-doctors-plan-to-ballot-for-industrial-action "Junior doctors plan to ballot for industrial action"
 [anaesthetist]: https://en.wikipedia.org/wiki/Anesthesiologist "Wikipedia: Anesthesiologist"
 [a web developer]: http://design.canonical.com/author/nottrobin/ "Ubuntu Design team: Robin Winslow"
-[all NHS doctors]: https://docs.google.com/a/robinwinslow.co.uk/spreadsheets/d/1KEr5RzFEuC2AKmicUm-0pZSUmNY1-YXEALFl2930LvE/edit?usp=sharing "Spreadsheet: NHS Workforce Statistics - July 2015, Provisional statistics: Doctors by grade and specialty"
+[all NHS doctors]: https://docs.google.com/spreadsheets/d/1KEr5RzFEuC2AKmicUm-0pZSUmNY1-YXEALFl2930LvE#gid=1969868445 "Spreadsheet: NHS Workforce Statistics - July 2015, Provisional statistics: Doctors by grade and specialty"
 ["Junior" doctors]: https://en.wikipedia.org/wiki/Junior_doctor "Wikipedia: Junior doctor"
 [explains it fairly well]: http://www.nhscareers.nhs.uk/explore-by-career/doctors/pay-for-doctors/ "NHS Careers: Pay for doctors"
 [may earn £23,500]: http://www.prospects.ac.uk/consulting_civil_engineer_salary.htm "Consulting civil engineer: Salary and conditions"

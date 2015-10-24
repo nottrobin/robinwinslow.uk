@@ -65,6 +65,8 @@ So what are doctors complaining about?
 
 This is a huge change for doctors as it will mean they get paid [the same for 9pm on a Saturday night as 9am on a Tuesday morning][]. Despite Jeremy's reassurances, many doctors who currently work unsocial hours [will definitely see a significant pay cut][].
 
+In addition to this, the changes will obviously mean that doctors are more often working late evenings and Saturdays. Being a doctor already means you have hardly any free time at useful hours, and this will make it even harder for them to make social appointments, meet up with friends etc.
+
 Doctors are also concerned that by changing the working hours in a week that are perceived as "normal" from 60 to 90, doctors will inevitably feel pressure to work these hours, in violation of the Working Time Directive, and there aren't sufficient safeguards in place to make sure this doesn't happen. This will lead to exhausted and unsafe doctors.
 
 Ultimately there are worries that this contract, which is seen by some as punitive for doctors, will [further damage the NHS][].
@@ -88,9 +90,9 @@ In summary
 
 Doctors' working hours are already at the limits of what is legal in the EU, and their salaries are nothing special.
 
-Jeremy Hunt wants to impose a new contract on 60% of NHS doctors to make them work Saturdays and evenings more often.
+Jeremy Hunt wants to impose a new contract on 60% of NHS doctors to make them work Saturdays and evenings more often. Many doctors will see a pay cut of up to 40%.
 
-Doctors are rightfully unhappy about it, have protested in huge numbers nad will probably call their first general strike in 40 years.
+Doctors are rightfully unhappy about it, have protested in huge numbers and will probably call their first general strike in 40 years.
 
 ["weekend effect"]: https://en.wikipedia.org/wiki/Weekend_effect "Wikipedia: Weekend effect"
 [observed internationally]: http://www.forbes.com/sites/robertglatter/2015/07/06/should-you-be-concerned-about-the-weekend-effect/ "Should You Be Concerned About The 'Weekend Effect?'"

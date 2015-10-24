@@ -62,16 +62,26 @@ Doctors are also concerned that by changing the working hours in a week that are
 
 Ultimately there are worries that this contract, which is seen by some as punitive for doctors, will [further damage the NHS][].
 
-Doctors and the public have been speaking out about the contract changes using [the hashtag #NotFairNotSafe][]. Over 20,000 [protested][] in London, Nottingham and Belfast. The BMA [are balloting for strike action][ballot], which I think will probably go ahead.
+Doctors and the public have been speaking out about the contract changes using [the hashtag #NotFairNotSafe][]. Over 20,000 [protested][] in London, Nottingham and Belfast. The BMA [are balloting for strike action][ballot], which I think will probably go ahead, based on the feeling I get from the doctors I know.
 
 What's this 7-day NHS thing about?
 ===
 
-The reason the government is making these changes is because of [a Conservative campaign pledge][pledge] that David Cameron made to deliver for 7-day NHS services.
+The reason the government is making these changes is because of [a Conservative campaign pledge][pledge] that David Cameron made to deliver for 7-day NHS services. This is a confusing pledge, because as many have pointed out, [NHS hospitals already operate 7-days a week][].
 
-This is a very confusing pledge, because as many have pointed out, [the NHS already runs 7-days][].
+Jeremy Hunt clarified that what he meant was that "patients are more likely to die if they turn up to hospital at the weekend". A claim for which he's now being accused of [misleading parliament][].
 
-[the NHS already runs 7-days]: http://www.theguardian.com/healthcare-network/views-from-the-nhs-frontline/2015/jul/20/jeremy-hunt-doctors-already-work-247-nhs "Guardian: Don't lecture us Jeremy Hunt, we doctors already work 24/7 in the NHS"
+In summary
+===
+
+Doctors' working hours are already at the limits of what is legal in the EU, and their salaries are nothing special.
+
+Jeremy Hunt wants to impose a new contract on 60% of NHS doctors to make them work Saturdays and evenings more often.
+
+Doctors are rightfully unhappy about it, have protested in huge numbers nad will probably call their first general strike in 40 years.
+
+[misleading parliament]: http://www.mirror.co.uk/news/uk-news/jeremy-hunt-misled-parliament-over-6645957 "Mirror: Jeremy Hunt 'misled Parliament' over NHS death figures claims official complaint by 3,500 doctors"
+[the NHS already runs 7-days a week]: http://www.theguardian.com/healthcare-network/views-from-the-nhs-frontline/2015/jul/20/jeremy-hunt-doctors-already-work-247-nhs "Guardian: Don't lecture us Jeremy Hunt, we doctors already work 24/7 in the NHS"
 [were protests]: http://www.dailymail.co.uk/news/article-3277262/Tens-thousands-junior-doctors-march-London-protest-plans-make-work-evenings-weekends.html "MailOnline: Tens of thousands of junior doctors march through London to protest over new plans for evening and weekend work"
 [the hashtag #NotFairNotSafe]: https://twitter.com/hashtag/notfairnotsafe "Twitter: #NotFairNotSafe"
 [further weaken the NHS]: http://www.theguardian.com/society/2015/sep/24/junior-doctor-contracts-are-threat-to-nhs-warn-royal-colleges "Junior doctor contracts are threat to NHS, warn Royal Colleges"

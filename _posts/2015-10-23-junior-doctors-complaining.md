@@ -40,7 +40,7 @@ How many hours do doctors work?
 
 Doctors often work overtime and ["unsocial hours"][], and are [paid extra accordingly][] as a percentage of their basic pay. Currently, any hours outside 8am to 6pm on a weekday are considered unsocial, although Jeremy Hunt is trying to change that (see below).
 
-The [European Working Time Directive in theory limits][] doctors to working a maximum average of 48 hours a week (over a 26 week period), and a maximum of 91 hours in any individual week. However, despite attempts to enforce these hours, some doctors [still work 100-hour weeks][].
+The [European Working Time Directive in theory limits][] doctors to working a maximum average of 48 hours a week over a 26 week period, and a maximum of 91 hours in any individual week. However, despite attempts to enforce these hours, some doctors [still work 100-hour weeks][].
 
 What other difficulties do doctors face?
 ===

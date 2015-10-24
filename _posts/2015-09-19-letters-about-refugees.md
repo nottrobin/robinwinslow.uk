@@ -23,6 +23,9 @@ In case anyone else is interested I'm publishing the emails below (as well as on
 
 ---
 
+Me to David: I am ashamed of the government
+---
+
 ```
 On Tue, 8 September 2015 at 10:39
 From: "Robin Winslow" <robin@robinwinslow.co.uk>
@@ -46,6 +49,7 @@ Therefore I urge you to encourage the Prime Minister and the cabinet to massivel
 Yours in deepest sincerity,  
 Robin Winslow Morris
 
+David to me: They're not all refugees
 ---
 
 ```
@@ -79,6 +83,7 @@ David
 David Mackintosh MP
 Conservative Member of Parliament for Northampton South
 
+Me to David: Do you have any sources?
 ---
 
 ```
@@ -108,6 +113,7 @@ I urge you again, as my representative in parliament, please do what you can to 
 Sincerely,  
 Robin
 
+David to me: This is clearly something we disagree on
 ---
 
 ```
@@ -123,6 +129,7 @@ Thank you for your email. I'm sorry you are not happy with my response but this 
 Best wishes  
 David
 
+Me to David: You're probably right
 ---
 
 ```

@@ -16,7 +16,7 @@ What is a "junior" doctor
 
 ["Junior" doctors][] make up 60% of [all NHS doctors][], and will include most doctors that you've met.
 
-The somewhat confusing term refers to any doctor from when they graduate from their 5 or 6 year degree until they fully complete their training, potentially 9 or more years after graduating.  Almost any doctor who isn't yet a consultant is a junior doctor.
+The somewhat confusing term refers to any doctor from when they graduate from their 5 or 6 year degree until they fully complete their training, potentially 9 or more years after graduating.  Almost any doctor who isn't yet a consultant or a full GP is a junior doctor.
 
 Therefore, this new contract will effect the majority of doctors in the country.
 
@@ -40,12 +40,12 @@ How many hours do doctors work?
 
 Doctors often work overtime and ["unsocial hours"][], and are [paid extra accordingly][] as a percentage of their basic pay. Currently, any hours outside 8am to 6pm on a weekday are considered unsocial, although Jeremy Hunt is trying to change that (see below).
 
-The [European Working Time Directive in theory means that][] doctors are limited to working a maximum average over  of 48 hours a week (over a 26 week period), and a maximum of 91 hours in any individual week. However, despite attempts to enforce these hours, some doctors [still work 100-hour weeks][].
+The [European Working Time Directive in theory limits][] doctors to working a maximum average of 48 hours a week (over a 26 week period), and a maximum of 91 hours in any individual week. However, despite attempts to enforce these hours, some doctors [still work 100-hour weeks][].
 
-What other difficulties to doctors face?
+What other difficulties do doctors face?
 ===
 
-As already mentioned, doctors have to work long and irregular hours. They often get rotaed on night shifts for a few days followed by long days, meaning they have to switch their body clock around extremely fast. And they have to do this at the same time as revising for and sitting some of the toughest exams, to eventually complete their training, up to 15 years after starting university. And they have to pay for myriad subscriptions, courses and insurance all out of a not particularly impressive salary.
+As already mentioned, doctors have to work long and irregular hours. They often get rotated on night shifts for a few days followed by long days, meaning they have to switch their body clock around extremely fast. And they have to do this at the same time as revising for and sitting very tough exams, to eventually complete their training, up to 15 years after starting university. And they have to pay for myriad subscriptions, courses and insurance all out of a not particularly impressive salary.
 
 In addition to this, doctors get regularly rotated between NHS trusts, every 4 or 6 months. This means doctors often have to move house, or stay in temporary accommodation. My wife and I have had 5 addresses in 5 years.
 
@@ -56,7 +56,7 @@ What are these contract changes?
 
 Coming hot on the heels of [his attempts to force consultants][] to work weekends, Jeremy Hunt wants to impose a new contract on "junior" (most) doctors.
 
-The main thing this contract will do is change the definition of "social hours" from 8am-6pm on a weekday, to 8am-10pm Monday through Saturday. This is a step towards the government's [promise of "seven-day NHS services"][pledge]
+The main change in this contract is to redefine "social hours" from "8am-6pm on a weekday", to "8am-10pm Monday through Saturday". This is a step towards the government's [promise of "seven-day NHS services"][pledge].
 
 Jeremy has [tried to reassure doctors][] that basic pay will be adjusted so that the average doctor won't see a pay cut, and that doctors won't be working longer hours.
 
@@ -65,18 +65,21 @@ So what are doctors complaining about?
 
 This is a huge change for doctors as it will mean they get paid [the same for 9pm on a Saturday night as 9am on a Tuesday morning][]. Despite Jeremy's reassurances, many doctors who currently work unsocial hours [will definitely see a significant pay cut][].
 
-Doctors are also concerned that by changing the working hours in a week that are percieved as "normal" from 60 to 90, doctors will inevitably feel pressure to work these hours, in violation of the Working Time Directive, and there aren't sufficient safeguards in place to make sure this doesn't happen. This will lead to exhausted and unsafe doctors.
+Doctors are also concerned that by changing the working hours in a week that are perceived as "normal" from 60 to 90, doctors will inevitably feel pressure to work these hours, in violation of the Working Time Directive, and there aren't sufficient safeguards in place to make sure this doesn't happen. This will lead to exhausted and unsafe doctors.
 
 Ultimately there are worries that this contract, which is seen by some as punitive for doctors, will [further damage the NHS][].
 
-Doctors and the public have been speaking out about the contract changes using [the hashtag #NotFairNotSafe][]. Over 20,000 [protested][] in London, Nottingham and Belfast. The BMA [are balloting for strike action][ballot], which I think will probably go ahead, based on the feeling I get from the doctors I know.
+Doctors and the public have been speaking out about the contract changes using [the hashtag #NotFairNotSafe][]. Over 20,000 [protested][] in London, Nottingham and Belfast last weekend. The BMA [are balloting for strike action][ballot], which I think will probably go ahead, based on the feeling I get from the doctors I know.
 
 What's this 7-day NHS thing about?
 ===
 
-The reason the government is making these changes is because of [a Conservative campaign pledge][pledge] that David Cameron made to deliver for 7-day NHS services. This is a confusing pledge, because as many have pointed out, [NHS hospitals already operate 7-days a week][].
+The reason the government is making these changes is because of [a Conservative campaign pledge][pledge] that David Cameron made to deliver 7-day NHS services.
 
-Jeremy Hunt clarified that what he meant was that "patients are more likely to die if they turn up to hospital at the weekend". A claim for which he's now being accused of [misleading parliament][].
+> The government is committed to working with the NHS so that 7-day services are available in all hospitals. Patients should get the same high quality, safe care on a Saturday and Sunday as they do on a weekday.  
+> [Government policy paper: 7-day NHS services: a factsheet][]
+
+As many have pointed out, [NHS hospitals already operate 7-days a week][]. [According to Jeremy Hunt][], patients are 15% more likely to die at weekends, but he's now being accused of [misleading parliament][]. This ["weekend effect"][] is in fact [observed internationally][], and is no worse in England than anywhere else.
 
 I'm hoping to write more about the 7-day NHS pledge more in depth (and in a less neutral tone) soon.
 
@@ -89,6 +92,9 @@ Jeremy Hunt wants to impose a new contract on 60% of NHS doctors to make them wo
 
 Doctors are rightfully unhappy about it, have protested in huge numbers nad will probably call their first general strike in 40 years.
 
+["weekend effect"]: https://en.wikipedia.org/wiki/Weekend_effect "Wikipedia: Weekend effect"
+[observed internationally]: http://www.forbes.com/sites/robertglatter/2015/07/06/should-you-be-concerned-about-the-weekend-effect/ "Should You Be Concerned About The 'Weekend Effect?'"
+[according to Jeremy Hunt]: http://www.itv.com/news/update/2015-07-16/hunt-patients-more-likely-to-die-if-admitted-on-weekend/ "Hunt: Patients more likely to die if admitted on weekend"
 [misleading parliament]: http://www.mirror.co.uk/news/uk-news/jeremy-hunt-misled-parliament-over-6645957 "Mirror: Jeremy Hunt 'misled Parliament' over NHS death figures claims official complaint by 3,500 doctors"
 [NHS hospitals already operate 7-days a week]: http://www.theguardian.com/healthcare-network/views-from-the-nhs-frontline/2015/jul/20/jeremy-hunt-doctors-already-work-247-nhs "Guardian: Don't lecture us Jeremy Hunt, we doctors already work 24/7 in the NHS"
 [protested]: http://www.dailymail.co.uk/news/article-3277262/Tens-thousands-junior-doctors-march-London-protest-plans-make-work-evenings-weekends.html "MailOnline: Tens of thousands of junior doctors march through London to protest over new plans for evening and weekend work"
@@ -112,3 +118,4 @@ Doctors are rightfully unhappy about it, have protested in huge numbers nad will
 ["Junior" doctors]: https://en.wikipedia.org/wiki/Junior_doctor "Wikipedia: Junior doctor"
 [explains it fairly well]: http://www.nhscareers.nhs.uk/explore-by-career/doctors/pay-for-doctors/ "NHS Careers: Pay for doctors"
 [may earn £23,500]: http://www.prospects.ac.uk/consulting_civil_engineer_salary.htm "Consulting civil engineer: Salary and conditions"
+[Government policy paper: 7-day NHS services: a factsheet]: https://www.gov.uk/government/publications/7-day-nhs-services-a-factsheet/7-day-nhs-services-a-factsheet "Government policy paper: 7-day NHS services: a factsheet"

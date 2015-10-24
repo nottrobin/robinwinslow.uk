@@ -96,10 +96,14 @@ pre {
     overflow: auto;
 }
 blockquote {
-    padding: 0.5em 1.5em;
-    font-family: monospace;
-    background-color: $super-light-grey;
-    color: #666;
+    margin: 1.5em 0;
+    padding: 0 1em;
+    border-left: 1px solid #ccc;
+    font-style: italic;
+    color: #888;
+}
+blockquote:before {
+
 }
 
 .github-fork {

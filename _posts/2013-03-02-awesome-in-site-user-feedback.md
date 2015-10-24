@@ -38,7 +38,7 @@ The missing link - Github Issues integration
 ===
 
 Immediately I thought "where will these suggestions be stored?"
-because I was already managing [my own list of ideas](https://github.com/nottrobin/robinwinslow.co.uk/issues) in
+because I was already managing [my own list of ideas](https://github.com/nottrobin/robinwinslow.uk/issues) in
 [Github Issues](https://github.com/blog/831-issues-2-0-the-next-generation) (augmented with [Huboard](http://huboard.com/))
 and I didn't like the idea of having to maintain two lists, or manually copy issues between the two.
 

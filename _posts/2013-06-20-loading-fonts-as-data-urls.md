@@ -44,7 +44,7 @@ So using Data URLs, you can include your font directly in your CSS like so:
 }
 ```
 
-(For example, [here's what I use for this very site](https://github.com/nottrobin/robinwinslow.co.uk/blob/master/_assets/stylesheets/global.scss#L345))
+(For example, [here's what I use for this very site](https://github.com/nottrobin/robinwinslow.uk/blob/master/_assets/stylesheets/global.scss#L345))
 
 This will now mean that your web pages will only have to download one CSS file, rather than a CSS file and a bunch of font files, which will help performance. Personally I think it's also neat not to have to create a special directory for font files. Keeping it all in one place (CSS) just seems nice and neat to me.
 

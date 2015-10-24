@@ -7,7 +7,7 @@ tags:
 layout: post
 ---
 
-For many moons I have been hosting my [Jekyll site](https://github.com/nottrobin/robinwinslow.co.uk) on a [Heroku cedar stack](https://devcenter.heroku.com/articles/cedar). Recently the setup I had stopped working, and I'm still not sure why. However, I solved it by simplifying things, and now I think my new solution is more simple and more robust.
+For many moons I have been hosting my [Jekyll site](https://github.com/nottrobin/robinwinslow.uk) on a [Heroku cedar stack](https://devcenter.heroku.com/articles/cedar). Recently the setup I had stopped working, and I'm still not sure why. However, I solved it by simplifying things, and now I think my new solution is more simple and more robust.
 
 How Jekyll works
 ===
@@ -22,6 +22,3 @@ My old setup
 I used to configure my project to regenerate the website on the fly. Every time my Heroku Dyno spun up it would regenerate the site.
 
 I did this using the following steps:
-
-
-

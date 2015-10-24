@@ -1,11 +1,11 @@
-I have been developing high-performing and high-scale websites for over 6 years, with experience of the entire web 
-technology stack. I follow trends in internet development closely and have extensive experience of modern 
-server- and client-side technologies including object-oriented PHP MVC frameworks, test-driven development and 
+I have been developing high-performing and high-scale websites for over 6 years, with experience of the entire web
+technology stack. I follow trends in internet development closely and have extensive experience of modern
+server- and client-side technologies including object-oriented PHP MVC frameworks, test-driven development and
 semantic and maintainable JavaScript, HTML5 and CSS3.
 
-I am currently looking for a senior position near Nottingham which would enable me to develop my leadership and management skills while continuing to find innovative solutions for complex prolems, and to learn new technologies. 
+I am currently looking for a senior position near Nottingham which would enable me to develop my leadership and management skills while continuing to find innovative solutions for complex prolems, and to learn new technologies.
 
-At Hillarys I got the opportunity to lead the team in coding and management strategies for new and existing projects. I developed my leadership skills and worked closely with other development and marketing teams to introduce new working practices. 
+At Hillarys I got the opportunity to lead the team in coding and management strategies for new and existing projects. I developed my leadership skills and worked closely with other development and marketing teams to introduce new working practices.
 
 I am very interested in flexible working practices for lean software development, and creating modern teams where developers can work and develop efficiently.
 
@@ -53,7 +53,7 @@ Websites I've worked on
 
 web-blinds.com
 arena-blinds.com
-robinwinslow.co.uk
+robinwinslow.uk
 countrylife.co.uk
 horseandhound.co.uk
 golf-monthly.co.uk

@@ -20,7 +20,7 @@ The somewhat confusing term refers to any doctor from when they graduate from th
 
 Therefore, this new contract will effect the majority of doctors in the country.
 
-How much do junior doctors earn (basic pay)?
+How much do junior doctors earn?
 ===
 
 This is a somewhat complex question. Because "junior" doctors have anything from 0 to over 9 years of experience on top of their 5-6 year degree. However, NHS.uk [explains it fairly well][]:
@@ -110,7 +110,7 @@ Doctors are rightfully unhappy about it, have protested in huge numbers nad will
 [European Working Time Directive in theory means that]: http://bma.org.uk/support-at-work/ewtd/ewtd-juniors "BMA: EWTD for junior doctors"
 ["unsocial hours"]: http://www.nhsemployers.org/your-workforce/pay-and-reward/nhs-terms-and-conditions/nhs-terms-and-conditions-of-service-handbook/unsocial-hours-payments "NHS Employers: Unsocial hours payments - Section 2(a) (England)"
 [paid extra accordingly]: http://bma.org.uk/support-at-work/pay-fees-allowances/pay-banding "BMA: Pay banding"
-[have to pay a lot]: https://en.wikipedia.org/wiki/Junior_doctor#Costs_and_concerns "Wikipedia: Junior doctor - Costs and concerns"
+[have to pay a lot]: http://careers.bmj.com/careers/advice/Junior_doctors%3A_look_after_your_financial_health_by_reducing_your_tax_bill_and_increasing_your_income "BMJ: Junior doctors: look after your financial health by reducing your tax bill and increasing your income"
 [ballot]: https://bma.org.uk/news-views-analysis/news/2015/september/junior-doctors-plan-to-ballot-for-industrial-action "Junior doctors plan to ballot for industrial action"
 [anaesthetist]: https://en.wikipedia.org/wiki/Anesthesiologist "Wikipedia: Anesthesiologist"
 [a web developer]: http://design.canonical.com/author/nottrobin/ "Ubuntu Design team: Robin Winslow"

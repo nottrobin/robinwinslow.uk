@@ -107,7 +107,7 @@ Doctors are rightfully unhappy about it, have protested in huge numbers nad will
 [others before me]: http://www.theguardian.com/society/2015/sep/29/junior-doctors-contract-row-nhs-explainer-health "Guardian: Junior doctors contract row: an explainer"
 [his attempts to force consultants]: http://www.theguardian.com/society/2015/jul/16/nhs-consultants-given-ultimatum-on-weekend-working "Guardian: Jeremy Hunt gives NHS consultants ultimatum on weekend working"
 [still work 100-hour weeks]: http://www.telegraph.co.uk/news/health/news/10818708/Junior-doctors-are-still-working-100-hour-weeks-despite-European-laws-BMA.html "Telegraph: Junior doctors are still working 100 hour weeks despite European laws: BMA"
-[European Working Time Directive in theory means that]: http://bma.org.uk/support-at-work/ewtd/ewtd-juniors "BMA: EWTD for junior doctors"
+[European Working Time Directive in theory limits]: http://bma.org.uk/support-at-work/ewtd/ewtd-juniors "BMA: EWTD for junior doctors"
 ["unsocial hours"]: http://www.nhsemployers.org/your-workforce/pay-and-reward/nhs-terms-and-conditions/nhs-terms-and-conditions-of-service-handbook/unsocial-hours-payments "NHS Employers: Unsocial hours payments - Section 2(a) (England)"
 [paid extra accordingly]: http://bma.org.uk/support-at-work/pay-fees-allowances/pay-banding "BMA: Pay banding"
 [have to pay a lot]: http://careers.bmj.com/careers/advice/Junior_doctors%3A_look_after_your_financial_health_by_reducing_your_tax_bill_and_increasing_your_income "BMJ: Junior doctors: look after your financial health by reducing your tax bill and increasing your income"

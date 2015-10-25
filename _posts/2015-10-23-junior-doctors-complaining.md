@@ -38,7 +38,7 @@ Doctors also [have to pay a lot][] out of their salary for courses, exams, membe
 How many hours do doctors work?
 ===
 
-Doctors often work overtime and ["unsocial hours"][], and are [paid extra accordingly][] as a percentage of their basic pay. Currently, any hours outside 8am to 6pm on a weekday are considered unsocial, although Jeremy Hunt is trying to change that (see below).
+Doctors often work overtime and ["unsocial hours"][], and are [paid extra accordingly][] as a percentage of their basic pay. Currently, any hours outside 7am to 7pm on a weekday are considered unsocial, although Jeremy Hunt is trying to change that (see below).
 
 The [European Working Time Directive in theory limits][] doctors to working a maximum average of 48 hours a week over a 26 week period, and a maximum of 91 hours in any individual week. However, despite attempts to enforce these hours, some doctors [still work 100-hour weeks][].
 
@@ -56,7 +56,7 @@ What are these contract changes?
 
 Coming hot on the heels of [his attempts to force consultants][] to work weekends, Jeremy Hunt wants to impose a new contract on "junior" (most) doctors.
 
-The main change in this contract is to redefine "social hours" from "8am-6pm on a weekday", to "8am-10pm Monday through Saturday". This is a step towards the government's [promise of "seven-day NHS services"][pledge].
+The main change in this contract is to redefine "social hours" from "7am-7pm on a weekday", to "7am-10pm Monday through Saturday". This is a step towards the government's [promise of "seven-day NHS services"][pledge].
 
 Jeremy has [tried to reassure doctors][] that basic pay will be adjusted so that the average doctor won't see a pay cut, and that doctors won't be working longer hours.
 

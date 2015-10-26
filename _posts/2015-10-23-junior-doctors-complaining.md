@@ -65,11 +65,9 @@ So what are doctors complaining about?
 
 This is a huge change for doctors as it will mean they get paid [the same for 9pm on a Saturday night as 9am on a Tuesday morning][]. Despite Jeremy's reassurances, many doctors who currently work unsocial hours [will definitely see a significant pay cut][].
 
-In addition to this, the changes will obviously mean that doctors are more often working late evenings and Saturdays. Being a doctor already means you have hardly any free time at useful hours, and this will make it even harder for them to make social appointments, meet up with friends etc.
+In addition to this, the changes will obviously mean that doctors are more often working late evenings and Saturdays. Being a doctor already means you have hardly any free time at useful hours, and this will make it even harder for them to make social appointments, meet up with friends etc. Ultimately this contract, which is seen as punitive for doctors, will [further damage the NHS][].
 
-Doctors are also concerned that by changing the working hours in a week that are perceived as "normal" from 60 to 90, doctors will inevitably feel pressure to work these hours, in violation of the Working Time Directive, and there aren't sufficient safeguards in place to make sure this doesn't happen. This will lead to exhausted and unsafe doctors.
-
-Ultimately there are worries that this contract, which is seen by some as punitive for doctors, will [further damage the NHS][].
+The [BMA is also concerned][] that the new contract will weaken the safeguards ensuring doctors aren't overworked. There is no guarantee that NHS employers will have to ensure the Working Time Regulations are adhered to.
 
 Doctors and the public have been speaking out about the contract changes using [the hashtag #NotFairNotSafe][]. Over 20,000 [protested][] in London, Nottingham and Belfast last weekend. The BMA [are balloting for strike action][ballot], which I think will probably go ahead, based on the feeling I get from the doctors I know.
 
@@ -121,3 +119,4 @@ Doctors are rightfully unhappy about it, have protested in huge numbers and will
 [explains it fairly well]: http://www.nhscareers.nhs.uk/explore-by-career/doctors/pay-for-doctors/ "NHS Careers: Pay for doctors"
 [may earn £23,500]: http://www.prospects.ac.uk/consulting_civil_engineer_salary.htm "Consulting civil engineer: Salary and conditions"
 [Government policy paper: 7-day NHS services: a factsheet]: https://www.gov.uk/government/publications/7-day-nhs-services-a-factsheet/7-day-nhs-services-a-factsheet "Government policy paper: 7-day NHS services: a factsheet"
+[BMA is also concerned]: https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/445742/50576_DDRB_report_2015_WEB_book.pdf "Review Body on Doctors’ and Dentists’ Remuneration: See paragraph 4.64"

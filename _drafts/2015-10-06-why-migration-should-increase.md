@@ -9,7 +9,9 @@ tags:
 
 
 
-Today, Theresa May [makes another attempt][bbc-may] to turn us all against the evil migrants (and, by extension, refugees).
+On the 6th of October, Theresa May [makes another attempt][bbc-may] to turn us all against the evil migrants, and I started writing this article in response.
+
+I've only just got around to finishing it, and while it may not be quite as topical, and issues are still just as important, especially as I expect the government will make another attempt to demonise immigrants in the wake of last night's tragic attacks in Paris.
 
 A conservative standpoint
 ===

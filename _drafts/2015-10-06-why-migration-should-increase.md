@@ -61,7 +61,12 @@ Hiring people from overseas, with different types of experience and cultural bac
 The diversity argument
 ---
 
-I believe it is simple more interesting to have a richer mix of cultures and backgrounds in the UK. The more diverse society, the more different ideas 
+I believe it is simply more interesting to have a richer mix of cultures and backgrounds in the UK. The more diverse society, the more new and interesting ideas and pieces of artwork, and the better UK citizens will be at working within the international community.
+
+A better UK, a better world
+===
+
+In summary, I believe the argument against immigration in the UK is born out of xenophobia and fear of change, and has no solid evidence to support it. On the other hand, a UK that supports immigration will ultimately be a richer, more moral and more progressive society.
 
 
 [bbc-may]: http://www.bbc.co.uk/news/uk-politics-34450887 "BBC: Theresa May: High immigration levels prevent 'cohesive society'"

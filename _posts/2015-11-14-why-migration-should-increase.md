@@ -1,5 +1,7 @@
 ---
 title: Why migration should increase
+description: "I am a strong advocate of migration to the UK. I believe it's the only ethical and economically responsible position to hold."
+layout: post
 tags: 
   - politics
   - personal

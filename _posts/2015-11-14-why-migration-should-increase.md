@@ -2,14 +2,14 @@
 title: Why migration should increase
 description: "I am a strong advocate of migration to the UK. I believe it's the only ethical and economically responsible position to hold."
 layout: post
-tags: 
+tags:
   - politics
   - personal
 ---
 
 On the 6th of October, Theresa May [made another attempt][bbc-may] to turn us all against the evil migrants, and I started writing this article in response.
 
-I've only just got around to finishing it, and while it may not be quite as topical, and issues are still just as important, especially as I expect the government will make another attempt to demonise immigrants in the wake of last night's tragic attacks in Paris.
+I've only just got around to finishing it, and while it may not be quite as topical, the issues are still just as important, especially as I expect the government will make another attempt to demonise immigrants in the wake of last night's tragic attacks in Paris.
 
 A conservative standpoint
 ===
@@ -30,7 +30,7 @@ This time, however, May is being surprisingly frank on that point:
 In a sense, therefore, May's speech is quite transparent about her point of view:
 
 > "But even if we could manage all the consequences of mass immigration, Britain does not need net migration in the hundreds of thousands every year."
-> 
+>
 > "So there is no case, in the national interest, for immigration of the scale we have experienced over the last decade."
 
 It is really telling that May responds to this lack of economic effects from migration by saying "there's no case for immigration". I would rather say:

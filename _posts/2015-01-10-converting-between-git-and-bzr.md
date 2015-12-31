@@ -94,3 +94,7 @@ Only work in one repository
 ---
 
 It is not practical to be doing your actual work in both systems, because converting from one to the other will overwrite any history in the destination repository. For this reason you need to choose to do all your work in either Git or Bazaar, and then regularly convert it to the other using the above conversion instructions.
+
+(Originally published [on design.canonical.com][design-version])
+
+[design-version]: http://design.canonical.com/2015/01/converting-projects-between-git-and-bazaar/ "ubuntu design: Converting projects between Git and Bazaar"

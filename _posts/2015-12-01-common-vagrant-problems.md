@@ -2,6 +2,12 @@
 title: Common Vagrant problems
 description: Some common issues that I've found with setting up Vagrant boxes
 layout: post
+tags:
+  - dev
+---
+
+I wrote this as a draft ages ago, and I haven't really quality-checked it. I'm publishing it as I have decided to make a more concerted effort not to filter myself on my blog, and publish my drafts.
+
 ---
 
 Vagrant seems like a great idea - just checkout a project, type "vagrant up", and immediately you're good to go.
@@ -35,7 +41,7 @@ VT-x/AMD-V hardware acceleration has been enabled, but is not operational.
 ```
 
 To fix this you need to [reboot into the BIOS settings](http://www.betaarchive.com/forum/viewtopic.php?t=22067) and enable VT-x.
-Unfortunately as computer BIOSes vary immensely, I can't help you out with where to find the setting. 
+Unfortunately as computer BIOSes vary immensely, I can't help you out with where to find the setting.
 
 ## Chef server issues
 
@@ -63,5 +69,4 @@ The simplest fix is probably, once again, to use a completely new client name:
 
 ```
 chef.node_name = "#{ENV['USER']}-unique-key-27"
-``` 
-
+```

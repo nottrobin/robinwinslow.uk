@@ -68,7 +68,7 @@ Okay so my strategy isn't that different from before. I'm still going to set asi
 - Start off by writing down the things I want to do, and then put them in order, and *only focus on the first one*.
 - *Strictly* don't use the internet except for researching sources (I still don't know how to make myself do this).
 
-We'll see how this strategy works out. I'll try to report back.
+We'll see how this strategy works out. I'll try to write another post about how I get on. We'll see if I have the discipline for it.
 
 [nas]: https://en.wikipedia.org/wiki/Network-attached_storage "Wikipedia: Network-attached storage"
 [wiki-discipline]: http://www.wikihow.com/Discipline-Yourself "WikiHow: How to Discipline Yourself"

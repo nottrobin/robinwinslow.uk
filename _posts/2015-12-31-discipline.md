@@ -8,7 +8,7 @@ tags:
 
 I lack discipline. It's new year's eve, and if I had to choose one new year's resolution it would be to gain discipline. I have many many things I want to do, but they all require discipline.
 
-I also tried asking the Twitterverse just now, but so far nothing much has come of it:
+I also tried asking the Twitterverse just now:
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Hello social-media-verse. How do you achieve self-discipline in a world of a million distractions? &#39;Cos I&#39;m struggling. Any tips?</p>&mdash; Robin Winslow (@nottrobin) <a href="https://twitter.com/nottrobin/status/682589698963968007">December 31, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

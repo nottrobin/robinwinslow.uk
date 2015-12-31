@@ -5,6 +5,8 @@ future: true
 exclude: [config.ru, Gemfile, Gemfile.lock, LICENSE.md, Procfile, Rakefile, README.md, vendor]
 permalink: pretty
 destination: _site/files
+gems:
+  - jekyll-assets
 defaults:
   -
     scope:

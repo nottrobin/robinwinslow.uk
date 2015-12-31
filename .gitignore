@@ -2,3 +2,6 @@
 .sass-cache
 _css
 _site
+.asset-cache/
+.bundle/
+vendor/

@@ -29,7 +29,7 @@ I have endless things I'd like to do, ranging from the mundane to the life-defin
 - Learn the piano properly
 - Become a journalist on the side
 
-The problem is, at the moment I act on impulse. Every now and then the impulse will flair up to start on something. Sometimes I add it to a todo list and then forget about it forever. Sometimes I start, get half-way through my task, and then drop it forever.
+At the moment I act on impulse. Every now and then the impulse will flair up to start on something. Sometimes I add it to a todo list and then forget about it forever. Sometimes I start, get half-way through my task, and then drop it forever.
 
 Always the problem is I get distracted by something else I suddenly care about more.
 

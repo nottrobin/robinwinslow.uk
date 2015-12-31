@@ -10,7 +10,7 @@ if [ -z "$commit_message" ]; then
 fi
 
 echo "= Build the site ="
-jekyll build
+bundle exec jekyll build
 
 (
     echo "= Commit and push to website ="

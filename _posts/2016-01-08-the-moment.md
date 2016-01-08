@@ -1,5 +1,5 @@
 ---
-title: "The moment: An abstract though piece"
+title: "The moment: An abstract thought piece"
 description: "Travelling home on the train, late at night, extremely tired and slightly drunk, I had a surreal conversation with a 13 year old kid about hacking. During the space afterwards, I wrote this."
 tags:
   - personal

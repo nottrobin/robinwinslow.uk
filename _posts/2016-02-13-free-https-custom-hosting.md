@@ -1,5 +1,5 @@
 ---
-title: How to host an HTTPS site on a custom domain completely for free"
+title: "How to host an HTTPS site on a custom domain completely for free"
 description: "The combination of the free services from CloudFlare and Github Pages make it incredibly easy to host a secure website."
 tags:
   - dev

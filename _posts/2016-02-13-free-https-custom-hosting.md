@@ -36,7 +36,10 @@ your repositories and they will be served as a website at
 
 And all files are passed through the
 [Jekyll][] parser first, so if you want to split up your HTML into templates
-you can.
+you can. And if you don't want to craft your site by hand, you can use the
+[Automatic Page Generator][].
+
+![automatic page generator themes](https://camo.githubusercontent.com/d60800ddc54bf9d0317ca901e7fb14590167f7fd/68747470733a2f2f6769746875622d696d616765732e73332e616d617a6f6e6177732e636f6d2f626c6f672f323031322f706167652d67656e657261746f722d7069636b65722e706e67)
 
 Websites on `github.io` also [support HTTPS][], so you can serve your site up
 at `https://{username}.github.io/{project-name}` if you want.
@@ -147,10 +150,10 @@ Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
 X-Content-Type-Options: nosniff
 ```
 
-It will take a little while for your domain to make it into the
+It can take several weeks for your domain to make it into the
 [Chromium HSTS preload list][]. You can check if it's in there, or add it
 again, by visiting `chrome://net-internals/#hsts` in a Chrome or Chromium
-browser.
+browser and looking for the `static_sts_domain` setting.
 
 That's it!
 ===
@@ -189,3 +192,4 @@ online in minutes, totally for free!
 [cloudflare-http2]: https://www.cloudflare.com/http2/ "CloudFlare HTTP/2"
 [DDOS attacks]: https://en.wikipedia.org/wiki/Denial-of-service_attack "Wikipedia: Denial-of-service attack"
 [cloudflare-plans]: https://www.cloudflare.com/plans/ "CloudFlare: Plans"
+[Automatic Page Generator]: https://github.com/blog/1081-instantly-beautiful-project-pages "GitHub: Instantly Beautiful Project Pages"

@@ -51,7 +51,7 @@ called with `CNAME` to the repository with your domain name in it - e.g.
 `mytestwebsite.robinwinslow.uk` - and then go and setup the [DNS CNAME][]
 to point to `{username}.github.io`.
 
-![mytestwebsite GitHub pages files](http://i.imgur.com/7EF2uwy.png)
+![mytestwebsite GitHub pages files](http://i.imgur.com/7EF2uwyg.png)
 
 The only thing you can't do directly with GitHub Pages is offer HTTPS
 on your custom domain - e.g. `https://mytestwebsite.robinwinslow.uk`. This is where
@@ -79,7 +79,7 @@ certificate to encrypt communication between your users and their cached site.
 First simply setup your DNS with CloudFlare to point to `{username}.github.io`,
 and allow CloudFlare to cache the site.
 
-![mytestwebsite CloudFlare DNS setup](http://i.imgur.com/VxPqzgF.png)
+![mytestwebsite CloudFlare DNS setup](http://i.imgur.com/VxPqzgFg.png)
 
 
 Between CloudFlare and your host the connection doesn't have to be encrypted,
@@ -88,7 +88,7 @@ this encrypted connection doesn't actually need a *valid* HTTPS certificate. To
 enable this we should select the "Full" (rather than "Flexible" or "Strict")
 option.
 
-![CloudFlare full SSL encryption](http://i.imgur.com/olf2JH2.png)
+![CloudFlare full SSL encryption](http://i.imgur.com/olf2JH2g.png)
 
 Et. voila! You now have an encrypted custom domain in front of
 GitHub Pages completely for free!
@@ -116,7 +116,7 @@ The first thing we can do is turn on [HSTS with CloudFlare][] (still for free).
 If you're using a subdomain (e.g. `mytestwebsite.robinwinslow.uk`), remember to enable
 "Apply HSTS policy to subdomains".
 
-![CloudFlare: HSTS setting](http://i.imgur.com/tYam5yn.png)
+![CloudFlare: HSTS setting](http://i.imgur.com/tYam5yng.png)
 
 This will tell modern browsers to always use the HTTPS protocol for this domain.
 

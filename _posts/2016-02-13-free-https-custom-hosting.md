@@ -93,12 +93,12 @@ GitHub Pages completely for free!
 
 ![mytestwebsite with a secure domain](http://i.imgur.com/eBgFJqp.png)
 
-Requiring users to use HTTPS
+Ensuring all visitors use HTTPS
 ===
 
 To make our site properly secure, we need to ensure all users are sent
-to the HTTPS site (`http://mytestwebsite.robinwinslow.uk`) instead of the HTTP
-one (`https://mytestwebsite.robinwinslow.uk`).
+to the HTTPS site (`https://mytestwebsite.robinwinslow.uk`) instead of the HTTP
+one (`http://mytestwebsite.robinwinslow.uk`).
 
 Setting up a page rule
 ---
@@ -109,7 +109,7 @@ from `http://mytestwebsite.robinwinslow.uk` to `https://mytestwebsite.robinwinsl
 Although this is not supported with GitHub Pages, it [can be achieved][] with
 CloudFlare page rules.
 
-Just add a page rule for `*{your-domain.com}/*` (e.g. `*robinwinslow.uk/*`)
+Just add a page rule for `http://*{your-domain.com}/*` (e.g. `http://*robinwinslow.uk/*`)
 and turn on "Always use HTTPS":
 
 ![CloudFlare always use HTTPS page rule](http://i.imgur.com/1l6tyIAg.png)
@@ -143,10 +143,6 @@ HTTP/1.1 200 OK
 Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
 X-Content-Type-Options: nosniff
 ```
-
-[HSTS][] [is in fact superior][] to the 301 redirect method. With a 301 redirect
-you run the risk of a man-in-the-middle attacker intercepting the user *before*
-the redirect has happened to secure the user.
 
 That's it!
 ===

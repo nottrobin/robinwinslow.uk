@@ -16,10 +16,7 @@ very basic certificates, and setting up a website on OpenShift is a fairly techn
 undertaking.
 
 There now exists [a much simpler way to setup an HTTPS website][simple-https] with
-[CloudFlare][] and [GitHub Pages][], with two small downsides:
-
-- It must be a static site
-- We can't ensure 100% of users use HTTPS (but we can get pretty close)
+[CloudFlare][] and [GitHub Pages][]. This only works for static sites.
 
 If your site is more complicated and needs a database or dynamic functionality,
 then look at my other post about [the OpenShift solution][free-https]. However,
@@ -67,6 +64,7 @@ are really helpful here:
 
 - [Free automatic HTTPS for your domain][]
 - [HTTP Strict Transport Security][cloudflare-hsts] (HSTS)
+- [Page Rules][cloudflare-rules]
 - [DNSSEC][cloudflare-dnssec]
 - [CNAME flattening][cloudflare-alias]
 - ["Always online" protection][]
@@ -95,30 +93,48 @@ GitHub Pages completely for free!
 
 ![mytestwebsite with a secure domain](http://i.imgur.com/eBgFJqp.png)
 
-Encouraging HTTPS
+Requiring users to use HTTPS
 ===
 
-As I said earlier, one of the downsides here is we can't get quite 100%
-of our visitors to use HTTPS (they could choose to visit `http://mytestwebsite.robinwinslow.uk`
-instead of `https://mytestwebsite.robinwinslow.uk`).
+To make our site properly secure, we need to ensure all users are sent
+to the HTTPS site (`http://mytestwebsite.robinwinslow.uk`) instead of the HTTP
+one (`https://mytestwebsite.robinwinslow.uk`).
 
-The most robust way to get visitors to use HTTPS is to send a [301 redirect][]
-from `http://mytestwebsite.robinwinslow.uk` to `https://mytestwebsite.robinwinslow.uk`. unfortunately
-this is not supported with GitHub Pages.
+Setting up a page rule
+---
 
-However, there are other powerful ways that we can send many visitors to HTTPS
-and encourage the others to use it.
+The first step to get visitors to use HTTPS is to send a [301 redirect][]
+from `http://mytestwebsite.robinwinslow.uk` to `https://mytestwebsite.robinwinslow.uk`.
+
+Although this is not supported with GitHub Pages, it [can be achieved][] with
+CloudFlare page rules.
+
+Just add a page rule for `*{your-domain.com}/*` (e.g. `*robinwinslow.uk/*`)
+and turn on "Always use HTTPS":
+
+![CloudFlare always use HTTPS page rule](http://i.imgur.com/1l6tyIAg.png)
+
+Now we can check that our domain is redirecting users to HTTPS
+by inspecting the headers:
+
+``` bash
+$ curl -I mytestwebsite.robinwinslow.uk
+HTTP/1.1 301 Moved Permanently
+...
+Location: https://mytestwebsite.robinwinslow.uk/
+```
 
 HTTP Strict Transport Security (HSTS)
 ---
 
-The first thing we can do is turn on [HSTS with CloudFlare][] (still for free).
-If you're using a subdomain (e.g. `mytestwebsite.robinwinslow.uk`), remember to enable
-"Apply HSTS policy to subdomains".
+To protect our users from [man-in-the-middle attacks][], we should also
+turn on [HSTS with CloudFlare][] (still for free).
+If you're using a subdomain (e.g. `mytestwebsite.robinwinslow.uk`),
+remember to enable "Apply HSTS policy to subdomains".
 
 ![CloudFlare: HSTS setting](http://i.imgur.com/tYam5yng.png)
 
-This will tell modern browsers to always use the HTTPS protocol for this domain.
+This will tell [modern browsers][] to always use the HTTPS protocol for this domain.
 
 ``` bash
 $ curl -I https://mytestwebsite.robinwinslow.uk
@@ -130,51 +146,13 @@ X-Content-Type-Options: nosniff
 
 [HSTS][] [is in fact superior][] to the 301 redirect method. With a 301 redirect
 you run the risk of a man-in-the-middle attacker intercepting the user *before*
-the redirect has happened to secure the user. However, unfortunately [not all
-browsers support HSTS][], so people using IE 10 or below will still be able to
-visit the insecure site.
+the redirect has happened to secure the user.
 
-Tell search engines to use HTTPS
----
+That's it!
+===
 
-Firstly, always make sure any links to your site that you have control over
-use the HTTPS version of the URL.
-
-``` html
-<a href="https://mytestwebsite.robinwinslow.uk">mytestwebsite</a>
-```
-
-Then, if you add a `rel="canonical"` instruction ([thanks Eric Mill][ghp-https])
-to your HTML pages then search engines like Google will only send people to the
-HTTPS version of the page:
-
-``` html
-<link rel="canonical" href="https://mytestwebsite.robinwinslow.uk/index.html" />
-```
-
-JavaScript redirecting
----
-
-To catch any users who still come through to your site on plain unencrypted HTTP,
-you could add a JavaScript snippet to redirect them
-(modified [from Sheharyar Naseer][simple-https]'s solution):
-
-``` html
-<script>
-  if (window.location.protocol != "https:") {
-    window.location.protocol = "https";
-  }
-</script>
-```
-
-This will of course only catch people with JavaScript turned on. But hopefully
-the number of people visiting your site who are:
-
-1. Not coming from a search engine
-2. Running IE10 or below and
-3. Have disabled JavaScript
-
-is small enough not to be too worried about.
+You now have an incredibly quick and easy way to put a fully secure website
+online in minutes, totally for free!
 
 [HSTS with CloudFlare]: https://blog.cloudflare.com/enforce-web-policy-with-hypertext-strict-transport-security-hsts/ "CloudFlare blog: Enforce Web Policy with HTTP Strict Transport Security (HSTS)"
 [free-https]: /2014/08/26/host-your-site-with-https-for-free/ "Robin Winslow: Host your site with HTTPS for free"
@@ -189,7 +167,7 @@ is small enough not to be too worried about.
 [301 redirect]: https://moz.com/learn/seo/redirection "MOZ: Redirection"
 [HSTS]: https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security "Wikipedia: HTTP Strict Transport Security"
 [is in fact superior]: https://www.eff.org/deeplinks/2014/02/websites-hsts "EFF: Websites Must Use HSTS in Order to Be Secure"
-[not all browsers support HSTS]: http://caniuse.com/#feat=stricttransportsecurity "Can I use... Strict Transport Security"
+[modern browsers]: http://caniuse.com/#feat=stricttransportsecurity "Can I use... Strict Transport Security"
 [ghp-https]: https://konklone.com/post/github-pages-now-sorta-supports-https-so-use-it#telling-search-engines "Eric Mill: GitHub Pages Now (Sorta) Supports HTTPS, So Use It - Telling search engines"
 [growing]: https://www.chapterthree.com/blog/why-your-site-should-be-using-https "Why your site should be using HTTPS"
 [movement]: https://www.youtube.com/watch?v=cBhZ6S0PFCY "Google I/O 2014 - HTTPS Everywhere"
@@ -200,3 +178,6 @@ is small enough not to be too worried about.
 [cloudflare-dnssec]: https://www.cloudflare.com/dnssec/universal-dnssec/ "CloudFlare Universal DNSSEC"
 [cloudflare-alias]: https://blog.cloudflare.com/introducing-cname-flattening-rfc-compliant-cnames-at-a-domains-root/ "CloudFlare: Introducing CNAME Flattening: RFC-Compliant CNAMEs at a Domain's Root"
 [A firewall]: https://www.cloudflare.com/waf/ "CloudFlare: Affordable Web Application Firewall"
+[cloudflare-rules]: https://support.cloudflare.com/hc/en-us/articles/200168306-Is-there-a-tutorial-for-Page-Rules- "CloudFlare support: Is there a tutorial for Page Rules?"
+[can be achieved]: https://support.cloudflare.com/hc/en-us/articles/200170536-How-do-I-redirect-all-visitors-to-HTTPS-SSL- "CloudFlare support: How do I redirect all visitors to HTTPS/SSL?"
+[man-in-the-middle attacks]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack "Wikipedia: Man-in-the-middle attack"

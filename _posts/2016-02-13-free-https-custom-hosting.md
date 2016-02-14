@@ -69,7 +69,7 @@ are especially helpful for our current HTTPS mission:
 - [HTTP/2][cloudflare-http2] - optimised connections for browsers that support it
 - [CNAME flattening][cloudflare-alias] - so you can use a [DNS CNAME][] at the domain apex
 - ["Always online" protection][] - Your cached website will stay up even if the host goes down
-- [Web Application Firewall][] - intelligent protection against [DDOS attacks][]
+- [Firewall][cloudflare-firewall] - intelligent protection against [DDOS attacks][]
 
 Because CloudFlare are a CDN *and* a DNS host, they can do the HTTPS negotiation
 for you. They've taken advantage of this to provide you with a free HTTPS
@@ -181,7 +181,7 @@ online in minutes, totally for free!
 [cloudflare-hsts]: https://blog.cloudflare.com/enforce-web-policy-with-hypertext-strict-transport-security-hsts/ "CloudFlare: Enforce Web Policy with HTTP Strict Transport Security (HSTS)"
 [cloudflare-dnssec]: https://www.cloudflare.com/dnssec/universal-dnssec/ "CloudFlare Universal DNSSEC"
 [cloudflare-alias]: https://blog.cloudflare.com/introducing-cname-flattening-rfc-compliant-cnames-at-a-domains-root/ "CloudFlare: Introducing CNAME Flattening: RFC-Compliant CNAMEs at a Domain's Root"
-[Web Application Firewall]: https://www.cloudflare.com/waf/ "CloudFlare: Affordable Web Application Firewall"
+[cloudflare-firewall]: https://www.cloudflare.com/features-security/ "CloudFlare: Security"
 [cloudflare-rules]: https://support.cloudflare.com/hc/en-us/articles/200168306-Is-there-a-tutorial-for-Page-Rules- "CloudFlare support: Is there a tutorial for Page Rules?"
 [can be achieved]: https://support.cloudflare.com/hc/en-us/articles/200170536-How-do-I-redirect-all-visitors-to-HTTPS-SSL- "CloudFlare support: How do I redirect all visitors to HTTPS/SSL?"
 [mitm]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack "Wikipedia: Man-in-the-middle attack"

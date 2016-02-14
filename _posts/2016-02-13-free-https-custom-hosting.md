@@ -37,14 +37,14 @@ your repositories and they will be served as a website at
 
 ![GitHub pages minimal files](http://i.imgur.com/DBeJSBN.png)
 
-![mytestwebsite GitHub pages](http://i.imgur.com/2ZvKJEP.png)
-
 And all files are passed through the
 [Jekyll][] parser first, so if you want to split up your HTML into templates
 you can.
 
 Websites on `github.io` also [support HTTPS][], so you can serve your site up
 at `https://{username}.github.io/{project-name}` if you want.
+
+![mytestwebsite GitHub pages](http://i.imgur.com/2ZvKJEP.png)
 
 GitHub Pages also [support custom domains][] (still for free). Just add a file
 called with `CNAME` to the repository with your domain name in it - e.g.

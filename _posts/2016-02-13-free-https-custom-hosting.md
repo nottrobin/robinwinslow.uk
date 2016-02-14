@@ -89,7 +89,7 @@ option.
 
 ![CloudFlare full SSL encryption](http://i.imgur.com/olf2JH2g.png)
 
-Et voila! You now have an encrypted custom domain in front of
+Et voilà! You now have an encrypted custom domain in front of
 GitHub Pages completely for free!
 
 ![mytestwebsite with a secure domain](http://i.imgur.com/eBgFJqp.png)
@@ -184,7 +184,8 @@ online in minutes, totally for free!
 [Web Application Firewall]: https://www.cloudflare.com/waf/ "CloudFlare: Affordable Web Application Firewall"
 [cloudflare-rules]: https://support.cloudflare.com/hc/en-us/articles/200168306-Is-there-a-tutorial-for-Page-Rules- "CloudFlare support: Is there a tutorial for Page Rules?"
 [can be achieved]: https://support.cloudflare.com/hc/en-us/articles/200170536-How-do-I-redirect-all-visitors-to-HTTPS-SSL- "CloudFlare support: How do I redirect all visitors to HTTPS/SSL?"
-[man-in-the-middle attacks]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack "Wikipedia: Man-in-the-middle attack"
+[mitm]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack "Wikipedia: Man-in-the-middle attack"
 [Chromium HSTS preload list]: https://hstspreload.appspot.com/ "Chromium HSTS preload list"
 [cloudflare-http2]: https://www.cloudflare.com/http2/ "CloudFlare HTTP/2"
 [DDOS attacks]: https://en.wikipedia.org/wiki/Denial-of-service_attack "Wikipedia: Denial-of-service attack"
+[cloudflare-plans]: https://www.cloudflare.com/plans/ "CloudFlare: Plans"

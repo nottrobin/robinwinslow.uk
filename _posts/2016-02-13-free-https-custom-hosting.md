@@ -121,7 +121,7 @@ If you're using a subdomain (e.g. `mytestwebsite.robinwinslow.uk`), remember to 
 This will tell modern browsers to always use the HTTPS protocol for this domain.
 
 ``` bash
-$ curl -sI https://mytestwebsite.robinwinslow.uk
+$ curl -I https://mytestwebsite.robinwinslow.uk
 HTTP/1.1 200 OK
 ...
 Strict-Transport-Security: max-age=15552000; includeSubDomains; preload

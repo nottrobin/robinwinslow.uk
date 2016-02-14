@@ -59,16 +59,17 @@ CloudFlare
 
 CloudFlare offer a really quite impressive free DNS and CDN service. Of course
 there are paid plans, but I myself can't see why you'd need one. This free
-service includes some really impressive offerings, the first two of which
-are really helpful here:
+service includes some really impressive offerings, the first three of which
+are especially helpful for our current HTTPS mission:
 
-- [Free automatic HTTPS for your domain][]
-- [HTTP Strict Transport Security][cloudflare-hsts] (HSTS)
-- [Page Rules][cloudflare-rules]
-- [DNSSEC][cloudflare-dnssec]
-- [CNAME flattening][cloudflare-alias]
-- ["Always online" protection][]
-- [A firewall][] to protect against DDOS attacks
+- [Free automatic HTTPS for your domain][] - no need to buy a certificate
+- [Page Rules][cloudflare-rules] - custom settings and redirects for URL patterns
+- [HTTP Strict Transport Security][cloudflare-hsts] (HSTS) - protection from [MITM attacks][mitm]
+- [DNSSEC][cloudflare-dnssec] - protection from DNS poisoning attacks
+- [HTTP/2][cloudflare-http2] - optimised connections for browsers that support it
+- [CNAME flattening][cloudflare-alias] - so you can use a [DNS CNAME][] at the domain apex
+- ["Always online" protection][] - Your cached website will stay up even if the host goes down
+- [Web Application Firewall][] - intelligent protection against [DDOS attacks][]
 
 Because CloudFlare are a CDN *and* a DNS host, they can do the HTTPS negotiation
 for you. They've taken advantage of this to provide you with a free HTTPS
@@ -127,8 +128,10 @@ Location: https://mytestwebsite.robinwinslow.uk/
 HTTP Strict Transport Security (HSTS)
 ---
 
-To protect our users from [man-in-the-middle attacks][], we should also
-turn on [HSTS with CloudFlare][] (still for free).
+To protect our users from [man-in-the-middle attacks][mitm], we should also
+turn on [HSTS with CloudFlare][] (still for free). Note that this can cause
+problems if you're ever planning on removing HTTPS from your site.
+
 If you're using a subdomain (e.g. `mytestwebsite.robinwinslow.uk`),
 remember to enable "Apply HSTS policy to subdomains".
 
@@ -143,6 +146,11 @@ HTTP/1.1 200 OK
 Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
 X-Content-Type-Options: nosniff
 ```
+
+It will take a little while for your domain to make it into the
+[Chromium HSTS preload list][]. You can check if it's in there, or add it
+again, by visiting `chrome://net-internals/#hsts` in a Chrome or Chromium
+browser.
 
 That's it!
 ===
@@ -173,7 +181,10 @@ online in minutes, totally for free!
 [cloudflare-hsts]: https://blog.cloudflare.com/enforce-web-policy-with-hypertext-strict-transport-security-hsts/ "CloudFlare: Enforce Web Policy with HTTP Strict Transport Security (HSTS)"
 [cloudflare-dnssec]: https://www.cloudflare.com/dnssec/universal-dnssec/ "CloudFlare Universal DNSSEC"
 [cloudflare-alias]: https://blog.cloudflare.com/introducing-cname-flattening-rfc-compliant-cnames-at-a-domains-root/ "CloudFlare: Introducing CNAME Flattening: RFC-Compliant CNAMEs at a Domain's Root"
-[A firewall]: https://www.cloudflare.com/waf/ "CloudFlare: Affordable Web Application Firewall"
+[Web Application Firewall]: https://www.cloudflare.com/waf/ "CloudFlare: Affordable Web Application Firewall"
 [cloudflare-rules]: https://support.cloudflare.com/hc/en-us/articles/200168306-Is-there-a-tutorial-for-Page-Rules- "CloudFlare support: Is there a tutorial for Page Rules?"
 [can be achieved]: https://support.cloudflare.com/hc/en-us/articles/200170536-How-do-I-redirect-all-visitors-to-HTTPS-SSL- "CloudFlare support: How do I redirect all visitors to HTTPS/SSL?"
 [man-in-the-middle attacks]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack "Wikipedia: Man-in-the-middle attack"
+[Chromium HSTS preload list]: https://hstspreload.appspot.com/ "Chromium HSTS preload list"
+[cloudflare-http2]: https://www.cloudflare.com/http2/ "CloudFlare HTTP/2"
+[DDOS attacks]: https://en.wikipedia.org/wiki/Denial-of-service_attack "Wikipedia: Denial-of-service attack"

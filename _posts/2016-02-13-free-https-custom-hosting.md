@@ -46,8 +46,8 @@ at `https://{username}.github.io/{project-name}` if you want.
 
 ![mytestwebsite GitHub pages](http://i.imgur.com/2ZvKJEP.png)
 
-GitHub Pages also [support custom domains][] (still for free). Just add a file
-called with `CNAME` to the repository with your domain name in it - e.g.
+GitHub Pages also [support custom domains][] (still for free). Just add a `CNAME`
+file to the repository with your domain name in it - e.g.
 `mytestwebsite.robinwinslow.uk` - and then go and setup the [DNS CNAME][]
 to point to `{username}.github.io`.
 
@@ -90,7 +90,7 @@ option.
 
 ![CloudFlare full SSL encryption](http://i.imgur.com/olf2JH2g.png)
 
-Et. voila! You now have an encrypted custom domain in front of
+Et voila! You now have an encrypted custom domain in front of
 GitHub Pages completely for free!
 
 ![mytestwebsite with a secure domain](http://i.imgur.com/eBgFJqp.png)
@@ -98,7 +98,7 @@ GitHub Pages completely for free!
 Encouraging HTTPS
 ===
 
-As I said earlier, one of the downsides here is we can't serve get quite 100%
+As I said earlier, one of the downsides here is we can't get quite 100%
 of our visitors to use HTTPS (they could choose to visit `http://mytestwebsite.robinwinslow.uk`
 instead of `https://mytestwebsite.robinwinslow.uk`).
 

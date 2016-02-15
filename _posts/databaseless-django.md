@@ -1,5 +1,5 @@
 ---
-title: "Databaseless Django: Why use a dynamic framework without a database?"
+title: "Databaseless Django: Why we use a dynamic framework without a database"
 description: "At Ubuntu we've been using Django without a database for a few years. Here are some of the reasons and advantages behind that decision."
 tags:
   - dev

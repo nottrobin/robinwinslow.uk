@@ -61,7 +61,7 @@ CloudFlare
 ===
 
 CloudFlare offer a really quite impressive free DNS and CDN service. Of course
-there are paid plans, but I myself can't see why you'd need one. This free
+there are [paid plans][cloudflare-plans], but I myself can't see why you'd need one. This free
 service includes some really impressive offerings, the first three of which
 are especially helpful for our current HTTPS mission:
 

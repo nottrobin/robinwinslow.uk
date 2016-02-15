@@ -17,7 +17,7 @@ For our [China site](http://cn.ubuntu.com), we've decided that the HTML pages
 should be cached for 5 minutes, and the CSS and JavaScript can be cached for a
 year - as every time we update them we change the URL.
 
-Caching headers
+Caching headers in Django
 ===
 
 Telling the browser how long to cache a resource is done with one of two headers:
@@ -31,7 +31,7 @@ for you, but as we have a separate [Squid cache][] in front of our application,
 this was a more heavyweight solution than we needed.
 
 Modifying HTML responses using View classes
-===
+---
 
 In our case, all of our HTML pages are served with an extended version of
 the [TemplateView class][]:
@@ -78,7 +78,7 @@ Cache-Control: max-age=300
 Browsers and proxies will now cache the HTML pages for 5 minutes.
 
 Controlling caching for static files
-===
+---
 
 Django [recommends][] serving static files separately from the rest of your
 application.
@@ -133,13 +133,13 @@ Cache-Control: public, max-age=31557600
 ```
 
 Now we have control
-===
+---
 
-[Leveraging browser caching][] is an invaluable tool in performance, and so
+[Leveraging browser caching][pagespeed-caching] is an invaluable tool in performance, and so
 understanding how we can control the user's cache with Django is very helpful.
 
 Hopefully I've demonstrated some ways that this can be achieved, which we've
-just implemented on <http://cn.ubuntu.com>.
+just implemented on [cn.ubuntu.com](http://cn.ubuntu.com).
 
 
 [cache framework]: https://docs.djangoproject.com/en/1.9/topics/cache/ "Django’s cache framework"
@@ -151,6 +151,5 @@ just implemented on <http://cn.ubuntu.com>.
 [introduced by Kenneth Reitz]: http://www.kennethreitz.org/essays/introducing-dj-static "Introducing DJ-Static"
 [DJ-Static]: https://github.com/kennethreitz/dj-static "Github: DJ-Static"
 [WhiteNoise]: http://whitenoise.evans.io/en/stable/ "WhiteNoise: Radically simplified static file serving for Python web apps"
-[Leveraging browser caching]: https://devcenter.heroku.com/articles/increasing-application-performance-with-http-cache-headers
 [heroku-caching]: https://devcenter.heroku.com/articles/increasing-application-performance-with-http-cache-headers "Heroku: Increasing Application Performance with HTTP Cache Headers"
 [pagespeed-caching]: https://developers.google.com/speed/docs/insights/LeverageBrowserCaching "PageSpeed Insights: Leverage Browser Caching"

@@ -6,8 +6,8 @@ tags:
 layout: post
 ---
 
-It's becoming more and more important for websites to carefully consider
-how their resources are cached in users' browsers. Get the caching wrong,
+It's becoming [more and more important][pagespeed-caching] for websites to carefully consider
+how their [resources are cached][heroku-caching] in users' browsers. Get the caching wrong,
 and you either end up with a woefully slow experience for the user, or a very
 strange looking website as users are left with stale CSS files and images.
 
@@ -152,3 +152,5 @@ just implemented on <http://cn.ubuntu.com>.
 [DJ-Static]: https://github.com/kennethreitz/dj-static "Github: DJ-Static"
 [WhiteNoise]: http://whitenoise.evans.io/en/stable/ "WhiteNoise: Radically simplified static file serving for Python web apps"
 [Leveraging browser caching]: https://devcenter.heroku.com/articles/increasing-application-performance-with-http-cache-headers
+[heroku-caching]: https://devcenter.heroku.com/articles/increasing-application-performance-with-http-cache-headers "Heroku: Increasing Application Performance with HTTP Cache Headers"
+[pagespeed-caching]: https://developers.google.com/speed/docs/insights/LeverageBrowserCaching "PageSpeed Insights: Leverage Browser Caching"

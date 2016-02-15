@@ -15,7 +15,7 @@ Or often both.
 
 For our [China site](http://cn.ubuntu.com), we've decided that the HTML pages
 should be cached for 5 minutes, and the CSS and JavaScript can be cached for a
-year - as every time we update them we change the URL.
+year - as every time we update them we [change the URL][].
 
 Caching headers in Django
 ===
@@ -153,3 +153,4 @@ just implemented on [cn.ubuntu.com](http://cn.ubuntu.com).
 [WhiteNoise]: http://whitenoise.evans.io/en/stable/ "WhiteNoise: Radically simplified static file serving for Python web apps"
 [heroku-caching]: https://devcenter.heroku.com/articles/increasing-application-performance-with-http-cache-headers "Heroku: Increasing Application Performance with HTTP Cache Headers"
 [pagespeed-caching]: https://developers.google.com/speed/docs/insights/LeverageBrowserCaching "PageSpeed Insights: Leverage Browser Caching"
+[change the URL]: https://github.com/ubuntudesign/django-versioned-static-url "UbuntuDesign on GitHub: Django versioned static"

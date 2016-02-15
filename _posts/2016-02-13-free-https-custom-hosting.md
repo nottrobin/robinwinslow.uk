@@ -19,6 +19,7 @@ There now exists [a much simpler way to setup an HTTPS website][simple-https] wi
 [CloudFlare][] and [GitHub Pages][]. This only works for static sites.
 
 If your site is more complicated and needs a database or dynamic functionality,
+or you need an SHA-1 fallback certificate (explained below)
 then look at my other post about [the OpenShift solution][free-https]. However,
 if a static site works for you, read on.
 
@@ -60,8 +61,7 @@ CloudFlare comes in.
 CloudFlare
 ===
 
-CloudFlare offer a really quite impressive free DNS and CDN service. Of course
-there are [paid plans][cloudflare-plans], but I myself can't see why you'd need one. This free
+CloudFlare offer a really quite impressive free DNS and CDN service. This free
 service includes some really impressive offerings, the first three of which
 are especially helpful for our current HTTPS mission:
 
@@ -73,6 +73,16 @@ are especially helpful for our current HTTPS mission:
 - [CNAME flattening][cloudflare-alias] - so you can use a [DNS CNAME][] at the domain apex
 - ["Always online" protection][] - Your cached website will stay up even if the host goes down
 - [Firewall][cloudflare-firewall] - intelligent protection against [DDOS attacks][]
+
+The most important downside to CloudFlare's free tier SSL is that it doesn't
+include the [fall-back to legacy SHA-1 for older browsers][cloudflare-sha1].
+This means that the most out-of-date (and therefore probably the poorest) 1.5%
+of global citizens won't be able to access your site without upgrading their
+browser. If this is important to you, either find a different HTTPS solution or
+upgrade to a [paid CloudFlare account][cloudflare-plans].
+
+Setting up HTTPS
+---
 
 Because CloudFlare are a CDN *and* a DNS host, they can do the HTTPS negotiation
 for you. They've taken advantage of this to provide you with a free HTTPS
@@ -193,3 +203,4 @@ online in minutes, totally for free!
 [DDOS attacks]: https://en.wikipedia.org/wiki/Denial-of-service_attack "Wikipedia: Denial-of-service attack"
 [cloudflare-plans]: https://www.cloudflare.com/plans/ "CloudFlare: Plans"
 [Automatic Page Generator]: https://github.com/blog/1081-instantly-beautiful-project-pages "GitHub: Instantly Beautiful Project Pages"
+[cloudflare-sha1]: https://blog.cloudflare.com/sha-1-deprecation-no-browser-left-behind/ "CloudFlare blog: SHA-1 Deprecation: No Browser Left Behind"

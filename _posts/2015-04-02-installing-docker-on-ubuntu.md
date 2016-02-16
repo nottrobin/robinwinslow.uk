@@ -1,5 +1,5 @@
 ---
-title: Getting Docker running on ubuntu 14.04
+title: Getting Docker running on Ubuntu 14.04
 layout: post
 description: "There are more steps than there should be to get docker running on ubuntu 14.04. I outline them here."
 tags:

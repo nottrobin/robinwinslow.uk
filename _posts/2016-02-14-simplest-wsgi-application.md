@@ -1,6 +1,6 @@
 ---
-title: "A quick simple Python application server for playing around"
-description: "If you're a python developer, it's incredibly useful to ."
+title: "Creating a minimal Python application server for experimenting"
+description: "As a web developer, it can be incredibly useful to be able to spin up a quick server to inspect and manipulate raw requests. And if you're used to working in Python, this little script is just the ticket."
 tags:
   - dev
   - back-end
@@ -35,7 +35,8 @@ def application(env, start_response):
     start_response(http_status, response_headers)
     return [response_text]
 
-make_server('', 8000, application).serve_forever()
+if __name__ == "__main__":
+    make_server('', 8000, application).serve_forever()
 ```
 
 Put this in a file - e.g. `wsgi.py` - and run it with:
@@ -48,11 +49,13 @@ $ python wsgi.py
 (I've also saved this [as a Gist][]).
 
 This provides you with a very raw way of parsing HTTP requests. All the
-HTTP variables come in as items in the `env` dictionary. So `env['PATH_INFO']`
-will tell you the requested path
-(the `/index.html` in `http://example.com/index.html`),
-and `env['QUERY_STRING']` will get you any query parameters
-(the `foo=bar` in `http://example.com/index.html?foo=bar`).
+HTTP variables come in as items in the `env` dictionary:
+
+``` python
+def application(env, start_response):
+    env['PATH_INFO']     # The requested path (the `/index.html` in `http://example.com/index.html`),
+    env['QUERY_STRING']  # Any query parameters (the `foo=bar` in `http://example.com/index.html?foo=bar`).
+```
 
 What I often do from here is use [ipdb][] to inspect incoming requests, or
 directly manipulate the response headers or content.

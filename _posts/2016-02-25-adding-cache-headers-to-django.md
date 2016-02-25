@@ -156,3 +156,4 @@ just implemented on [cn.ubuntu.com](http://cn.ubuntu.com).
 [heroku-caching]: https://devcenter.heroku.com/articles/increasing-application-performance-with-http-cache-headers "Heroku: Increasing Application Performance with HTTP Cache Headers"
 [pagespeed-caching]: https://developers.google.com/speed/docs/insights/LeverageBrowserCaching "PageSpeed Insights: Leverage Browser Caching"
 [change the URL]: https://github.com/ubuntudesign/django-versioned-static-url "UbuntuDesign on GitHub: Django versioned static"
+[now recommend]: https://devcenter.heroku.com/articles/django-assets "Heroku: Django and Static Assets"

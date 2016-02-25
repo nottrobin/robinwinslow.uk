@@ -6,6 +6,8 @@ tags:
 layout: post
 ---
 
+(Also published [on design.canonical.com](http://design.canonical.com/))
+
 It's becoming [more and more important][pagespeed-caching] for websites to carefully consider
 how their [resources are cached][heroku-caching] in users' browsers. Get the caching wrong,
 and you either end up with a woefully slow experience for the user, or a very

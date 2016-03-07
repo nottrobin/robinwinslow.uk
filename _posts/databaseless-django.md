@@ -9,7 +9,7 @@ layout: post
 **This is the first in what will hopefully be a series on the codebase behind
 ubuntu.com and our other sites.**
 
-Three years ago we moved [ubuntu.com]() from [Drupal][] to [Django][], and over the
+Three years ago we moved [ubuntu.com][] from [Drupal][] to [Django][], and over the
 years our various other sites have followed suit.
 
 We wanted to have more control
@@ -31,4 +31,6 @@ Dynamic sites
 ===
 
 
-[Drupal]: ""
+[Drupal]: https://www.drupal.org "Open source PHP-base CMS"
+[Django]: https://www.djangoproject.com
+[ubuntu.com]: http://www.ubuntu.com "Ubuntu: Leading open-source operating system for PCs, phone and servers"

@@ -102,8 +102,27 @@ blockquote {
     font-style: italic;
     color: #888;
 }
-blockquote:before {
-
+form {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: #eee;
+  overflow: hidden;
+}
+label {
+  margin-right: 1em;
+}
+button {
+  margin-right: 1em;
+  font-size: 1em;
+  -webkit-appearance: none;
+  padding: 0.3em 1em 0.2em;
+  vertical-align: middle;
+  background-color: #399;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 .github-fork {

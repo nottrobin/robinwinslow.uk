@@ -1,0 +1,126 @@
+---
+layout: post
+title: "Fix Docker's networking DNS config"
+description: "Within certain networks, docker is unable to resolve DNS correctly. When this happens, here's how to fix it."
+tags:
+    - back-end
+    - dev
+    - canonical
+---
+
+*Updated for [Ubuntu 16.04 (Xenial)][xenial]*
+
+Sometimes, [Docker](https://www.docker.com/)'s internet connectivity won't be working properly, which can lead to a number of obscure errors with your applications. In my experience, this is usually because [DNS](http://en.wikipedia.org/wiki/Domain_name_system) lookups are failing in Docker images.
+
+If you *know* it's a DNS problem and you're in a hurry, [jump straight to the system-wide solution](#the-permanent-system-wide-fix).
+
+# Is DNS the problem?
+
+Fortunately it's easy to test Docker's DNS.
+
+First, check that basic internet connectivity is working by pinging Google public DNS server. It should succeed, giving you output similar to this:
+
+``` bash
+$ docker run alpine ping -c 1 192.203.230.10  # Ping a London-based NASA root nameserver
+PING 192.203.230.10 (192.203.230.10): 56 data bytes
+64 bytes from 192.203.230.10: seq=0 ttl=53 time=113.866 ms
+
+--- 192.203.230.10 ping statistics ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max = 113.866/113.866/113.866 ms
+```
+
+Now try pinging `google.com` itself:
+
+``` bash
+$ docker run alpine ping -c 1 google.com
+ping: bad address 'google.com'
+```
+
+If it fails as shown above then there is a problem resolving DNS.
+
+# Why?
+
+By default, Docker images will try to use [Google's public DNS server](https://developers.google.com/speed/public-dns/), `8.8.8.8`, to resolve DNS.
+
+In some networks, like [Canonical's London office](http://www.canonical.com/about#office-row) network where I work, the administrators intentionally block the use of public DNS servers to encourage people to use the network's own DNS server.
+
+In this case, Docker containers using the default configuration won't be able to resolve DNS, rendering the internet effectively unuseable from within those containers.
+
+# The quick fix: Overriding Docker's DNS
+
+Fortunately, it's fairly easy to directly run a docker container with a custom DNS server.
+
+## Discover the address of your DNS server
+
+You can find out what network's DNS server from within [Ubuntu][ubuntu] as follows:
+
+``` bash
+$ nmcli dev show | grep 'IP4.DNS'
+IP4.DNS[1]:                             10.0.0.2
+```
+
+## Run Docker with the new DNS server
+
+To run a docker container with this DNS server, provide the `--dns` flag to the `run` command. For example, let's run the command we used to check if DNS is working:
+
+``` bash
+$ docker run --dns 10.0.0.2 alpine ping -c 1 google.com
+PING google.com (216.58.198.206): 56 data bytes
+64 bytes from 216.58.198.206: seq=0 ttl=50 time=39.574 ms
+
+--- google.com ping statistics ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max = 39.574/39.574/39.574 ms
+```
+
+And that's what success looks like.
+
+# The permanent system-wide fix
+
+The above solution is all very well if you're only temporarily inside a restrictive network and you only need to run containers directly.
+
+However, most of the time you'll want this to work by default and keep working on your system, and for any other programs that rely on Docker.
+
+## Update the Docker daemon
+
+To achieve this, you need to change the DNS settings of the Docker daemon. In recent versions of [Ubuntu][ubuntu], you do this by opening up `/lib/systemd/system/docker.service`, e.g.:
+
+``` bash
+$ sudo vim /lib/systemd/system/docker.service
+```
+
+And editing the line that starts `ExecStart=` to add `--dns` options after the `daemon` instruction for the new DNS servers.As well as your network's own DNS server, we should also add Google DNS server (`8.8.8.8`) so that Docker DNS will continue to work outside the current network:
+
+``` bash
+# /lib/systemd/system/docker.service
+# ...
+ExecStart=/usr/bin/docker daemon --dns 8.8.8.8 --dns 10.0.0.2 -H fd://
+# ...
+```
+
+## Restart the daemon
+
+These changes won't take effect until the daemon is restarted:
+
+``` bash
+$ systemctl daemon-reload
+$ sudo service docker restart
+```
+
+## Testing the fix
+
+Now you should be able to ping `google.com` successfully from any Docker container without explicitly overriding the DNS server, e.g.:
+
+``` bash
+$ docker run alpine ping -c 1 google.com
+PING google.com (216.58.198.206): 56 data bytes
+64 bytes from 216.58.198.206: seq=0 ttl=50 time=39.574 ms
+
+--- google.com ping statistics ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max = 39.574/39.574/39.574 ms
+```
+
+xenial: http://releases.ubuntu.com/16.04/ "Ubuntu 16.04 Xenial Xerus: The latest version of Ubuntu"
+ubuntu: http://www.ubuntu.com/ "The Ubuntu operating system"

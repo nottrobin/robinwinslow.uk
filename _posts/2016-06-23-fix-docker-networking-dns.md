@@ -19,7 +19,7 @@ Fortunately it's easy to test Docker's DNS.
 First, check that basic internet connectivity is working by pinging a public IP address. It should succeed, giving you output similar to this:
 
 ``` bash
-$ docker run alpine ping -c 1 192.203.230.10  # Ping a London-based NASA root nameserver
+$ docker run busybox ping -c 1 192.203.230.10  # Ping a London-based NASA root nameserver
 PING 192.203.230.10 (192.203.230.10): 56 data bytes
 64 bytes from 192.203.230.10: seq=0 ttl=53 time=113.866 ms
 
@@ -34,8 +34,7 @@ But now try resolving the domain `google.com`:
 $ docker run busybox nslookup google.com
 Server:    8.8.8.8
 Address 1: 8.8.8.8
-
-nslookup: can\'t resolve 'google.com'
+nslookup: can't resolve 'google.com'
 ```
 
 If it fails as shown above then there is a problem resolving DNS.
@@ -68,10 +67,9 @@ IP4.DNS[1]:                             10.0.0.2
 To run a docker container with this DNS server, provide the `--dns` flag to the `run` command. For example, let's run the command we used to check if DNS is working:
 
 ``` bash
-$ docker run --dns 10.0.0.2 alpine ping -c 1 google.com
+$ docker run --dns 10.0.0.2 busybox nslookup google.com
 Server:    10.0.0.2
 Address 1: 10.0.0.2
-
 Name:      google.com
 Address 1: 2a00:1450:4009:811::200e lhr26s02-in-x200e.1e100.net
 Address 2: 216.58.198.174 lhr25s10-in-f14.1e100.net
@@ -116,11 +114,10 @@ $ sudo service docker restart
 Now you should be able to ping `google.com` successfully from any Docker container without explicitly overriding the DNS server, e.g.:
 
 ``` bash
-$ docker run alpine ping -c 1 google.com
-PING google.com (216.58.198.206): 56 data bytes
-64 bytes from 216.58.198.206: seq=0 ttl=50 time=39.574 ms
-
---- google.com ping statistics ---
-1 packets transmitted, 1 packets received, 0% packet loss
-round-trip min/avg/max = 39.574/39.574/39.574 ms
+$ docker run busybox nslookup google.com
+Server:    10.0.0.2
+Address 1: 10.0.0.2
+Name:      google.com
+Address 1: 2a00:1450:4009:811::200e lhr26s02-in-x200e.1e100.net
+Address 2: 216.58.198.174 lhr25s10-in-f14.1e100.net
 ```

@@ -8,8 +8,6 @@ tags:
     - canonical
 ---
 
-*Updated for [Ubuntu 16.04 (Xenial)][xenial]*
-
 Sometimes, [Docker](https://www.docker.com/)'s internet connectivity won't be working properly, which can lead to a number of obscure errors with your applications. In my experience, this is usually because [DNS](http://en.wikipedia.org/wiki/Domain_name_system) lookups are failing in Docker images.
 
 If you *know* it's a DNS problem and you're in a hurry, [jump straight to the system-wide solution](#the-permanent-system-wide-fix).
@@ -55,7 +53,7 @@ Fortunately, it's fairly easy to directly run a docker container with a custom D
 
 ## Discover the address of your DNS server
 
-You can find out what network's DNS server from within [Ubuntu][ubuntu] as follows:
+You can find out what network's DNS server from within [Ubuntu](http://www.ubuntu.com/) as follows:
 
 ``` bash
 $ nmcli dev show | grep 'IP4.DNS'
@@ -86,7 +84,7 @@ However, most of the time you'll want this to work by default and keep working o
 
 ## Update the Docker daemon
 
-To achieve this, you need to change the DNS settings of the Docker daemon. In recent versions of [Ubuntu][ubuntu], you do this by opening up `/lib/systemd/system/docker.service`, e.g.:
+To achieve this, you need to change the DNS settings of the Docker daemon. In recent versions of [Ubuntu](http://www.ubuntu.com), you do this by opening up `/lib/systemd/system/docker.service`, e.g.:
 
 ``` bash
 $ sudo vim /lib/systemd/system/docker.service
@@ -123,6 +121,3 @@ PING google.com (216.58.198.206): 56 data bytes
 1 packets transmitted, 1 packets received, 0% packet loss
 round-trip min/avg/max = 39.574/39.574/39.574 ms
 ```
-
-[xenial]: http://releases.ubuntu.com/16.04/ "Ubuntu 16.04 Xenial Xerus: The latest version of Ubuntu"
-[ubuntu]: http://www.ubuntu.com/ "The Ubuntu operating system"

@@ -41,11 +41,13 @@ If it fails as shown above then there is a problem resolving DNS.
 
 # Why?
 
-By default, Docker images will try to use [Google's public DNS server](https://developers.google.com/speed/public-dns/), `8.8.8.8`, to resolve DNS.
+By default, if Docker can't find a DNS server locally defined in your `/etc/resolv.conf` file, [containers will default](https://docs.docker.com/engine/userguide/networking/configure-dns/) to using [Google's public DNS server](https://developers.google.com/speed/public-dns/), `8.8.8.8`, to resolve DNS.
 
 In some networks, like [Canonical's London office](http://www.canonical.com/about#office-row) network where I work, the administrators intentionally block the use of public DNS servers to encourage people to use the network's own DNS server.
 
 In this case, Docker containers using the default configuration won't be able to resolve DNS, rendering the internet effectively unuseable from within those containers.
+
+I've [filed a bug about this issue](https://github.com/docker/docker/issues/23910), although I don't yet know when or if it might be addressed.
 
 # The quick fix: Overriding Docker's DNS
 
@@ -122,5 +124,5 @@ PING google.com (216.58.198.206): 56 data bytes
 round-trip min/avg/max = 39.574/39.574/39.574 ms
 ```
 
-xenial: http://releases.ubuntu.com/16.04/ "Ubuntu 16.04 Xenial Xerus: The latest version of Ubuntu"
-ubuntu: http://www.ubuntu.com/ "The Ubuntu operating system"
+[xenial]: http://releases.ubuntu.com/16.04/ "Ubuntu 16.04 Xenial Xerus: The latest version of Ubuntu"
+[ubuntu]: http://www.ubuntu.com/ "The Ubuntu operating system"

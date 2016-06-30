@@ -85,28 +85,21 @@ However, most of the time you'll want this to work by default and keep working o
 
 ## Update the Docker daemon
 
-To achieve this, you need to change the DNS settings of the Docker daemon. In recent versions of [Ubuntu](http://www.ubuntu.com), you do this by opening up `/lib/systemd/system/docker.service`, e.g.:
+To achieve this, you need to change the DNS settings of the Docker daemon. You can set the default options for the docker daemon by creating a [daemon configuration file](https://docs.docker.com/engine/reference/commandline/dockerd/#/daemon-configuration-file) at `/etc/docker/daemon.json`.
 
-``` bash
-$ sudo vim /lib/systemd/system/docker.service
+You should create this file with the following contents to set two DNS, firstly your network's DNS server, and secondly the Google DNS server to fall back to in case that server isn't available:
+
+``` javascript
+// /etc/docker/daemon.json
+{
+    "dns": ["10.0.0.2", "8.8.8.8"]
+}
 ```
 
-And editing the line that starts `ExecStart=` to add `--dns` options after the `daemon` instruction for the new DNS servers.As well as your network's own DNS server, we should also add Google DNS server (`8.8.8.8`) so that Docker DNS will continue to work outside the current network:
+Then restart the docker service:
 
 ``` bash
-# /lib/systemd/system/docker.service
-# ...
-ExecStart=/usr/bin/docker daemon --dns 8.8.8.8 --dns 10.0.0.2 -H fd://
-# ...
-```
-
-## Restart the daemon
-
-These changes won't take effect until the daemon is restarted:
-
-``` bash
-$ systemctl daemon-reload
-$ sudo service docker restart
+sudo service docker restart
 ```
 
 ## Testing the fix

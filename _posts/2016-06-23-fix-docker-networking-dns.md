@@ -89,12 +89,12 @@ To achieve this, you need to change the DNS settings of the Docker daemon. You c
 
 You should create this file with the following contents to set two DNS, firstly your network's DNS server, and secondly the Google DNS server to fall back to in case that server isn't available:
 
+*`/etc/docker/daemon.json`*
 ``` json
 {
     "dns": ["10.0.0.2", "8.8.8.8"]
 }
 ```
-*[`/etc/docker/daemon.json`]*
 
 Then restart the docker service:
 

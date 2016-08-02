@@ -9,11 +9,11 @@ This left us with the question:
 
 > Should we enable Gzip compression on our SSL/TLS-enabled site?
 
-Ultimately we decided that BREACH didn't apply in our case, and so we should enable Gzip.
+Ultimately we decided that BREACH didn't apply in our case, and so we should enable Gzip, as at no point does it display sensitive data back to the user.
 
 # What are BREACH and CRIME?
 
-The BREACH attack is an implementation of the CRIME vulnerability discovered in 2011. While the original proof-of-concept, which relied on SSL compression, has bee almost entirely mitigated in modern servers and browsers, there is still a version of BREACH which works in very specific circumstances.
+The BREACH attack is an implementation of [the CRIME vulnerability][CRIME] discovered in 2011. While the original proof-of-concept, which relied on SSL compression, has been almost entirely mitigated in modern servers and browsers, there is still a version of BREACH which works against modern browsers in some circumstances.
 
 Do your users enter sensitive data on your site? And do you ever display this sensitive data back to them? If not BREACH probably doesn't apply to your site and so it's perfectly safe to enable compression.
 
@@ -72,11 +72,12 @@ For this reason, I think it's worth being aware of so that you can take precauti
 [mod-deflate]: http://httpd.apache.org/docs/current/mod/mod_deflate.html "Apache mod_deflate"
 [will-profile]: http://design.canonical.com/author/willmoggridge "Will Moggridge on design.ubuntu.com"
 [gzip-explained]: https://developer.yahoo.com/performance/rules.html#gzip "Gzip and performance"
-[breach]: http://breachattack.com/ "The BREACH attack"
+[CRIME]: https://en.wikipedia.org/wiki/CRIME 'Wikipedia: The CRIME vulnerability: "Compression Ratio Info-leak Made Easy"'
+[breach]: http://breachattack.com/ 'The BREACH attack: "Browser Reconnaissance and Exfiltration via Adaptive Compression of Hypertext"'
 [breach-example]: http://i.imgur.com/jDEw2uQ.png "An illustration of the BREACH attack"
 [MITM]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack "Wikipedia: Man-in-the-middle attack"
 [evil-twin]: https://en.wikipedia.org/wiki/Evil_twin_(wireless_networks) "Wikipedia: Evil twin network"
 [mitigations]: http://breachattack.com/#mitigations "Other ways to mitigate the BREACH attack"
 [our-assets]: https://assets.ubuntu.com/v1/ "Ubuntu's assets server"
 [http-compression]: https://en.wikipedia.org/wiki/HTTP_compression "Wikipedia: HTTP compression"
-[TLS]: https://en.wikipedia.org/wiki/Transport_Layer_Security "Wikipedia: TLS"
+[TLS]: https://en.wikipedia.org/wiki/Transport_Layer_Security "Wikipedia: Transport Later Security (SSL replacement)"

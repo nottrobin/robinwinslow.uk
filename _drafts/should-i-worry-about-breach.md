@@ -9,11 +9,11 @@ This left us with the question:
 
 > Should we enable Gzip compression on our SSL/TLS-enabled site?
 
-Ultimately we decided that BREACH didn't apply in our case, and so we should enable Gzip.
+Ultimately we decided that BREACH didn't apply in our case, and so we should enable Gzip. (Explaining why in our case might help give the reader an example of a none vulnerable service)
 
 # What are BREACH and CRIME?
 
-The BREACH attack is an implementation of the CRIME vulnerability discovered in 2011. While the original proof-of-concept, which relied on SSL compression, has bee almost entirely mitigated in modern servers and browsers, there is still a version of BREACH which works in very specific circumstances.
+The BREACH attack is an implementation of the CRIME vulnerability discovered in 2011. While the original proof-of-concept, which relied on SSL compression, has been almost entirely mitigated in modern servers and browsers, there is still a version of BREACH which works in very specific circumstances.
 
 Do your users enter sensitive data on your site? And do you ever display this sensitive data back to them? If not BREACH probably doesn't apply to your site and so it's perfectly safe to enable compression.
 

@@ -5,7 +5,11 @@ description: "Should the BREACH vulnerability prevent me enabling Gzip compressi
 
 We recently realised that content on [our assets server][our-assets] wasn't being [compressed][http-compression], meaning the [performance of our websites][gzip-explained] wasn't quite what it could have been. We were just about to enable [mod_deflate][mod-deflate], when [Will][will-profile] discovered that enabling Gzip on a website with [TLS][TLS] might leave us vulnerable to [the BREACH attack][breach].
 
+This left us with the question:
+
 > Should we enable Gzip compression on our SSL/TLS-enabled site?
+
+Ultimately we decided that BREACH didn't apply in our case, and so we should enable Gzip.
 
 # What are BREACH and CRIME?
 
@@ -52,7 +56,7 @@ If your site is vulnerable to BREACH, then simply removing any cases where sensi
 
 If this is not possible, then there are [other ways to mitigate BREACH][mitigations].
 
-# 
+# In summary
 
 BREACH is not the most serious vulnerability out there, as it probably only applies to a relatively small number of sites out there and also requires a very targeted attack.
 

@@ -56,9 +56,9 @@ If your site is vulnerable to BREACH, then simply removing any cases where sensi
 
 If this is not possible, then there are [other ways to mitigate BREACH][mitigations].
 
-# In summary
+# Summary
 
-BREACH is not the most serious vulnerability out there, as it probably only applies to a relatively small number of sites out there and also requires a very targeted attack.
+BREACH is not the most serious vulnerability out there, as it probably only applies to a relatively small number of sites and requires specifically targeted attacks.
 
 However, it is an attack without an effective security patch - it will still work against modern servers and browsers.
 

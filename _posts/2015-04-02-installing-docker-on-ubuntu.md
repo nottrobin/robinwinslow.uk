@@ -25,4 +25,4 @@ You should now be set to go, unless you're inside a corporate network that doesn
 docker run ubuntu /usr/bin/apt update
 ```
 
-If the above command produces a connection error, follow [my guide to fix Docker networking](/2014/08/27/fix-docker-networking/).
+If the above command produces a connection error, follow [my guide to fix Docker networking](/2016/06/23/fix-docker-networking-dns/).

@@ -13,7 +13,7 @@ I was [prompted by Avaaz][] to [email my MP][] about the current refugee crisis.
 
 I hope I had some impact on [David][], but ultimately I was surprised and a bit disappointed that he simply gave up discussing the point so quickly. He didn't try to counter my objections with any statistics or evidence. Which is a shame.
 
-I uptimately came away with the impression that David is a very standard Conservative-party-line MP, with not much independence. As [TheyWorkForYou puts it][David], he:
+I ultimately came away with the impression that David is a very standard Conservative-party-line MP, with not much independence. As [TheyWorkForYou puts it][David], he:
 
 > Consistently voted for a reduction in spending on welfare benefits  
 > Consistently voted for replacing Trident with a new nuclear weapons system  

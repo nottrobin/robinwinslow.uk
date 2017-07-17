@@ -1,0 +1,326 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+     	<title>Saving ubuntu.com on download day: caching location specific pages | by Robin</title>
+
+    	<meta name="description" content="How we significantly reduced the load on the ubuntu.com servers by caching location-specific download pages.">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="canonical" href="https://robinwinslow.uk/2014/08/29/saving-ubuntu-com-download-day/" />
+
+        <link type="text/css" rel="stylesheet" href="/assets/global-cde306f7329733dd6abd0056b28c2061da3b79079c896e4286449114bfff9d39.css">
+
+        <script>
+            if (location.hostname=="robinwinslow.uk") {
+                var _gaq=[
+                    ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
+                    ['_setAccount','UA-2993676-8'],
+                    ['_trackPageview']
+                ];
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = '//www.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
+        </script>
+
+        <link type="application/atom+xml" rel="alternative" href="/rss.xml" />
+    </head>
+
+    <body class="">
+        <!--[if lt IE 9]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header class="site-header">
+            <h1>The blog of <a href="/">Robin</a></h1>
+
+            <nav class="inline-navigation site-navigation">
+                <ul>
+                    <li class=""><a href="/dev/">Web dev</a></li>
+                    <li class=""><a href="/politics/">Politics</a></li>
+                    <li class=""><a href="/musings/">Musings</a></li>
+                    <li class=""><a href="/">All articles</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+    <header class="page-header">
+        <date>29 Aug 2014</date>
+
+        <h1>Saving ubuntu.com on download day: caching location specific pages</h1>
+    </header>
+
+    <p><small>(This article is was <a href="http://design.canonical.com/2014/08/saving-ubuntu-com-on-download-day-caching-location-specific-pages/">originally posted on design.canonical.com</a>)</small></p>
+
+<p>On release day we can get up to 8,000 requests a second to <a href="http://ubuntu.com">ubuntu.com</a> from people trying to download the new release. In fact, last October (<a href="http://en.wikipedia.org/wiki/Ubuntu_13.10_Saucy_Salamander#Ubuntu_13.10_.28Saucy_Salamander.29">13.10</a>) was the first release day in a long time that the site didn&#39;t crash under the load at some point during the day (huge credit to the <a href="http://www.ubuntu.com/management/ubuntu-advantage">infrastructure team</a>).</p>
+
+<p>Ubuntu.com has been running on <a href="https://www.drupal.org/">Drupal</a>, but we&#39;ve been gradually migrating it to a more bespoke <a href="https://www.djangoproject.com/">Django</a> based system. In March we started work on migrating the download section in time for the release of <a href="http://en.wikipedia.org/wiki/List_of_Ubuntu_releases#Ubuntu_14.04_LTS_.28Trusty_Tahr.29">Trusty Tahr</a>. This was a prime opportunity to look for ways to reduce some of the load on the servers.</p>
+
+<h2 id="choosing-geolocated-download-mirrors-is-hard-work-for-an-application">Choosing <a href="http://en.wikipedia.org/wiki/Geolocation">geolocated</a> download mirrors is hard work for an application</h2>
+
+<p>When someone downloads Ubuntu from ubuntu.com (on <a href="http://www.ubuntu.com/download/desktop/thank-you?version=14.04.1&architecture=amd64">a thank-you page</a>), they are actually sent to one of the <a href="https://launchpad.net/ubuntu/+cdmirrors">300 or so mirror sites</a> that&#39;s <a href="http://en.wikipedia.org/wiki/Geolocation">nearby</a>.</p>
+
+<p>To pick a mirror for the user, the <a href="https://en.wikipedia.org/wiki/Web_application">application</a> has to:</p>
+
+<ol>
+<li>Decide from the client&#39;s <a href="http://en.wikipedia.org/wiki/Ip_address">IP address</a> what country they&#39;re in</li>
+<li>Get the list of mirrors and find the ones that are in their country</li>
+<li>Randomly pick them a mirror, while sending more people to mirrors with higher bandwidth</li>
+</ol>
+
+<p>This process is by far the most intensive operation on the whole site, not because these tasks are particularly complicated in themselves, but because this needs to be done for each and every user - potentially 8,000 a second while every other page on the site can be aggressively <a href="https://en.wikipedia.org/wiki/Cache_(computing)">cached</a> to prevent most requests from hitting the application itself.</p>
+
+<p>For the site to be able to handle this load, we&#39;d need to <a href="https://en.wikipedia.org/wiki/Load_balancing_(computing)">load-balance</a> requests across perhaps 40 <a href="https://en.wikipedia.org/wiki/Virtual_machine">VMs</a>.</p>
+
+<h2 id="can-everything-be-done-client-side">Can everything be done client-side?</h2>
+
+<p>Our first thought was to embed the entire mirror list in the <a href="http://ubuntu.com/download/desktop/thank-you">thank-you page</a> and use <a href="http://en.wikipedia.org/wiki/Javascript">JavaScript</a> in the users&#39; browsers to select an appropriate mirror. This would drastically reduce the load on the application, because the download page would then be effectively <a href="http://en.wikipedia.org/wiki/Static_web_page">static</a> and cache-able like every other page.</p>
+
+<p>The only way to reliably get the user&#39;s location <a href="http://en.wikipedia.org/wiki/Client-side_scripting">client-side</a> is with the <a href="https://developer.mozilla.org/en/docs/WebAPI/Using_geolocation">geolocation API</a>, which <a href="http://caniuse.com/#search=geolocation">is only supported by 85% of users&#39; browsers</a>. Another slight issue is that the user has to give permission before they could be assigned a mirror, which would slightly hinder their experience.</p>
+
+<p>This solution would inconvenience users just a bit too much. So we found a trade-off:</p>
+
+<h2 id="a-mixed-solution-apache-geolocation">A mixed solution - Apache geolocation</h2>
+
+<p><a href="http://dev.maxmind.com/geoip/legacy/mod_geoip2/">mod_geoip2</a> for Apache can apply server rules based on a user&#39;s location and is much faster than doing geolocation at the application level. This means that we can use Apache to send users to a country-specific version of the download page (e.g. <a href="http://www.ubuntu.com/download/desktop/thank-you?country=DE&version=12.04.4&architecture=amd64">the German desktop thank-you page</a>) by adding <code>&amp;country=GB</code> to the end of the URL.</p>
+
+<p>These country specific pages contain the list of mirrors for that country, and each one can now be cached, vastly reducing the load on the server. Client-side JavaScript randomly selects a mirror for the user, weighted by the bandwidth of each mirror, and kicks off their download, without the need for client-side geolocation support.</p>
+
+<p>This solution was successfully implemented shortly before the release of <a href="http://en.wikipedia.org/wiki/List_of_Ubuntu_releases#Ubuntu_14.04_LTS_.28Trusty_Tahr.29">Trusty Tahr</a>.</p>
+
+
+<!-- Generate subnav for article -->
+<script type="text/javascript" src="/assets/subnav-020636817964deb048fb98c55583f2981ff145d2db5e13d5c3b624c4ef8613f4.js"></script>
+
+
+    <hr>
+
+    <nav class="tags-list muted">
+        <label>Tags</label>
+
+        <ul>
+
+            <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            <li><a href="/postsbytag/#front-end">front-end</a></li>
+
+            <li><a href="/postsbytag/#dev">dev</a></li>
+
+            <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+        </ul>
+    </nav>
+
+
+<hr/>
+
+<div id="disqus_thread" class="comments"></div>
+
+</article>
+
+
+<nav class="related-nav article-index">
+    <h1>Similar articles</h1>
+
+    <ul>
+    
+        
+            
+                <li>
+    <article>
+        <a href="/2016/06/23/fix-docker-networking-dns/">
+            <date>23 Jun 2016</date>
+            <h1>Fix Docker's networking DNS config</h1>
+            <p>Within certain networks, docker is unable to resolve DNS correctly. When this happens, here's how to fix it.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2016/02/14/simplest-wsgi-application/">
+            <date>14 Feb 2016</date>
+            <h1>Creating a minimal Python application server for experimenting</h1>
+            <p>As a web developer, it can be incredibly useful to be able to spin up a quick server to inspect and manipulate raw requests. And if you're used to working in Python, this little script is just the ticket.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2015/04/02/installing-docker-on-ubuntu/">
+            <date>02 Apr 2015</date>
+            <h1>Getting Docker running on Ubuntu 14.04</h1>
+            <p>There are more steps than there should be to get docker running on ubuntu 14.04. I outline them here.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    </ul>
+</nav>
+
+
+<script>
+    if (location.hostname=="robinwinslow.uk") {
+        var disqus_shortname = 'robin-blog'; // required: replace example with your forum shortname
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the comments (powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>)</noscript>
+
+
+        <footer class="site-footer">
+            <nav class="vcard" id="contact-information">
+                <h1>Contact information</h1>
+
+                <ul>
+                    <li><a href="mailto:robin+blog@robinwinslow.uk" class="email">robin@robinwinslow.uk</a></li>
+                    <li><a href="tel:07795070704" class="tel">07795070704</a></li>
+                    <li><a href="https://www.google.co.uk/maps?q=ng7">NG7, Nottingham, UK</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Further writing</h1>
+
+                <ul>
+                    <li><a href="http://cv.robinwinslow.uk">cv.robinwinslow.uk</a></li>
+                    <li><a href="http://design.canonical.com/author/nottrobin/">design.canonical.com</a></li>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Profiles</h1>
+
+                <ul>
+                    <li><a href="https://twitter.com/nottrobin">twitter.com (@nottrobin)</a></li>
+                    <li><a href="https://facebook.com/robinwinslowmorris">facebook.com (robinwinslowmorris)</a></li>
+                    <li><a href="https://github.com/nottrobin/">github.com (nottrobin)</a>
+                </ul>
+            </nav>
+
+            <p>
+                All articles are written by me, <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a>, unless otherwise stated. Feel free to use any of my writing, but please <a href="http://creativecommons.org/licenses/by/4.0/">give me attribution</a>.
+            </p>
+
+            <p>You're free to download this entire site <a href="https://github.com/nottrobin/robinwinslow.uk/">from github</a>, and <a href="http://creativecommons.org/publicdomain/zero/1.0/">do whatever you like</a> with the code.</p>
+
+            <p><a href="https://github.com/nottrobin/robinwinslow.uk/" class="github-fork">Fork me on github.</a></p>
+        </footer>
+		<!--[if !(lt IE 8)]><!-->
+		<script type="text/javascript">
+		  (function(){
+			var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
+			e.src = 'https://www.eff.org/ngw/widget.min.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+		  })();
+		</script>
+		<!--<![endif]-->
+    </body>
+</html>

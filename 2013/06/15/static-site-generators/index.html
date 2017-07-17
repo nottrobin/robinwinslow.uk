@@ -1,0 +1,406 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+     	<title>Blog like a pro with static site generators - it's easier than you think | by Robin</title>
+
+    	<meta name="description" content="Why technically proficient editors, bloggers, and especially web developers, should all use static site generators for their own sites">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="canonical" href="https://robinwinslow.uk/2013/06/15/static-site-generators/" />
+
+        <link type="text/css" rel="stylesheet" href="/assets/global-cde306f7329733dd6abd0056b28c2061da3b79079c896e4286449114bfff9d39.css">
+
+        <script>
+            if (location.hostname=="robinwinslow.uk") {
+                var _gaq=[
+                    ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
+                    ['_setAccount','UA-2993676-8'],
+                    ['_trackPageview']
+                ];
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = '//www.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
+        </script>
+
+        <link type="application/atom+xml" rel="alternative" href="/rss.xml" />
+    </head>
+
+    <body class="">
+        <!--[if lt IE 9]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header class="site-header">
+            <h1>The blog of <a href="/">Robin</a></h1>
+
+            <nav class="inline-navigation site-navigation">
+                <ul>
+                    <li class=""><a href="/dev/">Web dev</a></li>
+                    <li class=""><a href="/politics/">Politics</a></li>
+                    <li class=""><a href="/musings/">Musings</a></li>
+                    <li class=""><a href="/">All articles</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+    <header class="page-header">
+        <date>15 Jun 2013</date>
+
+        <h1>Blog like a pro with static site generators - it's easier than you think</h1>
+    </header>
+
+    <p>Static site generators (like <a href="http://jekyllrb.com/">Jekyll</a> and <a href="http://ringce.com/hyde">Hyde</a>) offer a much simpler and more transparent way to create a website. There&#39;s a small learning curve, but it&#39;s totally worth it. Especially if you&#39;re a developer already.</p>
+
+<h1 id="what-is-a-static-site-generator">What is a static site generator?</h1>
+
+<p>A piece of software that can read a set of files in a particular format and convert them into static files (e.g. HTML &amp;c.) that can then be served directly as a website.</p>
+
+<p>Note that just because a site is static on the server-side doesn&#39;t mean it can&#39;t be dynamic on the client-side. You can easily include comments and other dynamic functionality through JavaScript plugins.</p>
+
+<p>The workflow goes something like this:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sublime-text _posts/2013-05-30-why-i-love-the-internet.md <span class="c"># create a new blog post</span>
+<span class="gp">$ </span>jekyll --server <span class="c"># build the static site into my _site/2013/05/30/why-i-love-the-internet.html directory and run a test server</span>
+<span class="c"># check the site and my new blog post look okay</span>
+<span class="gp">$ </span>git add . <span class="o">&amp;&amp;</span> git commit -m <span class="s1">'new post: why i love the internet'</span> <span class="c"># save it in version control</span>
+<span class="gp">$ </span>git push heroku <span class="c"># release the change to my live site (I use heroku)</span>
+</code></pre></div>
+<h1 id="why-bother">Why bother?</h1>
+
+<p>Personally I think static sites make managing websites really fun.</p>
+
+<p>For the right kind of project, static sites can make it so much simpler to manage a site. They remove a whole bunch of concerns that you used to have to worry about (e.g. with CMSs like <a href="http://wordpress.org/">Wordpress</a> or <a href="http://drupal.org/">Drupal</a>, or frameworks like <a href="https://www.djangoproject.com/">Django</a>, <a href="http://rubyonrails.org/">Rails</a> or <a href="http://symfony.com/">Symfony</a>):</p>
+
+<ul>
+<li><strong>caching</strong> - You can forget about server-side caching, since you&#39;re already serving static files</li>
+<li><strong>databases</strong> - You don&#39;t need a database - all the data is stored as files</li>
+<li><strong>version control</strong> - You easily keep your whole site including document changes in version control</li>
+<li><strong>easy to start</strong> - Hardly have to write any code to get started.</li>
+<li><strong>easy to maintain</strong> - Tweaking your site is more transparent and direct - you can easily view and edit the static files directly.</li>
+</ul>
+
+<h1 id="which-sites-make-sense">Which sites make sense?</h1>
+
+<p>Any site that needs to do anything complex on the server-side work will <em>not</em> be appropriate. However, any site which is basically just <strong>a collection of static information</strong> - like a <strong>blog</strong>, a <strong>brochure site</strong>, or even a <strong>news or magazine site</strong> - could work as a static site.</p>
+
+<p>The other important thing is that everyone who wants to be able to edit the site needs to learn how to do it.</p>
+
+<p>This needn&#39;t necessarily exclude anyone. Many static site generators use <a href="http://daringfireball.net/projects/markdown/basics">Markdown document syntax</a>, which anyone can understand and learn. <a href="https://github.com/">Github</a> even has a lets you edit files directly online, which anyone with permission can use to edit the website files. Editors will have to understand the concept of version control, and understand how the site structure works, but this shared understanding will probably aid rather than hinder your project&#39;s progression.</p>
+
+<p>In any case, if the only people who edit the site directly are developers then using a static site generator should come absolutely naturally.</p>
+
+<h1 id="how">How?</h1>
+
+<p>There are many static site generators out there written in many different languages:</p>
+
+<ul>
+<li>ruby: <a href="http://jekyllrb.com/">jekyll</a> | <a href="http://middlemanapp.com/">middleman</a> | <a href="http://nanoc.ws/">nanoc</a></li>
+<li>python: <a href="http://ringce.com/hyde">hyde</a> | <a href="http://getpelican.com/">pelican</a></li>
+<li>php: <a href="http://www.phrozn.info/en/">phrozen</a> | <a href="https://sculpin.io/">sculpin</a></li>
+</ul>
+
+<p>Personally I use <a href="https://github.com/nottrobin/robinwinslow.uk">jekyll for my website</a>. Originally this was because it is <a href="https://help.github.com/articles/using-jekyll-with-pages">natively supported in Github Pages</a>.</p>
+
+<p>I&#39;m not going to go into how to use a <a href="http://jekyllrb.com/">Jekyll</a> in depth in this post, but I&#39;ll try to write another couple of posts soon:</p>
+
+<ol>
+<li>How to set up a basic static site with Jekyll on Github Pages</li>
+<li>How to host a Jekyll-based site on Heroku</li>
+</ol>
+
+
+<!-- Generate subnav for article -->
+<script type="text/javascript" src="/assets/subnav-020636817964deb048fb98c55583f2981ff145d2db5e13d5c3b624c4ef8613f4.js"></script>
+
+
+    <hr>
+
+    <nav class="tags-list muted">
+        <label>Tags</label>
+
+        <ul>
+
+            <li><a href="/postsbytag/#dev">dev</a></li>
+
+            <li><a href="/postsbytag/#blogging">blogging</a></li>
+
+            <li><a href="/postsbytag/#server-side">server-side</a></li>
+
+            <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+        </ul>
+    </nav>
+
+
+<hr/>
+
+<div id="disqus_thread" class="comments"></div>
+
+</article>
+
+
+<nav class="related-nav article-index">
+    <h1>Similar articles</h1>
+
+    <ul>
+    
+        
+            
+                <li>
+    <article>
+        <a href="/2016/06/23/fix-docker-networking-dns/">
+            <date>23 Jun 2016</date>
+            <h1>Fix Docker's networking DNS config</h1>
+            <p>Within certain networks, docker is unable to resolve DNS correctly. When this happens, here's how to fix it.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2016/02/25/adding-cache-headers-to-django/">
+            <date>25 Feb 2016</date>
+            <h1>Django HTTP headers: Controlling caching on cn.ubuntu.com</h1>
+            <p>As optimising web performance becomes more and more important, it's becoming essential to carefully manage your caching headers. But Django doesn't make it hat easy.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2016/02/14/simplest-wsgi-application/">
+            <date>14 Feb 2016</date>
+            <h1>Creating a minimal Python application server for experimenting</h1>
+            <p>As a web developer, it can be incredibly useful to be able to spin up a quick server to inspect and manipulate raw requests. And if you're used to working in Python, this little script is just the ticket.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    </ul>
+</nav>
+
+
+<script>
+    if (location.hostname=="robinwinslow.uk") {
+        var disqus_shortname = 'robin-blog'; // required: replace example with your forum shortname
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the comments (powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>)</noscript>
+
+
+        <footer class="site-footer">
+            <nav class="vcard" id="contact-information">
+                <h1>Contact information</h1>
+
+                <ul>
+                    <li><a href="mailto:robin+blog@robinwinslow.uk" class="email">robin@robinwinslow.uk</a></li>
+                    <li><a href="tel:07795070704" class="tel">07795070704</a></li>
+                    <li><a href="https://www.google.co.uk/maps?q=ng7">NG7, Nottingham, UK</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Further writing</h1>
+
+                <ul>
+                    <li><a href="http://cv.robinwinslow.uk">cv.robinwinslow.uk</a></li>
+                    <li><a href="http://design.canonical.com/author/nottrobin/">design.canonical.com</a></li>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Profiles</h1>
+
+                <ul>
+                    <li><a href="https://twitter.com/nottrobin">twitter.com (@nottrobin)</a></li>
+                    <li><a href="https://facebook.com/robinwinslowmorris">facebook.com (robinwinslowmorris)</a></li>
+                    <li><a href="https://github.com/nottrobin/">github.com (nottrobin)</a>
+                </ul>
+            </nav>
+
+            <p>
+                All articles are written by me, <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a>, unless otherwise stated. Feel free to use any of my writing, but please <a href="http://creativecommons.org/licenses/by/4.0/">give me attribution</a>.
+            </p>
+
+            <p>You're free to download this entire site <a href="https://github.com/nottrobin/robinwinslow.uk/">from github</a>, and <a href="http://creativecommons.org/publicdomain/zero/1.0/">do whatever you like</a> with the code.</p>
+
+            <p><a href="https://github.com/nottrobin/robinwinslow.uk/" class="github-fork">Fork me on github.</a></p>
+        </footer>
+		<!--[if !(lt IE 8)]><!-->
+		<script type="text/javascript">
+		  (function(){
+			var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
+			e.src = 'https://www.eff.org/ngw/widget.min.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+		  })();
+		</script>
+		<!--<![endif]-->
+    </body>
+</html>

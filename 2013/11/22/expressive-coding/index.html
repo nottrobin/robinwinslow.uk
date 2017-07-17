@@ -1,0 +1,531 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+     	<title>Writing expressive code | by Robin</title>
+
+    	<meta name="description" content="Reading some legacy code today reminded me of some general principles that programmers could follow to make code easier to manage for future developers. I may have got a bit carried away...">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="canonical" href="https://robinwinslow.uk/2013/11/22/expressive-coding/" />
+
+        <link type="text/css" rel="stylesheet" href="/assets/global-cde306f7329733dd6abd0056b28c2061da3b79079c896e4286449114bfff9d39.css">
+
+        <script>
+            if (location.hostname=="robinwinslow.uk") {
+                var _gaq=[
+                    ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
+                    ['_setAccount','UA-2993676-8'],
+                    ['_trackPageview']
+                ];
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = '//www.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
+        </script>
+
+        <link type="application/atom+xml" rel="alternative" href="/rss.xml" />
+    </head>
+
+    <body class="">
+        <!--[if lt IE 9]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header class="site-header">
+            <h1>The blog of <a href="/">Robin</a></h1>
+
+            <nav class="inline-navigation site-navigation">
+                <ul>
+                    <li class=""><a href="/dev/">Web dev</a></li>
+                    <li class=""><a href="/politics/">Politics</a></li>
+                    <li class=""><a href="/musings/">Musings</a></li>
+                    <li class=""><a href="/">All articles</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+    <header class="page-header">
+        <date>22 Nov 2013</date>
+
+        <h1>Writing expressive code</h1>
+    </header>
+
+    <p>As any coder gains experience, they inevitebly learn more and more ways to solve the same problem.</p>
+
+<p>The very first consideration is simplicity. We probably want to use as simple and direct a solution as possible - to avoid over-engineering. But the <em>simplest</em> solution is not necessarily the <em>shortest</em> solution.</p>
+
+<p>After simplicity, the very next consideration should be <em>expressiveness</em>. You should always be thinking about how deeply a new developer is going to have to delve into your code to understand what&#39;s going on.</p>
+<div class="highlight"><pre><code class="language-" data-lang="">Code is poetry
+</code></pre></div>
+<p>Writing expressive code may help future coders to understand what&#39;s going on. It may even help you in the future. But it may also help you simply to understand the problem. Thinking carefully about how to define and encapsulate the components of your solution will often help you to understand the problem better, leading to a more logical solution.</p>
+
+<h1 id="self-documenting-code">&quot;Self-documenting code&quot;</h1>
+
+<p><a href="http://en.wikipedia.org/wiki/Self-documenting_code">&quot;Self-documenting code&quot;</a> is about structuring your code and choosing your method and variable names so that your code will be largely self-describing. This is a great practice, and can make some comments redundant:</p>
+<div class="highlight"><pre><code class="language-php" data-lang="php">$user = new User(); // create a new user object
+$user-&gt;loadFromSession(session); // update the user from the session
+if ($user-&gt;isAuthenticated()) { ... } // If the user is authenticated...
+</code></pre></div>
+<p>However, as a recent discussion with <a href="http://twitter.com/karlwilliams">a friend of mine</a> highlighted to me, expressive code is not a <em>replacement</em> for comments - no code is <em>entirely</em> &quot;self-documenting&quot;. Always write as expresively as you can, but <em>also</em> always document where it makes sense. Methods, functions and classes should always be summarised with a comment - as mentioned in the <a href="/2014/01/05/summary-of-python-code-style-conventions/#toc_3">Python coding conventions</a>.</p>
+
+<h1 id="wording">Wording</h1>
+
+<p>It&#39;s worth thinking carefully about how you name your variables and methods.</p>
+
+<h2 id="dont-abbreviate">Don&#39;t abbreviate</h2>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">uid</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// I am unlikely to know what uid stands for without context</span>
+<span class="kd">var</span> <span class="nx">userIdentifier</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// Better</span>
+</code></pre></div>
+<h2 id="be-specific">Be specific</h2>
+
+<p>Use as concrete and specific nouns as you can to describe methods and functions:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">event</span><span class="p">;</span> <span class="c1">// bad - generic</span>
+<span class="kd">var</span> <span class="nx">newsLinkClickEvent</span><span class="p">;</span> <span class="c1">// good - specific</span>
+</code></pre></div>
+<h1 id="encapsulation">Encapsulation</h1>
+
+<p>No-one likes to read a really long procedural program. It&#39;s very difficult to follow. It&#39;s much easier to read a shorter set of well-encapsulated method calls. If you need to delve deeper, simply look in the relevant method:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Instead of showing you all the details of how we update the user</span>
+<span class="c1">// We encapsulate that in the updateDetails method</span>
+<span class="c1">// allowing you to quickly see the top-level processes</span>
+<span class="kd">function</span> <span class="nx">saveUserDetails</span><span class="p">(</span><span class="nx">userStore</span><span class="p">,</span> <span class="nx">userDetails</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">User</span><span class="p">();</span>
+    <span class="nx">user</span><span class="p">.</span><span class="nx">updateDetails</span><span class="p">(</span><span class="nx">userDetails</span><span class="p">);</span> <span class="c1">// sets a whole bunch of details on the user</span>
+    <span class="nx">userStore</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="nx">user</span><span class="p">);</span> <span class="c1">// Converts user data into the correct format, and then saves it in the user store</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="do-you-need-an-else">Do you need an <code>else</code>?</h2>
+
+<p>The use of many <code>if .. else</code> conditionals make programs confusing. In many cases, the <code>else</code> part can be encapsulated in a separate method or function call, making the program easier to read:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// With the else</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">permissionGroup</span> <span class="o">==</span> <span class="s1">'administrator'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">article</span><span class="p">.</span><span class="k">delete</span><span class="p">();</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">page</span><span class="p">.</span><span class="nx">showError</span><span class="p">(</span><span class="s2">"Sorry you don't have permission to delete this article"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Without the else</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">user</span><span class="p">.</span><span class="nx">deleteArticle</span><span class="p">(</span><span class="nx">article</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">page</span><span class="p">.</span><span class="nx">showError</span><span class="p">(</span><span class="s2">"Sorry you don't have permission to delete this article"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>In cases where a <code>switch</code> is used, or multiple <code>if .. else if</code> statements, you could consider <a href="http://haacked.com/archive/2013/11/08/death-to-the-if-statement.aspx/">using different types</a> instead:</p>
+<div class="highlight"><pre><code class="language-php" data-lang="php">class User {
+    function deleteArticle($article) {
+        $success = false;
+
+        if (
+            user-&gt;permissionGroup == 'administrator'
+            || user-&gt;permissionGroup == 'editor'
+        ) {
+            $success = $article-&gt;delete();
+        }
+
+        return $success;
+    }
+}
+</code></pre></div>
+<p>You can remove the need for this <code>if</code>, by making special types:</p>
+<div class="highlight"><pre><code class="language-php" data-lang="php">trait ArticleDeletion {
+    function deleteArticle($article) {
+        return $article-&gt;delete();
+    }
+}
+
+class Editor implements User { use ArticleDeletion; }
+class Administrator implements User { use ArticleDeletion; }
+</code></pre></div>
+<p>Notice that I&#39;ve deliberately opted <em>not</em> to make <code>Administrator</code> inherit from <code>Editor</code>, but instead compose them separately. This keeps my structure more flat and flexible. This is an example of <a href="http://en.wikipedia.org/wiki/Composition_over_inheritance">composition over inheritence</a>.</p>
+
+<h1 id="depth">Depth</h1>
+
+<p>While encapsulation is often a good thing, to make programs easier to understand at the higher level, it&#39;s important to preserve the <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility principle</a> by not encapsulating <a href="http://en.wikipedia.org/wiki/Separation_of_concerns">separate concerns</a> together.</p>
+
+<p>For example, one could write:</p>
+<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="kt">var</span> <span class="n">user</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">User</span><span class="p">();</span>
+<span class="n">user</span><span class="p">.</span><span class="nf">UpdateFromForm</span><span class="p">();</span> <span class="c1">// Imports user data from the page form
+</span><span class="n">user</span><span class="p">.</span><span class="nf">SaveToDatabase</span><span class="p">();</span>
+</code></pre></div>
+<p>While this is both short and fairly clear, it suffers from two other problems:</p>
+
+<ul>
+<li>The user has to delve further into the code to find basic information, like the name of the Database class, or which form the details are stored in</li>
+<li>If we want to use a different instance of the <code>Database</code>, we have to edit the <code>User</code> class, which doesn&#39;t make a whole lot of sense.</li>
+</ul>
+
+<p>In general you should always pass objects around, rather than instantiating them inside each other:</p>
+<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="kt">var</span> <span class="n">user</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">User</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">userData</span> <span class="p">=</span> <span class="n">Request</span><span class="p">.</span><span class="n">Form</span><span class="p">;</span>
+<span class="kt">var</span> <span class="n">database</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">DatabaseManager</span><span class="p">();</span>
+
+<span class="n">user</span><span class="p">.</span><span class="nf">ImportData</span><span class="p">(</span><span class="n">userData</span><span class="p">);</span>
+<span class="n">database</span><span class="p">.</span><span class="nf">Save</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+</code></pre></div>
+<p>This is more lines, but it is nonetheless clearer what is actually happening, and it&#39;s more versatile.</p>
+
+<h1 id="tidiness">Tidiness</h1>
+
+<p>Always try to format your code so that it is easily readable. Don&#39;t be afraid of white space, and use indentation sensibly to highlight the structure of your code.</p>
+
+<p>Where there is an accepted code style guide, you should try to follow it. For example, PHP has the <a href="https://github.com/php-fig/fig-standards/tree/master/accepted">FIG standards</a>.</p>
+
+<p>However, I don&#39;t think it&#39;s worthwhile being overly anal about code standards (my thinking has evolved on this somewhat) because you&#39;ll never be able to get everybody to code exactly the same way. So if (like me) you&#39;re a coder who feels the need to reformat code whenever you see it to make it fit in with anal standards, you could probably so with training yourself out of that habit. As long as you can read it, leave it be.</p>
+
+<h2 id="delete-commented-out-code">Delete commented out code</h2>
+
+<p>If you&#39;re using a version control system (like <a href="http://git-scm.com/">Git</a>) there really is no need to keep large blocks of commented-out or unused code. You should just delete it, to keep your codebase tidier. If you really need it again, you can just got and find it in the version control history. </p>
+
+<h1 id="trade-offs">Trade-offs</h1>
+
+<p>There will always be a trade-off between expresiveness and succinctness.</p>
+
+<h2 id="depth-vs-encapsulation">Depth vs. encapsulation</h2>
+
+<p>It is desirible to keep as flat a structure as possible in your objects, so that programmers don&#39;t have to delve through parent class after parent class to find the relevant bit of code. But it is also important to keep code encapsulated in logical units.</p>
+
+<p>Both the goals are often achievable by doing <a href="http://en.wikipedia.org/wiki/Composition_over_inheritance">composition over inheritence</a> using <a href="http://en.wikipedia.org/wiki/Dependency_injection">dependency injection</a> or traits / multiple inheritence.</p>
+
+<h2 id="special-syntax">Special syntax</h2>
+
+<p>In many languages there are often slightly obscure constructs that can nonetheless save time. With many of these there is a readability vs. simplicity trade-off.</p>
+
+<h3 id="ternary-operators-and-null-coalescing">Ternary operators and null coalescing</h3>
+
+<p>Both C# and PHP have null coalescing operators:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">var userType = user.Type ?? defaultType; // C#
+$userType = $user-&gt;Type ?: $defaultType; // PHP
+</code></pre></div>
+<p>And almost all languages support the <a href="http://en.wikipedia.org/wiki/%3F:">ternary operator</a>:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">userType</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">Type</span> <span class="o">!=</span> <span class="kc">null</span> <span class="p">?</span> <span class="nx">user</span><span class="p">.</span><span class="nx">Type</span> <span class="p">:</span> <span class="nx">defaultType</span><span class="p">;</span>
+</code></pre></div>
+<p>Both of these constructs are much more succinct than a full <code>if .. else</code> construct, but they are less semantically clear, hence the trade-off. Personally, I think it&#39;s fine to use the ternary operator in simple conditionals like this, but if it gets any more complicated then you should always use a full <code>if .. else</code> statement.</p>
+
+<h3 id="plugins-libraries">Plugins / libraries</h3>
+
+<p>For example, in C#:</p>
+<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="kt">var</span> <span class="n">brownFish</span><span class="p">;</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">fish</span> <span class="k">in</span> <span class="n">fishes</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">fish</span><span class="p">.</span><span class="n">colour</span> <span class="p">==</span> <span class="s">"brown"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">brownFish</span> <span class="p">=</span> <span class="n">fish</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Can be simplified with the Linq library:</p>
+<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+
+<span class="kt">var</span> <span class="n">brownFish</span> <span class="p">=</span> <span class="n">fishes</span><span class="p">.</span><span class="nf">First</span><span class="p">(</span><span class="n">fish</span> <span class="p">=&gt;</span> <span class="n">fish</span><span class="p">.</span><span class="n">colour</span> <span class="p">==</span> <span class="s">"brown"</span><span class="p">);</span>
+</code></pre></div>
+<p>The latter is clearly simpler, and hopefully not too difficult to understand, but its does require:</p>
+
+<ol>
+<li>Knowledge of the Linq library</li>
+<li>An understanding of lambda expressions work</li>
+</ol>
+
+<p>I think that in this case the Linq solution is so much simpler and quite expressive enough that it should definitely be preferred - and hopefully if another developer doesn&#39;t know about Linq, it will be quite easy for them to pick up, and will expand their knowledge.</p>
+
+<h2 id="single-use-variables">Single-use variables</h2>
+
+<p>While the following variable is pointless:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">arrayLength</span> <span class="o">=</span> <span class="nx">myArray</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">arrayIterator</span><span class="p">;</span> <span class="nx">arrayIterator</span> <span class="o">&lt;</span> <span class="nx">arrayLength</span><span class="p">;</span> <span class="nx">arrayIterator</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+</code></pre></div>
+<p>There are some cases where variables can be used to add useful semantic meaning:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">slideshowContainer</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">(</span><span class="s1">'main&gt;.show'</span><span class="p">);</span>
+
+<span class="nx">slideshowContainer</span><span class="p">.</span><span class="nx">startSlideshow</span><span class="p">();</span>
+</code></pre></div>
+
+<!-- Generate subnav for article -->
+<script type="text/javascript" src="/assets/subnav-020636817964deb048fb98c55583f2981ff145d2db5e13d5c3b624c4ef8613f4.js"></script>
+
+
+    <hr>
+
+    <nav class="tags-list muted">
+        <label>Tags</label>
+
+        <ul>
+
+            <li><a href="/postsbytag/#dev">dev</a></li>
+
+            <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+        </ul>
+    </nav>
+
+
+<hr/>
+
+<div id="disqus_thread" class="comments"></div>
+
+</article>
+
+
+<nav class="related-nav article-index">
+    <h1>Similar articles</h1>
+
+    <ul>
+    
+        
+            
+                <li>
+    <article>
+        <a href="/2016/06/23/fix-docker-networking-dns/">
+            <date>23 Jun 2016</date>
+            <h1>Fix Docker's networking DNS config</h1>
+            <p>Within certain networks, docker is unable to resolve DNS correctly. When this happens, here's how to fix it.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2016/02/25/adding-cache-headers-to-django/">
+            <date>25 Feb 2016</date>
+            <h1>Django HTTP headers: Controlling caching on cn.ubuntu.com</h1>
+            <p>As optimising web performance becomes more and more important, it's becoming essential to carefully manage your caching headers. But Django doesn't make it hat easy.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2016/02/14/simplest-wsgi-application/">
+            <date>14 Feb 2016</date>
+            <h1>Creating a minimal Python application server for experimenting</h1>
+            <p>As a web developer, it can be incredibly useful to be able to spin up a quick server to inspect and manipulate raw requests. And if you're used to working in Python, this little script is just the ticket.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    </ul>
+</nav>
+
+
+<script>
+    if (location.hostname=="robinwinslow.uk") {
+        var disqus_shortname = 'robin-blog'; // required: replace example with your forum shortname
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the comments (powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>)</noscript>
+
+
+        <footer class="site-footer">
+            <nav class="vcard" id="contact-information">
+                <h1>Contact information</h1>
+
+                <ul>
+                    <li><a href="mailto:robin+blog@robinwinslow.uk" class="email">robin@robinwinslow.uk</a></li>
+                    <li><a href="tel:07795070704" class="tel">07795070704</a></li>
+                    <li><a href="https://www.google.co.uk/maps?q=ng7">NG7, Nottingham, UK</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Further writing</h1>
+
+                <ul>
+                    <li><a href="http://cv.robinwinslow.uk">cv.robinwinslow.uk</a></li>
+                    <li><a href="http://design.canonical.com/author/nottrobin/">design.canonical.com</a></li>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Profiles</h1>
+
+                <ul>
+                    <li><a href="https://twitter.com/nottrobin">twitter.com (@nottrobin)</a></li>
+                    <li><a href="https://facebook.com/robinwinslowmorris">facebook.com (robinwinslowmorris)</a></li>
+                    <li><a href="https://github.com/nottrobin/">github.com (nottrobin)</a>
+                </ul>
+            </nav>
+
+            <p>
+                All articles are written by me, <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a>, unless otherwise stated. Feel free to use any of my writing, but please <a href="http://creativecommons.org/licenses/by/4.0/">give me attribution</a>.
+            </p>
+
+            <p>You're free to download this entire site <a href="https://github.com/nottrobin/robinwinslow.uk/">from github</a>, and <a href="http://creativecommons.org/publicdomain/zero/1.0/">do whatever you like</a> with the code.</p>
+
+            <p><a href="https://github.com/nottrobin/robinwinslow.uk/" class="github-fork">Fork me on github.</a></p>
+        </footer>
+		<!--[if !(lt IE 8)]><!-->
+		<script type="text/javascript">
+		  (function(){
+			var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
+			e.src = 'https://www.eff.org/ngw/widget.min.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+		  })();
+		</script>
+		<!--<![endif]-->
+    </body>
+</html>

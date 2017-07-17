@@ -1,0 +1,423 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+     	<title>Using a virtual environment with Python 3.4 | by Robin</title>
+
+    	<meta name="description" content="I recently started learning Python and Django, and so I've been working out how to setup a good virtual environment. Here's how to do it the native way in Python 3.4.">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="canonical" href="https://robinwinslow.uk/2013/12/26/python-3-4-virtual-environment/" />
+
+        <link type="text/css" rel="stylesheet" href="/assets/global-cde306f7329733dd6abd0056b28c2061da3b79079c896e4286449114bfff9d39.css">
+
+        <script>
+            if (location.hostname=="robinwinslow.uk") {
+                var _gaq=[
+                    ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
+                    ['_setAccount','UA-2993676-8'],
+                    ['_trackPageview']
+                ];
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = '//www.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
+        </script>
+
+        <link type="application/atom+xml" rel="alternative" href="/rss.xml" />
+    </head>
+
+    <body class="">
+        <!--[if lt IE 9]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header class="site-header">
+            <h1>The blog of <a href="/">Robin</a></h1>
+
+            <nav class="inline-navigation site-navigation">
+                <ul>
+                    <li class=""><a href="/dev/">Web dev</a></li>
+                    <li class=""><a href="/politics/">Politics</a></li>
+                    <li class=""><a href="/musings/">Musings</a></li>
+                    <li class=""><a href="/">All articles</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+    <header class="page-header">
+        <date>26 Dec 2013</date>
+
+        <h1>Using a virtual environment with Python 3.4</h1>
+    </header>
+
+    <p>I&#39;ve been learning Python recently. I had a choice between learning Python 2.7 or Python 3, and I chose the latter. It may be true that many people still work in Python 2.7, but I thought I should start off as up-to-date as possible.</p>
+
+<p>This meant that I had to work out how to set up a virtual environment without virtualenv.</p>
+
+<p>(Hopefully Python 3.3 <a href="https://wiki.ubuntu.com/Python/3">will finally be the default version</a> of Python in Ubuntu 14.04 LTS.)</p>
+
+<h1 id="what-is-virtualenv">What is virtualenv?</h1>
+
+<p><a href="https://pypi.python.org/pypi/virtualenv">Virtualenv</a> is a Python package that will setup a &quot;virtual&quot; python environment in a specific directory.</p>
+
+<p>This virtual environment will keep your python version and modules separate from the system&#39;s Python installation:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>virtualenv env            <span class="c"># create new environment in "env" folder</span>
+<span class="gp">$ </span><span class="nb">source </span>env/bin/activate   <span class="c"># Active "env"</span>
+<span class="o">(</span>env<span class="o">)</span> <span class="nv">$ </span>which pip           <span class="c"># "pip" is now inside "env" folder</span>
+env/bin/pip
+<span class="o">(</span>env<span class="o">)</span> /project<span class="nv">$ </span>deactivate  <span class="c"># Deactivate env </span>
+<span class="gp">/project$ </span>which pip         <span class="c"># "pip" is back to default</span>
+/usr/bin/pip
+</code></pre></div>
+<p>This means that you can keep a fixed python environment fixed for a specific project regardless of whether the wider system changes. Virtual environments complement <a href="http://www.deploydjango.com/django_project_structure/index.html#step-2-define-your-requirements"><code>requirements files</code></a>.</p>
+
+<p>When &quot;env&quot; is active, <code>pip install somemodule</code> will install &quot;somemodule&quot; into <code>env/lib/pythonx.x/site-packages</code> directory instead of the system&#39;s normal python path.</p>
+
+<p>This means that you can install exactly the modules you need for your current project and no more:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nb">source </span>env/bin/activate               <span class="c"># Activate a new environment</span>
+<span class="o">(</span>env<span class="o">)</span> <span class="nv">$ </span>pip freeze                      <span class="c"># No output - clean environment</span>
+<span class="o">(</span>env<span class="o">)</span> <span class="nv">$ </span>pip install -r requirements.txt <span class="c"># Install project dependencies</span>
+</code></pre></div>
+<h1 id="python-3-and-pyvenv">Python 3 and pyvenv</h1>
+
+<p>Virtualenv <a href="http://askubuntu.com/questions/279959/how-to-create-a-virtualenv-with-python3-3-in-ubuntu">doesn&#39;t play nicely</a> with Python 3, so it&#39;s best not to try to use it.</p>
+
+<h2 id="pyvenv-3-3">pyvenv-3.3</h2>
+
+<p>Fortunately, python 3.3 (the current version of the <a href="http://packages.ubuntu.com/saucy/python3">Ubuntu python3 package</a>) actually has a native virtual environment manager called <code>pyvenv</code>.</p>
+
+<p>Unfortunately, the resulting environment <a href="http://stackoverflow.com/questions/17982032/pyvenv-pip-not-installing-into-local-site-packages">doesn&#39;t include pip</a>. You can install pip into your virtual environment, but it&#39;s all rather clunky.</p>
+
+<h2 id="pyvenv-3-4">pyvenv-3.4</h2>
+
+<p>Python 3.4&#39;s version of <code>pyvenv</code> <a href="http://docs.python.org/dev/library/venv.html"><em>will</em></a> include <code>pip</code>, making management of virtual environments simple again, and now <em>native</em>.</p>
+
+<p>The downside here is that Python 3.4 is still in beta, and I can&#39;t find a PPA to install it through <code>apt-get</code> (the easy way).</p>
+
+<h1 id="building-python-3-4-from-source">Building Python 3.4 from source</h1>
+
+<p>Fortunately, building <a href="http://www.python.org/getit/releases/3.4.0/">Python 3.4.0-b1</a> from source was simple on Ubuntu 13.10:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sudo apt-get install build-essential <span class="c"># Make sure we have build tools</span>
+<span class="gp">$ </span>wget http://www.python.org/ftp/python/3.4.0/Python-3.4.0b1.tgz <span class="c"># download</span>
+<span class="gp">$ </span>tar -xzf Python-3.4.0b1.tgz          <span class="c"># unzip</span>
+<span class="gp">$ </span><span class="nb">cd </span>Python-3.4.0b1/                   <span class="c"># open directory</span>
+<span class="gp">$ </span>./configure                          <span class="c"># configure for this system</span>
+<span class="gp">$ </span>make                                 <span class="c"># build</span>
+<span class="gp">$ </span>sudo make install                    <span class="c"># install to /usr/local/</span>
+</code></pre></div>
+<p>You should now find you have a few new binaries (in <code>/usr/local/bin</code>) including <code>python3.4</code>, <code>pydoc3.4</code> and <code>pyvenv-3.4</code>.</p>
+
+<h1 id="using-pyvenv-3-4">Using pyvenv-3.4</h1>
+
+<p>Now that <code>pyvenv-3.4</code> is installed, here&#39;s how you might use it to setup a Django environment and a django project:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>pyvenv-3.4 djenv          <span class="c"># create django virtual env</span>
+<span class="gp">$ </span><span class="nb">source </span>djenv/bin/activate <span class="c"># activate it</span>
+<span class="o">(</span>djenv<span class="o">)</span> <span class="nv">$ </span>which pip         <span class="c"># check pip points to the right place</span>
+/home/me/djenv/bin/pip
+<span class="o">(</span>djenv<span class="o">)</span> <span class="nv">$ </span>pip freeze        <span class="c"># check our environment is clean (no output)</span>
+<span class="o">(</span>djenv<span class="o">)</span> <span class="nv">$ </span>pip install django django-extensions     <span class="c"># install django dependencies</span>
+<span class="o">(</span>djenv<span class="o">)</span> <span class="nv">$ </span>pip freeze        <span class="c"># see our installed dependencies</span>
+<span class="nv">Django</span><span class="o">==</span>1.6.1
+django-extensions<span class="o">==</span>1.2.5
+<span class="nv">six</span><span class="o">==</span>1.4.1
+<span class="o">(</span>djenv<span class="o">)</span> <span class="nv">$ </span>django-admin.py startproject newproject  <span class="c"># create new django project</span>
+<span class="o">(</span>djenv<span class="o">)</span> <span class="nv">$ </span>pip freeze &gt; newproject/requirements.txt <span class="c"># save dependencies into project</span>
+</code></pre></div>
+<h1 id="the-future">The future</h1>
+
+<p>While all the above setup isn&#39;t <em>that</em> hard, I&#39;m hoping that by 2015 we might see Python 3.4 become stable and become the default version of Python in Ubuntu 14.10.</p>
+
+<p>After that, I guess the next thing would be for someone to create something similar to <a href="http://virtualenvwrapper.readthedocs.org/en/latest/">virtualenv wrapper</a> for <code>pyvenv</code>.</p>
+
+
+<!-- Generate subnav for article -->
+<script type="text/javascript" src="/assets/subnav-020636817964deb048fb98c55583f2981ff145d2db5e13d5c3b624c4ef8613f4.js"></script>
+
+
+    <hr>
+
+    <nav class="tags-list muted">
+        <label>Tags</label>
+
+        <ul>
+
+            <li><a href="/postsbytag/#dev">dev</a></li>
+
+            <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+        </ul>
+    </nav>
+
+
+<hr/>
+
+<div id="disqus_thread" class="comments"></div>
+
+</article>
+
+
+<nav class="related-nav article-index">
+    <h1>Similar articles</h1>
+
+    <ul>
+    
+        
+            
+                <li>
+    <article>
+        <a href="/2016/06/23/fix-docker-networking-dns/">
+            <date>23 Jun 2016</date>
+            <h1>Fix Docker's networking DNS config</h1>
+            <p>Within certain networks, docker is unable to resolve DNS correctly. When this happens, here's how to fix it.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2016/02/25/adding-cache-headers-to-django/">
+            <date>25 Feb 2016</date>
+            <h1>Django HTTP headers: Controlling caching on cn.ubuntu.com</h1>
+            <p>As optimising web performance becomes more and more important, it's becoming essential to carefully manage your caching headers. But Django doesn't make it hat easy.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2016/02/14/simplest-wsgi-application/">
+            <date>14 Feb 2016</date>
+            <h1>Creating a minimal Python application server for experimenting</h1>
+            <p>As a web developer, it can be incredibly useful to be able to spin up a quick server to inspect and manipulate raw requests. And if you're used to working in Python, this little script is just the ticket.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    </ul>
+</nav>
+
+
+<script>
+    if (location.hostname=="robinwinslow.uk") {
+        var disqus_shortname = 'robin-blog'; // required: replace example with your forum shortname
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the comments (powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>)</noscript>
+
+
+        <footer class="site-footer">
+            <nav class="vcard" id="contact-information">
+                <h1>Contact information</h1>
+
+                <ul>
+                    <li><a href="mailto:robin+blog@robinwinslow.uk" class="email">robin@robinwinslow.uk</a></li>
+                    <li><a href="tel:07795070704" class="tel">07795070704</a></li>
+                    <li><a href="https://www.google.co.uk/maps?q=ng7">NG7, Nottingham, UK</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Further writing</h1>
+
+                <ul>
+                    <li><a href="http://cv.robinwinslow.uk">cv.robinwinslow.uk</a></li>
+                    <li><a href="http://design.canonical.com/author/nottrobin/">design.canonical.com</a></li>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Profiles</h1>
+
+                <ul>
+                    <li><a href="https://twitter.com/nottrobin">twitter.com (@nottrobin)</a></li>
+                    <li><a href="https://facebook.com/robinwinslowmorris">facebook.com (robinwinslowmorris)</a></li>
+                    <li><a href="https://github.com/nottrobin/">github.com (nottrobin)</a>
+                </ul>
+            </nav>
+
+            <p>
+                All articles are written by me, <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a>, unless otherwise stated. Feel free to use any of my writing, but please <a href="http://creativecommons.org/licenses/by/4.0/">give me attribution</a>.
+            </p>
+
+            <p>You're free to download this entire site <a href="https://github.com/nottrobin/robinwinslow.uk/">from github</a>, and <a href="http://creativecommons.org/publicdomain/zero/1.0/">do whatever you like</a> with the code.</p>
+
+            <p><a href="https://github.com/nottrobin/robinwinslow.uk/" class="github-fork">Fork me on github.</a></p>
+        </footer>
+		<!--[if !(lt IE 8)]><!-->
+		<script type="text/javascript">
+		  (function(){
+			var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
+			e.src = 'https://www.eff.org/ngw/widget.min.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+		  })();
+		</script>
+		<!--<![endif]-->
+    </body>
+</html>

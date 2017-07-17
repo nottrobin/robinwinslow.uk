@@ -1,0 +1,335 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+     	<title>Loading fonts as Data URLs for performance | by Robin</title>
+
+    	<meta name="description" content="Including your fonts inside your CSS files as Data URLs can help with performance">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="canonical" href="https://robinwinslow.uk/2013/06/20/loading-fonts-as-data-urls/" />
+
+        <link type="text/css" rel="stylesheet" href="/assets/global-cde306f7329733dd6abd0056b28c2061da3b79079c896e4286449114bfff9d39.css">
+
+        <script>
+            if (location.hostname=="robinwinslow.uk") {
+                var _gaq=[
+                    ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
+                    ['_setAccount','UA-2993676-8'],
+                    ['_trackPageview']
+                ];
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = '//www.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
+        </script>
+
+        <link type="application/atom+xml" rel="alternative" href="/rss.xml" />
+    </head>
+
+    <body class="">
+        <!--[if lt IE 9]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header class="site-header">
+            <h1>The blog of <a href="/">Robin</a></h1>
+
+            <nav class="inline-navigation site-navigation">
+                <ul>
+                    <li class=""><a href="/dev/">Web dev</a></li>
+                    <li class=""><a href="/politics/">Politics</a></li>
+                    <li class=""><a href="/musings/">Musings</a></li>
+                    <li class=""><a href="/">All articles</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+    <header class="page-header">
+        <date>20 Jun 2013</date>
+
+        <h1>Loading fonts as Data URLs for performance</h1>
+    </header>
+
+    <p>With the advent of <a href="https://en.wikipedia.org/wiki/Web_typography#Web_fonts">web fonts</a> (e.g. from <a href="https://www.google.com/fonts/">Google Fonts</a>), thankfully web designers are no longer tied to a limited set of &quot;web safe&quot; fonts.</p>
+
+<h1 id="fonts-and-performance">Fonts and performance</h1>
+
+<p>However, there is a potential performance hit with this. You will need to link your CSS files to the font files. The problem here isn&#39;t so much the size of the font file (they are typically under 100 KB), it&#39;s more that each new HTTP request that a page makes <a href="http://developer.yahoo.com/performance/rules.html">effects performance</a></p>
+
+<p>Also, when loading web fonts externally you will sometimes see a flicker where the page loads initially with the default browser fonts, and then the new fonts are downloaded and applied afterwards. This flicker can look quite unprofessional.</p>
+
+<h1 id="font-formats-and-ie8">Font formats and IE8</h1>
+
+<p>If you want to support Internet Explorer 8 or older, you unfortunately need to include your fonts in two formats: <a href="https://en.wikipedia.org/wiki/Woff">WOFF</a> and <a href="https://en.wikipedia.org/wiki/Embedded_OpenType">EOT</a>.</p>
+
+<p>However, if you&#39;re willing to drop IE8 support (and <a href="/2013/02/28/time-to-say-goodbye-to-ie8/">reap the benefits</a>), or to simply serve the browser default font to IE8, then you can provide your fonts in WOFF only, which is supported by <a href="http://caniuse.com/#search=woff">all other relevant browsers</a>.</p>
+
+<h1 id="data-urls">Data URLs</h1>
+
+<p>So <a href="http://dataurl.net/#about">Data URLs</a>, if you haven&#39;t heard of them, are a way of encoding binary data as a valid URL string. This means the data can be included directly inside HTML or CSS files. They are fantastically easy to create by simply dragging your binary file into the <a href="http://dataurl.net/#dataurlmaker">Data URL Creator</a>.</p>
+
+<p>Data URLs are likely to be a bit larger than the binary file would have been. In my experience they tend to be about 20% larger. So the larger the file you&#39;re dealing with the less practical it becomes to encode the file as a URL. However, for sub-100k web fonts this difference is not so important.</p>
+
+<p>So using Data URLs, you can include your font directly in your CSS like so:</p>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* http://www.google.com/webfonts/specimen/Lato */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'Lato light'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">300</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="n">local</span><span class="p">(</span><span class="s2">'Lato Light'</span><span class="p">),</span> <span class="sx">url('data:application/x-font-woff;base64,d09GRg...BQAAAAB')</span><span class="p">,</span> <span class="n">format</span><span class="p">(</span><span class="s2">'woff'</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>(For example, <a href="https://github.com/nottrobin/robinwinslow.uk/blob/master/_assets/stylesheets/global.scss#L345">here&#39;s what I use for this very site</a>)</p>
+
+<p>This will now mean that your web pages will only have to download one CSS file, rather than a CSS file and a bunch of font files, which will help performance. Personally I think it&#39;s also neat not to have to create a special directory for font files. Keeping it all in one place (CSS) just seems nice and neat to me.</p>
+
+<h1 id="a-word-about-caching">A word about caching</h1>
+
+<p>Whether the above suggestion is actually a good idea will depend on how often your CSS changes. Hopefully you&#39;ll be merging your CSS files into one file already to reduce HTTP requests. This of course means that whenever that merged CSS file changes, your users will have to download the whole file again to see your changes.</p>
+
+<p>If your fonts were downloaded as separate files, rather than being included in your CSS, then the fonts may well be cached even if the CSS has changed. However, if you include your fonts inside your CSS files as suggested above, this will mean that whenever your CSS changes a much larger CSS file will have to be downloaded each time. Including your fonts inside your CSS is likely to double the size of your CSS file.</p>
+
+<p>This is a complex decision, but to give you some rough advice I&#39;d say - if you CSS changes more than a couple of times a month then keep your fonts as separate files. If it&#39;s less often (as it is with this site) then it&#39;s probably worth including them inside the CSS as Data URLs.</p>
+
+<p>If you have a different opinion on this, please let me know in the comments.</p>
+
+
+<!-- Generate subnav for article -->
+<script type="text/javascript" src="/assets/subnav-020636817964deb048fb98c55583f2981ff145d2db5e13d5c3b624c4ef8613f4.js"></script>
+
+
+    <hr>
+
+    <nav class="tags-list muted">
+        <label>Tags</label>
+
+        <ul>
+
+            <li><a href="/postsbytag/#front-end">front-end</a></li>
+
+            <li><a href="/postsbytag/#dev">dev</a></li>
+
+            <li><a href="/postsbytag/#fonts">fonts</a></li>
+
+            <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+        </ul>
+    </nav>
+
+
+<hr/>
+
+<div id="disqus_thread" class="comments"></div>
+
+</article>
+
+
+<nav class="related-nav article-index">
+    <h1>Similar articles</h1>
+
+    <ul>
+    
+        
+            
+                <li>
+    <article>
+        <a href="/2015/03/05/a-seachange-in-front-end-best-practice/">
+            <date>05 Mar 2015</date>
+            <h1>A seachange in front-end best practice - but not for a while</h1>
+            <p>With the advent of HTTP/2, many front-end performance best practices will change. But we should only switch over when the browser support is there.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#front-end">front-end</a></li>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2015/01/10/converting-between-git-and-bzr/">
+            <date>10 Jan 2015</date>
+            <h1>Converting projects between Git and Bazaar</h1>
+            <p>In my team, we often work in both git and bzr version control systems. This is a little guide about managing both together.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#front-end">front-end</a></li>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2014/09/18/markup-on-the-information-superhighway/">
+            <date>18 Sep 2014</date>
+            <h1>The importance of markup on the information superhighway</h1>
+            <p>A fairly informal piece about the importance of understanding markup and the internet.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#front-end">front-end</a></li>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#blogging">blogging</a></li>
+
+                <li><a href="/postsbytag/#politics">politics</a></li>
+
+                <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    </ul>
+</nav>
+
+
+<script>
+    if (location.hostname=="robinwinslow.uk") {
+        var disqus_shortname = 'robin-blog'; // required: replace example with your forum shortname
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the comments (powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>)</noscript>
+
+
+        <footer class="site-footer">
+            <nav class="vcard" id="contact-information">
+                <h1>Contact information</h1>
+
+                <ul>
+                    <li><a href="mailto:robin+blog@robinwinslow.uk" class="email">robin@robinwinslow.uk</a></li>
+                    <li><a href="tel:07795070704" class="tel">07795070704</a></li>
+                    <li><a href="https://www.google.co.uk/maps?q=ng7">NG7, Nottingham, UK</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Further writing</h1>
+
+                <ul>
+                    <li><a href="http://cv.robinwinslow.uk">cv.robinwinslow.uk</a></li>
+                    <li><a href="http://design.canonical.com/author/nottrobin/">design.canonical.com</a></li>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Profiles</h1>
+
+                <ul>
+                    <li><a href="https://twitter.com/nottrobin">twitter.com (@nottrobin)</a></li>
+                    <li><a href="https://facebook.com/robinwinslowmorris">facebook.com (robinwinslowmorris)</a></li>
+                    <li><a href="https://github.com/nottrobin/">github.com (nottrobin)</a>
+                </ul>
+            </nav>
+
+            <p>
+                All articles are written by me, <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a>, unless otherwise stated. Feel free to use any of my writing, but please <a href="http://creativecommons.org/licenses/by/4.0/">give me attribution</a>.
+            </p>
+
+            <p>You're free to download this entire site <a href="https://github.com/nottrobin/robinwinslow.uk/">from github</a>, and <a href="http://creativecommons.org/publicdomain/zero/1.0/">do whatever you like</a> with the code.</p>
+
+            <p><a href="https://github.com/nottrobin/robinwinslow.uk/" class="github-fork">Fork me on github.</a></p>
+        </footer>
+		<!--[if !(lt IE 8)]><!-->
+		<script type="text/javascript">
+		  (function(){
+			var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
+			e.src = 'https://www.eff.org/ngw/widget.min.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+		  })();
+		</script>
+		<!--<![endif]-->
+    </body>
+</html>

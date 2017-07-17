@@ -1,0 +1,241 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+     	<title>TMUX and SSH auto-login with ssh-agent (finally!) | by Robin</title>
+
+    	<meta name="description" content="The steps necessary to get TMUX ssh-agent correctly configured.">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="canonical" href="https://robinwinslow.uk/2012/07/20/tmux-and-ssh-auto-login-with-ssh-agent-finally/" />
+
+        <link type="text/css" rel="stylesheet" href="/assets/global-cde306f7329733dd6abd0056b28c2061da3b79079c896e4286449114bfff9d39.css">
+
+        <script>
+            if (location.hostname=="robinwinslow.uk") {
+                var _gaq=[
+                    ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
+                    ['_setAccount','UA-2993676-8'],
+                    ['_trackPageview']
+                ];
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = '//www.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
+        </script>
+
+        <link type="application/atom+xml" rel="alternative" href="/rss.xml" />
+    </head>
+
+    <body class="">
+        <!--[if lt IE 9]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header class="site-header">
+            <h1>The blog of <a href="/">Robin</a></h1>
+
+            <nav class="inline-navigation site-navigation">
+                <ul>
+                    <li class=""><a href="/dev/">Web dev</a></li>
+                    <li class=""><a href="/politics/">Politics</a></li>
+                    <li class=""><a href="/musings/">Musings</a></li>
+                    <li class=""><a href="/">All articles</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+    <header class="page-header">
+        <date>20 Jul 2012</date>
+
+        <h1>TMUX and SSH auto-login with ssh-agent (finally!)</h1>
+    </header>
+
+    <p>I finally got this working, so I thought I&#39;d blog about it.</p>
+
+<p>Here&#39;s what I wanted to achieve:</p>
+
+<ul>
+<li>I log in to my unix system via SSH</li>
+<li><a href="http://tmux.sourceforge.net/">tmux</a>, my terminal multiplexer, starts up automatically</li>
+<li>I can then SSH between my environments <strong>without</strong> typing in a password every time.</li>
+</ul>
+
+<p>This is harder than you might think, as it requires several things to work together. After reading <a href="http://spin.atomicobject.com/2012/01/28/less-perplexing-terminal-multiplexing-with-tmux/">through</a> loads <a href="http://superuser.com/questions/237822/how-can-i-get-ssh-agent-working-over-ssh-and-in-tmux-on-os-x">of</a> blog <a href="http://www.opsbs.com/2011/04/terminal-multiplexing-with-ssh-agent-my-tmux-setup/">posts</a> I worked out how to do it:</p>
+
+<ul>
+<li>A password-less private key setup in your .ssh/ directory (e.g. ~/.ssh/id_dsa)</li>
+<li>The public key added to the authorised_keys for each destination box</li>
+<li>An ssh-agent environment running to automatically forward your keys for SSH connection.</li>
+<li>Make sure you don&#39;t spawn a new ssh-agent each time you log in, as you&#39;ll end up with hundreds of orphaned processes.</li>
+</ul>
+
+<p>It was the last step I was struggling with. To setup the first two steps <a href="http://www.thegeekstuff.com/2008/11/3-steps-to-perform-ssh-login-without-password-using-ssh-keygen-ssh-copy-id/">follow the guide here</a>.</p>
+
+<p>However, if you then don&#39;t do the final step, it will always ask for a passphrase for your key whenever you try to SSH:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">[rwmorris@dev:~] $ ssh qa
+Enter passphrase for key '/home/rwmorris/.ssh/id_dsa.pub':
+</code></pre></div>
+<p>For step 3 you need your tmux session to be aware of the ssh-agent environment, which isn&#39;t too hard.</p>
+
+<p>The problem in step for is that, stupidly, ssh-agent processes persist even if you log out of your terminal, and then if you spawn a new one when you log in again you end up with hundreds of orphaned processes and the sysadmins get upset.</p>
+
+<p>The solution to that is to make sure you start you ssh-agent with the &quot;-a&quot; option to specify the socket it should use, and then make sure you store the process ID (PID) somewhere. That way you can re-set the $SSH<em>AUTH</em>SOCK and $SSH<em>AGENT</em>PID environment variables to the correct values when you login again, and everything will work.</p>
+
+<p>1: Fire up the ssh-agent process before you run your tmux session, making sure you only start a new one if there isn&#39;t an existing one already.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># ~/.bashrc</span>
+
+<span class="k">if</span> <span class="o">[</span> -z <span class="s2">"</span><span class="nv">$TMUX</span><span class="s2">"</span> <span class="o">]</span>; <span class="k">then</span>
+    <span class="c"># we're not in a tmux session</span>
+
+    <span class="k">if</span> <span class="o">[</span> ! -z <span class="s2">"</span><span class="nv">$SSH_TTY</span><span class="s2">"</span> <span class="o">]</span>; <span class="k">then</span>
+        <span class="c"># We logged in via SSH</span>
+
+        <span class="c"># if ssh auth variable is missing</span>
+        <span class="k">if</span> <span class="o">[</span> -z <span class="s2">"</span><span class="nv">$SSH_AUTH_SOCK</span><span class="s2">"</span> <span class="o">]</span>; <span class="k">then
+            </span><span class="nb">export </span><span class="nv">SSH_AUTH_SOCK</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.ssh/.auth_socket"</span>
+        <span class="k">fi</span>
+
+        <span class="c"># if socket is available create the new auth session</span>
+        <span class="k">if</span> <span class="o">[</span> ! -S <span class="s2">"</span><span class="nv">$SSH_AUTH_SOCK</span><span class="s2">"</span> <span class="o">]</span>; <span class="k">then</span>
+            <span class="sb">`</span>ssh-agent -a <span class="nv">$SSH_AUTH_SOCK</span><span class="sb">`</span> &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
+            <span class="nb">echo</span> <span class="nv">$SSH_AGENT_PID</span> &amp;gt; <span class="nv">$HOME</span>/.ssh/.auth_pid
+        <span class="k">fi</span>
+
+        <span class="c"># if agent isn't defined, recreate it from pid file</span>
+        <span class="k">if</span> <span class="o">[</span> -z <span class="nv">$SSH_AGENT_PID</span> <span class="o">]</span>; <span class="k">then
+            </span><span class="nb">export </span><span class="nv">SSH_AGENT_PID</span><span class="o">=</span><span class="sb">`</span>cat <span class="nv">$HOME</span>/.ssh/.auth_pid<span class="sb">`</span>
+        <span class="k">fi</span>
+
+        <span class="c"># Add all default keys to ssh auth</span>
+        ssh-add 2&gt;/dev/null
+
+        <span class="c"># start tmux</span>
+        tmux attach
+    <span class="k">fi
+fi</span>
+</code></pre></div>
+<p>2: Make sure tmux is configured to pass through appropriate environment variables so it can find the socket for your ssh-agent session:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># ~/.tmux.conf</span>
+<span class="nb">set</span> -g update-environment -r
+</code></pre></div>
+<p>And win. Sorry it&#39;s not more simple. You&#39;d think a lot of this would be the default use-case so it would just work out of the box, but sadly that&#39;s not the way the unix world works. </p>
+
+
+<!-- Generate subnav for article -->
+<script type="text/javascript" src="/assets/subnav-020636817964deb048fb98c55583f2981ff145d2db5e13d5c3b624c4ef8613f4.js"></script>
+
+
+    <hr>
+
+    <nav class="tags-list muted">
+        <label>Tags</label>
+
+        <ul>
+
+            <li><a href="/postsbytag/#unix">unix</a></li>
+
+            <li><a href="/postsbytag/#dev">dev</a></li>
+
+            <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+        </ul>
+    </nav>
+
+
+<hr/>
+
+<div id="disqus_thread" class="comments"></div>
+
+</article>
+
+
+<nav class="related-nav article-index">
+    <h1>Similar articles</h1>
+
+    <ul>
+    
+        
+            
+        
+    
+    </ul>
+</nav>
+
+
+<script>
+    if (location.hostname=="robinwinslow.uk") {
+        var disqus_shortname = 'robin-blog'; // required: replace example with your forum shortname
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the comments (powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>)</noscript>
+
+
+        <footer class="site-footer">
+            <nav class="vcard" id="contact-information">
+                <h1>Contact information</h1>
+
+                <ul>
+                    <li><a href="mailto:robin+blog@robinwinslow.uk" class="email">robin@robinwinslow.uk</a></li>
+                    <li><a href="tel:07795070704" class="tel">07795070704</a></li>
+                    <li><a href="https://www.google.co.uk/maps?q=ng7">NG7, Nottingham, UK</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Further writing</h1>
+
+                <ul>
+                    <li><a href="http://cv.robinwinslow.uk">cv.robinwinslow.uk</a></li>
+                    <li><a href="http://design.canonical.com/author/nottrobin/">design.canonical.com</a></li>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Profiles</h1>
+
+                <ul>
+                    <li><a href="https://twitter.com/nottrobin">twitter.com (@nottrobin)</a></li>
+                    <li><a href="https://facebook.com/robinwinslowmorris">facebook.com (robinwinslowmorris)</a></li>
+                    <li><a href="https://github.com/nottrobin/">github.com (nottrobin)</a>
+                </ul>
+            </nav>
+
+            <p>
+                All articles are written by me, <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a>, unless otherwise stated. Feel free to use any of my writing, but please <a href="http://creativecommons.org/licenses/by/4.0/">give me attribution</a>.
+            </p>
+
+            <p>You're free to download this entire site <a href="https://github.com/nottrobin/robinwinslow.uk/">from github</a>, and <a href="http://creativecommons.org/publicdomain/zero/1.0/">do whatever you like</a> with the code.</p>
+
+            <p><a href="https://github.com/nottrobin/robinwinslow.uk/" class="github-fork">Fork me on github.</a></p>
+        </footer>
+		<!--[if !(lt IE 8)]><!-->
+		<script type="text/javascript">
+		  (function(){
+			var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
+			e.src = 'https://www.eff.org/ngw/widget.min.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+		  })();
+		</script>
+		<!--<![endif]-->
+    </body>
+</html>

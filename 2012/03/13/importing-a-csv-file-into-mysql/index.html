@@ -1,0 +1,264 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+     	<title>Importing a CSV file into MySQL | by Robin</title>
+
+    	<meta name="description" content="A simple PHP command-line script for importing data from a CSV file into a MySQL database.">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="canonical" href="https://robinwinslow.uk/2012/03/13/importing-a-csv-file-into-mysql/" />
+
+        <link type="text/css" rel="stylesheet" href="/assets/global-cde306f7329733dd6abd0056b28c2061da3b79079c896e4286449114bfff9d39.css">
+
+        <script>
+            if (location.hostname=="robinwinslow.uk") {
+                var _gaq=[
+                    ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
+                    ['_setAccount','UA-2993676-8'],
+                    ['_trackPageview']
+                ];
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = '//www.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
+        </script>
+
+        <link type="application/atom+xml" rel="alternative" href="/rss.xml" />
+    </head>
+
+    <body class="">
+        <!--[if lt IE 9]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header class="site-header">
+            <h1>The blog of <a href="/">Robin</a></h1>
+
+            <nav class="inline-navigation site-navigation">
+                <ul>
+                    <li class=""><a href="/dev/">Web dev</a></li>
+                    <li class=""><a href="/politics/">Politics</a></li>
+                    <li class=""><a href="/musings/">Musings</a></li>
+                    <li class=""><a href="/">All articles</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+    <header class="page-header">
+        <date>13 Mar 2012</date>
+
+        <h1>Importing a CSV file into MySQL</h1>
+    </header>
+
+    <p>I just wrote this script, and it seems pretty generic so I&#39;m going to share it with The Internet. This will import data from a <a href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> into a MySQL database table. Two rules:</p>
+
+<ol>
+<li>The first line of the CSV must contain the column names</li>
+<li>These column names must be exactly the same as the column names in the database table</li>
+</ol>
+
+<h1 id="usage">Usage</h1>
+
+<p>The basic usage is as follows:</p>
+<div class="highlight"><pre><code class="language-php" data-lang="php">php import.php -f [filename.csv] --database=[db_name] --table=[table_name]
+</code></pre></div>
+<p>You also have the following extra options:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">-q (Quiet; no output)
+-v (Verbose; print out all database insert commands)
+--host=[hostname] (The host the database is on
+- defaults to 'localhost')
+--username=[username] (The username for the database)
+--password=[password] (The password for the database)
+</code></pre></div>
+<h1 id="example">Example</h1>
+
+<p>Let&#39;s say we have a database called &quot;example<em>db&quot; containing a table &quot;example</em>table&quot;:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">mysql&gt; desc example_table;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| id    | int(11)      | YES  |     | NULL    |       |
+| value | varchar(255) | YES  |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+</code></pre></div>
+<p>Now we create a CSV of data called &quot;example_csv.csv&quot;:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">id,value 1,hello world 2,this is god
+</code></pre></div>
+<p>Now we run the import script:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ php import.php -f example_csv.csv --database=example_db --table=example_table
+</code></pre></div>
+<p>Resulting in the data being imported into the table:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">mysql&gt; select * from example_table;
++------+-------------+
+| id   | value       |
++------+-------------+
+| 1    | hello world |
+| 2    | this is god |
++------+-------------+
+2 rows in set (0.00 sec)
+</code></pre></div>
+<p>That wasn&#39;t too painful was it?</p>
+
+<h1 id="download">Download</h1>
+
+<p>Download the <a href="http://static.robinwinslow.co.uk/csvimport/import.zip">CSV import script</a> in .zip format.</p>
+
+<h1 id="to-export-from-mysql">To export from MySQL</h1>
+<div class="highlight"><pre><code class="language-" data-lang="">into outfile
+</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre><code class="language-" data-lang="">mysql -e '...' &amp;gt; filename
+</code></pre></div>
+<p>See: <a href="http://forums.mysql.com/read.php?79,150417,289518#msg-289518">this MySQL forum post</a>.</p>
+
+
+<!-- Generate subnav for article -->
+<script type="text/javascript" src="/assets/subnav-020636817964deb048fb98c55583f2981ff145d2db5e13d5c3b624c4ef8613f4.js"></script>
+
+
+    <hr>
+
+    <nav class="tags-list muted">
+        <label>Tags</label>
+
+        <ul>
+
+            <li><a href="/postsbytag/#PHP">PHP</a></li>
+
+            <li><a href="/postsbytag/#dev">dev</a></li>
+
+            <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            <li><a href="/postsbytag/#MySQL">MySQL</a></li>
+
+        </ul>
+    </nav>
+
+
+<hr/>
+
+<div id="disqus_thread" class="comments"></div>
+
+</article>
+
+
+<nav class="related-nav article-index">
+    <h1>Similar articles</h1>
+
+    <ul>
+    
+        
+            
+                <li>
+    <article>
+        <a href="/2012/04/10/sending-emails-individually-to-many-people-in-php/">
+            <date>10 Apr 2012</date>
+            <h1>Sending emails individually to many people in PHP</h1>
+            <p>Introducing an open-source mailer script written in PHP and hosted on Github.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#PHP">PHP</a></li>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+        
+    
+    </ul>
+</nav>
+
+
+<script>
+    if (location.hostname=="robinwinslow.uk") {
+        var disqus_shortname = 'robin-blog'; // required: replace example with your forum shortname
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the comments (powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>)</noscript>
+
+
+        <footer class="site-footer">
+            <nav class="vcard" id="contact-information">
+                <h1>Contact information</h1>
+
+                <ul>
+                    <li><a href="mailto:robin+blog@robinwinslow.uk" class="email">robin@robinwinslow.uk</a></li>
+                    <li><a href="tel:07795070704" class="tel">07795070704</a></li>
+                    <li><a href="https://www.google.co.uk/maps?q=ng7">NG7, Nottingham, UK</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Further writing</h1>
+
+                <ul>
+                    <li><a href="http://cv.robinwinslow.uk">cv.robinwinslow.uk</a></li>
+                    <li><a href="http://design.canonical.com/author/nottrobin/">design.canonical.com</a></li>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Profiles</h1>
+
+                <ul>
+                    <li><a href="https://twitter.com/nottrobin">twitter.com (@nottrobin)</a></li>
+                    <li><a href="https://facebook.com/robinwinslowmorris">facebook.com (robinwinslowmorris)</a></li>
+                    <li><a href="https://github.com/nottrobin/">github.com (nottrobin)</a>
+                </ul>
+            </nav>
+
+            <p>
+                All articles are written by me, <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a>, unless otherwise stated. Feel free to use any of my writing, but please <a href="http://creativecommons.org/licenses/by/4.0/">give me attribution</a>.
+            </p>
+
+            <p>You're free to download this entire site <a href="https://github.com/nottrobin/robinwinslow.uk/">from github</a>, and <a href="http://creativecommons.org/publicdomain/zero/1.0/">do whatever you like</a> with the code.</p>
+
+            <p><a href="https://github.com/nottrobin/robinwinslow.uk/" class="github-fork">Fork me on github.</a></p>
+        </footer>
+		<!--[if !(lt IE 8)]><!-->
+		<script type="text/javascript">
+		  (function(){
+			var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
+			e.src = 'https://www.eff.org/ngw/widget.min.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+		  })();
+		</script>
+		<!--<![endif]-->
+    </body>
+</html>

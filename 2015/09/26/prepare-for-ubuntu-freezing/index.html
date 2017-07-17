@@ -1,0 +1,406 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+     	<title>Prepare for when Ubuntu freezes | by Robin</title>
+
+    	<meta name="description" content="I just discovered this one neat trick to free up RAM in Ubuntu even when my mouse and keyboard stop responding.">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="canonical" href="https://robinwinslow.uk/2015/09/26/prepare-for-ubuntu-freezing/" />
+
+        <link type="text/css" rel="stylesheet" href="/assets/global-cde306f7329733dd6abd0056b28c2061da3b79079c896e4286449114bfff9d39.css">
+
+        <script>
+            if (location.hostname=="robinwinslow.uk") {
+                var _gaq=[
+                    ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
+                    ['_setAccount','UA-2993676-8'],
+                    ['_trackPageview']
+                ];
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = '//www.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
+        </script>
+
+        <link type="application/atom+xml" rel="alternative" href="/rss.xml" />
+    </head>
+
+    <body class="">
+        <!--[if lt IE 9]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header class="site-header">
+            <h1>The blog of <a href="/">Robin</a></h1>
+
+            <nav class="inline-navigation site-navigation">
+                <ul>
+                    <li class=""><a href="/dev/">Web dev</a></li>
+                    <li class=""><a href="/politics/">Politics</a></li>
+                    <li class=""><a href="/musings/">Musings</a></li>
+                    <li class=""><a href="/">All articles</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+    <header class="page-header">
+        <date>26 Sep 2015</date>
+
+        <h1>Prepare for when Ubuntu freezes</h1>
+    </header>
+
+    <p>(Also posted <a href="http://design.canonical.com/2015/09/prepare-for-when-ubuntu-freezes/" title="Ubuntu Design: Prepare for when Ubuntu freezes">on design.canonical.com</a>)</p>
+
+<p>I routinely have at least 20 tabs open in Chrome, 10 files open in
+<a href="https://atom.io/" title="Atom: A hackable text editor">Atom</a> (my editor of choice) and I&#39;m often running virtual machines
+as well. This means my poor little <a href="http://shop.lenovo.com/gb/en/laptops/thinkpad/x-series/x1-carbon/" title="Thinkpad X1 Carbon">X1 Carbon</a> often runs out of
+memory, at which point Ubuntu completely freezes up, preventing me from doing
+anything at all.</p>
+
+<p>Just a few days ago I had written a long post which I lost completely when my
+system froze, because Atom <a href="https://github.com/atom/atom/issues/4161" title="Feature Request: add crash restore">doesn&#39;t yet</a> recover documents after
+crashes.</p>
+
+<p>If this sounds at all familiar to you, <strong>I now have a solution</strong>! (Although
+it didn&#39;t save me in this case because it needs to be enabled first - see
+below.)</p>
+
+<h1 id="oom_kill">oom_kill</h1>
+
+<p>The <a href="https://en.wikipedia.org/wiki/Magic_SysRq_key" title="Wikipedia: Magic SysRq key">magic SysRq key</a> can run a bunch of kernel-level commands.
+One of these commands is called <code>oom_kill</code>. OOM stands for &quot;Out of memory&quot;,
+so <code>oom_kill</code> will kill the process taking up the most memory, to free some up.
+In most cases this should unfreeze <a href="http://www.ubuntu.com/" title="Ubuntu">Ubuntu</a>.</p>
+
+<p>You can run <code>oom_kill</code> from the keyboard with the following shortcut:</p>
+<div class="highlight"><pre><code class="language-" data-lang=""># Kill the process taking up the most memory
+alt + SysRq + f
+</code></pre></div>
+<p>Except that this is disabled by default on Ubuntu:</p>
+
+<h1 id="enabling-sysrq-functions">Enabling SysRq functions</h1>
+
+<p>For <a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/194676" title="SysRq should be limited by default like openSUSE">security reasons</a>, SysRq keyboard functions are disabled by
+default. To <a href="http://askubuntu.com/questions/11002/alt-sysrq-reisub-doesnt-reboot-my-laptop/11194#11194" title="Stack Overflow: Alt + sysrq + REISUB doesn&#39;t reboot my laptop">enable them</a>, change the value in the file
+<code>/etc/sysctl.d/10-magic-sysrq.conf</code> to <code>1</code>:</p>
+<div class="highlight"><pre><code class="language-" data-lang=""># /etc/sysctl.d/10-magic-sysrq.conf
+kernel.sysrq = 1
+</code></pre></div>
+<p>And to enable the new config run:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo sysctl --system
+</code></pre></div>
+<h1 id="sysrq-shortcut-for-the-thinkpad-x1">SysRq shortcut for the Thinkpad X1</h1>
+
+<p>Most laptops don&#39;t have a physical <code>SysRq</code> key. Instead they offer a keyboard
+combination to emulate the key. On my Thinkpad, this is <code>fn + s</code>. However, there&#39;s
+a quirk that the <code>SysRq</code> key is only &quot;pressed&quot; when you release.</p>
+
+<p>So to run <code>oom_kill</code> on a Thinkpad, after enabling it, do the following:</p>
+
+<ul>
+<li>Press and hold <code>alt</code></li>
+<li>To emulate <code>SysRq</code>, press <code>fn</code> and <code>s</code> keys together, then release them  (keep holding <code>alt</code>)</li>
+<li>Press <code>f</code></li>
+</ul>
+
+<p>This will kill the most expensive process (usually the browser tab running
+<code>inbox.google.com</code> in my case), and freeup some memory.</p>
+
+<p>Now, if your computer ever freezes up, you can just do this, and hopefully fix
+it.</p>
+
+
+<!-- Generate subnav for article -->
+<script type="text/javascript" src="/assets/subnav-020636817964deb048fb98c55583f2981ff145d2db5e13d5c3b624c4ef8613f4.js"></script>
+
+
+    <hr>
+
+    <nav class="tags-list muted">
+        <label>Tags</label>
+
+        <ul>
+
+            <li><a href="/postsbytag/#dev">dev</a></li>
+
+            <li><a href="/postsbytag/#personal">personal</a></li>
+
+            <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+        </ul>
+    </nav>
+
+
+<hr/>
+
+<div id="disqus_thread" class="comments"></div>
+
+</article>
+
+
+<nav class="related-nav article-index">
+    <h1>Similar articles</h1>
+
+    <ul>
+    
+        
+            
+                <li>
+    <article>
+        <a href="/2016/06/23/fix-docker-networking-dns/">
+            <date>23 Jun 2016</date>
+            <h1>Fix Docker's networking DNS config</h1>
+            <p>Within certain networks, docker is unable to resolve DNS correctly. When this happens, here's how to fix it.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2016/02/25/adding-cache-headers-to-django/">
+            <date>25 Feb 2016</date>
+            <h1>Django HTTP headers: Controlling caching on cn.ubuntu.com</h1>
+            <p>As optimising web performance becomes more and more important, it's becoming essential to carefully manage your caching headers. But Django doesn't make it hat easy.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2016/02/14/simplest-wsgi-application/">
+            <date>14 Feb 2016</date>
+            <h1>Creating a minimal Python application server for experimenting</h1>
+            <p>As a web developer, it can be incredibly useful to be able to spin up a quick server to inspect and manipulate raw requests. And if you're used to working in Python, this little script is just the ticket.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    </ul>
+</nav>
+
+
+<script>
+    if (location.hostname=="robinwinslow.uk") {
+        var disqus_shortname = 'robin-blog'; // required: replace example with your forum shortname
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the comments (powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>)</noscript>
+
+
+        <footer class="site-footer">
+            <nav class="vcard" id="contact-information">
+                <h1>Contact information</h1>
+
+                <ul>
+                    <li><a href="mailto:robin+blog@robinwinslow.uk" class="email">robin@robinwinslow.uk</a></li>
+                    <li><a href="tel:07795070704" class="tel">07795070704</a></li>
+                    <li><a href="https://www.google.co.uk/maps?q=ng7">NG7, Nottingham, UK</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Further writing</h1>
+
+                <ul>
+                    <li><a href="http://cv.robinwinslow.uk">cv.robinwinslow.uk</a></li>
+                    <li><a href="http://design.canonical.com/author/nottrobin/">design.canonical.com</a></li>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Profiles</h1>
+
+                <ul>
+                    <li><a href="https://twitter.com/nottrobin">twitter.com (@nottrobin)</a></li>
+                    <li><a href="https://facebook.com/robinwinslowmorris">facebook.com (robinwinslowmorris)</a></li>
+                    <li><a href="https://github.com/nottrobin/">github.com (nottrobin)</a>
+                </ul>
+            </nav>
+
+            <p>
+                All articles are written by me, <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a>, unless otherwise stated. Feel free to use any of my writing, but please <a href="http://creativecommons.org/licenses/by/4.0/">give me attribution</a>.
+            </p>
+
+            <p>You're free to download this entire site <a href="https://github.com/nottrobin/robinwinslow.uk/">from github</a>, and <a href="http://creativecommons.org/publicdomain/zero/1.0/">do whatever you like</a> with the code.</p>
+
+            <p><a href="https://github.com/nottrobin/robinwinslow.uk/" class="github-fork">Fork me on github.</a></p>
+        </footer>
+		<!--[if !(lt IE 8)]><!-->
+		<script type="text/javascript">
+		  (function(){
+			var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
+			e.src = 'https://www.eff.org/ngw/widget.min.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+		  })();
+		</script>
+		<!--<![endif]-->
+    </body>
+</html>

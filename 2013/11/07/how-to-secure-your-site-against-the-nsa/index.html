@@ -1,0 +1,397 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+     	<title>How to secure your site against the NSA and GCHQ | by Robin</title>
+
+    	<meta name="description" content="There has been some misinformation going around about the state of our cryptographic technology following certain revelations about the NSA. I'm here to clear that up.">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="canonical" href="https://robinwinslow.uk/2013/11/07/how-to-secure-your-site-against-the-nsa/" />
+
+        <link type="text/css" rel="stylesheet" href="/assets/global-cde306f7329733dd6abd0056b28c2061da3b79079c896e4286449114bfff9d39.css">
+
+        <script>
+            if (location.hostname=="robinwinslow.uk") {
+                var _gaq=[
+                    ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
+                    ['_setAccount','UA-2993676-8'],
+                    ['_trackPageview']
+                ];
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = '//www.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
+        </script>
+
+        <link type="application/atom+xml" rel="alternative" href="/rss.xml" />
+    </head>
+
+    <body class="">
+        <!--[if lt IE 9]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header class="site-header">
+            <h1>The blog of <a href="/">Robin</a></h1>
+
+            <nav class="inline-navigation site-navigation">
+                <ul>
+                    <li class=""><a href="/dev/">Web dev</a></li>
+                    <li class=""><a href="/politics/">Politics</a></li>
+                    <li class=""><a href="/musings/">Musings</a></li>
+                    <li class=""><a href="/">All articles</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+    <header class="page-header">
+        <date>07 Nov 2013</date>
+
+        <h1>How to secure your site against the NSA and GCHQ</h1>
+    </header>
+
+    <p>In the last couple of months I&#39;ve had a number of discussions with people who were under the impression that <em>encryption has been cracked</em> by the NSA.</p>
+
+<p>If you like, jump straight to <a href="#what-you-can-do">what you can do about it</a>.</p>
+
+<h1 id="the-story">The story</h1>
+
+<p>The story started in September, in the Guardian:</p>
+
+<blockquote>
+<p>NSA and GCHQ unlock encryption used to protect emails, banking and medical records</p>
+</blockquote>
+
+<p><small>(<a href="http://www.theguardian.com/world/2013/sep/05/nsa-gchq-encryption-codes-security">Guardian - Revealed: how US and UK spy agencies defeat internet privacy and security</a>, James Ball, Julian Borger and Glenn Greenwald, 5th September 2013)</small></p>
+
+<p>This came up again today, because <a href="http://en.wikipedia.org/wiki/Tim_berners_lee">Sir Tim Berners-Lee</a> made a statement:</p>
+
+<blockquote>
+<p>In an interview with the Guardian, he expressed particular outrage that GCHQ and the NSA had weakened online security by cracking much of the online encryption on which hundreds of millions of users rely to guard data privacy.</p>
+</blockquote>
+
+<p><small>(<a href="http://www.theguardian.com/world/2013/nov/06/tim-berners-lee-encryption-spy-agencies">Guardian - Tim Berners-Lee condemns spy agencies as heads face MPs</a>, Ed Pilkington, 7th November 2013)</small></p>
+
+<p>And something very similar to this was stated in the Radio 4 news program I was listening to this morning.</p>
+
+<h1 id="the-worry">The worry</h1>
+
+<p>On the face of it this sounds like the NSA&#39;s geniuses have reverse-engineered some core cryptographic principles - e.g. worked out how to quickly deduce prime factors from a public key (<a href="http://www.informit.com/articles/article.aspx?p=102212&seqNum=4">read an explanation of RSA</a>).</p>
+
+<p>This would be very serious. I was sceptical though, because I believe that if there were key vulnerabilities in public algorithms, the public would have found them long before the NSA. They don&#39;t have a monopoly on good mathematicians. This is, after all, why open-source code and public algorithms are inherently more secure.</p>
+
+<h1 id="the-truth">The truth</h1>
+
+<p>Helpfully, Massachusetts Institute of Technology published an article 4 days later clarifying what the NSA had likely achieved:</p>
+
+<blockquote>
+<p>New details of the NSA’s capabilities suggest encryption can still be trusted. But more effort is needed to fix problems with how it is used.</p>
+</blockquote>
+
+<p><small>(<a href="http://www.technologyreview.com/news/519171/nsa-leak-leaves-crypto-math-intact-but-highlights-known-workarounds/">NSA Leak Leaves Crypto-Math Intact but Highlights Known Workarounds</a>, Tom Simonite, 9th September 2013)</small></p>
+
+<p>This shows that (still as far as we know) <strong>the NSA have done nothing unprecedented</strong>. They have, however, gone to huge lengths to exploit every known vulnerability in security systems, regardless of legality. Mostly, these vulnerabilities are with the end-point systems, not the cryptography itself.</p>
+
+<h2 id="what-the-nsa-and-gchq-have-done">What the NSA and GCHQ have done</h2>
+
+<p>I&#39;ve tried to list these in order of severity:</p>
+
+<ul>
+<li>Intercepted huge amounts of encrypted and unencrypted internet traffic</li>
+<li><a href="http://www.independent.co.uk/news/world/americas/nsa-hacked-google-and-yahoos-data-centre-links-snowden-documents-say-8913998.html">Used network taps</a> to get hold of Google and Yahoo&#39;s (and probably others&#39;) unencrypted private data as it&#39;s transferred between their servers</li>
+<li>Acquired private-keys wherever they can, presumably through traditional hacking methods like brute-forcing passwords, social engineering, or inside contacts.</li>
+<li>Built back doors into certain commercial encryption software products (most notably, <a href="http://www.wired.co.uk/news/archive/2013-07/12/microsoft-nsa-collusion">Microsoft</a>)</li>
+<li>Used brute-force attacks to find weaker (1024-bit) RSA private keys</li>
+<li>Used court orders to force companies to give up personal information</li>
+</ul>
+
+<h2 id="a-word-about-rsa-brute-forcing">A word about RSA brute-forcing</h2>
+
+<p>We have <a href="http://stackoverflow.com/questions/589834/what-rsa-key-length-should-i-use-for-my-ssl-certificates">known for a while</a> that 1024-bit RSA keys could feasibly be brute-forced by anyone with enough resources - and many assumed that the U.S security agencies would almost certainly be doing it. So for the more paranoid among us, this should be no surprise.</p>
+
+<blockquote>
+<p>“RSA 1024 is entirely too weak to be used anywhere with any confidence in its security” says Tom Ritter</p>
+</blockquote>
+
+<p>However, MIT also claim that these weaker keys are:</p>
+
+<blockquote>
+<p>used by most websites that offer secure SSL connections</p>
+</blockquote>
+
+<p>This surprises me, as I know that <a href="http://uk.godaddy.com/">GoDaddy</a> at least won&#39;t sell you a certificate for a key shorter than 2048-bit - and I would assume other certificate vendors would follow suit. But maybe this is fairly recent.</p>
+
+<p>However, even if &quot;most websites&quot; use RSA-1024, it <em>doesn&#39;t mean</em> that the NSA is decrypting all of this encrypted traffic, because it still requires a huge amount of resources (and time) to do, and the sheer number of such keys being used will also be huge. This means the NSA can <em>only</em> be decrypting data from <em>specifically targeted</em> sites. They won&#39;t have decrypted all of it.</p>
+
+<p><span id="what-you-can-do"></span></p>
+
+<h1 id="what-you-can-do">What you can do</h1>
+
+<p>Now that we know this is going on, it only means that we should be more stringent about the security best-practices that already existed:</p>
+
+<ul>
+<li>Use only public, open-source, tried and tested programs and algorithms</li>
+<li>Use 2048-bit or longer RSA keys</li>
+<li><a href="http://crypto.stackexchange.com/questions/8933/how-can-i-use-ssl-tls-with-perfect-forward-secrecy">Configure secure servers to prefer &quot;perfect forward secrecy&quot; cyphers</a></li>
+<li>Avoid the mainstream service providers (Google, Yahoo, Microsoft) where you can</li>
+<li>Secure your end-points: disable your root login; use secure passwords; know who has access to your private keys</li>
+</ul>
+
+
+<!-- Generate subnav for article -->
+<script type="text/javascript" src="/assets/subnav-020636817964deb048fb98c55583f2981ff145d2db5e13d5c3b624c4ef8613f4.js"></script>
+
+
+    <hr>
+
+    <nav class="tags-list muted">
+        <label>Tags</label>
+
+        <ul>
+
+            <li><a href="/postsbytag/#politics">politics</a></li>
+
+            <li><a href="/postsbytag/#technology">technology</a></li>
+
+            <li><a href="/postsbytag/#nsa">nsa</a></li>
+
+            <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+        </ul>
+    </nav>
+
+
+<hr/>
+
+<div id="disqus_thread" class="comments"></div>
+
+</article>
+
+
+<nav class="related-nav article-index">
+    <h1>Similar articles</h1>
+
+    <ul>
+    
+        
+            
+                <li>
+    <article>
+        <a href="/2016/05/04/community-questions/">
+            <date>04 May 2016</date>
+            <h1>Can you help me? Where should my blog go from here?</h1>
+            <p>Please help me out by answering some questions about how my blog should evolve.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#politics">politics</a></li>
+
+                <li><a href="/postsbytag/#webdev">webdev</a></li>
+
+                <li><a href="/postsbytag/#personal">personal</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2016/01/08/the-moment/">
+            <date>08 Jan 2016</date>
+            <h1>The moment: An abstract thought piece</h1>
+            <p>Travelling home on the train, late at night, extremely tired and slightly drunk, I had a surreal conversation with a 13 year old kid about hacking. During the space afterwards, I wrote this.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#personal">personal</a></li>
+
+                <li><a href="/postsbytag/#politics">politics</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2015/11/14/why-migration-should-increase/">
+            <date>14 Nov 2015</date>
+            <h1>Why migration should increase</h1>
+            <p>I am a strong advocate of migration to the UK. I believe it's the only ethical and economically responsible position to hold.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#politics">politics</a></li>
+
+                <li><a href="/postsbytag/#personal">personal</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    </ul>
+</nav>
+
+
+<script>
+    if (location.hostname=="robinwinslow.uk") {
+        var disqus_shortname = 'robin-blog'; // required: replace example with your forum shortname
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the comments (powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>)</noscript>
+
+
+        <footer class="site-footer">
+            <nav class="vcard" id="contact-information">
+                <h1>Contact information</h1>
+
+                <ul>
+                    <li><a href="mailto:robin+blog@robinwinslow.uk" class="email">robin@robinwinslow.uk</a></li>
+                    <li><a href="tel:07795070704" class="tel">07795070704</a></li>
+                    <li><a href="https://www.google.co.uk/maps?q=ng7">NG7, Nottingham, UK</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Further writing</h1>
+
+                <ul>
+                    <li><a href="http://cv.robinwinslow.uk">cv.robinwinslow.uk</a></li>
+                    <li><a href="http://design.canonical.com/author/nottrobin/">design.canonical.com</a></li>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Profiles</h1>
+
+                <ul>
+                    <li><a href="https://twitter.com/nottrobin">twitter.com (@nottrobin)</a></li>
+                    <li><a href="https://facebook.com/robinwinslowmorris">facebook.com (robinwinslowmorris)</a></li>
+                    <li><a href="https://github.com/nottrobin/">github.com (nottrobin)</a>
+                </ul>
+            </nav>
+
+            <p>
+                All articles are written by me, <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a>, unless otherwise stated. Feel free to use any of my writing, but please <a href="http://creativecommons.org/licenses/by/4.0/">give me attribution</a>.
+            </p>
+
+            <p>You're free to download this entire site <a href="https://github.com/nottrobin/robinwinslow.uk/">from github</a>, and <a href="http://creativecommons.org/publicdomain/zero/1.0/">do whatever you like</a> with the code.</p>
+
+            <p><a href="https://github.com/nottrobin/robinwinslow.uk/" class="github-fork">Fork me on github.</a></p>
+        </footer>
+		<!--[if !(lt IE 8)]><!-->
+		<script type="text/javascript">
+		  (function(){
+			var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
+			e.src = 'https://www.eff.org/ngw/widget.min.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+		  })();
+		</script>
+		<!--<![endif]-->
+    </body>
+</html>

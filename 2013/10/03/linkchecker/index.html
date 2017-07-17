@@ -1,0 +1,420 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+     	<title>How to use unix linkchecker to thoroughly check any site | by Robin</title>
+
+    	<meta name="description" content="I just discovered the unix linkchecker tool. It's a very useful and thorough tool for checking websites that more people should use.">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="canonical" href="https://robinwinslow.uk/2013/10/03/linkchecker/" />
+
+        <link type="text/css" rel="stylesheet" href="/assets/global-cde306f7329733dd6abd0056b28c2061da3b79079c896e4286449114bfff9d39.css">
+
+        <script>
+            if (location.hostname=="robinwinslow.uk") {
+                var _gaq=[
+                    ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
+                    ['_setAccount','UA-2993676-8'],
+                    ['_trackPageview']
+                ];
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = '//www.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
+        </script>
+
+        <link type="application/atom+xml" rel="alternative" href="/rss.xml" />
+    </head>
+
+    <body class="">
+        <!--[if lt IE 9]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header class="site-header">
+            <h1>The blog of <a href="/">Robin</a></h1>
+
+            <nav class="inline-navigation site-navigation">
+                <ul>
+                    <li class=""><a href="/dev/">Web dev</a></li>
+                    <li class=""><a href="/politics/">Politics</a></li>
+                    <li class=""><a href="/musings/">Musings</a></li>
+                    <li class=""><a href="/">All articles</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+    <header class="page-header">
+        <date>03 Oct 2013</date>
+
+        <h1>How to use unix linkchecker to thoroughly check any site</h1>
+    </header>
+
+    <p>If you want to a tool to crawl through your site looking for 404 or 500 errors, there are online tools (e.g. The W3C&#39;s <a href="http://validator.w3.org/checklink">online link checker</a>), browser plugins for <a href="https://chrome.google.com/webstore/detail/check-my-links/ojkcdipcgfaekbeaelaapakgnjflfglf?hl=en-GB">Firefox</a> and <a href="https://chrome.google.com/webstore/detail/check-my-links/ojkcdipcgfaekbeaelaapakgnjflfglf?hl=en-GB">Chrome</a>, or windows programs like <a href="http://home.snafu.de/tilman/xenulink.html">Xenu&#39;s Link Sleuth</a>.</p>
+
+<h1 id="a-unix-link-checker">A unix link checker</h1>
+
+<p>Today I found <a href="http://wummel.github.io/linkchecker/">linkchecker</a> - available as a unix command-line program (although it also has a GUI or a web interface).</p>
+
+<h1 id="install-the-command-line-tool">Install the command-line tool</h1>
+
+<p>You can install the command-line tool simply on Ubuntu:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install linkchecker
+</code></pre></div>
+<h1 id="using-linkchecker">Using linkchecker</h1>
+
+<p>Like any good command-line program, it has a <a href="http://linkchecker.sourceforge.net/man1/linkchecker.1.html">manual page</a>, but it can be a bit daunting to read, so I give some shortcuts below.</p>
+
+<p>By default, <code>linkchecker</code> will give you a lot of warnings. It&#39;ll warn you for any links that result in 301s, as well as all 404s, timeouts, etc., as well as giving you status updates every second or so.</p>
+
+<h2 id="robots-txt">Robots.txt</h2>
+
+<p>linkchecker will not crawl a website that is disallowed by a robots.txt file, and there&#39;s no way to override that. <a href="http://wummel.github.io/linkchecker/faq.html">The solution</a> is to change the <code>robots.txt</code> file to allow linkchecker through:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">User-Agent: *
+Disallow: /
+User-Agent: LinkChecker
+Allow: /
+</code></pre></div>
+<h2 id="redirecting-output">Redirecting output</h2>
+
+<p><code>linkchecker</code> seems to be expecting you to redirect its output to a file. If you do so, it will only put the actual warnings and errors in the file, and report status to the command-line:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>linkchecker http://example.com &gt; siteerrors.log
+35 URLs active,     0 URLs queued, 13873 URLs checked, runtime 1 hour, 51 minutes
+</code></pre></div>
+<h2 id="timeout">Timeout</h2>
+
+<p>If you&#39;re testing a development site, it&#39;s quite likely it will be fairly slow to respond and <code>linkchecker</code> may experience many timeouts, so you probably want to up that timeout time:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>linkchecker --timeout<span class="o">=</span>300 http://example.com &gt; siteerrors.log
+</code></pre></div>
+<h2 id="ignore-warnings">Ignore warnings</h2>
+
+<p>I don&#39;t know about you, but the sites I work on have loads of errors. I want to find 404s and 50*s before I worry about redirect warnings.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>linkchecker --timeout<span class="o">=</span>300 --no-warnings http://example.com &gt; siteerrors.log
+</code></pre></div>
+<h2 id="output-type">Output type</h2>
+
+<p>The default <code>text</code> output is fairly verbose. For easy readability, you probably want the logging to be in CSV format:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>linkchecker --timeout<span class="o">=</span>300 --no-warnings -ocsv http://example.com &gt; siteerrors.csv
+</code></pre></div>
+<h2 id="other-options">Other options</h2>
+
+<p>If you find and fix all your basic 404 and 50* errors, you might then want to turn warnings back on (remove <code>--no-warnings</code>) and start using <code>--check-html</code> and <code>--check-css</code>.</p>
+
+<h2 id="checking-websites-with-openid-2014-04-17-update">Checking websites with OpenID (2014-04-17 update)</h2>
+
+<p>Today I had to use <code>linkchecker</code> to check a site which required authentication with <a href="https://login.ubuntu.com/">Canonical&#39;s OpenID system</a>. To do this, <a href="http://stackoverflow.com/questions/9119998/using-wget-in-conjunction-with-an-openid-login">a StackOverflow answer</a> helped me immensely.</p>
+
+<p>I first accessed the site as normal with <a href="http://www.chromium.org/Home">Chromium</a>, opened <a href="https://developers.google.com/chrome-developer-tools/docs/console">the console window</a> and dumped all the cookies that were set in that site:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&gt;</span> <span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span>
+<span class="s2">"__utmc="</span><span class="mi">111111111</span><span class="s2">"; pysid=1e53e0a04bf8e953c9156ea841e41157;"</span>
+</code></pre></div>
+<p>I then saved these cookies in <code>cookies.txt</code> in a format that linkchecker will understand:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">Host:example.com
+Set-cookie: __utmc="111111111"
+Set-cookie: pysid="1e53e0a04bf8e953c9156ea841e41157"
+</code></pre></div>
+<p>And included it in my <code>linkchecker</code> command with <code>--cookiefile</code>:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">linkchecker --cookiefile<span class="o">=</span>cookies.txt --timeout<span class="o">=</span>300 --no-warnings -ocsv http://example.com &gt; siteerrors.csv
+</code></pre></div>
+<h1 id="use-it">Use it!</h1>
+
+<p>If you work on a website of any significant size, there are almost certainly dozens of broken links and other errors. Link checkers will crawl through the website checking each link for errors.</p>
+
+<p>Link checking your website may seem obvious, but in my experience hardly any dev teams do it regularly.</p>
+
+<p>You might well want to use <code>linkchecker</code> to do automated link checking! I haven&#39;t implemented this yet, but I&#39;ll try to let you know when I do.</p>
+
+
+<!-- Generate subnav for article -->
+<script type="text/javascript" src="/assets/subnav-020636817964deb048fb98c55583f2981ff145d2db5e13d5c3b624c4ef8613f4.js"></script>
+
+
+    <hr>
+
+    <nav class="tags-list muted">
+        <label>Tags</label>
+
+        <ul>
+
+            <li><a href="/postsbytag/#dev">dev</a></li>
+
+            <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+        </ul>
+    </nav>
+
+
+<hr/>
+
+<div id="disqus_thread" class="comments"></div>
+
+</article>
+
+
+<nav class="related-nav article-index">
+    <h1>Similar articles</h1>
+
+    <ul>
+    
+        
+            
+                <li>
+    <article>
+        <a href="/2016/06/23/fix-docker-networking-dns/">
+            <date>23 Jun 2016</date>
+            <h1>Fix Docker's networking DNS config</h1>
+            <p>Within certain networks, docker is unable to resolve DNS correctly. When this happens, here's how to fix it.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2016/02/25/adding-cache-headers-to-django/">
+            <date>25 Feb 2016</date>
+            <h1>Django HTTP headers: Controlling caching on cn.ubuntu.com</h1>
+            <p>As optimising web performance becomes more and more important, it's becoming essential to carefully manage your caching headers. But Django doesn't make it hat easy.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2016/02/14/simplest-wsgi-application/">
+            <date>14 Feb 2016</date>
+            <h1>Creating a minimal Python application server for experimenting</h1>
+            <p>As a web developer, it can be incredibly useful to be able to spin up a quick server to inspect and manipulate raw requests. And if you're used to working in Python, this little script is just the ticket.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    </ul>
+</nav>
+
+
+<script>
+    if (location.hostname=="robinwinslow.uk") {
+        var disqus_shortname = 'robin-blog'; // required: replace example with your forum shortname
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the comments (powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>)</noscript>
+
+
+        <footer class="site-footer">
+            <nav class="vcard" id="contact-information">
+                <h1>Contact information</h1>
+
+                <ul>
+                    <li><a href="mailto:robin+blog@robinwinslow.uk" class="email">robin@robinwinslow.uk</a></li>
+                    <li><a href="tel:07795070704" class="tel">07795070704</a></li>
+                    <li><a href="https://www.google.co.uk/maps?q=ng7">NG7, Nottingham, UK</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Further writing</h1>
+
+                <ul>
+                    <li><a href="http://cv.robinwinslow.uk">cv.robinwinslow.uk</a></li>
+                    <li><a href="http://design.canonical.com/author/nottrobin/">design.canonical.com</a></li>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Profiles</h1>
+
+                <ul>
+                    <li><a href="https://twitter.com/nottrobin">twitter.com (@nottrobin)</a></li>
+                    <li><a href="https://facebook.com/robinwinslowmorris">facebook.com (robinwinslowmorris)</a></li>
+                    <li><a href="https://github.com/nottrobin/">github.com (nottrobin)</a>
+                </ul>
+            </nav>
+
+            <p>
+                All articles are written by me, <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a>, unless otherwise stated. Feel free to use any of my writing, but please <a href="http://creativecommons.org/licenses/by/4.0/">give me attribution</a>.
+            </p>
+
+            <p>You're free to download this entire site <a href="https://github.com/nottrobin/robinwinslow.uk/">from github</a>, and <a href="http://creativecommons.org/publicdomain/zero/1.0/">do whatever you like</a> with the code.</p>
+
+            <p><a href="https://github.com/nottrobin/robinwinslow.uk/" class="github-fork">Fork me on github.</a></p>
+        </footer>
+		<!--[if !(lt IE 8)]><!-->
+		<script type="text/javascript">
+		  (function(){
+			var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
+			e.src = 'https://www.eff.org/ngw/widget.min.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+		  })();
+		</script>
+		<!--<![endif]-->
+    </body>
+</html>

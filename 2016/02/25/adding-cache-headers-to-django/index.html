@@ -1,0 +1,433 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+     	<title>Django HTTP headers: Controlling caching on cn.ubuntu.com | by Robin</title>
+
+    	<meta name="description" content="As optimising web performance becomes more and more important, it's becoming essential to carefully manage your caching headers. But Django doesn't make it hat easy.">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="canonical" href="https://robinwinslow.uk/2016/02/25/adding-cache-headers-to-django/" />
+
+        <link type="text/css" rel="stylesheet" href="/assets/global-cde306f7329733dd6abd0056b28c2061da3b79079c896e4286449114bfff9d39.css">
+
+        <script>
+            if (location.hostname=="robinwinslow.uk") {
+                var _gaq=[
+                    ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
+                    ['_setAccount','UA-2993676-8'],
+                    ['_trackPageview']
+                ];
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = '//www.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
+        </script>
+
+        <link type="application/atom+xml" rel="alternative" href="/rss.xml" />
+    </head>
+
+    <body class="">
+        <!--[if lt IE 9]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header class="site-header">
+            <h1>The blog of <a href="/">Robin</a></h1>
+
+            <nav class="inline-navigation site-navigation">
+                <ul>
+                    <li class=""><a href="/dev/">Web dev</a></li>
+                    <li class=""><a href="/politics/">Politics</a></li>
+                    <li class=""><a href="/musings/">Musings</a></li>
+                    <li class=""><a href="/">All articles</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+    <header class="page-header">
+        <date>25 Feb 2016</date>
+
+        <h1>Django HTTP headers: Controlling caching on cn.ubuntu.com</h1>
+    </header>
+
+    <p><small>Also published <a href="http://design.canonical.com/">on design.canonical.com</a>.</small></p>
+
+<p>It&#39;s becoming <a href="https://developers.google.com/speed/docs/insights/LeverageBrowserCaching" title="PageSpeed Insights: Leverage Browser Caching">more and more important</a> for websites to carefully consider
+how their <a href="https://devcenter.heroku.com/articles/increasing-application-performance-with-http-cache-headers" title="Heroku: Increasing Application Performance with HTTP Cache Headers">resources are cached</a> in users&#39; browsers. Get the caching wrong,
+and you either end up with a woefully slow experience for the user, or a very
+strange looking website as users are left with stale CSS files and images.</p>
+
+<p>Or often both.</p>
+
+<p>For our <a href="http://cn.ubuntu.com">China site</a>, we&#39;ve decided that the HTML pages
+should be cached for 5 minutes, and the CSS and JavaScript can be cached for a
+year - as every time we update them we <a href="https://github.com/ubuntudesign/django-versioned-static-url" title="UbuntuDesign on GitHub: Django versioned static">change the URL</a>.</p>
+
+<h1 id="caching-headers-in-django">Caching headers in Django</h1>
+
+<p>Telling the browser how long to cache a resource is done with one of two headers:</p>
+
+<ul>
+<li><code>Cache-Control</code>: In HTTP/1.1, this can set the maximum age before a resource should be re-downloaded.</li>
+<li><code>Expires</code>: In the older HTTP/1.0 standard, this sets the date and time that a resource becomes outdated and should be refreshed.</li>
+</ul>
+
+<p>To control these headers in Django is less simple than you might think. If you&#39;re
+happy to use the <a href="https://docs.djangoproject.com/en/1.9/topics/cache/" title="Django’s cache framework">cache framework</a> then it will take care of these headers
+for you, but as we have a separate <a href="http://www.squid-cache.org/" title="Squid: Optimising Web Delivery">Squid cache</a> in front of our application,
+this was a more heavyweight solution than we needed.</p>
+
+<h2 id="modifying-html-responses-using-view-classes">Modifying HTML responses using View classes</h2>
+
+<p>In our case, all of our HTML pages are served with an extended version of
+the <a href="https://docs.djangoproject.com/es/1.9/ref/class-based-views/base/#templateview" title="Django base views: TemplateView">TemplateView class</a>:</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.views.generic.base</span> <span class="kn">import</span> <span class="n">TemplateView</span>
+
+<span class="k">class</span> <span class="nc">OurTemplateView</span><span class="p">(</span><span class="n">TemplateView</span><span class="p">):</span>
+    <span class="c"># Setup our custom template data</span>
+</code></pre></div>
+<p>To add headers, we need to modify the <a href="https://docs.djangoproject.com/en/1.9/ref/request-response/#httpresponse-objects" title="Django request and response objects: HttpResponse objects"><code>HTTPResponse</code></a>, which we can intercept
+by extending the <code>render_to_response</code> method.</p>
+
+<p>Django also provides <a href="https://docs.djangoproject.com/en/1.9/ref/utils/#django.utils.cache.patch_response_headers" title="Django Utils: django.utils.cache.patch_response_headers"><code>patch_response_headers</code></a> a handy helper function to generate our caching headers for us
+and attach them to the response:</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">OurTemplateView</span><span class="p">(</span><span class="n">TemplateView</span><span class="p">):</span>
+  <span class="k">def</span> <span class="nf">render_to_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="o">**</span><span class="n">response_kwargs</span><span class="p">):</span>
+      <span class="c"># Get response from parent TemplateView class</span>
+      <span class="n">response</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">CmsTemplateFinder</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">render_to_response</span><span class="p">(</span>
+          <span class="n">context</span><span class="p">,</span> <span class="o">**</span><span class="n">response_kwargs</span>
+      <span class="p">)</span>
+
+      <span class="c"># Add Cache-Control and Expires headers</span>
+      <span class="n">patch_response_headers</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">cache_timeout</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+
+      <span class="c"># Return response</span>
+      <span class="k">return</span> <span class="n">response</span>
+</code></pre></div>
+<p>And now we can see our extra caching headers in the HTTP response:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>curl -I cn.ubuntu.com
+...
+Date: Fri, 12 Feb 2016 22:48:38 GMT
+Expires: Fri, 12 Feb 2016 22:53:35 GMT
+Last-Modified: Fri, 12 Feb 2016 22:48:35 GMT
+Cache-Control: max-age<span class="o">=</span>300
+</code></pre></div>
+<p>Browsers and proxies will now cache the HTML pages for 5 minutes.</p>
+
+<h2 id="controlling-caching-for-static-files">Controlling caching for static files</h2>
+
+<p>Django <a href="https://docs.djangoproject.com/en/1.9/howto/static-files/deployment/" title="Django: Deploying static files">recommends</a> serving static files separately from the rest of your
+application.</p>
+
+<p>However, for simplicity and dev-prod parity we&#39;ve been using <a href="https://github.com/kennethreitz/dj-static" title="Github: DJ-Static">DJ-Static</a> to
+serve static files with the Django WSGI app, as <a href="http://www.kennethreitz.org/essays/introducing-dj-static" title="Introducing DJ-Static">introduced by Kenneth Reitz</a>.
+This was also, at the time we implemented it, the method recommended by Heroku
+for managing static files in Django.</p>
+
+<p>However, as it turns out DJ-Static doesn&#39;t offer any control over caching
+headers. And Heroku <a href="https://devcenter.heroku.com/articles/django-assets" title="Heroku: Django and Static Assets">now recommend</a> using <a href="http://whitenoise.evans.io/en/stable/" title="WhiteNoise: Radically simplified static file serving for Python web apps">WhiteNoise</a> instead.</p>
+
+<p>Serving static files with WhiteNoise is pretty simple (as it was with DJ-Static):</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># myapp/settings.py</span>
+<span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="s">'static'</span>
+<span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s">'/static/'</span>
+
+<span class="c"># myapp/wsgi.py</span>
+<span class="kn">from</span> <span class="nn">django.core.wsgi</span> <span class="kn">import</span> <span class="n">get_wsgi_application</span>
+<span class="kn">from</span> <span class="nn">whitenoise.django</span> <span class="kn">import</span> <span class="n">DjangoWhiteNoise</span>
+
+<span class="n">application</span> <span class="o">=</span> <span class="n">DjangoWhiteNoise</span><span class="p">(</span><span class="n">get_wsgi_application</span><span class="p">())</span>
+</code></pre></div>
+<p>WhiteNoise will add a <code>Cache-Control</code> header, although it doesn&#39;t
+support set the older <code>Expires</code> header. By default, the <code>Cache-Control</code> header
+is initially set to no caching:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>curl -I localhost:8000/static/css/styles.css?v<span class="o">=</span>d5d2934
+...
+Cache-Control: public, max-age<span class="o">=</span>0
+</code></pre></div>
+<p>We wanted our static files to be cached for a year, so we set the
+<code>WHITENOISE_MAX_AGE</code> setting in <code>settings.py</code>:</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># myapp/settings.py</span>
+<span class="n">WHITENOISE_MAX_AGE</span> <span class="o">=</span> <span class="mi">31557600</span>
+</code></pre></div>
+<p>This will set the <code>max-age</code> in the <code>Cache-Control</code> header to achieve the
+browser caching we&#39;re looking for:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>curl -I http://cn.ubuntu.com/static/css/styles.css?v<span class="o">=</span>d5d2934
+...
+Cache-Control: public, max-age<span class="o">=</span>31557600
+</code></pre></div>
+<h2 id="now-we-have-control">Now we have control</h2>
+
+<p><a href="https://developers.google.com/speed/docs/insights/LeverageBrowserCaching" title="PageSpeed Insights: Leverage Browser Caching">Leveraging browser caching</a> is an invaluable tool in performance, and so
+understanding how we can control the user&#39;s cache with Django is very helpful.</p>
+
+<p>Hopefully I&#39;ve demonstrated some ways that this can be achieved, which we&#39;ve
+just implemented on <a href="http://cn.ubuntu.com">cn.ubuntu.com</a>.</p>
+
+
+<!-- Generate subnav for article -->
+<script type="text/javascript" src="/assets/subnav-020636817964deb048fb98c55583f2981ff145d2db5e13d5c3b624c4ef8613f4.js"></script>
+
+
+    <hr>
+
+    <nav class="tags-list muted">
+        <label>Tags</label>
+
+        <ul>
+
+            <li><a href="/postsbytag/#dev">dev</a></li>
+
+        </ul>
+    </nav>
+
+
+<hr/>
+
+<div id="disqus_thread" class="comments"></div>
+
+</article>
+
+
+<nav class="related-nav article-index">
+    <h1>Similar articles</h1>
+
+    <ul>
+    
+        
+            
+                <li>
+    <article>
+        <a href="/2016/06/23/fix-docker-networking-dns/">
+            <date>23 Jun 2016</date>
+            <h1>Fix Docker's networking DNS config</h1>
+            <p>Within certain networks, docker is unable to resolve DNS correctly. When this happens, here's how to fix it.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2016/02/14/simplest-wsgi-application/">
+            <date>14 Feb 2016</date>
+            <h1>Creating a minimal Python application server for experimenting</h1>
+            <p>As a web developer, it can be incredibly useful to be able to spin up a quick server to inspect and manipulate raw requests. And if you're used to working in Python, this little script is just the ticket.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    </ul>
+</nav>
+
+
+<script>
+    if (location.hostname=="robinwinslow.uk") {
+        var disqus_shortname = 'robin-blog'; // required: replace example with your forum shortname
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the comments (powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>)</noscript>
+
+
+        <footer class="site-footer">
+            <nav class="vcard" id="contact-information">
+                <h1>Contact information</h1>
+
+                <ul>
+                    <li><a href="mailto:robin+blog@robinwinslow.uk" class="email">robin@robinwinslow.uk</a></li>
+                    <li><a href="tel:07795070704" class="tel">07795070704</a></li>
+                    <li><a href="https://www.google.co.uk/maps?q=ng7">NG7, Nottingham, UK</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Further writing</h1>
+
+                <ul>
+                    <li><a href="http://cv.robinwinslow.uk">cv.robinwinslow.uk</a></li>
+                    <li><a href="http://design.canonical.com/author/nottrobin/">design.canonical.com</a></li>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Profiles</h1>
+
+                <ul>
+                    <li><a href="https://twitter.com/nottrobin">twitter.com (@nottrobin)</a></li>
+                    <li><a href="https://facebook.com/robinwinslowmorris">facebook.com (robinwinslowmorris)</a></li>
+                    <li><a href="https://github.com/nottrobin/">github.com (nottrobin)</a>
+                </ul>
+            </nav>
+
+            <p>
+                All articles are written by me, <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a>, unless otherwise stated. Feel free to use any of my writing, but please <a href="http://creativecommons.org/licenses/by/4.0/">give me attribution</a>.
+            </p>
+
+            <p>You're free to download this entire site <a href="https://github.com/nottrobin/robinwinslow.uk/">from github</a>, and <a href="http://creativecommons.org/publicdomain/zero/1.0/">do whatever you like</a> with the code.</p>
+
+            <p><a href="https://github.com/nottrobin/robinwinslow.uk/" class="github-fork">Fork me on github.</a></p>
+        </footer>
+		<!--[if !(lt IE 8)]><!-->
+		<script type="text/javascript">
+		  (function(){
+			var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
+			e.src = 'https://www.eff.org/ngw/widget.min.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+		  })();
+		</script>
+		<!--<![endif]-->
+    </body>
+</html>

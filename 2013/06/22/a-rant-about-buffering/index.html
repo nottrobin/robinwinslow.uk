@@ -1,0 +1,231 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+     	<title>Youtube annoyances - a rant about buffering | by Robin</title>
+
+    	<meta name="description" content="A rant about how the most popular online video services get buffering so very wrong by not allowing the user to control it.">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="canonical" href="https://robinwinslow.uk/2013/06/22/a-rant-about-buffering/" />
+
+        <link type="text/css" rel="stylesheet" href="/assets/global-cde306f7329733dd6abd0056b28c2061da3b79079c896e4286449114bfff9d39.css">
+
+        <script>
+            if (location.hostname=="robinwinslow.uk") {
+                var _gaq=[
+                    ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
+                    ['_setAccount','UA-2993676-8'],
+                    ['_trackPageview']
+                ];
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = '//www.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
+        </script>
+
+        <link type="application/atom+xml" rel="alternative" href="/rss.xml" />
+    </head>
+
+    <body class="">
+        <!--[if lt IE 9]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header class="site-header">
+            <h1>The blog of <a href="/">Robin</a></h1>
+
+            <nav class="inline-navigation site-navigation">
+                <ul>
+                    <li class=""><a href="/dev/">Web dev</a></li>
+                    <li class=""><a href="/politics/">Politics</a></li>
+                    <li class=""><a href="/musings/">Musings</a></li>
+                    <li class=""><a href="/">All articles</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+    <header class="page-header">
+        <date>22 Jun 2013</date>
+
+        <h1>Youtube annoyances - a rant about buffering</h1>
+    </header>
+
+    <p>I&#39;m currently trying to watch <a href="https://www.youtube.com/watch?v=CHQJko7xc4c">Murray vs. Djokovic [US Open Final 2012] on Youtube</a>, but I&#39;m struggling because of two limitations:</p>
+
+<ul>
+<li>My internet connection sucks (probably 3mbps or lower?)</li>
+<li>I need to watch it in 720p HD because otherwise I can&#39;t see the ball properly</li>
+</ul>
+
+<p>This it causing me a lot of frustration. Because of the way Youtube handles video buffering, I&#39;m having to watch it in 1.5 minute bursts.</p>
+
+<p>I don&#39;t think Youtube are the only culprit here - other players, like <a href="http://www.bbc.co.uk/iplayer/">BBC iPlayer</a>, also cause similar issues by not giving the user any control over buffering. </p>
+
+<h1 id="youtubes-strategy">Youtube&#39;s strategy</h1>
+
+<p>Youtube&#39;s strategy is built up to discourage waiting for your video to buffer. Here&#39;s what I&#39;ve observed about how Youtube&#39;s video player works:</p>
+
+<ul>
+<li>Most youtube videos can stream in multiple different qualities - from 144p to 720p</li>
+<li>Whenever you switch quality, it means you will lose any video buffer you previously had, as the player starts buffering in the new quality</li>
+<li>By default, the player automatically switches format for you (discarding the buffer) based on variances in your connection speed</li>
+<li>By default, the player automatically switches format for you (discarding the buffer) when you switch to full-screen mode</li>
+<li>The player will only buffer a limited amount of video while it is paused</li>
+<li>Any buffered video history seems to be discarded - if you want to jump back to a previous time in the video it starts buffering from that point all over again</li>
+</ul>
+
+<p>The goal here is clear - they want you to be able to watch video as soon as you start playing it with no waiting with the least amount of hassle. If you&#39;re on a better connection you&#39;ll see better quality video, but most of the time quality isn&#39;t that important.</p>
+
+<p>Also I imagine they deliberately limit buffering on paused videos because it significantly reduces the load on their servers, which is understandable, Youtube is as popular as it is.</p>
+
+<h1 id="the-problem">The problem</h1>
+
+<p>Elements of this strategy are great. That they support multiple qualities is great, and that they can pick your quality automatically based on your connection speed. Most of the time quality is not important, what you really want is for your viewing not to be interrupted.</p>
+
+<p>However, they completely fail in their goal to make video playback smooth and flawless. Everyone I know of has had to pause Youtube video to try to build up a buffer. Youtube clearly think everyone is on a decent broadband internet connection (like <a href="https://fiber.google.com/">Google Fibre</a>) - which is a bit silly given that even in America the average quality of broadband internet is not that high.</p>
+
+<p>Also, the Youtube player tries to make too many of these decisions for the user. Anyone who watches a lot of online video knows what a buffer is and would be able to control it well if they were given the chance.</p>
+
+<h1 id="the-solution">The solution</h1>
+
+<p>I think Youtube need to:</p>
+
+<ul>
+<li>Give more control to the user</li>
+<li>Treat the buffer as sacred</li>
+</ul>
+
+<p>And they can do that as follows:</p>
+
+<ul>
+<li>Allow the user to explicitly tell a video to &quot;buffer&quot; - this would be distinct from pausing: You can &quot;pause&quot; the video when you aren&#39;t having buffering problems but you just don&#39;t want to watch it right now. But you can &quot;buffer&quot; when you explicitly need to build up a buffer - and for this option there would be no limit on how much you can buffer.</li>
+<li>By default <em>never</em> change the video quality while there is any sort of buffer built up. By all means, choose an initial quality based on what you know about the connection speed - but once the video has started playing and has buffered some, don&#39;t change the quality and discard the buffer automatically - e.g. if the user goes full-screen.</li>
+</ul>
+
+<h1 id="telling-youtube">Telling youtube</h1>
+
+<p>Of course, if I&#39;m going to complain about this, I should probably let Youtube know.</p>
+
+<p><a href="http://answers.yahoo.com/question/index?qid=20090716122339AAO5rDB">Yahoo Answers told me</a> to post it on <a href="https://www.facebook.com/youtube">their Facebook page</a> so that&#39;s <a href="https://www.facebook.com/youtube/posts/10151771568201754">what I did</a>.</p>
+
+
+<!-- Generate subnav for article -->
+<script type="text/javascript" src="/assets/subnav-020636817964deb048fb98c55583f2981ff145d2db5e13d5c3b624c4ef8613f4.js"></script>
+
+
+    <hr>
+
+    <nav class="tags-list muted">
+        <label>Tags</label>
+
+        <ul>
+
+            <li><a href="/postsbytag/#internet">internet</a></li>
+
+            <li><a href="/postsbytag/#video">video</a></li>
+
+            <li><a href="/postsbytag/#youtube">youtube</a></li>
+
+            <li><a href="/postsbytag/#personal">personal</a></li>
+
+        </ul>
+    </nav>
+
+
+<hr/>
+
+<div id="disqus_thread" class="comments"></div>
+
+</article>
+
+
+<nav class="related-nav article-index">
+    <h1>Similar articles</h1>
+
+    <ul>
+    
+        
+            
+        
+    
+    </ul>
+</nav>
+
+
+<script>
+    if (location.hostname=="robinwinslow.uk") {
+        var disqus_shortname = 'robin-blog'; // required: replace example with your forum shortname
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the comments (powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>)</noscript>
+
+
+        <footer class="site-footer">
+            <nav class="vcard" id="contact-information">
+                <h1>Contact information</h1>
+
+                <ul>
+                    <li><a href="mailto:robin+blog@robinwinslow.uk" class="email">robin@robinwinslow.uk</a></li>
+                    <li><a href="tel:07795070704" class="tel">07795070704</a></li>
+                    <li><a href="https://www.google.co.uk/maps?q=ng7">NG7, Nottingham, UK</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Further writing</h1>
+
+                <ul>
+                    <li><a href="http://cv.robinwinslow.uk">cv.robinwinslow.uk</a></li>
+                    <li><a href="http://design.canonical.com/author/nottrobin/">design.canonical.com</a></li>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Profiles</h1>
+
+                <ul>
+                    <li><a href="https://twitter.com/nottrobin">twitter.com (@nottrobin)</a></li>
+                    <li><a href="https://facebook.com/robinwinslowmorris">facebook.com (robinwinslowmorris)</a></li>
+                    <li><a href="https://github.com/nottrobin/">github.com (nottrobin)</a>
+                </ul>
+            </nav>
+
+            <p>
+                All articles are written by me, <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a>, unless otherwise stated. Feel free to use any of my writing, but please <a href="http://creativecommons.org/licenses/by/4.0/">give me attribution</a>.
+            </p>
+
+            <p>You're free to download this entire site <a href="https://github.com/nottrobin/robinwinslow.uk/">from github</a>, and <a href="http://creativecommons.org/publicdomain/zero/1.0/">do whatever you like</a> with the code.</p>
+
+            <p><a href="https://github.com/nottrobin/robinwinslow.uk/" class="github-fork">Fork me on github.</a></p>
+        </footer>
+		<!--[if !(lt IE 8)]><!-->
+		<script type="text/javascript">
+		  (function(){
+			var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
+			e.src = 'https://www.eff.org/ngw/widget.min.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+		  })();
+		</script>
+		<!--<![endif]-->
+    </body>
+</html>

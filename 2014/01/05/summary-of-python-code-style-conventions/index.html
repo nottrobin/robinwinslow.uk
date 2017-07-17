@@ -1,0 +1,429 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+     	<title>A summary of python code style conventions | by Robin</title>
+
+    	<meta name="description" content="Recently I've been learning Python. I just found out about PEP 8 and PEP 257, which are guidelines for how to write python code. To solidify them in my mind, I'm going to summarise them here.">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="canonical" href="https://robinwinslow.uk/2014/01/05/summary-of-python-code-style-conventions/" />
+
+        <link type="text/css" rel="stylesheet" href="/assets/global-cde306f7329733dd6abd0056b28c2061da3b79079c896e4286449114bfff9d39.css">
+
+        <script>
+            if (location.hostname=="robinwinslow.uk") {
+                var _gaq=[
+                    ['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js'],
+                    ['_setAccount','UA-2993676-8'],
+                    ['_trackPageview']
+                ];
+                (function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = '//www.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            }
+        </script>
+
+        <link type="application/atom+xml" rel="alternative" href="/rss.xml" />
+    </head>
+
+    <body class="">
+        <!--[if lt IE 9]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header class="site-header">
+            <h1>The blog of <a href="/">Robin</a></h1>
+
+            <nav class="inline-navigation site-navigation">
+                <ul>
+                    <li class=""><a href="/dev/">Web dev</a></li>
+                    <li class=""><a href="/politics/">Politics</a></li>
+                    <li class=""><a href="/musings/">Musings</a></li>
+                    <li class=""><a href="/">All articles</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+    <header class="page-header">
+        <date>05 Jan 2014</date>
+
+        <h1>A summary of python code style conventions</h1>
+    </header>
+
+    <p><a href="http://www.python.org/dev/peps/pep-0008/">&quot;PEP 8: Style Guide for Python Code&quot;</a> and <a href="http://www.python.org/dev/peps/pep-0257/">&quot;PEP 257: Docstring Conventions&quot;</a> aren&#39;t exactly long, but they&#39;re also not easily skimmable.</p>
+
+<p>As I&#39;ve just started to learn python, I should make an effort to internalise these best-practice conventions. To help me do that, I&#39;m going to summarise PEP 8 and 257 here, as a quick reference for myself and anyone else who might find it useful.</p>
+
+<p>This is not quite an exhaustive summary: I have omitted the really obvious stuff, and in some cases I&#39;ve picked one approach where PEP8 allows a few.</p>
+
+<p>These standards can hopefully help in every coders&#39; ongoing mission to write <a href="/2013/11/22/expressive-coding/">readable and expressive code</a>.</p>
+
+<h1 id="indentation-line-length-code-wrapping">Indentation, line-length &amp; code wrapping</h1>
+
+<ul>
+<li>Always use <em>4 spaces</em> for indentation (don&#39;t use tabs)</li>
+<li>Write in ASCII in Python 2 and UTF-8 in Python 3</li>
+<li>Max line-length: 72 characters (especially in comments)</li>
+<li>Always indent wrapped code for readablility</li>
+</ul>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Good:</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">some_function_that_takes_arguments</span><span class="p">(</span>
+    <span class="s">'argument one,</span><span class="err">
+</span><span class="s">    '</span><span class="n">argument</span> <span class="n">two</span><span class="s">',</span><span class="err">
+</span><span class="s">    '</span><span class="n">argument</span> <span class="n">three</span><span class="s">'</span><span class="err">
+</span><span class="s">)</span><span class="err">
+
+</span><span class="s"># Bad:</span><span class="err">
+</span><span class="s">result = some_function_that_takes_arguments(</span><span class="err">
+</span><span class="s">'</span><span class="n">argument</span> <span class="n">one</span><span class="p">,</span>
+<span class="s">'argument two'</span><span class="p">,</span> <span class="s">'argument three'</span><span class="p">)</span>
+<span class="n">result2</span> <span class="o">=</span> <span class="n">some_function_that_takes_arguments</span><span class="p">(</span><span class="s">'argument one'</span><span class="p">,</span> <span class="s">'argument two'</span><span class="p">,</span> <span class="s">'argument three'</span><span class="p">)</span>
+</code></pre></div>
+<h1 id="imports">Imports</h1>
+
+<ul>
+<li>Don&#39;t use wildcards</li>
+<li>Try to use absolute imports over relative ones</li>
+<li>When using relative imports, be explicit (with .)</li>
+<li>Don&#39;t import multiple packages per line</li>
+</ul>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Good:</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">mypkg.sibling</span> <span class="kn">import</span> <span class="n">example</span>
+<span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">Popen</span><span class="p">,</span> <span class="n">PIPE</span> <span class="c"># Acceptable</span>
+<span class="kn">from</span> <span class="nn">.sibling</span> <span class="kn">import</span> <span class="n">example</span> <span class="c"># Acceptable</span>
+
+<span class="c"># Bad:</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span> <span class="c"># multiple packages</span>
+<span class="kn">import</span> <span class="nn">sibling</span> <span class="c"># local module without "."</span>
+<span class="kn">from</span> <span class="nn">mypkg</span> <span class="kn">import</span> <span class="o">*</span> <span class="c"># wildcards</span>
+</code></pre></div>
+<h1 id="whitespace-and-newlines">Whitespace and newlines</h1>
+
+<ul>
+<li>2 blank lines before top-level function and class definitions</li>
+<li>1 blank line before class method definitions</li>
+<li>Use blank lines in functions sparingly</li>
+<li>Avoid extraneous whitespace</li>
+<li>Don&#39;t use whitespace to line  up assignment operators (<code>=</code>, <code>:</code>)</li>
+<li>Spaces around <code>=</code> for assignment</li>
+<li>No spaces around <code>=</code> for default parameter values</li>
+<li>Spaces around mathematical operators, but group them sensibly</li>
+<li>Multiple statements on the same line are discouraged</li>
+</ul>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Good:</span>
+<span class="n">spam</span><span class="p">(</span><span class="n">ham</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">{</span><span class="n">eggs</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>
+<span class="nb">dict</span><span class="p">[</span><span class="s">'key'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">long_variable</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">hypot2</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">complex</span><span class="p">(</span><span class="n">real</span><span class="p">,</span> <span class="n">imag</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">magic</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="n">real</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="n">imag</span><span class="p">)</span>
+<span class="n">do_one</span><span class="p">()</span>
+<span class="n">do_two</span><span class="p">()</span>
+
+<span class="c"># Bad</span>
+<span class="n">spam</span> <span class="p">(</span> <span class="n">ham</span><span class="p">[</span> <span class="mi">1</span> <span class="p">],</span> <span class="p">{</span> <span class="n">eggs</span><span class="p">:</span> <span class="mi">2</span> <span class="p">}</span> <span class="p">)</span> <span class="c"># spaces inside brackets</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">4</span> <span class="p">:</span> <span class="k">print</span> <span class="n">x</span> <span class="p">,</span> <span class="n">y</span> <span class="p">;</span> <span class="n">x</span> <span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="p">,</span> <span class="n">x</span> <span class="c"># inline statements, space before commas</span>
+<span class="nb">dict</span> <span class="p">[</span><span class="s">'key'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span> <span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="c"># space before dictionary key</span>
+<span class="n">y</span>             <span class="o">=</span> <span class="mi">2</span> <span class="c"># Using spaces to line up assignment operators</span>
+<span class="n">long_variable</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">hypot2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">y</span> <span class="c"># Too much space around operators</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="c"># Too much space around operators</span>
+<span class="k">def</span> <span class="nf">complex</span><span class="p">(</span><span class="n">real</span><span class="p">,</span> <span class="n">imag</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">magic</span><span class="p">(</span><span class="n">r</span> <span class="o">=</span> <span class="n">real</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="n">imag</span><span class="p">)</span> <span class="c"># Spaces in default values</span>
+</code></pre></div>
+<h1 id="comments">Comments</h1>
+
+<ul>
+<li>Keep comments up to date - incorrect comments are worse than no comments</li>
+<li>Write in whole sentences</li>
+<li>Try to write in <a href="http://en.wikipedia.org/wiki/The_elements_of_style">&quot;Strunk &amp; White&quot;</a> English</li>
+<li>Use inline comments sparingly &amp; avoid obvious comments</li>
+<li>Each line of block comments should start with &quot;# &quot;</li>
+<li>Paragraphs in block comments should be separated by a line with a single &quot;#&quot;</li>
+<li>All public functions, classes and methods should have docstrings</li>
+<li>Docstrings should start and end with <code>&quot;&quot;&quot;</code></li>
+<li>Docstring one-liners can be all on the same line</li>
+<li>In docstrings, list each argument on a separate line</li>
+<li>Docstrings should have a blank line before the final <code>&quot;&quot;&quot;</code></li>
+</ul>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+    <span class="s">""" A one-line docstring """</span>
+
+<span class="k">def</span> <span class="nf">my_other_function</span><span class="p">(</span><span class="n">parameter</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="s">"""
+    A multiline docstring.
+
+    Keyword arguments:
+    parameter -- an example parameter (default False) 
+
+    """</span>
+</code></pre></div>
+<h1 id="naming-conventions">Naming conventions</h1>
+
+<ul>
+<li>Class names in <code>CapWords</code></li>
+<li>Method, function and variables names in <code>lowercase_with_underscores</code></li>
+<li>Private methods and properties start with <code>__double_underscore</code></li>
+<li>&quot;Protected&quot; methods and properties start with <code>_single_underscore</code></li>
+<li>If you need to use a reserved word, add a <code>_</code> to the end (e.g. <code>class_</code>)</li>
+<li>Always use <code>self</code> for the first argument to instance methods</li>
+<li>Always use <code>cls</code> for the first argument to class methods</li>
+<li>Never declare functions using <code>lambda</code> (<code>f = lambda x: 2*x</code>)</li>
+</ul>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+    <span class="s">""" A purely illustrative class """</span>
+
+    <span class="n">__property</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">property_value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__property</span> <span class="o">=</span> <span class="n">property_value</span>
+
+    <span class="k">def</span> <span class="nf">get_property</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">""" A simple getter for "property" """</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__property</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+        <span class="n">instance</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">(</span><span class="s">"default value"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">instance</span>
+</code></pre></div>
+
+<!-- Generate subnav for article -->
+<script type="text/javascript" src="/assets/subnav-020636817964deb048fb98c55583f2981ff145d2db5e13d5c3b624c4ef8613f4.js"></script>
+
+
+    <hr>
+
+    <nav class="tags-list muted">
+        <label>Tags</label>
+
+        <ul>
+
+            <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            <li><a href="/postsbytag/#dev">dev</a></li>
+
+        </ul>
+    </nav>
+
+
+<hr/>
+
+<div id="disqus_thread" class="comments"></div>
+
+</article>
+
+
+<nav class="related-nav article-index">
+    <h1>Similar articles</h1>
+
+    <ul>
+    
+        
+            
+                <li>
+    <article>
+        <a href="/2016/06/23/fix-docker-networking-dns/">
+            <date>23 Jun 2016</date>
+            <h1>Fix Docker's networking DNS config</h1>
+            <p>Within certain networks, docker is unable to resolve DNS correctly. When this happens, here's how to fix it.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#canonical">canonical</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2016/02/14/simplest-wsgi-application/">
+            <date>14 Feb 2016</date>
+            <h1>Creating a minimal Python application server for experimenting</h1>
+            <p>As a web developer, it can be incredibly useful to be able to spin up a quick server to inspect and manipulate raw requests. And if you're used to working in Python, this little script is just the ticket.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+                <li>
+    <article>
+        <a href="/2015/04/02/installing-docker-on-ubuntu/">
+            <date>02 Apr 2015</date>
+            <h1>Getting Docker running on Ubuntu 14.04</h1>
+            <p>There are more steps than there should be to get docker running on ubuntu 14.04. I outline them here.</p>
+        </a>
+
+
+        <nav class="tags-list muted">
+            <label>Tags</label>
+
+            <ul>
+
+                <li><a href="/postsbytag/#dev">dev</a></li>
+
+                <li><a href="/postsbytag/#back-end">back-end</a></li>
+
+            </ul>
+        </nav>
+
+    </article>
+</li>
+
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+    </ul>
+</nav>
+
+
+<script>
+    if (location.hostname=="robinwinslow.uk") {
+        var disqus_shortname = 'robin-blog'; // required: replace example with your forum shortname
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the comments (powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>)</noscript>
+
+
+        <footer class="site-footer">
+            <nav class="vcard" id="contact-information">
+                <h1>Contact information</h1>
+
+                <ul>
+                    <li><a href="mailto:robin+blog@robinwinslow.uk" class="email">robin@robinwinslow.uk</a></li>
+                    <li><a href="tel:07795070704" class="tel">07795070704</a></li>
+                    <li><a href="https://www.google.co.uk/maps?q=ng7">NG7, Nottingham, UK</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Further writing</h1>
+
+                <ul>
+                    <li><a href="http://cv.robinwinslow.uk">cv.robinwinslow.uk</a></li>
+                    <li><a href="http://design.canonical.com/author/nottrobin/">design.canonical.com</a></li>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h1>Profiles</h1>
+
+                <ul>
+                    <li><a href="https://twitter.com/nottrobin">twitter.com (@nottrobin)</a></li>
+                    <li><a href="https://facebook.com/robinwinslowmorris">facebook.com (robinwinslowmorris)</a></li>
+                    <li><a href="https://github.com/nottrobin/">github.com (nottrobin)</a>
+                </ul>
+            </nav>
+
+            <p>
+                All articles are written by me, <a href="https://plus.google.com/104026832761488144614" rel="author">Robin Winslow</a>, unless otherwise stated. Feel free to use any of my writing, but please <a href="http://creativecommons.org/licenses/by/4.0/">give me attribution</a>.
+            </p>
+
+            <p>You're free to download this entire site <a href="https://github.com/nottrobin/robinwinslow.uk/">from github</a>, and <a href="http://creativecommons.org/publicdomain/zero/1.0/">do whatever you like</a> with the code.</p>
+
+            <p><a href="https://github.com/nottrobin/robinwinslow.uk/" class="github-fork">Fork me on github.</a></p>
+        </footer>
+		<!--[if !(lt IE 8)]><!-->
+		<script type="text/javascript">
+		  (function(){
+			var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
+			e.src = 'https://www.eff.org/ngw/widget.min.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+		  })();
+		</script>
+		<!--<![endif]-->
+    </body>
+</html>

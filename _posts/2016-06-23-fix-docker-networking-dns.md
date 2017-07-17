@@ -1,12 +1,15 @@
 ---
 layout: post
-title: "Fix Docker's networking DNS config"
-description: "Within certain networks, docker is unable to resolve DNS correctly. When this happens, here's how to fix it."
+title: Fix Docker's networking DNS config
+description: Within certain networks, docker is unable to resolve DNS correctly. When
+  this happens, here's how to fix it.
 tags:
-    - back-end
-    - dev
-    - canonical
+- back-end
+- dev
+- canonical
+date: '2016-06-23T00:00:00.000+00:00'
 ---
+
 
 Sometimes, [Docker](https://www.docker.com/)'s internet connectivity won't be working properly, which can lead to a number of obscure errors with your applications. In my experience, this is usually because [DNS](http://en.wikipedia.org/wiki/Domain_name_system) lookups are failing in Docker images.
 
@@ -14,11 +17,11 @@ If you *know* it's a DNS problem and you're in a hurry, [jump straight to the sy
 
 # Is DNS the problem?
 
-Fortunately it's easy to test Docker's DNS.
+eeeeFortunately it's easy to test Docker's DNS.
 
 First, check that basic internet connectivity is working by pinging a public IP address. It should succeed, giving you output similar to this:
 
-``` bash
+```
 $ docker run busybox ping -c 1 192.203.230.10  # Ping a London-based NASA root nameserver
 PING 192.203.230.10 (192.203.230.10): 56 data bytes
 64 bytes from 192.203.230.10: seq=0 ttl=53 time=113.866 ms
@@ -26,15 +29,17 @@ PING 192.203.230.10 (192.203.230.10): 56 data bytes
 --- 192.203.230.10 ping statistics ---
 1 packets transmitted, 1 packets received, 0% packet loss
 round-trip min/avg/max = 113.866/113.866/113.866 ms
+
 ```
 
 But now try resolving the domain `google.com`:
 
-``` bash
+```
 $ docker run busybox nslookup google.com
 Server:    8.8.8.8
 Address 1: 8.8.8.8
 nslookup: can't resolve 'google.com'
+
 ```
 
 If it fails as shown above then there is a problem resolving DNS.
@@ -57,22 +62,24 @@ Fortunately, it's fairly easy to directly run a docker container with a custom D
 
 You can find out what network's DNS server from within [Ubuntu](http://www.ubuntu.com/) as follows:
 
-``` bash
+```
 $ nmcli dev show | grep 'IP4.DNS'
 IP4.DNS[1]:                             10.0.0.2
+
 ```
 
 ## Run Docker with the new DNS server
 
 To run a docker container with this DNS server, provide the `--dns` flag to the `run` command. For example, let's run the command we used to check if DNS is working:
 
-``` bash
+```
 $ docker run --dns 10.0.0.2 busybox nslookup google.com
 Server:    10.0.0.2
 Address 1: 10.0.0.2
 Name:      google.com
 Address 1: 2a00:1450:4009:811::200e lhr26s02-in-x200e.1e100.net
 Address 2: 216.58.198.174 lhr25s10-in-f14.1e100.net
+
 ```
 
 And that's what success looks like.
@@ -91,27 +98,30 @@ You should create this file with the following contents to set two DNS, firstly 
 
 `/etc/docker/daemon.json`:
 
-``` json
+```
 {
     "dns": ["10.0.0.2", "8.8.8.8"]
 }
+
 ```
 
 Then restart the docker service:
 
-``` bash
+```
 sudo service docker restart
+
 ```
 
 ## Testing the fix
 
 Now you should be able to ping `google.com` successfully from any Docker container without explicitly overriding the DNS server, e.g.:
 
-``` bash
+```
 $ docker run busybox nslookup google.com
 Server:    10.0.0.2
 Address 1: 10.0.0.2
 Name:      google.com
 Address 1: 2a00:1450:4009:811::200e lhr26s02-in-x200e.1e100.net
 Address 2: 216.58.198.174 lhr25s10-in-f14.1e100.net
+
 ```

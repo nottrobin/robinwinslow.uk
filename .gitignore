@@ -5,3 +5,6 @@ _site
 .asset-cache/
 .bundle/
 vendor/
+/env/
+/env3/
+node_modules/

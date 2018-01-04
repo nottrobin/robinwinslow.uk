@@ -2,11 +2,9 @@ markdown: redcarpet
 redcarpet:
     extensions: [with_toc_data]
 future: true
-exclude: [config.ru, Gemfile, Gemfile.lock, LICENSE.md, Procfile, Rakefile, README.md, vendor]
+exclude: [config.ru, Gemfile, Gemfile.lock, LICENSE.md, Procfile, Rakefile, README.md, vendor, env, env3]
 permalink: pretty
 destination: _site/files
-gems:
-  - jekyll-assets
 defaults:
   -
     scope:

@@ -4,7 +4,7 @@ redcarpet:
 future: true
 exclude: [config.ru, Gemfile, Gemfile.lock, LICENSE.md, Procfile, Rakefile, README.md, vendor, env, env3]
 permalink: pretty
-destination: _site/files
+destination: _site
 defaults:
   -
     scope:

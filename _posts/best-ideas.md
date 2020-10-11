@@ -1,5 +1,4 @@
-The best ideas in the world
-===
+## The best ideas in the world
 
 Some ideas are just objectively good.
 
@@ -12,17 +11,12 @@ should transcend petty arguments about human political or financial systems.
 Instead, these should be the measures by which we decide if a human systems
 are succeeding or failing.
 
-1. Knowledge should be freely available to anyone
----
+#### 1. Knowledge should be freely available to anyone
 
-2. Machines & automation should mean we all work less
----
+#### 2. Machines & automation should mean we all work less
 
-3. Everyone should have enough to live
----
+#### 3. Everyone should have enough to live
 
-4. No-one should have more wealth than they could ever hope to spend while others starve
----
+#### 4. No-one should have more wealth than they could ever hope to spend while others starve
 
-5.
----
+#### 5.

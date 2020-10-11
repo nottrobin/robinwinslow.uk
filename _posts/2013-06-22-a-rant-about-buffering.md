@@ -3,10 +3,10 @@ layout: post
 title: "Youtube annoyances - a rant about buffering"
 description: "A rant about how the most popular online video services get buffering so very wrong by not allowing the user to control it."
 tags:
-    - internet
-    - video
-    - youtube
-    - personal
+  - internet
+  - video
+  - youtube
+  - personal
 ---
 
 I'm currently trying to watch [Murray vs. Djokovic [US Open Final 2012] on Youtube](https://www.youtube.com/watch?v=CHQJko7xc4c), but I'm struggling because of two limitations:
@@ -16,10 +16,9 @@ I'm currently trying to watch [Murray vs. Djokovic [US Open Final 2012] on Youtu
 
 This it causing me a lot of frustration. Because of the way Youtube handles video buffering, I'm having to watch it in 1.5 minute bursts.
 
-I don't think Youtube are the only culprit here - other players, like [BBC iPlayer](http://www.bbc.co.uk/iplayer/), also cause similar issues by not giving the user any control over buffering. 
+I don't think Youtube are the only culprit here - other players, like [BBC iPlayer](http://www.bbc.co.uk/iplayer/), also cause similar issues by not giving the user any control over buffering.
 
-Youtube's strategy
-===
+## Youtube's strategy
 
 Youtube's strategy is built up to discourage waiting for your video to buffer. Here's what I've observed about how Youtube's video player works:
 
@@ -34,8 +33,7 @@ The goal here is clear - they want you to be able to watch video as soon as you 
 
 Also I imagine they deliberately limit buffering on paused videos because it significantly reduces the load on their servers, which is understandable, Youtube is as popular as it is.
 
-The problem
-===
+## The problem
 
 Elements of this strategy are great. That they support multiple qualities is great, and that they can pick your quality automatically based on your connection speed. Most of the time quality is not important, what you really want is for your viewing not to be interrupted.
 
@@ -43,8 +41,7 @@ However, they completely fail in their goal to make video playback smooth and fl
 
 Also, the Youtube player tries to make too many of these decisions for the user. Anyone who watches a lot of online video knows what a buffer is and would be able to control it well if they were given the chance.
 
-The solution
-===
+## The solution
 
 I think Youtube need to:
 
@@ -54,10 +51,9 @@ I think Youtube need to:
 And they can do that as follows:
 
 - Allow the user to explicitly tell a video to "buffer" - this would be distinct from pausing: You can "pause" the video when you aren't having buffering problems but you just don't want to watch it right now. But you can "buffer" when you explicitly need to build up a buffer - and for this option there would be no limit on how much you can buffer.
-- By default *never* change the video quality while there is any sort of buffer built up. By all means, choose an initial quality based on what you know about the connection speed - but once the video has started playing and has buffered some, don't change the quality and discard the buffer automatically - e.g. if the user goes full-screen.
+- By default _never_ change the video quality while there is any sort of buffer built up. By all means, choose an initial quality based on what you know about the connection speed - but once the video has started playing and has buffered some, don't change the quality and discard the buffer automatically - e.g. if the user goes full-screen.
 
-Telling youtube
-===
+## Telling youtube
 
 Of course, if I'm going to complain about this, I should probably let Youtube know.
 

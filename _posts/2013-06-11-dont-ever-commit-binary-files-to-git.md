@@ -3,44 +3,42 @@ layout: post
 title: "Don't ever commit binary files to Git! Or what to do if you do."
 description: "Why you shouldn't commit binary files to a distributed version control system - and how you can remove them completely if you do."
 tags:
-    - dev
-    - back-end
-    - git
+  - dev
+  - back-end
+  - git
 ---
 
-Git is a great [distributed version control system](http://en.wikipedia.org/wiki/Distributed_revision_control). It's fantastically for easily storing changed to *text files* wherever you are, and then easily copying them up to a server or servers or sharing them with your friends locally.
+Git is a great [distributed version control system](http://en.wikipedia.org/wiki/Distributed_revision_control). It's fantastically for easily storing changed to _text files_ wherever you are, and then easily copying them up to a server or servers or sharing them with your friends locally.
 
-Avoid binary files
-===
+## Avoid binary files
 
 "Text files" is the key here. It easily lets you see textual changes. But this function is useless for binary data. Data about changes in binary files just makes the commits impossible to read.
 
 There is another very good reason for keeping binary files out of your repository: They are usually much bigger. Images, videos and compiled binaries are all much bigger than text files. If you commit them to your repository, the size of your repository will become much larger.
 
-This matters not because storage is expensive - it's not. It matter because the point of using a *distributed* VCS is that it makes it cheap and easy to *clone and navigate*. You want to be able to spin up a new machine and copy the repository as quickly as possible. You want to be able to switch branches as quickly as possible. If you commit any significant number of binary files you will see all of these tasks slow down considerably.
+This matters not because storage is expensive - it's not. It matter because the point of using a _distributed_ VCS is that it makes it cheap and easy to _clone and navigate_. You want to be able to spin up a new machine and copy the repository as quickly as possible. You want to be able to switch branches as quickly as possible. If you commit any significant number of binary files you will see all of these tasks slow down considerably.
 
-It's important to *never commit binary files* because once you've commit them they are *in the repository history* and are very annoying to remove. You can delete the files from the *current version* of the project - but they'll remain in the repository history, meaning that the overall repository size will still be large.
+It's important to _never commit binary files_ because once you've commit them they are _in the repository history_ and are very annoying to remove. You can delete the files from the _current version_ of the project - but they'll remain in the repository history, meaning that the overall repository size will still be large.
 
-How you can fix it
-===
+## How you can fix it
 
-You can totally remove large files from the repository only by *rewriting history*. This is extremely dangerous because it will overwrite all commits since files were added, producing a completely different version of the revision history.
+You can totally remove large files from the repository only by _rewriting history_. This is extremely dangerous because it will overwrite all commits since files were added, producing a completely different version of the revision history.
 
-If you have shared your repository with anyone, or stored it anywhere else (like [Github](https://github.com)) you must make sure that *all versions of these repositories* get updated to your new version before anyone tries to add any new work on top. This can be a huge ball-ache.
+If you have shared your repository with anyone, or stored it anywhere else (like [Github](https://github.com)) you must make sure that _all versions of these repositories_ get updated to your new version before anyone tries to add any new work on top. This can be a huge ball-ache.
 
 However, if you **understand the risks** you can rewrite history using a [fantastic script](https://gist.github.com/nottrobin/5758221) I found on [David Underhill's blog](http://dound.com/2009/04/git-forever-remove-files-or-folders-from-history/). It first uses `git filter-branch` to remove the files from the commits, and then deletes the relevant caches of the files.
 
 Make sure you've committed all your work and have a backup copy of your up-to-date repository somewhere. Then do the following:
 
-``` bash
-# Get hold of the script
+```bash
+## Get hold of the script
 $ wget -O- https://gist.github.com/nottrobin/5758221/raw/ff740b4ac3b8ab80d40e3598ec461400dce42b5d/git-prune | sudo tee -a /usr/bin/git-prune-files
 $ sudo chmod +x /usr/bin/git-prune-files
 
-# Change to your project directory
+## Change to your project directory
 $ cd ~/projects/my-git-project
 
-# Remove the relevant files
+## Remove the relevant files
 $ git-prune-files static/images
 ```
 
@@ -60,4 +58,4 @@ Writing objects: 100% (22041/22041), done.
 Total 22041 (delta 15312), reused 5817 (delta 0)
 ```
 
-Now make *absolutely sure* this version of the repository replaces *all copies* of your repository *immediately*.
+Now make _absolutely sure_ this version of the repository replaces _all copies_ of your repository _immediately_.

@@ -3,9 +3,9 @@ title: "Can you help me? Where should my blog go from here?"
 description: "Please help me out by answering some questions about how my blog should evolve."
 layout: post
 tags:
- - politics
- - webdev
- - personal
+  - politics
+  - webdev
+  - personal
 ---
 
 Hello. I'd like your help, if you're not too busy. Whether you're a regular
@@ -15,8 +15,7 @@ I've included a few polls below. If you feel like answering them that would be
 extremely helpful. Or if you have any more complex thoughts or suggestions
 please comment at the bottom.
 
-My problem
-===
+## My problem
 
 My blog gets about 150 visitors a day, which is fairly modest, but at the same
 time it's not nothing.
@@ -35,8 +34,7 @@ me to procrastinate from writing most of the time. Having a relationship
 with my audience would certainly help me find the motivation to write, but I
 think there may be other things that could help too.
 
-Solutions?
-===
+## Solutions?
 
 I have a few ideas that I think might help, but I'm not sure if they're good
 ideas, so I'd love some feedback on them.
@@ -48,9 +46,9 @@ Jump to each solution:
 - Images on my posts
 - Promote my Twitter account
 
+###
 
 Split my blog into topics
----
 
 I think my blog is rather unfocused, which probably contributes to people not
 wanting to come back as they may not know what to expect. It runs from
@@ -92,8 +90,7 @@ I have to say if they're visiting the relevant blog.
   </p>
 </form>
 
-Highlight good posts
----
+### Highlight good posts
 
 I don't think very many people at all are reading more than one post per visit
 to my blog. This is either because all my content sucks so people are leaving as
@@ -141,9 +138,9 @@ be no bad thing. I have two ideas for how to do this:
   </p>
 </form>
 
+###
 
 Images on my posts
----
 
 While I do quite like how lightweight my blog site is, I hear that graphics
 are everything these days. I even had someone complain that they couldn't link
@@ -169,8 +166,7 @@ with catching people's interest.
   </p>
 </form>
 
-Promote my Twitter account
----
+### Promote my Twitter account
 
 Currently you can find my contact details in the footer of the site, so people
 who are really looking for them can probably find them, but no-one's
@@ -203,8 +199,7 @@ if I felt like I had an audience it would probably help me write more.
   </p>
 </form>
 
-Do you have any other ideas?
----
+### Do you have any other ideas?
 
 If you have any other suggestions for how my blog should be improved, please
 write a comment or [send me a tweet][].

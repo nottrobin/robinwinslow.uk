@@ -15,11 +15,10 @@ This charge will apply across the board, including for the huge number of [migra
 
 This is [clearly the wrong way](http://www.theguardian.com/society/2014/oct/10/foreign-patients-nhs-nigel-farage) to deal with the NHS's funding problems.
 
-Hurting the UK's reputation
----
+### Hurting the UK's reputation
 
 > "The new fee is bound to hit the already dipping market of Indian students visiting Britain for higher education."
-> 
+>
 > (The Times of India: [For 6-month stay in UK, pay health surcharge](http://timesofindia.indiatimes.com/world/uk/For-6-month-stay-in-UK-pay-health-surcharge/articleshow/46641211.cms))
 
 We live in an international world, where the long-term success of any country lies in its ability to cooperate with and support the international community. This is a complex web of relationships, but it undoubtedly begins at home.
@@ -28,13 +27,11 @@ Quite apart from the clear damage this policy will deal to the UK education sect
 
 And the symbolic barrier is even more important than the financial one. The fact that the official position of the UK is now that migrants don't get the same level of such a basic need as healthcare looks incredibly racist, and will definitely make people think twice before deciding to visit the UK, or recommend it to their friends, or choose it as a place to do business.
 
-Financially counter-productive
----
+### Financially counter-productive
 
 To say nothing of the hugely damaging message the UK is sending to the international community, and the resulting effect on international business, this policy will almost certainly hurt the NHS financially. Fewer migrant doctors will want to visit the UK if they have to pay for the very service they are providing to others for free, which will leave our NHS even more unable to find decent doctors to hire.
 
-Doing something about it
----
+### Doing something about it
 
 If you agree that this is a terrible policy, [you can sign this petition until March 30th](http://epetitions.direct.gov.uk/petitions/76086). After that, I guess there may be another petition.
 

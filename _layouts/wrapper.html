@@ -1,0 +1,148 @@
+<!doctype html>
+
+<!--
+## Features:
+
+- Keep CSS inline: It will be small enough not to add much weight to the page, which means it's better to avoid the extra HTTP call to request CSS
+- Use system fonts: But it's hard to find a nice system font for both Linux, Windows and MacOS
+
+- Google colours for links
+- Visual box around article to highlight it
+- Navigation - don't get in the way
+- 
+
+JavaScript:
+
+- Only use enhancements that aren't necessary:
+  - Document outline on the left
+  - Add "title" to links
+
+-->
+
+<html>
+  <head>
+    <title>{{ page.title }} | Some thoughts</title>
+    
+    <meta name="description" content="{{ page.description }}">
+
+    <link type="application/atom+xml" rel="alternative" href="/rss.xml" />
+
+    <style>
+      /**
+       * Font size
+       * 
+       * For usability, bigger text is almost always better. People continue to Especially as resolutions get higher
+       * 
+       */
+
+      body {
+        font-family: "dejavu Sans light", sans-serif;
+        font-size: 1.5rem;
+        background-color: #efefef;
+        margin: 0;
+      }
+      .site-header {
+        display: flex;
+        justify-content: center;
+        padding: 0.5em 5em;
+        font-weight: 100;
+      }
+      .site-title {
+        flex-basis: 10em;
+      }
+      .site-title-standalone {
+        flex-basis: 35em;
+      }
+      .search-form {
+        flex-basis: 25em;
+        margin-top: 1em;
+        text-align: right;
+      }
+      time {
+        color: gray;
+      }
+      footer {
+        font-size: 1rem;
+        padding: 3em;
+      }
+      footer ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+      }
+      footer li {
+        margin: 0 3em;
+      }
+      h1, h2, h3, h4 {
+        font-weight: normal;
+        margin-top: 2em;
+        margin-bottom: 1em;
+      }
+      h1 {
+        font-size: 3em;
+      }
+      h2 {
+          font-size: 2em;
+      }
+      h3 {
+          font-size: 1.5em;
+      }
+      h4 {
+          font-size: 1.2em;
+      }
+      p {
+        line-height: 1.5em;
+      }
+      a {
+        color: #1a0dab;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      a:visited {
+        color: #551A8B;
+      }
+      article {
+        margin: auto;
+        padding: 3em 5em;
+        max-width: 35em;
+        background-color: white;
+      }
+      li {
+        margin: 2em;
+      }
+      li:first-of-type {
+        margin-top: 0;
+      }
+      li:last-of-type {
+        margin-bottom: 0;
+      }
+      li article {
+          padding: 1em 2em;
+      }
+      li article h1 {
+        font-size: 1.5em;
+        margin: 1em 0 0 0;
+        font-weight: normal;
+      }
+      ol {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+      }
+      article p {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    {{ content }}
+
+    <footer>
+      <ul>
+        <li><a href="https://twitter.com/nottrobin">@nottrobin</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

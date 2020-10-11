@@ -3,14 +3,13 @@ layout: post
 title: "BBC publishing misinformation on knife crime"
 description: "The BBC reported on a fight and stabbings in Nottingham, but quoted the sensationalist and misleading comments from the club owner. I object."
 tags:
-    - politics
-    - canonical
+  - politics
+  - canonical
 ---
 
 On Saturday night, there was a big fight outside one of our night-clubs here in Nottingham, in which 3 people were stabbed.
 
-BBC publishing stupid opinions
-===
+## BBC publishing stupid opinions
 
 The BBC [wrote an article](http://www.bbc.co.uk/news/uk-england-nottinghamshire-24691928), including a quote from the nightclub owner:
 
@@ -23,8 +22,7 @@ and the pull-quote:
 
 I don't understand why the BBC felt the need to give a platform to this particular schmuck. It is the responsibility of journalists, in my opinion, to stem the tide of sensationalism after events like this - after all, they should understand better than anyone the frequency with which stories like this occur.
 
-The truth about knife crime
-===
+## The truth about knife crime
 
 According to knife crime [statistics from parliament.uk](http://www.parliament.uk/briefing-papers/Sn04304):
 

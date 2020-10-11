@@ -1,6 +1,6 @@
 ---
 title: Importing a CSV file into MySQL
-description: A simple PHP command-line script for importing data from a CSV file into a MySQL database. 
+description: A simple PHP command-line script for importing data from a CSV file into a MySQL database.
 layout: post
 tags:
   - PHP
@@ -11,15 +11,14 @@ tags:
 
 I just wrote this script, and it seems pretty generic so I'm going to share it with The Internet. This will import data from a [CSV](http://en.wikipedia.org/wiki/Comma-separated_values) into a MySQL database table. Two rules:
 
- 1. The first line of the CSV must contain the column names
- 2. These column names must be exactly the same as the column names in the database table
+1.  The first line of the CSV must contain the column names
+2.  These column names must be exactly the same as the column names in the database table
 
-Usage
-===
+## Usage
 
 The basic usage is as follows:
 
-``` php
+```php
 php import.php -f [filename.csv] --database=[db_name] --table=[table_name]
 ```
 
@@ -34,8 +33,7 @@ You also have the following extra options:
 --password=[password] (The password for the database)
 ```
 
-Example
-===
+## Example
 
 Let's say we have a database called "example_db" containing a table "example_table":
 
@@ -77,13 +75,11 @@ mysql> select * from example_table;
 
 That wasn't too painful was it?
 
-Download
-===
+## Download
 
 Download the [CSV import script](http://static.robinwinslow.co.uk/csvimport/import.zip) in .zip format.
 
-To export from MySQL
-===
+## To export from MySQL
 
 ```
 into outfile

@@ -2,7 +2,7 @@
 title: "Usability case study for designing a new theme"
 ---
 
-# Basics
+## Basics
 
 http://instone.org/heuristics
 
@@ -38,7 +38,7 @@ http://instone.org/heuristics
 - "Recover from errors"
 -
 
-# Landing page
+## Landing page
 
 https://www.distilled.net/blog/conversion-rate-optimization/asking-uxperts-how-to-improve-your-landing-pages/
 

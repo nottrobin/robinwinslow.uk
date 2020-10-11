@@ -3,9 +3,9 @@ layout: post
 title: "Supporting net neutrality and the Internet Slowdown"
 description: "Ubuntu.com and Canonical.com will be showing the #InternetSlowdown banner in support of net neutrality."
 tags:
-    - front-end
-    - canonical
-    - politics
+  - front-end
+  - canonical
+  - politics
 ---
 
 (Also posted [on the Canonical blog](http://blog.canonical.com/2014/09/09/supporting-net-neutrality-and-the-internet-slowdown/))
@@ -17,6 +17,7 @@ Along with [Reddit](http://www.reddit.com/ "Reddit"), [Tumblr](https://www.tumbl
 <link rel="stylesheet" href="http://blog.canonical.com/wp-content/uploads//banner.min_1.css">
 
 <a href="https://www.battleforthenet.com/?from=banner"></a></p><a href="https://www.battleforthenet.com/?from=banner">
+
 <div id="banner" class="light" style="display: block; max-width: 350px; float: right; margin: 1em">
 <div id="loader">
 <div class="spinner">
@@ -73,13 +74,13 @@ If there were Internet slow lanes, you’d still be waiting.
 </div>
 </a>
 
-## Net neutrality
+### Net neutrality
 
 From [Wikipedia](http://en.wikipedia.org/wiki/Net_neutrality):
 
 > Net neutrality is the principle that Internet service providers and governments should treat all data on the Internet equally, not discriminating or charging differentially by user, content, site, platform, application, type of attached equipment, and modes of communication.
 
-### Internet Slowdown day
+#### Internet Slowdown day
 
 [#InternetSlowdown](https://twitter.com/hashtag/internetslowdown "Twitter - #InternetSlowdown") day is in protest to the [FCC’s plans](http://en.wikipedia.org/wiki/Net_neutrality "Wikipedia - FCC") to allow ISPs in America to offer “paid prioritization” of their traffic to certain companies.
 

@@ -5,22 +5,21 @@ description: "A dynamic post containing all my ideas for blogs to write some-day
 tags:
   - blogging
 ---
- 
+
 I have so many ideas for blogs to write, but I never write them. So this is going to be a dynamic post, which I will update with all my ideas for blogs to write some-day.
 
-Ideas
-===
+## Ideas
 
 - how to be a good online citizen (basically - link a lot (without no-follow), write good markup, don't cheat - be careful of just following the stats)
 - Websockets
 - Can I make money out of AdSense?
 - Serving fonts as data URIs
 - About downtime and meditation
-http://lifehacker.com/why-we-should-rethink-the-eight-hour-workday-515742249
-https://en.wikipedia.org/wiki/Research_on_meditation
-http://justinjackson.ca/the-principle-that-changed-my-life/
-https://twitter.com/nimbu/status/347359068966494210
-http://www.bbc.co.uk/news/uk-23002796#?utm_source=twitterfeed&utm_medium=twitter
+  http://lifehacker.com/why-we-should-rethink-the-eight-hour-workday-515742249
+  https://en.wikipedia.org/wiki/Research_on_meditation
+  http://justinjackson.ca/the-principle-that-changed-my-life/
+  https://twitter.com/nimbu/status/347359068966494210
+  http://www.bbc.co.uk/news/uk-23002796#?utm_source=twitterfeed&utm_medium=twitter
 - My transition to believing in the importance of privacy
   > The ideal world where privacy is unneccesary
   > Loss of pirvacy inevitably gives someone power
@@ -62,9 +61,9 @@ http://www.bbc.co.uk/news/uk-23002796#?utm_source=twitterfeed&utm_medium=twitter
 - The importance of usability (and aesthetic design) in information sharing
 - Project planning models, and how greater flexibility is desirable but difficult
 - where should I develop my professional skills?
-  > highlight my skills
-  > highlight what companies need
-  > discussion potential areas [online marketing; website designer; internal communications consultant]
+    > highlight my skills
+    > highlight what companies need
+    > discussion potential areas [online marketing; website designer; internal communications consultant]
 - What's wrong with Linux? (theme, basically - not solid enough)
 - Lessons learned from Interactive Systems Design
 - What's open-source mean? - once written, share on message board etc.

@@ -3,9 +3,9 @@ title: TalkTalk screwed me - and the country
 description: How TalkTalk absolutely delivered on their promise of shockingly bad customer service
 layout: post
 tags:
-    - "consumer rights"
-    - politics
-    - personal
+  - "consumer rights"
+  - politics
+  - personal
 ---
 
 TalkTalk have the
@@ -17,8 +17,7 @@ I went with them anyway because I thought "who needs customer service?".
 We were going to have to accept terrible connection speeds anyway, because of our available exchange,
 and I thought being a highly technical user, I'd have little need for customer service.
 
-You can't avoid our small print
-===
+## You can't avoid our small print
 
 For a while I've been wondering why our broadband bills tended to be closer to £8 than £3.
 Today I finally got up the botheredness to phone them about it.
@@ -29,8 +28,7 @@ costing £5/month. We obviously didn't use it, as the only reason we have the ph
 I'm sure this must be in the small print somewhere, but I didn't see it, and you'll just have to believe me when I say that I am as literate as
 one could reasonably expect from a customer, and I am wise to and on the lookout for these sorts of tricks.
 
-TalkTalk, do yourselves a favour...
-===
+## TalkTalk, do yourselves a favour...
 
 I want to say that I have no beef with the guy who answered the phone when I called them.
 I think his name was Allen. He was pretty slow, but otherwise very friendly, and he forwarded all my complaints on to his supervisor faithfully.
@@ -40,10 +38,9 @@ but when I call up to say that I never wanted the service and haven't used it, t
 Not so with TalkTalk (I'm not going to them honor with a link) who point blank refused to refund the charges.
 
 This is really stupid because the amount was so small (£7.25) and the potential bad publicity from me bitching about them has to hurt them
-to *at least* £7.25's worth. Honestly TalkTalk, do yourselves a favour.
+to _at least_ £7.25's worth. Honestly TalkTalk, do yourselves a favour.
 
-This isn't even about me. Honest.
-===
+## This isn't even about me. Honest.
 
 I lost £7.25. I hope you won't think I'm being a horrible snob when I say I genuinely hardly care about that amount of money.
 It was not worth the stress of my long phone call with Allen.

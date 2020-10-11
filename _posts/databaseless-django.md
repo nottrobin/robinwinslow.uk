@@ -18,19 +18,15 @@ wider company. (We heart Python).
 
 We also made the unusual move of ditching the database.
 
-Ditching the database
-===
+## Ditching the database
 
 If you ask most web developers, they will tell you that a website consists of
 a
 
-Static sites
----
+#### Static sites
 
-Dynamic sites
-===
+## Dynamic sites
 
-
-[Drupal]: https://www.drupal.org "Open source PHP-base CMS"
-[Django]: https://www.djangoproject.com
+[drupal]: https://www.drupal.org "Open source PHP-base CMS"
+[django]: https://www.djangoproject.com
 [ubuntu.com]: http://www.ubuntu.com "Ubuntu: Leading open-source operating system for PCs, phone and servers"

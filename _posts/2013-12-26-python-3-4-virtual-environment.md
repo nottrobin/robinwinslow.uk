@@ -1,10 +1,14 @@
 ---
-title: "Using a virtual environment with Python 3.4"
-layout: post
+title: Using a virtual environment with Python 3.4
+date: 2013-12-26 00:00:00 Z
 tags:
-  - dev
-  - back-end
-description: "I recently started learning Python and Django, and so I've been working out how to setup a good virtual environment. Here's how to do it the native way in Python 3.4."
+- dev
+- back-end
+description: I recently started learning Python and Django, and so I've been working
+  out how to setup a good virtual environment. Here's how to do it the native way
+  in Python 3.4.
+image_url: https://assets.ubuntu.com/v1/d4f10591-python+virtualenv.png?w=230&h=160&mode=fill&bg=0000
+layout: post
 ---
 
 I've been learning Python recently. I had a choice between learning Python 2.7 or Python 3, and I chose the latter. It may be true that many people still work in Python 2.7, but I thought I should start off as up-to-date as possible.
@@ -19,7 +23,7 @@ This meant that I had to work out how to set up a virtual environment without vi
 
 This virtual environment will keep your python version and modules separate from the system's Python installation:
 
-```bash
+``` bash
 $ virtualenv env            # create new environment in "env" folder
 $ source env/bin/activate   # Active "env"
 (env) $ which pip           # "pip" is now inside "env" folder
@@ -35,7 +39,7 @@ When "env" is active, `pip install somemodule` will install "somemodule" into `e
 
 This means that you can install exactly the modules you need for your current project and no more:
 
-```bash
+``` bash
 $ source env/bin/activate               # Activate a new environment
 (env) $ pip freeze                      # No output - clean environment
 (env) $ pip install -r requirements.txt # Install project dependencies
@@ -53,7 +57,7 @@ Unfortunately, the resulting environment [doesn't include pip](http://stackoverf
 
 ### pyvenv-3.4
 
-Python 3.4's version of `pyvenv` [_will_](http://docs.python.org/dev/library/venv.html) include `pip`, making management of virtual environments simple again, and now _native_.
+Python 3.4's version of `pyvenv` [*will*](http://docs.python.org/dev/library/venv.html) include `pip`, making management of virtual environments simple again, and now *native*.
 
 The downside here is that Python 3.4 is still in beta, and I can't find a PPA to install it through `apt-get` (the easy way).
 
@@ -61,7 +65,7 @@ The downside here is that Python 3.4 is still in beta, and I can't find a PPA to
 
 Fortunately, building [Python 3.4.0-b1](http://www.python.org/getit/releases/3.4.0/) from source was simple on Ubuntu 13.10:
 
-```bash
+``` bash
 $ sudo apt-get install build-essential # Make sure we have build tools
 $ wget http://www.python.org/ftp/python/3.4.0/Python-3.4.0b1.tgz # download
 $ tar -xzf Python-3.4.0b1.tgz          # unzip
@@ -77,7 +81,7 @@ You should now find you have a few new binaries (in `/usr/local/bin`) including 
 
 Now that `pyvenv-3.4` is installed, here's how you might use it to setup a Django environment and a django project:
 
-```bash
+``` bash
 $ pyvenv-3.4 djenv          # create django virtual env
 $ source djenv/bin/activate # activate it
 (djenv) $ which pip         # check pip points to the right place
@@ -94,6 +98,6 @@ six==1.4.1
 
 ## The future
 
-While all the above setup isn't _that_ hard, I'm hoping that by 2015 we might see Python 3.4 become stable and become the default version of Python in Ubuntu 14.10.
+While all the above setup isn't *that* hard, I'm hoping that by 2015 we might see Python 3.4 become stable and become the default version of Python in Ubuntu 14.10.
 
 After that, I guess the next thing would be for someone to create something similar to [virtualenv wrapper](http://virtualenvwrapper.readthedocs.org/en/latest/) for `pyvenv`.

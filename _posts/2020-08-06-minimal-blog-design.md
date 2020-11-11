@@ -19,4 +19,9 @@ I've been a fan of simplicity in tech for as long as I can remember. Complexity 
 Every time I'm implementing things, I don't accept complexity. If I don't understand why I'm doing things, I go back to basics until I understand it. Then I build it up from the ground up keeping it as lean as possible.
 
 https://usabilitygeek.com/less-is-more-importance-minimalist-web-design/
+https://usabilitygeek.com/hyperlink-usability-guidelines-usable-links/
 https://www.smashingmagazine.com/2012/02/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/
+https://www.greenlanemarketing.com/resources/articles/seo-101-seo-and-multiple-h1-tags/
+https://www.tandfonline.com/doi/full/10.1080/13510347.2020.1807517
+https://www.nngroup.com/articles/change-the-color-of-visited-links/
+http://universalusability.com/access_by_design/links/differentiate.html

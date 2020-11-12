@@ -157,15 +157,25 @@ JavaScript:
       }
 
       .posts li {
-        margin: 3em;
+        margin: 3em 0;
       }
       .posts li article {
           padding: 1.5em 3em;
+      }
+      @media (max-width: 984px) {
+        .posts li article {
+            padding: 1.5em;
+        }
       }
       .posts li article h1 {
         font-size: 2em;
         margin: 1em 0 0 0;
         font-weight: normal;
+      }
+      @media (max-width: 984px) {
+        .posts li article h1 {
+          font-size: 1.8em;
+        }
       }
       .posts {
         padding: 0;

@@ -2,7 +2,7 @@
 title: "Are the U.S constitution's days numbered?"
 layout: post
 tags:
-    - politics
+  - politics
 description: "I was just reading a very interesting article in The Atlantic about the prospect of rewriting the constitution. It made quite a compelling argument."
 ---
 
@@ -10,15 +10,13 @@ America's governmental system could be said to be doing pretty badly. [1% of the
 
 An article by Alex Seitz-Wald appeared in [The Atlantic](http://www.theatlantic.com/) a couple of days ago entitled ["The U.S. Needs a New Constitution—Here's How to Write It"](http://www.theatlantic.com/politics/archive/2013/11/the-us-needs-a-new-constitution-heres-how-to-write-it/281090/).
 
-An outdated model
-===
+## An outdated model
 
 Alex argues that a growing number of experts believe that the constitution is no longer fit for purpose - an argument lent credibility by the recent [government shutdown](http://en.wikipedia.org/wiki/United_States_federal_government_shutdown_of_2013).
 
 > "It gets close to a failing grade in terms of 21st-century notions on democratic theory," says University of Texas law professor Sanford Levinson, part of the growing cadre of legal scholars who say the time has come for a new constitutional convention.
 
-Modern constitutions
----
+### Modern constitutions
 
 There are apparently myriad examples of modern constitutions, highlighting the age of the U.S's, which is 226 years old.
 
@@ -26,8 +24,7 @@ There are apparently myriad examples of modern constitutions, highlighting the a
 
 As Alex mentions, possibly the most notable post-war constitutions are those of [Japan](http://en.wikipedia.org/wiki/Japanese_constitution) and [Germany](http://en.wikipedia.org/wiki/German_constitution) - which have both proved to be relatively successful in many ways.
 
-What doesn't work
----
+### What doesn't work
 
 > "There are about 30 countries, mostly in Latin America, that have adopted American-style systems. All of them, without exception, have succumbed to the Linzian nightmare at one time or another, often repeatedly," according to Yale constitutional law professor Bruce Ackerman
 
@@ -38,8 +35,7 @@ Alex points out two key problems with the U.S model:
 
 > "No democratic principle exists to resolve disputes between the executive and the legislature about which of the two actually represents the will of the people," Linz wrote
 
-What works
----
+### What works
 
 The article suggests that a Westminster-like parliamentary system has proved superior:
 
@@ -49,8 +45,7 @@ He quotes Arend Lijphart in promoting parlimentary systems and Proportional Repr
 
 > "Democracies work best if they are consensus instead of majoritarian democracies." [Arend Lijphart]
 
-Changes to make
-===
+## Changes to make
 
 Helpfully, the article does contain some speculative suggestions of steps to take to reform the U.S system:
 
@@ -63,8 +58,7 @@ Helpfully, the article does contain some speculative suggestions of steps to tak
 
 More radical ideas are included, such as instant-runoff voting with multiple choices, or even the German Pirate Party's "liquid democracy" (something I'm going to be looking into more).
 
-Getting there
-===
+## Getting there
 
 So this is all very well, but how likely is this to actually happen? How could we possibly get to the point where the American people and leadership would consider seriously changing their constitution?
 

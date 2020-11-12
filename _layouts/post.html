@@ -1,65 +1,16 @@
 ---
-layout: default
+layout: wrapper
 ---
 
+<nav class="back-to-home">
+  <p><a href="/">< Some thoughts</a></h1></p>
+</header>
+
+<header class="article-header">
+  <h1>{{ page.title }}</h1>
+  <time datetime="{{ page.date | date: '%F' }}">{{ page.date | date_to_long_string: "ordinal" }}</time>
+</header>
+
 <article>
-    <header class="page-header">
-        <date>{{ page.date | date_to_string }}</date>
-
-        <h1>{{ page.title }}</h1>
-    </header>
-
-    {{ content }}
-
-    <!-- Generate subnav for article -->
-    <script src="/js/subnav.js"></script>
-
-{% if page.tags %}
-    <hr>
-
-    <nav class="tags-list muted">
-        <label>Tags</label>
-
-        <ul>
-{% for tag in page.tags %}
-            <li><a href="/postsbytag/#{{ tag }}">{{ tag }}</a></li>
-{% endfor %}
-        </ul>
-    </nav>
-{% endif %}
-
-<hr/>
-
-<div id="disqus_thread" class="comments"></div>
-
+  {{ content }}
 </article>
-
-{% if page.tags %}
-<nav class="related-nav article-index">
-    <h1>Similar articles</h1>
-
-    <ul>
-    {% for tag in site.tags %}{% if tag[0] == page.tags[0] %}
-        {% for post in tag[1] %}
-            {% if forloop.index < 4  and post.title != page.title %}
-                {% include list-article.html %}
-            {% endif %}
-        {% endfor %}
-    {% endif %}{% endfor %}
-    </ul>
-</nav>
-{% endif %}
-
-<script>
-    if (location.hostname=="robinwinslow.uk") {
-        var disqus_shortname = 'robin-blog'; // required: replace example with your forum shortname
-
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    }
-</script>
-
-<noscript>Please enable JavaScript to view the comments (powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>)</noscript>

@@ -11,15 +11,13 @@ On the 6th of October, Theresa May [made another attempt][bbc-may] to turn us al
 
 I've only just got around to finishing it, and while it may not be quite as topical, the issues are still just as important, especially as I expect the government will make another attempt to demonise immigrants in the wake of last night's tragic attacks in Paris.
 
-A conservative standpoint
-===
+## A conservative standpoint
 
 This is not a logical decision, it is inherently an emotional and political one. And being against immigration is a classic conservative standpoint. Migrants always signify change. The more new people you let into the country, the less predictable the social mix. Society will evolve and change to respond to the diversity of backgrounds.
 
 The conservative steriotype is against that sort of uncertainty, or that level of change. Things should remain within defined parameters so that we can conserve our society, or put another way, keep change to a minimum.
 
-"It's all about the economy"
----
+### "It's all about the economy"
 
 Of course, this conservative government tries to run on a platform of economic stability. Only they can be trusted with the economy, according to them. Which is why they have tried in the past to argue that migration is bad for the economy.
 
@@ -37,13 +35,11 @@ It is really telling that May responds to this lack of economic effects from mig
 
 > there's no case against immigration
 
-A case for migration
-===
+## A case for migration
 
 And while there is no economic argument against migration, there are many reasons to support it.
 
-The moral argument
----
+### The moral argument
 
 The United Kingdom is one of the richest territories in the world. Not to trivialise the struggles of the poorer members of society in the UK, but they have significantly better lives in terms of life expectancy, human rights and luxury than the majority of people in the world.
 
@@ -51,22 +47,18 @@ This situation simply isn't fair, and border controls are the main mechanism for
 
 The UK could easily afford, and in my opinion has a moral obligation to, expand it's commitment to helping migrants seek a better life on our shores. And as Theresa May's own sources show, such immigration has no negative impact on the UK economy.
 
-The business case
----
+### The business case
 
 Businesses leaders have a history of pushing to relax immigration laws. They don't want to be restricted to hiring new talent purely from within the UK population in case they can't find the ideal candidate. And of course it's simply unfair to provide this advantage to UK workers when applying for jobs against more capable candidates from overseas.
 
 Hiring people from overseas, with different types of experience and cultural backgrounds, can help businesses work much more effectively in international markets.
 
-The diversity argument
----
+### The diversity argument
 
 I believe it is simply more interesting to have a richer mix of cultures and backgrounds in the UK. The more diverse society, the more new and interesting ideas and pieces of artwork, and the better UK citizens will be at working within the international community.
 
-A better UK, a better world
-===
+## A better UK, a better world
 
 In summary, I believe the argument against immigration in the UK is born out of xenophobia and fear of change, and has no solid evidence to support it. On the other hand, a UK that supports immigration will ultimately be a richer, more moral and more progressive society.
-
 
 [bbc-may]: http://www.bbc.co.uk/news/uk-politics-34450887 "BBC: Theresa May: High immigration levels prevent 'cohesive society'"

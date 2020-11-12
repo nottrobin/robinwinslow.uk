@@ -1,13 +1,26 @@
 ---
-layout: page
-title: "web dev and politics"
-description: 'Articles on client- and server-side web development. Also some about politics. And general rants and ramblings.'
+layout: wrapper
+title: The list of thoughts
+description: General rants and ramblings.
 ---
 
-<nav class="article-index hero-articles">
-    <ul>
-    {% for post in site.posts %}
-        {% include list-article.html %}
-    {% endfor %}
-    </ul>
-</nav>
+<header class="site-header">
+  <p class="site-title"><a href="/">Some thoughts</a></p>
+  <form class="search-form" action="https://www.google.com/search">
+    <input type="hidden" name="sitesearch" value="robinwinslow.uk">
+    <input type="search" name="q">
+    <button type="submit">Search posts</button>
+  </form>
+</header>
+
+<ol class="posts">
+  {% for post in site.posts %}
+    <li>
+      <article>
+        <time datetime="{{ post.date | date: '%F' }}">{{ post.date | date_to_long_string: "ordinal" }}</time>
+        <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+        {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+      </article>
+    </li>
+  {% endfor %}
+</ol>

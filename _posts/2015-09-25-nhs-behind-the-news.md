@@ -13,11 +13,11 @@ recent searches I made were
 [what are the risks of extended paracetamol use][c4823254].
 
 The first result on fidgeting was, unsurprisingly, from
-the Mail Online, but *amazingly* the 1st result from my paracetamol
+the Mail Online, but _amazingly_ the 1st result from my paracetamol
 query, and the 3rd result on fidgeting, were from [NHS choices][c9fd35db], in their
 [Behind the Headlines][4bdfcb8a] series.
 
-# Comparing headlines
+## Comparing headlines
 
 **Fidgeting**:
 
@@ -38,7 +38,7 @@ a small link between extended paracetamol use and some health conditions,
 the evidence is far from solid - paracetamol should still be considered
 a very safe painkiller to take.
 
-# Combating sensationalism
+## Combating sensationalism
 
 Sensationalist headlines [are a problem][1980338f] but the fact that these more
 informative analyses are appearing so high up in search results is really
@@ -49,14 +49,15 @@ an effort to check for these articles whenever I want to share information
 about any health phenomena. And you should too. And eventually
 [Google will learn][62f88151].
 
-  [7b0edee4]: http://www.telegraph.co.uk/news/health/news/11445925/Long-term-use-of-paracetamol-can-lead-to-high-blood-pressure-and-stroke.html "Telegraph: Long term use of paracetamol can lead to high blood pressure and stroke"
-  [decd0478]: http://www.dailymail.co.uk/health/article-2976701/Paracetamol-linked-heart-attack-risk-Fears-high-doses-taken-long-time.html "Paracetamol linked to heart attack risk: Fears over high doses taken for a long time"
-  [2b0633c8]: http://www.nhs.uk/news/2015/03March/Pages/Is-long-term-paracetamol-use-not-as-safe-as-we-thought.aspx "NHS choices: Is long term paracetamol use not as safe as we thought?"
-  [c9fd35db]: http://www.nhs.uk/Pages/HomePage.aspx "NHS choices"
-  [1980338f]: https://www.agingcare.com/Articles/dangers-of-sensationalist-science-176442.htm "The Dangers of Believing in ‘Sensationalist Science’"
-  [dbc01221]: http://www.dailymail.co.uk/health/article-2685378/How-fidgeting-help-stay-healthy-Moving-ward-heart-disease.html "The Daily Mail: How fidgeting can help you stay healthy"
-  [4bdfcb8a]: http://www.nhs.uk/news/Pages/NewsIndex.aspx "NHS choices: Behind the Headlines"
-  [c4823254]: https://www.google.co.uk/search?q=what%20are%20the%20risks%20of%20extended%20paracetamol%20use "Google results for "what are the risks of extended paracetamol use""
-  [614b94c3]: https://www.google.co.uk/search?q=does+fidgeting+have+health+benefits+like+exercise "Google results for "does fidgeting have health benefits like exercise""
-  [5be6a04b]: http://www.nhs.uk/news/2015/09September/Pages/Fidgeting-probably-not-a-useful-alternative-to-proper-exercise.aspx "NHS choices: Fidgeting probably not a useful alternative to proper exercise"
-  [62f88151]: https://en.wikipedia.org/wiki/PageRank "Wikipedia: PageRank"
+[7b0edee4]: http://www.telegraph.co.uk/news/health/news/11445925/Long-term-use-of-paracetamol-can-lead-to-high-blood-pressure-and-stroke.html "Telegraph: Long term use of paracetamol can lead to high blood pressure and stroke"
+[decd0478]: http://www.dailymail.co.uk/health/article-2976701/Paracetamol-linked-heart-attack-risk-Fears-high-doses-taken-long-time.html "Paracetamol linked to heart attack risk: Fears over high doses taken for a long time"
+[2b0633c8]: http://www.nhs.uk/news/2015/03March/Pages/Is-long-term-paracetamol-use-not-as-safe-as-we-thought.aspx "NHS choices: Is long term paracetamol use not as safe as we thought?"
+[c9fd35db]: http://www.nhs.uk/Pages/HomePage.aspx "NHS choices"
+[1980338f]: https://www.agingcare.com/Articles/dangers-of-sensationalist-science-176442.htm "The Dangers of Believing in ‘Sensationalist Science’"
+[dbc01221]: http://www.dailymail.co.uk/health/article-2685378/How-fidgeting-help-stay-healthy-Moving-ward-heart-disease.html "The Daily Mail: How fidgeting can help you stay healthy"
+[4bdfcb8a]: http://www.nhs.uk/news/Pages/NewsIndex.aspx "NHS choices: Behind the Headlines"
+
+[c4823254]: https://www.google.co.uk/search?q=what%20are%20the%20risks%20of%20extended%20paracetamol%20use "Google results for "what are the risks of extended paracetamol use""
+[614b94c3]: https://www.google.co.uk/search?q=does+fidgeting+have+health+benefits+like+exercise "Google results for "does fidgeting have health benefits like exercise""
+[5be6a04b]: http://www.nhs.uk/news/2015/09September/Pages/Fidgeting-probably-not-a-useful-alternative-to-proper-exercise.aspx "NHS choices: Fidgeting probably not a useful alternative to proper exercise"
+[62f88151]: https://en.wikipedia.org/wiki/PageRank "Wikipedia: PageRank"

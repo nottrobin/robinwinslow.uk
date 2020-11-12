@@ -3,25 +3,23 @@ layout: post
 title: "A review of Down and Out in the Magic Kingdom by Cory Doctorow"
 description: "My review of Down and Out: My first review of anything ever, this is my opinion of the Cory's first novel. I hope someone finds it useful."
 tags:
-    - personal
-    - reviews
+  - personal
+  - reviews
 ---
 
 Rating: <span class="rating">3.5</span>
 
 This is my first ever review of anything. I don't know why I decided to start now, with this book, but I did. So there we go.
 
-Cory Doctorow
-===
+## Cory Doctorow
 
-[Down and Out in the Magic Kingdom][downpage] was [Cory Doctorow][corytwitter]'s first novel. Written in 2003, it was ([according to Wikipedia][wikicoryfiction]) the first novel to be released under a [creative commons][cc] license. Which is very cool. 
+[Down and Out in the Magic Kingdom][downpage] was [Cory Doctorow][corytwitter]'s first novel. Written in 2003, it was ([according to Wikipedia][wikicoryfiction]) the first novel to be released under a [creative commons][cc] license. Which is very cool.
 
 Aside from having written [12 novels][corynovels] to date, Cory is a co-editor of [Boing Boing][bb], fellow of the [Electronic Freedom Foundation][eff] and founder of the [Open Rights Group][org].
 
 If you submit the text from many of my blog posts (e.g. "[How is my blog going][mybloggoing]") to the [I Write Like website][iwl], it'll tell you that [I write like Cory Doctorow][my-iwl].
 
-A quick summary
-===
+## A quick summary
 
 > This [future history][wikifh] book takes place in the 22nd century, mostly in [Walt Disney World][wikiwdw]. Disney World is run by rival [adhocracies][wikiadhoc], each dedicated to providing the best experience to the park's visitors and competing for the Whuffie the guests offer.
 
@@ -35,8 +33,7 @@ The book is set in a future where:
 
 You can read the [plot summary on Wikipedia][wikidown-plot].
 
-My review
-===
+## My review
 
 Right from the start it's clear Cory has put a lot of effort into the technical details of the world. There are believable, technical solutions to death and money, and you can see how this world could easily be a logical future of the world we currently live in. We develop the ability to back-up a brain and re-insert it into a body; we are constantly connected to a highly-optimised version of the internet, which is feeding us relevant information all the time.
 
@@ -56,8 +53,7 @@ But unfortunately, ultimately a novel needs to follow a storyline. And this is w
 
 This all meant that at the end of the book I was left with a slightly unsatisfied feeling; almost a dystopian feeling. But I certainly encountered some interesting ideas along the way.
 
-Conclusion
-===
+## Conclusion
 
 Down and Out is the second book by Cory Doctorow that I've read. The first was [Little Brother][wiki-lb]. I would definitely recommend Little Brother over Down and Out - it is a longer and more mature work, and it succeeds in being a more engaging read. This is not entirely surprising as Cory was 5 years and 5 novels more experienced when he wrote Little Brother.
 

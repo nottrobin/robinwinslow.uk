@@ -3,18 +3,17 @@ layout: post
 title: "How to secure your site against the NSA and GCHQ"
 description: "There has been some misinformation going around about the state of our cryptographic technology following certain revelations about the NSA. I'm here to clear that up."
 tags:
-    - politics
-    - technology
-    - nsa
-    - canonical
+  - politics
+  - technology
+  - nsa
+  - canonical
 ---
 
-In the last couple of months I've had a number of discussions with people who were under the impression that *encryption has been cracked* by the NSA.
+In the last couple of months I've had a number of discussions with people who were under the impression that _encryption has been cracked_ by the NSA.
 
 If you like, jump straight to [what you can do about it](#what-you-can-do).
 
-The story
-===
+## The story
 
 The story started in September, in the Guardian:
 
@@ -30,15 +29,13 @@ This came up again today, because [Sir Tim Berners-Lee](http://en.wikipedia.org/
 
 And something very similar to this was stated in the Radio 4 news program I was listening to this morning.
 
-The worry
-===
+## The worry
 
 On the face of it this sounds like the NSA's geniuses have reverse-engineered some core cryptographic principles - e.g. worked out how to quickly deduce prime factors from a public key ([read an explanation of RSA][cryp-explained-prime-factors]).
 
 This would be very serious. I was sceptical though, because I believe that if there were key vulnerabilities in public algorithms, the public would have found them long before the NSA. They don't have a monopoly on good mathematicians. This is, after all, why open-source code and public algorithms are inherently more secure.
 
-The truth
-===
+## The truth
 
 Helpfully, Massachusetts Institute of Technology published an article 4 days later clarifying what the NSA had likely achieved:
 
@@ -48,8 +45,7 @@ Helpfully, Massachusetts Institute of Technology published an article 4 days lat
 
 This shows that (still as far as we know) **the NSA have done nothing unprecedented**. They have, however, gone to huge lengths to exploit every known vulnerability in security systems, regardless of legality. Mostly, these vulnerabilities are with the end-point systems, not the cryptography itself.
 
-What the NSA and GCHQ have done
----
+### What the NSA and GCHQ have done
 
 I've tried to list these in order of severity:
 
@@ -60,8 +56,7 @@ I've tried to list these in order of severity:
 - Used brute-force attacks to find weaker (1024-bit) RSA private keys
 - Used court orders to force companies to give up personal information
 
-A word about RSA brute-forcing
----
+### A word about RSA brute-forcing
 
 We have [known for a while][se-rsa-length] that 1024-bit RSA keys could feasibly be brute-forced by anyone with enough resources - and many assumed that the U.S security agencies would almost certainly be doing it. So for the more paranoid among us, this should be no surprise.
 
@@ -73,12 +68,11 @@ However, MIT also claim that these weaker keys are:
 
 This surprises me, as I know that [GoDaddy](http://uk.godaddy.com/) at least won't sell you a certificate for a key shorter than 2048-bit - and I would assume other certificate vendors would follow suit. But maybe this is fairly recent.
 
-However, even if "most websites" use RSA-1024, it *doesn't mean* that the NSA is decrypting all of this encrypted traffic, because it still requires a huge amount of resources (and time) to do, and the sheer number of such keys being used will also be huge. This means the NSA can *only* be decrypting data from *specifically targeted* sites. They won't have decrypted all of it.
+However, even if "most websites" use RSA-1024, it _doesn't mean_ that the NSA is decrypting all of this encrypted traffic, because it still requires a huge amount of resources (and time) to do, and the sheer number of such keys being used will also be huge. This means the NSA can _only_ be decrypting data from _specifically targeted_ sites. They won't have decrypted all of it.
 
 <span id="what-you-can-do"></span>
 
-What you can do
-===
+## What you can do
 
 Now that we know this is going on, it only means that we should be more stringent about the security best-practices that already existed:
 

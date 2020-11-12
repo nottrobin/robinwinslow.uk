@@ -1,17 +1,19 @@
 ---
-layout: post
-title: "Don't ever commit binary files to Git! Or what to do if you do."
-description: "Why you shouldn't commit binary files to a distributed version control system - and how you can remove them completely if you do."
+title: Don't ever commit binary files to Git! Or what to do if you do.
+date: 2013-06-11 00:00:00 Z
 tags:
-    - dev
-    - back-end
-    - git
+- dev
+- back-end
+- git
+description: Why you shouldn't commit binary files to a distributed version control
+  system - and how you can remove them completely if you do.
+image_url: https://assets.ubuntu.com/v1/7e800a30-Don+t+ever+commit+binary+files+to+Git+Or+what+to+do+if+you+do+.png?w=230&h=160&mode=fill&bg=0000
+layout: post
 ---
 
 Git is a great [distributed version control system](http://en.wikipedia.org/wiki/Distributed_revision_control). It's fantastically for easily storing changed to *text files* wherever you are, and then easily copying them up to a server or servers or sharing them with your friends locally.
 
-Avoid binary files
-===
+## Avoid binary files
 
 "Text files" is the key here. It easily lets you see textual changes. But this function is useless for binary data. Data about changes in binary files just makes the commits impossible to read.
 
@@ -21,8 +23,7 @@ This matters not because storage is expensive - it's not. It matter because the 
 
 It's important to *never commit binary files* because once you've commit them they are *in the repository history* and are very annoying to remove. You can delete the files from the *current version* of the project - but they'll remain in the repository history, meaning that the overall repository size will still be large.
 
-How you can fix it
-===
+## How you can fix it
 
 You can totally remove large files from the repository only by *rewriting history*. This is extremely dangerous because it will overwrite all commits since files were added, producing a completely different version of the revision history.
 

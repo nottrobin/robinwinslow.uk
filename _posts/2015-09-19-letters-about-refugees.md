@@ -13,7 +13,7 @@ I was [prompted by Avaaz][] to [email my MP][] about the current refugee crisis.
 
 I hope I had some impact on [David][], but ultimately I was surprised and a bit disappointed that he simply gave up discussing the point so quickly. He didn't try to counter my objections with any statistics or evidence. Which is a shame.
 
-I ultimately came away with the impression that David is a very standard Conservative-party-line MP, with not much independence. As [TheyWorkForYou puts it][David], he:
+I ultimately came away with the impression that David is a very standard Conservative-party-line MP, with not much independence. As [TheyWorkForYou puts it][david], he:
 
 > Consistently voted for a reduction in spending on welfare benefits  
 > Consistently voted for replacing Trident with a new nuclear weapons system  
@@ -23,8 +23,7 @@ In case anyone else is interested I'm publishing the emails below (as well as on
 
 ---
 
-Me to David: I am ashamed of the government
----
+### Me to David: I am ashamed of the government
 
 ```
 On Tue, 8 September 2015 at 10:39
@@ -49,8 +48,7 @@ Therefore I urge you to encourage the Prime Minister and the cabinet to massivel
 Yours in deepest sincerity,  
 Robin Winslow Morris
 
-David to me: They're not all refugees
----
+### David to me: They're not all refugees
 
 ```
 On Tue, 8 Sep 2015 at 15:56
@@ -83,8 +81,7 @@ David
 David Mackintosh MP
 Conservative Member of Parliament for Northampton South
 
-Me to David: Do you have any sources?
----
+### Me to David: Do you have any sources?
 
 ```
 On Wed, 9 Sep 2015 at 14:11
@@ -113,8 +110,7 @@ I urge you again, as my representative in parliament, please do what you can to 
 Sincerely,  
 Robin
 
-David to me: This is clearly something we disagree on
----
+### David to me: This is clearly something we disagree on
 
 ```
 On Wed, 9 Sep 2015 at 20:26
@@ -129,8 +125,7 @@ Thank you for your email. I'm sorry you are not happy with my response but this 
 Best wishes  
 David
 
-Me to David: You're probably right
----
+### Me to David: You're probably right
 
 ```
 On Thu, 10 Sep 2015 at 00:26
@@ -145,19 +140,19 @@ I guess you're probably right. Thanks for replying all the same.
 Kind regards,
 Robin
 
-[prompted by Avaaz]: https://speakout.38degrees.org.uk/campaigns/248
+[prompted by avaaz]: https://speakout.38degrees.org.uk/campaigns/248
 [letter1]: https://gist.github.com/nottrobin/f390eec3b0026e99ca3b
 [letter2]: https://gist.github.com/nottrobin/2790b8a0d2d3a16ff4d8
 [letter3]: https://gist.github.com/nottrobin/2790b8a0d2d3a16ff4d8
 [the next 5 years]: http://www.bbc.co.uk/news/uk-34171148
 [this weekend alone]: http://www.reuters.com/article/2015/09/07/us-europe-migrants-idUSKCN0R71EX20150907
 [comments about the crisis]: http://www.theguardian.com/world/2015/sep/02/david-miliband-refugees-uk-humanitarian-traditions
-[a video by Dr. Hans Rosling]: https://www.youtube.com/watch?v=eziPJOE5woI
-[I responded to him]: https://gist.github.com/nottrobin/2790b8a0d2d3a16ff4d8
+[a video by dr. hans rosling]: https://www.youtube.com/watch?v=eziPJOE5woI
+[i responded to him]: https://gist.github.com/nottrobin/2790b8a0d2d3a16ff4d8
 [my open letter]: https://gist.github.com/nottrobin/f390eec3b0026e99ca3b
-[EU directive 2001/51/EC]: https://youtu.be/eziPJOE5woI?t=1m35s
-[tents in Calais]: http://www.bbc.com/news/uk-29074736
+[eu directive 2001/51/ec]: https://youtu.be/eziPJOE5woI?t=1m35s
+[tents in calais]: http://www.bbc.com/news/uk-29074736
 [a final response]: https://gist.github.com/nottrobin/1404ddc422a8a5b40822
-[email my MP]: https://www.writetothem.com/
-[David]: http://www.theyworkforyou.com/mp/25347/david_mackintosh/northampton_south
+[email my mp]: https://www.writetothem.com/
+[david]: http://www.theyworkforyou.com/mp/25347/david_mackintosh/northampton_south
 [gist.github.com]: https://gist.github.com

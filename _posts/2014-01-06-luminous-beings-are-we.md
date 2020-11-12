@@ -3,12 +3,11 @@ layout: post
 title: "Luminous beings are we"
 description: "A piece of creative writing from my diary from last year. It's about the ebb and flow of humanity, and how life is hacking."
 tags:
-    - personal
-    - canonical
+  - personal
+  - canonical
 ---
 
-A diary entry from October 15th 2013
----
+### A diary entry from October 15th 2013
 
 Today I very much wanted to work on my voice. Work out how to get my message across - feel like I was saying something genuine, something of significance.
 

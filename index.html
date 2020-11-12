@@ -17,7 +17,7 @@ description: General rants and ramblings.
   {% for post in site.posts %}
     <li>
       <article>
-        <time datetime="{{ post.date | date: '%F' }}">{{ post.date | date_to_long_string: "ordinal" }}</time>
+        <p><time datetime="{{ post.date | date: '%F' }}">{{ post.date | date_to_long_string: "ordinal" }}</time></p>
         <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
         {% if post.description %}<p>{{ post.description }}</p>{% endif %}
       </article>

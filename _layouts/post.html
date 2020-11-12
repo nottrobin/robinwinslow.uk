@@ -2,17 +2,15 @@
 layout: wrapper
 ---
 
-<header class="site-header">
-  <p class="site-title-standalone">
-    <a href="/">< Some thoughts</a></h1>
-  </p>
+<nav class="back-to-home">
+  <p><a href="/">< Some thoughts</a></h1></p>
+</header>
+
+<header class="article-header">
+  <h1>{{ page.title }}</h1>
+  <time datetime="{{ page.date | date: '%F' }}">{{ page.date | date_to_long_string: "ordinal" }}</time>
 </header>
 
 <article>
-  <header>
-    <time datetime="{{ page.date | date: '%F' }}">{{ page.date | date_to_long_string: "ordinal" }}</time>
-    <h1>{{ page.title }}</h1>
-  </header>
-
   {{ content }}
 </article>

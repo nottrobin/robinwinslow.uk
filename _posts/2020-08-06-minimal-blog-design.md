@@ -2,6 +2,7 @@
 layout: post
 title: A minimal blog
 description: Why and how I created a minimalistic new style for this site
+published: false
 ---
 
 My blog has been neglected for years, dispite my strong desire to write more. The psychological barrier here has been the pressure I put on myself to make all my work _significant_.

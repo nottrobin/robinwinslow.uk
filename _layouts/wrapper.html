@@ -41,23 +41,6 @@ JavaScript:
         background-color: #efefef;
         margin: 0;
       }
-      .site-header {
-        display: flex;
-        justify-content: center;
-        padding: 0.5em 5em;
-        font-weight: 100;
-      }
-      .site-title {
-        flex-basis: 10em;
-      }
-      .site-title-standalone {
-        flex-basis: 35em;
-      }
-      .search-form {
-        flex-basis: 25em;
-        margin-top: 1em;
-        text-align: right;
-      }
       time {
         color: gray;
       }
@@ -79,16 +62,16 @@ JavaScript:
         margin-bottom: 1em;
       }
       h1 {
-        font-size: 3em;
+        font-size: 2em;
       }
       h2 {
-          font-size: 2em;
+        font-size: 1.5em;
       }
       h3 {
-          font-size: 1.5em;
+        font-size: 1.2em;
       }
       h4 {
-          font-size: 1.2em;
+        font-size: 1.1em;
       }
       p {
         line-height: 1.5em;
@@ -103,45 +86,89 @@ JavaScript:
       a:visited {
         color: #551A8B;
       }
+      input, button {
+        -webkit-appearance: none; 
+        appearance: none;
+        border: 1px solid lightgray;
+        font-size: 1em;
+        box-sizing: content-box;
+        padding: 0.5em 0.8em;
+      }
       article {
         margin: auto;
         padding: 3em 5em;
         max-width: 35em;
         background-color: white;
       }
-      li {
-        margin: 2em;
+      article p, article ul, article ol {
+        margin-block-start: 1.5em;
+        margin-block-end: 1.5em;
       }
-      li:first-of-type {
-        margin-top: 0;
+      article li {
+        margin-block-start: 1em;
+        margin-block-end: 1em;
       }
-      li:last-of-type {
-        margin-bottom: 0;
+      pre {
+        overflow-x: scroll;
+        background-color: #eee;
+        padding: 1em;
       }
-      li article {
-          padding: 1em 2em;
+
+      /* Classes */
+      .article-header {
+        margin: auto;
+        max-width: 60em;
+        padding: 3em;
+        text-align: center;
       }
-      li article h1 {
-        font-size: 1.5em;
+      .article-header h1 {
+        font-size: 3em;
+        margin: 0 0 0.5em 0;
+      }
+
+      .back-to-home {
+        padding: 0 1.5em;
+      }
+
+      .site-header {
+        max-width: 60em;
+        margin: 1em auto 2em auto;
+        overflow: hidden;
+      }
+      .site-title {
+        float: left;
+        margin: 1em;
+      }
+      .search-form {
+        float: right;
+        margin: 1em;
+      }
+
+      .posts li {
+        margin: 3em;
+      }
+      .posts li article {
+          padding: 3em;
+      }
+      .posts li article h1 {
+        font-size: 2em;
         margin: 1em 0 0 0;
         font-weight: normal;
       }
-      ol {
+      .posts {
         padding: 0;
         margin: 0;
         list-style-type: none;
       }
-      article p {
-        margin-bottom: 0;
-      }
     </style>
+    <script data-ad-client="ca-pub-3794489207815900" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   </head>
   <body>
     {{ content }}
 
     <footer>
       <ul>
-        <li><a href="https://twitter.com/nottrobin">@nottrobin</a></li>
+        <li>By <a href="https://twitter.com/nottrobin">@nottrobin</a></li>
       </ul>
     </footer>
   </body>

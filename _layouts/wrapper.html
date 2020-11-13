@@ -57,7 +57,6 @@ JavaScript:
         color: gray;
       }
       footer {
-        font-size: 1rem;
         padding: 3em;
       }
       footer ul {
@@ -158,12 +157,18 @@ JavaScript:
         padding: 0 1.5em;
       }
 
-      .site-header {
+      .title {
         text-align: center;
-        max-width: 60em;
-        margin: 1em auto 2em auto;
+        margin: 1em 1em 2em 1em;
+      }
+      .title h1 {
+        margin-bottom: 0;
+      }
+      .title p {
+        margin-top: 0.25em;
       }
       .search-form {
+        text-align: center;
         margin: 0.8em 1em;
       }
       .search-form input, .search-form button {
@@ -215,11 +220,5 @@ JavaScript:
     </div>
 
     {{ content }}
-
-    <footer>
-      <ul>
-        <li>By <a href="https://twitter.com/nottrobin">@nottrobin</a></li>
-      </ul>
-    </footer>
   </body>
 </html>

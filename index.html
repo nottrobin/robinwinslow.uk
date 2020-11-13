@@ -4,14 +4,16 @@ title: A list of thoughts
 description: Thinkings on life, technology and politics.
 ---
 
-<header class="site-header">
-  <h1 class="site-title">Posts</h1>
-  <form class="search-form" action="https://www.google.com/search">
-    <input type="hidden" name="sitesearch" value="robinwinslow.uk">
-    <input type="search" name="q">
-    <button type="submit">Search posts</button>
-  </form>
+<header class="title">
+  <h1>Posts</h1>
+  <p>by <a href="https://twitter.com/nottrobin">@nottrobin</a></p>
 </header>
+
+<form class="search-form" action="https://www.google.com/search">
+  <input type="hidden" name="sitesearch" value="robinwinslow.uk">
+  <input type="search" name="q">
+  <button type="submit">Search posts</button>
+</form>
 
 <ol class="posts">
   {% for post in site.posts %}

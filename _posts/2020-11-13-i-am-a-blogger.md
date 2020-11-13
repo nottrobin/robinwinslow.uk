@@ -24,4 +24,4 @@ And now, just like that, I am a blogger. And bloggers blog. Every day.
 
 This will be my first post in a long time, and hopefully the first of many, many short and boring posts just like this one.
 
-Wish me luck! And self-belief.
+Wish me luck, and self-belief!

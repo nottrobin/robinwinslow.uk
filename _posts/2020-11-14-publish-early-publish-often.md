@@ -61,8 +61,8 @@ If I'm right about this, it really doesn't matter how much crap content you prod
 
 As I [mentioned yesterday](/2020/11/13/i-am-a-blogger/), I'm currently trying to revive my blog. I'm going to do this by setting the bar for publishing content very low for myself, and hoping to publish daily. At least for a while.
 
-I'm not going to spend a long time on editing, or let myself expect too much of my posts. I'm just going to do what I can, what comes to the top of my head.
+I'm not going to spend a long time on editing, or let myself expect too much of my posts. I'm just going to do what I can.
 
-This will be my second post in 2 days. So far so good, I guess.
+This is my second post in 2 days. So far so good, I guess.
 
 Let's see how it goes from here.

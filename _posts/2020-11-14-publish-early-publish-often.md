@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: 'Publish early, publish often'
 description: 'Why publishing unpolished, quick drafts may be a good strategy'
 layout: post

@@ -4,7 +4,7 @@ title: 'Publish early, publish often'
 description: 'Why publishing unpolished, quick drafts may be a good strategy'
 layout: post
 ---
-This is going to fly in the face of conventional wisdom.
+This may fly in the face of conventional wisdom.
 
 # What bloggers will tell you
 

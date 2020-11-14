@@ -45,7 +45,7 @@ This is for two reasons:
 
 Why couldn't the same theory apply to blogging?
 
-# Are bloggers building a brand?
+# Are bloggers really brand building?
 
 One reason to be careful about "releasing early" is the potential for reputational damage. If you're well known, releasing a sub-par product could tarnish your reputation.
 

@@ -32,11 +32,11 @@ Until yesterday, I'd not published anything for 21 months! The reason? I expect 
 
 # Why web devs "release early"
 
-In my world of web development, we have a saying:
+In my world of web development, we have a principle:
 
 > [Release early, release often](https://en.wikipedia.org/wiki/Release_early,_release_often)
 
-We release out products as early as we possibly can - while they only do the bare minimum and sometimes while they still have bugs. Then we make improvements fast.
+We release our products as early as we possibly can - while they only do the bare minimum and sometimes while they still have bugs. Then we make improvements fast.
 
 This is for two reasons:
 

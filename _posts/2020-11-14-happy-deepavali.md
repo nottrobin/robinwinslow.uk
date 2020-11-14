@@ -3,6 +3,7 @@ published: true
 title: Happy Deepavali!
 description: I had a lovely day. I'm exhausted.
 layout: post
+date: '2020-11-14 23:50'
 ---
 Today was [Deepavali](https://en.wikipedia.org/wiki/Diwali) (or Diwali) - the first for my son, and the first that my Daughter was properly engaged with. It was great, and exhausting.
 

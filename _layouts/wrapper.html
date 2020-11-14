@@ -118,10 +118,22 @@ JavaScript:
         margin-block-end: 1em;
       }
       blockquote {
-        margin: 2em 0;
+        margin: 1.5em 0;
+        font-size: 1.2em;
         padding: 0 2em;
         border-left: 2px solid #ddd;
         font-style: italic;
+      }
+      blockquote:before {
+        content: "❝";
+        font-size: 1.2em;
+      }
+      blockquote:after {
+        content: "❞";
+        font-size: 1.2em;
+      }
+      blockquote p {
+        display: inline;
       }
       pre {
         overflow-x: scroll;

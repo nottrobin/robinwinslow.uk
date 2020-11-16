@@ -11,7 +11,7 @@ Instead, today I'm simply going to write down some of the posts I hope to write 
 These posts will all form a larger story about how I created the new styling for my blog.
 
 1. *What's the point of this site?* - Lay out the goals of my blog, and the principles behind how I run it
-2. *Shooting for simplicity?* - My philosophy for creating a simple user experience for my blog
+2. *Shooting for simplicity* - My philosophy for creating a simple user experience for my blog
 3. *Go big or go home: On font size and spacing*
 4. *Aim for the middle: On centre alignment*
 

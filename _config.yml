@@ -1,12 +1,9 @@
-redcarpet:
-    extensions: [with_toc_data]
-future: true
-exclude: [config.ru, Gemfile, Gemfile.lock, LICENSE.md, Procfile, Rakefile, README.md, vendor, env, env3]
+exclude: [LICENSE.md, README.md]
 permalink: pretty
-destination: _site
 defaults:
   -
     scope:
-      path: ""
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
     values:
-      rss_link: "/rss.xml"
+      is_post: true # automatically set is_post=true for all posts

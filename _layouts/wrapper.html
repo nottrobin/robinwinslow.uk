@@ -28,9 +28,14 @@ JavaScript:
     <meta name="description" content="{{ page.description }}">
 
     <!-- Social media -->
+    <meta property='article:author' content='https://twitter.com/nottrobin' />
+    <meta property='article:publisher' content='https://robinwinslow.uk' />
+    {% if page.is_post -%}
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="{{ page.title }}"/>
-    <meta property="og:image" content="https://picsum.photos/400">
+    {%- else -%}
+    <meta property="og:type" content="website"/>
+    {%- endif %}
 
     <link type="application/atom+xml" rel="alternative" href="/rss.xml" />
 

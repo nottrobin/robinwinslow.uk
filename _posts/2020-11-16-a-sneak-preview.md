@@ -13,7 +13,7 @@ These posts will all form a larger story about how I created the new styling for
 1. *What's the point of this site?* - Lay out the goals of my blog, and the principles behind how I run it
 2. *Shooting for simplicity* - My philosophy for creating a simple user experience for my blog
 3. *Go big or go home: On font size and spacing*
-4. *Aim for the middle: On centre alignment*
+4. *Why is everything centre-aligned?*
 
 This will do for now. I'm not hard committing to any of the titles here, but they're just the beginnings of the direction I want to take with my next few posts.
 

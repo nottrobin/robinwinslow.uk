@@ -23,16 +23,6 @@ JavaScript:
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2993676-8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-2993676-8');
-    </script>
-
     <title>{{ page.title }}</title>
     
     <meta name="description" content="{{ page.description }}">
@@ -118,25 +108,16 @@ JavaScript:
         margin-block-end: 1em;
       }
       blockquote {
+        padding: 1em 1.5em;
         margin: 1.5em 0;
-        font-size: 1.2em;
-        padding: 0 2em;
         border-left: 2px solid #ddd;
         font-style: italic;
-      }
-      blockquote:before {
-        content: "❝";
-        font-size: 1.2em;
-      }
-      blockquote:after {
-        content: "❞";
-        font-size: 1.2em;
       }
       blockquote p {
         display: inline;
       }
       pre {
-        overflow-x: scroll;
+        overflow-x: auto;
         background-color: #eee;
         padding: 1em;
       }
@@ -202,14 +183,6 @@ JavaScript:
         list-style-type: none;
       }
     </style>
-
-    <!-- media.net ads snippet -->
-    <script type="text/javascript">
-      window._mNHandle = window._mNHandle || {};
-      window._mNHandle.queue = window._mNHandle.queue || [];
-      medianet_versionId = "3121199";
-    </script>
-    <script src="https://contextual.media.net/dmedianet.js?cid=8CUE0H340" async="async"></script>
   </head>
   <body>
     <!-- media.net ad placement -->
@@ -225,5 +198,22 @@ JavaScript:
     </div>
 
     {{ content }}
+
+    <!-- media.net ads snippet -->
+    <script type="text/javascript">
+      window._mNHandle = window._mNHandle || {};
+      window._mNHandle.queue = window._mNHandle.queue || [];
+      medianet_versionId = "3121199";
+    </script>
+    <script src="https://contextual.media.net/dmedianet.js?cid=8CUE0H340" async></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-2993676-8');
+    </script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-2993676-8" async></script>
   </body>
 </html>

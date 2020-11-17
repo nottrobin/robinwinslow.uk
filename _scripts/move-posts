@@ -1,0 +1,74 @@
+#! /usr/bin/env python3
+
+from glob import glob
+import re
+import os
+from contextlib import contextmanager
+
+
+@contextmanager
+def working_directory(path):
+    """
+    A context manager which changes the working directory to the given
+    path, and then changes it back to its previous value on exit.
+    Usage:
+    > # Do something in original directory
+    > with working_directory('/my/new/path'):
+    >     # Do something in new directory
+    > # Back to old directory
+    """
+
+    prev_cwd = os.getcwd()
+    os.chdir(path)
+    try:
+        yield
+    finally:
+        os.chdir(prev_cwd)
+
+
+project_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+with working_directory(project_dir):
+    for filepath in glob("_posts/*.md"):
+        print(f"Reading {filepath}")
+        with open(filepath) as post:
+            lines = post.readlines()
+
+        filepath_match = re.match(
+            (
+                r"_posts/(?P<year>\d{4})-(?P<month>\d{2})-(?P<day>\d{2})"
+                r"-(?P<slug>.*).md"
+            ),
+            filepath,
+        )
+
+        if not filepath_match:
+            print(f"... odd, {filepath} didn't match...")
+
+        parts = filepath_match.groupdict()
+
+        redirect_url = f'/{parts["year"]}/{parts["month"]}/{parts["day"]}/{parts["slug"]}/'
+
+        new_lines = [lines[0], f"redirect_from: {redirect_url}\n"]
+
+        has_date = False
+
+        for line in lines:
+            if line.startswith("date: ") or line.startswith("Date: "):
+                has_date = True
+                break
+
+        if not has_date:
+            new_lines += (
+                f"date: {parts['year']}-{parts['month']}-{parts['day']}\n"
+            )
+
+        new_lines = new_lines + lines[1:]
+
+        print(f'Creating _articles/{parts["slug"]}.md')
+        with open(f'_articles/{parts["slug"]}.md', "w") as article:
+            for line in new_lines:
+                article.write(line)
+
+        print(f"Removing {filepath}")
+        os.remove(filepath)

@@ -3,7 +3,11 @@ published: true
 title: Why have a blog?
 description: Laying out the goals & principles for my site
 layout: post
+date: 2020-11-16
+redirect_from:
+  - /2020/11/16/why-have-a-blog/
 ---
+
 I've had this blog now for about 8 years. Wow that sounds like a long time.
 
 Why did I start it? Why am I continuing?

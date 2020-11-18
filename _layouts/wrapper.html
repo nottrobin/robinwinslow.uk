@@ -56,10 +56,6 @@ JavaScript:
       time, .subtitle {
         color: gray;
       }
-      footer {
-        text-align: center;
-        padding: 3em;
-      }
       h1, h2, h3, h4 {
         font-weight: normal;
         margin-top: 2em;
@@ -193,6 +189,28 @@ JavaScript:
         margin: 0;
         list-style-type: none;
       }
+      .see-the-code {
+        padding: 1.5em;
+        font-size: 0.8em;
+        text-align: right;
+      }
+      .author {
+        text-align: center;
+        margin: 3em;
+        font-style: normal;
+      }
+      .more-posts {
+        padding: 1.5em 3em;
+        margin: auto;
+        background-color: white;
+        max-width: 35em;
+      }
+      .more-posts h2 {
+        margin-top: 1em;
+      }
+      .more-posts time {
+        font-size: 0.8em;
+      }
 
       /* Pygments syntax highlighting autumn theme */
       pre { line-height: 125%; }
@@ -285,6 +303,10 @@ JavaScript:
     </div>
 
     {{ content }}
+
+    <footer class="see-the-code">
+      <a href="https://github.com/nottrobin/robinwinslow.uk">☵ See the code</a>
+    </footer>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script>

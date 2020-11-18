@@ -15,6 +15,42 @@ layout: wrapper
   {{ content }}
 </article>
 
-<footer>
-  <p>By <a href="https://twitter.com/nottrobin">@nottrobin</a></p>
-</footer>
+<address class="author">
+  By <a href="https://twitter.com/nottrobin">@nottrobin</a>
+</address>
+
+{% for article in site.articles %}
+  {% if article.url == page.url %}
+    {% unless forloop.first %}
+      {% assign previous = preceding %}
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign next = site.articles[forloop.index] %}
+    {% endunless %}
+  {% endif %}
+  {% assign preceding = article %}
+{% endfor %}
+
+{% assign latest = site.articles[-1] %}
+
+<nav class="more-posts">
+  <h2>More posts</h2>
+  {% if latest and latest.url != next.url and latest.url != page.url %}
+  <p>
+    <a href="{{ latest.url }}">{{ latest.title }}</a><br>
+    <time datetime="{{ latest.date | date: '%F' }}">{{ latest.date | date_to_long_string: "ordinal" }}</time>
+  </p>
+  {% endif %}
+  {% if next %}
+  <p>
+    <a href="{{ next.url }}">{{ next.title }}</a><br>
+    <time datetime="{{ next.date | date: '%F' }}">{{ next.date | date_to_long_string: "ordinal" }}</time>
+  </p>
+  {% endif %}
+  {% if previous %}
+  <p>
+    <a href="{{ previous.url }}">{{ previous.title }}</a><br>
+    <time datetime="{{ previous.date | date: '%F' }}">{{ previous.date | date_to_long_string: "ordinal" }}</time>
+  </p>
+  {% endif %}
+</nav>

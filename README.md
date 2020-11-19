@@ -18,6 +18,6 @@ $ jekyll serve
 
 Now the site should be running on http://127.0.0.1:4000.
 
-## License
+## Usage license
 
 My code and writing are public domain, use them however you wish.

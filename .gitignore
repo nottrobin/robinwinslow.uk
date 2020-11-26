@@ -8,3 +8,4 @@ vendor/
 /env/
 /env3/
 node_modules/
+.jekyll-cache/

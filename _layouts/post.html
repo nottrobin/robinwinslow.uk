@@ -11,25 +11,6 @@ layout: wrapper
   <time datetime="{{ page.date | date: '%F' }}">{{ page.date | date_to_long_string: "ordinal" }}</time>
 </header>
 
-<style>
-  .headings {
-    position: absolute;
-    text-align: right;
-    font-size: 0.8em;
-    opacity: 0.4;
-    position: fixed;
-    display: none;
-  }
-  .headings ol {
-    margin: 6em 6em 1.5em 1.5em;
-    padding: 0;
-  }
-  .headings ol li {
-    list-style-type: none;
-    margin: 1em 0;
-  }
-</style>
-
 <nav class="headings">
   <ol>
     <li><a href="#top">↑ top</a></li>
@@ -42,7 +23,7 @@ layout: wrapper
 
 <script>
   /**
-   * Heading nav
+   * Document outline
    */
 
   // Get elements

@@ -28,8 +28,8 @@ redirect_from:
   {% for article in artices_newest_first %}
     <li>
       <article>
-        <p><time datetime="{{ article.date | date: '%F' }}">{{ article.date | date_to_long_string: "ordinal" }}</time></p>
         <a href="{{ article.url }}"><h1>{{ article.title }}</h1></a>
+        <p class="date"><time datetime="{{ article.date | date: '%F' }}">{{ article.date | date_to_long_string: "ordinal" }}</time></p>
         {% if article.description %}<p>{{ article.description }}</p>{% endif %}
       </article>
     </li>

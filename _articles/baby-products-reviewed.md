@@ -2,7 +2,7 @@
 layout: post
 title: Baby & toddler products, reviewed (work in progress)
 description: Reviews of baby products we've bought over the last few years
-date: 2020-11-26
+date: 2020-11-26 11:00
 ---
 
 As I write this, my daughter is now nearly 3 and my son is 11 weeks old.

@@ -87,11 +87,10 @@ JavaScript:
         color: #551A8B;
       }
       input, button {
-        -webkit-appearance: none; 
         appearance: none;
         border: 1px solid lightgray;
         font-size: 1em;
-        box-sizing: content-box;
+        max-width: 100%;
         padding: 0.5em 0.8em;
       }
       article {
@@ -187,6 +186,11 @@ JavaScript:
         font-size: 1.5em;
         margin: 1em 0 0 0;
         font-weight: normal;
+      }
+      @media (max-width: 984px) {
+        .posts li article h1 {
+          font-size: 1.3em;
+        }
       }
       .posts {
         padding: 0;

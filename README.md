@@ -11,10 +11,14 @@ This means I'm limited to what's in [Jekyll](https://jekyllrb.com/), GitHub's [m
 ## Running the site locally
 
 ```bash
-$ sudo apt-get install ruby-dev # Install Ruby and Gems
-$ sudo gem install jekyll jekyll-redirect-from  # Install Jekyll and just one plugin
-$ jekyll serve
+$ sudo apt-get install ruby-dev # Install Ruby, Gems and development tooling for building gems
+$ sudo gem install jekyll  # Install Jekyll
+$ sudo gem install jekyll-coffeescript jekyll-default-layout jekyll-gist jekyll-github-metadata jekyll-optional-front-matter jekyll-paginate jekyll-readme-index jekyll-titles-from-headings jekyll-relative-links # Install jekyll and all the default plugins for GH pages
+$ sudo gem install jekyll-redirect-from  # Also install jekyll-redirect-from, which is used in this site
+$ jekyll serve  # Run the site
 ```
+
+(If you get errors, you might need to remove `kramdown`, or all of `ruby`, and start again).
 
 Now the site should be running on http://127.0.0.1:4000.
 

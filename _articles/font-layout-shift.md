@@ -1,0 +1,24 @@
+---
+layout: post
+title: Font loading performance and Cumulative Layout Shift
+description: 'Most sites should use "font-display: optional"'
+date: 2021-02-02 10:26
+---
+
+I just sent basically this as an email to my team, but since I think this is very interesting (to web experience & performance geeks) I'm gonna quickly throw it up as a post:
+
+I just read [More than you ever wanted to know about font loading on the web](https://www.industrialempathy.com/posts/high-performance-web-font-loading/) (which I found on [Hacker News](https://news.ycombinator.com/)).
+
+This article is all about how best to load fonts. It looks like just another dude's opinion but it's actually got a really impressive depth of knowledge behind it.
+
+I really recommend reading the whole article, but here are the important points:
+
+*   If you use non-native fonts, browsers' default font loading strategies often lead to[ Cumulative Layout Shift](https://web.dev/cls/) issues, and[ Largest Contentful Paint](https://web.dev/lcp/) issues
+    *   Apart from bad scores being a bad user experience, these measures are also "[web vitals](https://web.dev/vitals/)" which[ will be](https://developers.google.com/search/blog/2020/11/timing-for-page-experience) used in Google's PageRank calculations from May 20201.
+*   The best easy option to use is "font-display: optional"
+    *   What this does is display using the best font that is immediately available. So if you first visit[ ubuntu.com](http://ubuntu.com) and don't have "Ubuntu" available, it will use the next font from the list (unless it's able to download "ubuntu" super fast, which might sometimes happen). Then it will still download and cache "ubuntu" and use it for the next page load.
+*   Another option is to pick a fall-back font that matches the size characteristics of "ubuntu" (he provides[ a tool](https://www.industrialempathy.com/perfect-ish-font-fallback/?font=Montserrat) for finding one), so that there's minimal layout shift. Although presumably this option will have no impact on Largest Contentful Paint
+
+Long before Web Vitals came along, I was always quite frustrated at how fonts load on ubuntu.com - being invisible on first load, or swapping fonts in the first second - and it is far from the worst offender.
+
+`font-display: optional` sounds like the perfect compromise between performance & user interests, and the desire to present elegant professional designs. It doesn't slow down the user unnecessarily, but will lead to most people getting the best experience most of the time.

@@ -89,7 +89,7 @@ It's also worth taking advantage of opportunities to use RegEx in these ways to 
 For example, I recently used the following RegEx substitution in VSCode to format a dump of text into a table format:
 
 
-![RegEx replacement in VSCode](https://lh5.googleusercontent.com/mLDT-nkK2WI62ovJy_t5GCadgA82pQ_W8FA_23Yvs0uPD0x4WPdq6mbgPj-GTHiePU5bLKiT7bStwgJzPq8boyreFekfcP21FFDVD9NDom1XXTPPAzw_2la0Fixbv6e2UPNlktPu)
+![RegEx replacement in VSCode](https://lh4.googleusercontent.com/cP3lE6Zkb3JV2Xz-7x879LLQer_7DOr_r8dxrRA1FFUnl0AwSfT9rCaf0u-HCG2gTNBRzraRxX_DQm1CVQngIr9XAQ__AE1gIrs-yJZHacBLkyUvi8TIdk4YNfl2il1tqg6qrbjA)
 
 
 

@@ -34,6 +34,7 @@ layout: wrapper
   // Populate nav
   article.querySelectorAll("h1, h2").forEach(function (heading) {
     let item = document.createElement("li");
+    item.classList.add(heading.tagName.toLowerCase());
     item.innerHTML = `<a href="#${heading.id}">${heading.textContent}</a>`;
     list.appendChild(item);
   });

@@ -22,10 +22,8 @@ They are available in basically every programming language, and you’ll probabl
 
 A couple of examples of RegEx to get started:
 
-
-
-*   `[ -~]` - Any ASCII character (ASCII characters fall between space and "~")
-*   `^[a-z0-9_-]{3,15}$` - Usernames between 3 and 15 characters
+| `[ -~]` | Any ASCII character (ASCII characters fall between space and "~") |
+| `^[a-z0-9_-]{3,15}$` | Usernames between 3 and 15 characters |
 
 
 # When to use RegEx
@@ -89,7 +87,7 @@ It's also worth taking advantage of opportunities to use RegEx in these ways to 
 For example, I recently used the following RegEx substitution in VSCode to format a dump of text into a table format:
 
 
-![RegEx replacement in VSCode](https://lh4.googleusercontent.com/cP3lE6Zkb3JV2Xz-7x879LLQer_7DOr_r8dxrRA1FFUnl0AwSfT9rCaf0u-HCG2gTNBRzraRxX_DQm1CVQngIr9XAQ__AE1gIrs-yJZHacBLkyUvi8TIdk4YNfl2il1tqg6qrbjA)
+![RegEx replacement in VSCode](https://lh6.googleusercontent.com/dR5m7AyBayo8O9JFzjjfGlO-wdKSaIBxb_kxIfDGnJMGKmWI8Y2dDwmNAUlUjMlli6I5UtH3OheTGTmY9hEEluj6ieab68TbXG8oxk0QoSTV_SKQb1af95SXHoieMoOynVUqX44C)
 
 
 
@@ -118,19 +116,17 @@ r"^he[l]{2}o\wworld$"
 
 ## The most common special characters
 
-
-
-*   `.`: Matches any single character (except newlines, normally)
-*   `\`: Escape a special character (e.g. `\.` matches a literal dot)
-*   `?`: The preceding character may or may not be present (e.g. `/hell?o/` would match `hello` or `helo`)
-*   `*`: Any number of the preceding character is allowed (e.g. `.*` will match any single-line string, including an empty string, and gets used a lot)
-*   `+`: One or more of the preceding character (`.+` is the same as `.*` except that it won’t match an empty string)
-*   `|`: "or", match the preceding section or the following section (e.g. `hello|mad` will match "hello" or "mad")
-*   `()`: group a section together. This can be useful for conditionals (`(a|b)`), multipliers (`(hello)+`), or to create groups for substitutions (see below)
-*   `{}`: Specify how many of the preceding character (e.g. `a{12}` matches 12 "a"s in a row)
-*   `[]`: Match any character in this set. `-` defines ranges (e.g. `[a-z]` is any lowercase letter), `^` means "not" (e.g. `[^,]+` match any number of non-commas in a row)
-*   `^`: Beginning of line
-*   `$`: End of line
+| `.` | Matches any single character (except newlines, normally) |
+| `\` | Escape a special character (e.g. `\.` matches a literal dot) |
+| `?` | The preceding character may or may not be present (e.g. `/hell?o/` would match `hello` or `helo`) |
+| `*` | Any number of the preceding character is allowed (e.g. `.*` will match any single-line string, including an empty string, and gets used a lot) |
+| `+` | One or more of the preceding character (`.+` is the same as `.*` except that it won’t match an empty string) |
+| `|` | "or", match the preceding section or the following section (e.g. `hello|mad` will match "hello" or "mad") |
+| `()` | group a section together. This can be useful for conditionals (`(a|b)`), multipliers (`(hello)+`), or to create groups for substitutions (see below) |
+| `{}` | Specify how many of the preceding character (e.g. `a{12}` matches 12 "a"s in a row) |
+| `[]` | Match any character in this set. `-` defines ranges (e.g. `[a-z]` is any lowercase letter), `^` means "not" (e.g. `[^,]+` match any number of non-commas in a row) |
+| `^` | Beginning of line |
+| `$` | End of line |
 
 
 ## Character shortcuts

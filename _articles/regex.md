@@ -154,8 +154,8 @@ if( /^he[l]{2}o\sworld$/.test("hello world") ) {..}
 
 ``` python
 # Python
-Import re
-If re.match(r"^he[l]{2}o\sworld$", "hello world"): ..
+import re
+if re.match(r"^he[l]{2}o\sworld$", "hello world"): ..
 ```
 
 ## Regex in substitutions
@@ -174,7 +174,7 @@ console.log("hello world".replace(/^(he[l]{2}o)\s(world)$/, "mad $2"))
 
 ``` python
 # Python
-Import re
+import re
 print(re.replace(r"^(he[l]{2}o)\s(world)$", r"mad \2", "hello world"))
 ```
 
@@ -194,8 +194,8 @@ if( /^he[l]{2}o\sworld$/i.test("HeLlO wOrLd") ) {..}
 
 ``` python
 # Python
-Import re
-If re.match(r"^he[l]{2}o\sworld$", "HeLlO wOrLd", flags=re.IGNORECASE): ..
+import re
+if re.match(r"^he[l]{2}o\sworld$", "HeLlO wOrLd", flags=re.IGNORECASE): ..
 ```
 
 ## Lookahead and lookbehind in regex

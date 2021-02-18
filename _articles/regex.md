@@ -23,7 +23,7 @@ They are available in basically every programming language, and you’ll probabl
 
 A couple of examples of regular expressions to get started:
 
-| `[ -~]` | Any ASCII character (ASCII characters fall between space and "~") |
+| `[ -~]` | Any ASCII character<br />(ASCII characters fall between space and "~") |
 | `^[a-z0-9_-]{3,15}$` | Usernames between 3 and 15 characters |
 
 

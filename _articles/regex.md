@@ -2,8 +2,8 @@
 redirect_from: /how-to-regex
 date: 2021-02-17
 layout: post
-title: How the hell do I regex?
-description: An introduction to the basics of regex, with appropriate warnings
+title: Regex basics
+description: An overview regex and how to use it, from a few different angles. Including appropriate warnings like "avoid regex".
 ---
 
 In my team we  run "masterclasses" every couple of weeks, where someone in the team presents a topic to the rest of the team.

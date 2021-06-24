@@ -23,11 +23,11 @@ About 2 years ago [we noticed](https://github.com/canonical-web-and-design/deplo
 This may have had a few causes, but one very likely culprit was Kubernetes restarting or replacing containers. This may happen during normal running of the service, as Kubernetes reschedules pods to respond to load, but will also happen every time we release a new version of the site.
 
 
-## The trouble with SIGTERM and nginx
+## The trouble with `SIGTERM` and nginx
 
 When we release a new version of a site to Kubernetes, we first build and push a new image to the registry, then we ask Kubernetes to gradually roll out new containers based off the new image.
 
-Kubernetes will gradually switch over to the new containers, removing the old ones as it goes. It does this using the same mechanism as `[docker stop](https://docs.docker.com/engine/reference/commandline/stop/)` - it will send a SIGTERM [signal](https://en.wikipedia.org/wiki/Signal_(IPC)#POSIX_signals) to the container, allow 30 seconds for it to stop gracefully, then send SIGKILL. It expects SIGTERM to result in a graceful shutdown:
+Kubernetes will gradually switch over to the new containers, removing the old ones as it goes. It does this using the same mechanism as [`docker stop`](https://docs.docker.com/engine/reference/commandline/stop/) - it will send a SIGTERM [signal](https://en.wikipedia.org/wiki/Signal_(IPC)#POSIX_signals) to the container, allow 30 seconds for it to stop gracefully, then send SIGKILL. It expects SIGTERM to result in a graceful shutdown:
 
 > “It’s important that your application handle termination gracefully so that there is minimal impact on the end user and the time-to-recovery is as fast as possible!
 >
@@ -44,9 +44,9 @@ Unfortunately, this isn’t what happens when nginx receives a TERM signal:
 
 *From the “[Controlling nginx](http://nginx.org/en/docs/control.html)” documentation*
 
-What that “fast shutdown” means is that any open connections will be immediately closed. So if Kubernetes sends SIGTERM to my running containers, anyone with an open connection to those containers will see their connection break.
+What that “fast shutdown” means is that any open connections will be immediately closed. So if Kubernetes sends `SIGTERM` to my running containers, anyone with an open connection to those containers will see their connection break.
 
-We can illustrate this using [a Dockerfile](https://gist.github.com/nottrobin/60d949fd41c99b8c77fb23f614b126f8) which simply uses nginx to proxy to `[httpbin.org](https://httpbin.org/)/delay/10`. When we stop the container, we can see the container exit within less than a second, and the `curl` exit with “Empty reply from server”:
+We can illustrate this using [a Dockerfile](https://gist.github.com/nottrobin/60d949fd41c99b8c77fb23f614b126f8) which simply uses nginx to proxy to [`httpbin.org/delay/10`](https://httpbin.org/delay/10). When we stop the container, we can see the container exit within less than a second, and the `curl` exit with “Empty reply from server”:
 
     $ docker build -t delay-image .
     ...
@@ -65,9 +65,9 @@ We can illustrate this using [a Dockerfile](https://gist.github.com/nottrobin/60
 
 ## SIGQUIT to the rescue
 
-What we need instead is to send a SIGQUIT signal to ask nginx to perform a graceful shutdown, where it will wait for open connections to close before quitting.
+What we need instead is to send a `SIGQUIT` signal to ask nginx to perform a graceful shutdown, where it will wait for open connections to close before quitting.
 
-If we  [add “STOPSIGNAL SIGQUIT” to the Dockerfile](https://gist.github.com/nottrobin/79087f07efab61f013c6e7e519a96ad8) then we can instead see curl exit gracefully with a [successful 200 response](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success), and `docker stop` wait (in this case, for 8.51 seconds) until it’s done so:
+If we  [add `STOPSIGNAL SIGQUIT` to the Dockerfile](https://gist.github.com/nottrobin/79087f07efab61f013c6e7e519a96ad8) then we can instead see curl exit gracefully with a [successful 200 response](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success), and `docker stop` wait (in this case, for 8.51 seconds) until it’s done so:
 
     $ docker build -t delay-image .
     ...
@@ -86,20 +86,20 @@ If we  [add “STOPSIGNAL SIGQUIT” to the Dockerfile](https://gist.github.com/
 
 Bear in mind that `docker kill` will only wait 10 seconds, and Kubernetes will only wait 30, before killing the container with `SIGKILL`. So if you might need longer than that to close connections then you may need to increase the grace period.
 
-An exception to this rule is if you are relying on unix sockets in your nginx config. In this case, SIGQUIT will [fail to close the sockets](https://trac.nginx.org/nginx/ticket/753) properly, resulting in [containers potentially not restarting correctly](https://github.com/nginxinc/docker-nginx/issues/167). So if you’re using sockets, be careful with SIGQUIT.
+An exception to this rule is if you are relying on unix sockets in your nginx config. In this case, `SIGQUIT` will [fail to close the sockets](https://trac.nginx.org/nginx/ticket/753) properly, resulting in [containers potentially not restarting correctly](https://github.com/nginxinc/docker-nginx/issues/167). So if you’re using sockets, be careful with SIGQUIT.
 
 
 ## Why isn’t this default?
 
-I can’t find any reference to why nginx made the decision not to treat SIGTERM more gracefully, as a graceful termination seems to be the norm with SIGTERM.
+I can’t find any reference to why nginx made the decision not to treat `SIGTERM` more gracefully, as a graceful termination seems to be the norm with `SIGTERM`.
 
-> The SIGTERM signal is sent to a process to request its **termination**. [...] This allows the process to perform nice termination releasing resources and saving state if appropriate.
+> The `SIGTERM` signal is sent to a process to request its **termination**. [...] This allows the process to perform nice termination releasing resources and saving state if appropriate.
 
 *From [Wikipedia: Signal (IPC)](https://en.wikipedia.org/w/index.php?title=Signal_(IPC)&oldid=924696609)*
 
-~What is a shame is that the Dockerfile for the default nginx Docker image [explicitly uses](https://github.com/nginxinc/docker-nginx/blob/fe97d699daae7e04f916771ac520f7cf25ab2b27/mainline/buster/Dockerfile#L101) `STOPSIGNAL SIGTERM`, meaning that anyone using the default image (and anyone copying it) will get this connection closing issue.~
+~~What is a shame is that the Dockerfile for the default nginx Docker image [explicitly uses](https://github.com/nginxinc/docker-nginx/blob/fe97d699daae7e04f916771ac520f7cf25ab2b27/mainline/buster/Dockerfile#L101) `STOPSIGNAL SIGTERM`, meaning that anyone using the default image (and anyone copying it) will get this connection closing issue.~~
 
-~They have made the decision to use SIGTERM rather than SIGQUIT [because of the issue with sockets](https://github.com/nginxinc/docker-nginx/issues/167). But if you’re not using sockets, you should definitely use SIGQUIT instead.~
+~~They have made the decision to use SIGTERM rather than SIGQUIT [because of the issue with sockets](https://github.com/nginxinc/docker-nginx/issues/167). But if you’re not using sockets, you should definitely use SIGQUIT instead.~~
 
 *Edit: Since November 2020, the official docker image now uses SIGQUIT, so termination should now be graceful in Docker and Kubernetes.*
 

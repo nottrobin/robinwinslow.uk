@@ -19,8 +19,11 @@ date: 2021-06-29
 
 - [Heterodox academy](https://heterodoxacademy.org/) ([the HxA way](https://heterodoxacademy.org/library/the-hxa-way/))
 - [edX](https://www.edx.org/)
+- [Free code camp](https://freecodecamp.org/)
 
 # Charities
 
+- ACLU
+- Amnesty international
 - [Medecins Sans Frontieres](https://msf.org.uk/)
 - [Just giving](https://www.justgiving.com/)

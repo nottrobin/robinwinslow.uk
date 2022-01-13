@@ -126,7 +126,7 @@ It can be worth adding [titles](https://help.emarsys.com/hc/en-us/articles/36001
 
 If you want people to find your writing, share it on social media, using every account you can.
 
-For company content, share on [@ubuntudesigners](https://twitter.com/ubuntudesigners), [@ubuntudev](https://twitter.com/ubuntudev), [@vanillaframewrk](https://twitter.com/vanillaframewrk) and maybe even [@ubuntu](https://twitter.com/ubuntu) if appropriate. And also [hacker news](https://news.ycombinator.com/) and [Reddit](https://www.reddit.com/). I believe there’s a platform to help you do this, but I can’t remember what it is.
+Make sure to share your article on Twitter, Facebook etc. And also [hacker news](https://news.ycombinator.com/) and [Reddit](https://www.reddit.com/).
 
 For blog articles, write them first for your own site (you should benefit from your content), but it’s well worth reblogging them into a centralised blogging site. These sites have large communities and will promote your in lists of new articles on there. Examples:
 

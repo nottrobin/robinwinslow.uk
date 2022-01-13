@@ -23,8 +23,6 @@ Search engines approximate human beings. The best SEO is good writing for the we
 
 But many SEO best practices are also good principles for readability and accessibility:
 
-
-
 * liberal, well-structured headings
 * diverse vocabulary
 * liberal links
@@ -35,12 +33,9 @@ But many SEO best practices are also good principles for readability and accessi
 
 Although there is definitely an audience for high-quality, in-depth long reads, the web medium is much more suited to a fleeting, busy audience with a short attention span.
 
-
-    [“People are not likely to read your content completely or linearly”](https://www.nngroup.com/articles/how-people-read-online/)
+> [“People are not likely to read your content completely or linearly”](https://www.nngroup.com/articles/how-people-read-online/)
 
 Advice on writing for scanners:
-
-
 
 * Use clear, noticeable headings and subheadings
 * Place information up front ([Inverted pyramid structure](https://www.nngroup.com/articles/inverted-pyramid/)) - nothing like academic writing
@@ -103,14 +98,14 @@ The web revolutionised referencing - this is hugely underappreciated and underus
 Using links liberally is essential to both your own SEO and to the health of the web at large.
 
 
-    ["PageRank is NOT Dead"](https://ahrefs.com/blog/google-pagerank/)
+> ["PageRank is NOT Dead"](https://ahrefs.com/blog/google-pagerank/)
 
 Especially look for opportunities to link to your own content.
 
 Links are also a great way to call attention to key pieces of information within your writing.
 
 
-    [“Eyes Are Drawn to Links”](https://www.nngroup.com/articles/writing-links/)
+> [“Eyes Are Drawn to Links”](https://www.nngroup.com/articles/writing-links/)
 
 
 #### Carefully consider link text
@@ -118,7 +113,7 @@ Links are also a great way to call attention to key pieces of information within
 The exact text you use for your link is very important.
 
 
-    [“Poor link text hurts usability, accessibility, and seo”](https://www.nngroup.com/articles/writing-links/)
+> [“Poor link text hurts usability, accessibility, and seo”](https://www.nngroup.com/articles/writing-links/)
 
 Search engines use the link text to determine what a target page is about. Diversity is important here again - if you link to a piece multiple times, describe it a different way each time.
 
@@ -134,8 +129,6 @@ If you want people to find your writing, share it on social media, using every a
 For company content, share on [@ubuntudesigners](https://twitter.com/ubuntudesigners), [@ubuntudev](https://twitter.com/ubuntudev), [@vanillaframewrk](https://twitter.com/vanillaframewrk) and maybe even [@ubuntu](https://twitter.com/ubuntu) if appropriate. And also [hacker news](https://news.ycombinator.com/) and [Reddit](https://www.reddit.com/). I believe there’s a platform to help you do this, but I can’t remember what it is.
 
 For blog articles, write them first for your own site (you should benefit from your content), but it’s well worth reblogging them into a centralised blogging site. These sites have large communities and will promote your in lists of new articles on there. Examples:
-
-
 
 * [https://medium.com/](https://medium.com/)
 * [https://dev.to/](https://dev.to/)

@@ -34,7 +34,7 @@ Google Analytics is my crutch. It is the way that I can, at least in theory, see
 Moving on
 ---
 
-So now I get to kill two important birds with one stone - free myself from caring about who actually reads my work, and also claw back the tiniest bit of self respect by not letting the wily [Anthony Dillon](https://anthonydillon.com) defeat me in performance metrics.
+So now I get to kill two important birds with one stone - free myself from caring about who actually reads my work, and also claw back the tiniest bit of self respect by not letting the wily [Anthony Dillon](https://anthonydillon.com) defeat me [in performance metrics](https://www.dareboost.com/en/comparison?reportIds=a_2621142e310b60b7e1a27376a&reportIds=a_2621142e310b60b7e1a27376b).
 
 ![robinwinslow.uk new performance](https://user-images.githubusercontent.com/519935/154802472-bca15264-fe7d-44aa-9023-a752bf8741a6.png)
 

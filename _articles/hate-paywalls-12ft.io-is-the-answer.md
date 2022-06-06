@@ -35,7 +35,7 @@ I used to go through all these tricks manually to read the content I wanted. It 
 
 All I have to do is enter this in my browser:
 
-[12ft.io/https://www.ft.com/content/c7480de9-323a-410b-889b-dd24bbee593d](12ft.io/https://www.ft.com/content/c7480de9-323a-410b-889b-dd24bbee593d)
+[12ft.io/https://www.ft.com/content/c7480de9-323a-410b-889b-dd24bbee593d](https://12ft.io/https://www.ft.com/content/c7480de9-323a-410b-889b-dd24bbee593d)
 
 And boom! The article is open to me.
 

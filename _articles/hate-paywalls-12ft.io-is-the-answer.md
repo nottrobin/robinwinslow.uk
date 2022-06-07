@@ -29,7 +29,7 @@ The FT is the most interesing one. Many of their articles are blocked right away
 
 I used to go through all these tricks manually to read the content I wanted. It wasn't that hard, and there's a certain satisfaction in outsmarting the paywall. But now I've found a much easier way.
 
-[12ft.io](https://12ft.io/) is beautiful. All you have to do is add "12ft.io" to the beginning of the URL for any article you want to read. E.g., if I want to read this article:
+[12ft.io](https://12ft.io/) is beautiful. All you have to do is add "12ft.io/" to the beginning of the URL for any article you want to read. E.g., if I want to read this article:
 
 [https://www.ft.com/content/c7480de9-323a-410b-889b-dd24bbee593d](https://www.ft.com/content/c7480de9-323a-410b-889b-dd24bbee593d)
 

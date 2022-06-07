@@ -3,10 +3,9 @@ permalink: pretty
 defaults:
   -
     scope:
-      path: ""      # empty string for all files
-      type: posts   # limit to posts
+      path: "_articles"
     values:
-      is_post: true # automatically set is_post=true for all posts
+      layout: post
 collections:
   articles:
     output: true

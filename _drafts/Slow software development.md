@@ -34,8 +34,7 @@ Agile will tell us to add an item to our backlog in a fairly minimal form, pull 
 
 If I think about the developments in tech that have really impressed me, that have led to sustained value, they're all carefully considered. They're certainly not Facebook. They're docker, HTML5, GDS design principles, letsencrypt, USBC, the iPhone, Dyson products. They're not rushed out, their design is carefully considered.
 
-This is the way to solve problems well, in a lasting way. It's also the way to feel proud of your work.
-
+This is the way to solve problems well, in a lasting way. It's also the way to feel proud of your work. I believe this is what has led to Apple and Dyson's success, and their
 
 https://www.infoworld.com/article/3204171/what-is-docker-the-spark-for-the-container-revolution.amp.html
 https://www.cascade.app/strategy-factory/studies/dyson-strategy-study

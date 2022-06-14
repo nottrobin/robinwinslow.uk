@@ -13,7 +13,7 @@ At the moment it's very rough. I shared it with my team on our internal team Dis
 
 [12 factor app](https://12factor.net/)
 
-[Design principles](https://milkov.tech/assets/psd.pdf#page=185) from [A philosophy of software design](https://milkov.tech/assets/psd.pdf):
+[*Design principles*](https://milkov.tech/assets/psd.pdf#page=185) from [A philosophy of software design](https://milkov.tech/assets/psd.pdf):
 
 1. [Complexity is incremental](https://milkov.tech/assets/psd.pdf#page=24): you have to sweat the small stuff
 2. [Working code isn’t enough](https://milkov.tech/assets/psd.pdf#page=25): Strategic vs tactical programming

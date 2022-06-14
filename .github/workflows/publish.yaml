@@ -9,6 +9,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+
       - name: setup git config
         run: |
           git config user.name "Social bot"

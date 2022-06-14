@@ -7,7 +7,7 @@ title: Programming principles
 
 This is a list of principles that I respect for trying to write good software.
 
-At the moment it's very rough. I shared it with my ream on our internal team Discourse in this raw form. But I figure I might as well share it. Just remember it's a work in progress, I hope I come back and improve it sometime, but I probably won't.
+At the moment it's very rough. I shared it with my team on our internal team Discourse in this raw form. But I figure I might as well share it. Just remember it's a work in progress, I hope I come back and improve it sometime, but I probably won't.
 
 ---
 

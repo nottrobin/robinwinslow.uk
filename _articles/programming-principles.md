@@ -47,5 +47,5 @@ At the moment it's very rough. I shared it with my team on our internal team Dis
 - [Indicate output format with a “filename” suffix (e.g. “.json”)](https://robinwinslow.uk/api-design-ebook-2012-03.pdf#page=20)
 - [Use “?q=” for global search](https://robinwinslow.uk/api-design-ebook-2012-03.pdf#page=22)
 - [Use an “api.” subdomain](https://robinwinslow.uk/api-design-ebook-2012-03.pdf#page=23)
-- [**Use the API facade pattern**](https://robinwinslow.uk/api-design-ebook-2012-03.pdf#page=34)  
+- [Use the API facade pattern](https://robinwinslow.uk/api-design-ebook-2012-03.pdf#page=34)  
   See also: [wikipedia](https://en.wikipedia.org/wiki/Facade_pattern)

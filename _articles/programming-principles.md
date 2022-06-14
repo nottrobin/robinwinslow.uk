@@ -1,7 +1,9 @@
 ---
 date: 2022-06-14
+description: Some principles that I hold in high regard for solving problems well
+  in programming
+email_campaign_id: c9f6b6d2bf
 title: Programming principles
-description: Some principles that I hold in high regard for solving problems well in programming
 ---
 
 This is a list of principles that I respect for trying to write good software.
@@ -41,4 +43,4 @@ At the moment it's very rough. I shared it with my ream on our internal team Dis
     - [Use “?q=” for global search](https://robinwinslow.uk/api-design-ebook-2012-03.pdf#page=22)
     - [Use an “api.” subdomain](https://robinwinslow.uk/api-design-ebook-2012-03.pdf#page=23)
     - [**Use the API facade pattern**](https://robinwinslow.uk/api-design-ebook-2012-03.pdf#page=34)
-        - See also: [wikipedia](https://en.wikipedia.org/wiki/Facade_pattern) 
+        - See also: [wikipedia](https://en.wikipedia.org/wiki/Facade_pattern)

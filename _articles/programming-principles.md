@@ -41,7 +41,8 @@ At the moment it's very rough. I shared it with my team on our internal team Dis
 - [Simplify associations - sweep complexity under the ‘?’](https://robinwinslow.uk/api-design-ebook-2012-03.pdf#page=9)
 - [Errors: Use HTTP status codes; Be descriptive](https://robinwinslow.uk/api-design-ebook-2012-03.pdf#page=11)
 - [Versioning APIs](https://robinwinslow.uk/api-design-ebook-2012-03.pdf#page=14) - use whole numbers, maintain back versions  
-  I disagree with the advice to “never release an API without a version”. I think a lot of APIs stay on v1 for a very long time, especially if they’re not heavily used or worked on. For this reason, I’d say drop the version number for the first version, and  only introduce it when you need to create /v2/.
+  
+  *I disagree with the advice to “never release an API without a version”. I think a lot of APIs stay on v1 for a very long time, especially if they’re not heavily used or worked on. For this reason, I’d say drop the version number for the first version, and  only introduce it when you need to create /v2/.*
 - [Use “limit” and “offset” for pagination](https://robinwinslow.uk/api-design-ebook-2012-03.pdf#page=17)
 - [Indicate output format with a “filename” suffix (e.g. “.json”)](https://robinwinslow.uk/api-design-ebook-2012-03.pdf#page=20)
 - [Use “?q=” for global search](https://robinwinslow.uk/api-design-ebook-2012-03.pdf#page=22)

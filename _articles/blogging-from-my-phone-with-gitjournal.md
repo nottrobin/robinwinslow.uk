@@ -4,6 +4,7 @@ modified: 2022-06-05T23:30:21+01:00
 layout: post
 title: Blogging from my phone with GitJournal
 description: GitJournal is a great way to publish to a GitHub-hosted Jekyll blog from an Android phone
+hn_url: https://news.ycombinator.com/item?id=31638482
 ---
 
 I've been looking for a way to publish blog posts easily from my phone. I'm sure I would write a lot more if I could quickly jot down a post e.g. while lying on the floor next to my son's cot waiting for him to go to sleep.

@@ -1,9 +1,10 @@
 ---
-published: true
 title: Why have a blog?
 description: Laying out the goals & principles for my site
 layout: post
 date: 2020-11-16
+hn_url: https://news.ycombinator.com/item?id=31653748
+tweet_url: https://twitter.com/nottrobin/status/1328496460493709312
 redirect_from: /2020/11/16/why-have-a-blog/
 ---
 

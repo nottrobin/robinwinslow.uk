@@ -4,6 +4,7 @@ date: 2021-02-17
 layout: post
 title: Regex basics
 description: An overview of regex and how to use it, from a few different angles. Including appropriate warnings like 'avoid regex'.
+tweet_url: https://twitter.com/nottrobin/status/1362449254296518660
 ---
 
 In my team we  run "masterclasses" every couple of weeks, where someone in the team presents a topic to the rest of the team.

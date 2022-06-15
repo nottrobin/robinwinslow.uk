@@ -3,6 +3,7 @@ date: 2022-02-19
 title: Freedom from the tyranny of metrics
 description: I've finally removed Google Analytics from my site
 layout: post
+hn_url: https://news.ycombinator.com/item?id=31638829
 ---
  
 A terrible tragedy hast befallen my most beloved domain:

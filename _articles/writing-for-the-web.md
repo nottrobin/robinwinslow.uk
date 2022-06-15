@@ -3,6 +3,7 @@ date: 2022-01-13
 title: Writing for the web
 layout: post
 description: "The contents of a talk I'm giving tomorrow on best practices for online writing"
+hn_url: https://news.ycombinator.com/item?id=31638929
 ---
 
 Some things to consider when writing content for the information superhighway.

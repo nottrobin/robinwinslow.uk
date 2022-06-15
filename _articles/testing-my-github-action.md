@@ -2,6 +2,8 @@
 title: Testing my "socialise" GitHub action
 description: I've written a GitHub action to socialise my posts every time I commit. Let's try it out.
 date: 2022-06-14
+hn_url: https://news.ycombinator.com/item?id=31746320
+tweet_url: https://twitter.com/nottrobin/status/1536823132677349377
 ---
 
 I've spent the last week or so writing [a bunch of scripts](https://github.com/nottrobin/social-poster) to automatically post my new articles to Twitter, Hacker News and a Mailchimp mailing list. I've been testing them manually with some of my existing articles (with [surprising](https://news.ycombinator.com/item?id=31653748) [success](https://news.ycombinator.com/item?id=31646936) on Hacker News).

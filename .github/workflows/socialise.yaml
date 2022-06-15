@@ -40,7 +40,7 @@ jobs:
     
       - name: create a commit
         run: |
-          if [ git diff-index --exit-code HEAD -- _articles/ ]; then
+          if git diff-index --exit-code HEAD -- _articles/; then
             echo "No changes. Not committing."
           else
             git add _articles/

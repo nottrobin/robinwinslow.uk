@@ -27,17 +27,21 @@ jobs:
         run: |
           pip3 install -r social-poster/requirements.txt
 
-      - name: send new posts to social media and email
-        env:
-          HN_PASSWORD: ${{ secrets.HN_PASSWORD }}
-          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
-          TWITTER_API_KEY_SECRET: ${{ secrets.TWITTER_API_KEY_SECRET }}
-          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
-          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+      # - name: send new posts to social media and email
+      #   env:
+      #     HN_PASSWORD: ${{ secrets.HN_PASSWORD }}
+      #     TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+      #     TWITTER_API_KEY_SECRET: ${{ secrets.TWITTER_API_KEY_SECRET }}
+      #     TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+      #     TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+      #     MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+      #   run: |
+      #     social-poster/process-recent-articles.py
+    
+      - name: create a commit
         run: |
-          social-poster/process-recent-articles.py
-      
+          git commit --allow-empty -m "Empty commit $(date +%s)"
+
       - name: push back to repo
         run: |
           git push

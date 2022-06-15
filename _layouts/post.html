@@ -20,16 +20,16 @@ layout: wrapper
 <article>
   {{ content }}
 
-  {% if page.tweet_id or page.hacker_news_id %}
+  {% if page.tweet_url or page.hn_url %}
     <hr>
 
     <nav class="discuss">
         Please come and discuss this article
-        {% if page.tweet_id %}
-          <a href="https://twitter.com/nottrobin/status/{{ page.tweet_id }}">on Twitter</a>{% if page.hacker_news_id %} or {% else %}.{% endif %}
+        {% if page.tweet_url %}
+          <a href="{{ page.tweet_url }}">on Twitter</a>{% if page.hn_url %} or {% else %}.{% endif %}
         {% endif %}
-        {% if page.hacker_news_id %}
-          <a href="https://news.ycombinator.com/item?id={{ page.hacker_news_id }}">on hacker news.</a>
+        {% if page.hn_url %}
+          <a href="{{ page.hn_url }}">on Hacker News.</a>
         {% endif %}
     </nav>
   {% endif %}

@@ -1,11 +1,13 @@
 ---
 date: 2022-02-19
-title: Freedom from the tyranny of metrics
 description: I've finally removed Google Analytics from my site
-layout: post
+email_campaign_id: 8585cb34ad
 hn_url: https://news.ycombinator.com/item?id=31638829
+layout: post
+title: Freedom from the tyranny of metrics
+tweet_url: https://twitter.com/nottrobin/status/1536996738128658432
 ---
- 
+
 A terrible tragedy hast befallen my most beloved domain:
 
 ![image](https://user-images.githubusercontent.com/519935/154802582-0584f7e9-ed64-4f50-835b-84ef54c61bb2.png)

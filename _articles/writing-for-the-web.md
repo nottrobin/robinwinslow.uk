@@ -1,9 +1,12 @@
 ---
 date: 2022-01-13
-title: Writing for the web
-layout: post
-description: "The contents of a talk I'm giving tomorrow on best practices for online writing"
+description: The contents of a talk I'm giving tomorrow on best practices for online
+  writing
+email_campaign_id: 31ef92d74b
 hn_url: https://news.ycombinator.com/item?id=31638929
+layout: post
+title: Writing for the web
+tweet_url: https://twitter.com/nottrobin/status/1536996808605450242
 ---
 
 Some things to consider when writing content for the information superhighway.
@@ -137,4 +140,4 @@ For blog articles, write them first for your own site (you should benefit from y
 * [https://hashnode.com/](https://hashnode.com/)
 * [https://substack.com/](https://substack.com/)
 
-Make absolutely sure you link back to your own site. 
+Make absolutely sure you link back to your own site.

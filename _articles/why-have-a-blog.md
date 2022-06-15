@@ -1,11 +1,12 @@
 ---
-title: Why have a blog?
-description: Laying out the goals & principles for my site
-layout: post
 date: 2020-11-16
+description: Laying out the goals & principles for my site
+email_campaign_id: f0316e4fef
 hn_url: https://news.ycombinator.com/item?id=31653748
-tweet_url: https://twitter.com/nottrobin/status/1328496460493709312
+layout: post
 redirect_from: /2020/11/16/why-have-a-blog/
+title: Why have a blog?
+tweet_url: https://twitter.com/nottrobin/status/1328496460493709312
 ---
 
 I've had this blog now for about 8 years. Wow that sounds like a long time.

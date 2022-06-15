@@ -1,9 +1,12 @@
 ---
-redirect_from: /how-to-regex
 date: 2021-02-17
+description: An overview of regex and how to use it, from a few different angles.
+  Including appropriate warnings like 'avoid regex'.
+email_campaign_id: 36c424d2fb
+hn_url: https://news.ycombinator.com/item?id=31750620
 layout: post
+redirect_from: /how-to-regex
 title: Regex basics
-description: An overview of regex and how to use it, from a few different angles. Including appropriate warnings like 'avoid regex'.
 tweet_url: https://twitter.com/nottrobin/status/1362449254296518660
 ---
 

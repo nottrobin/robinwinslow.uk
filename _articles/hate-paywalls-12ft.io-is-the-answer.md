@@ -1,9 +1,11 @@
 ---
-date: 2022-06-05T00:00:00+01:00
-layout: post
-title: 'Hate paywalls? 12ft.io is the answer'
-description: After trying many ways to get around paywalls, I've landed on 12ft.io. It's simply awesome.
+date: 2022-06-05 00:00:00+01:00
+description: After trying many ways to get around paywalls, I've landed on 12ft.io.
+  It's simply awesome.
+email_campaign_id: 75407746fa
 hn_url: https://news.ycombinator.com/item?id=31646936
+layout: post
+title: Hate paywalls? 12ft.io is the answer
 tweet_url: https://twitter.com/nottrobin/status/1533565658767695873
 ---
 

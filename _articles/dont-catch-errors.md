@@ -1,8 +1,12 @@
 ---
-date: 2022-06-14T13:26:03+01:00
-updated: 2022-06-14T13:26:03+01:00
+date: 2022-06-14 13:26:03+01:00
+description: Catching errors without thinking carefully about the user experience
+  is an antipattern and a debugging nightmare.
+email_campaign_id: 40bd76b5ae
+hn_url: https://news.ycombinator.com/item?id=31771803
 title: Don't catch errors without a reason
-description: Catching errors without thinking carefully about the user experience is an antipattern and a debugging nightmare.
+tweet_url: https://twitter.com/nottrobin/status/1537563457788182528
+updated: 2022-06-14 13:26:03+01:00
 ---
 
 Earlier this week, when working on [my blogging pipeline scripts](https://robinwinslow.uk/testing-my-github-action) I had to delve into [the Mailchimp Marketing API docs](https://mailchimp.com/developer/marketing/api/root/). Each of the endpoints there provides a snippet of the following form (example for Python):

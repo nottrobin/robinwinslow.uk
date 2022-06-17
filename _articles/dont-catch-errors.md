@@ -1,11 +1,9 @@
 ---
 date: 2022-06-14 13:26:03+01:00
-description: Catching errors without thinking carefully about the user experience
-  is an antipattern and a debugging nightmare.
+description: Catching errors without thinking carefully about the user experience is an antipattern and a debugging nightmare.
 email_campaign_id: 40bd76b5ae
 hn_url: https://news.ycombinator.com/item?id=31771803
 title: Don't catch errors without a reason
-tweet_url: https://twitter.com/nottrobin/status/1537563457788182528
 updated: 2022-06-14 13:26:03+01:00
 ---
 

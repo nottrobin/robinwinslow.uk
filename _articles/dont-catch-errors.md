@@ -43,7 +43,7 @@ A seasoned Python developer will know how to read an exception stack trace. This
 
 ## Catching individual errors in application code is much more harmful
 
-Imagine instead that this happens inside a view function in Flask, a popular web microframework. Flask is pretty barebones, but one thing is comes with out of the box is error handling. If the application throws an error in development, it will helpfully print out the stack trace in the browser. If it happens in production, it will show a basic`[server error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)` page. 
+Imagine instead that this happens inside a view function in Flask, a popular web microframework. Flask is pretty barebones, but one thing is comes with out of the box is error handling. If the application throws an error in development, it will helpfully print out the stack trace in the browser. If it happens in production, it will show a basic [server error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500) page. 
 
 What the above code will do is print the error to the server log, pass right over the broken code, and try to serve up a normal [success page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200) as if nothing was wrong. This is bad. Worse than bad. This is a debugging nightmare.
 

@@ -47,7 +47,7 @@ Imagine instead that this happens inside a view function in Flask, a popular web
 
 What the above code will do is print the error to the server log, pass right over the broken code, and try to serve up a normal [success page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200) as if nothing was wrong. This is bad. Worse than bad. This is a debugging nightmare.
 
-It's the same with any application framework. Error handling will be managed, sensibly, at the application level. Catching individual error and providing custom handling makes error impossible to track down.
+It's the same with any application framework. Error handling will be managed, sensibly, at the application level. Catching individual errors and providing naive handling can make errors impossible to track down.
 
 ## Don't catch errors willy nilly
 

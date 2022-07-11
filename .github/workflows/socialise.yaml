@@ -49,4 +49,5 @@ jobs:
 
       - name: push back to repo
         run: |
+          git pull --rebase
           git push

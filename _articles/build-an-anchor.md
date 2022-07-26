@@ -1,7 +1,10 @@
 ---
-title: Build an anchor
-date: 2022-07-26T00:00:00+01:00
+date: 2022-07-26 00:00:00+01:00
 description: To build a life within the chaos of infinity, we each need an anchor.
+email_campaign_id: 14c41e4110
+hn_url: https://news.ycombinator.com/item?id=32244930
+title: Build an anchor
+tweet_url: https://twitter.com/nottrobin/status/1552059399270645761
 ---
 
 I've never been good at self care.

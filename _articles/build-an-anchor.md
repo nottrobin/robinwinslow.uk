@@ -1,9 +1,4 @@
 ---
-description: 
-title: Build an anchor
----
-
----
 title: Build an anchor
 date: 2022-07-26T00:00:00+01:00
 description: To build a life within the chaos of infinity, we each need an anchor.

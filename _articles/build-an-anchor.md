@@ -42,7 +42,7 @@ But now within that I can ask - which improvement is most important to me? Some 
 - advocating for digital rights policy
 - building a better internet
 
-This list is obviously incomplete. There's are myriad choices within each, and there are many more I could think of.
+This list is obviously incomplete. There are myriad choices within each, and there are many more I could think of.
 
 But now I have a framework to continue the work. Maybe I'll make a mind map, maybe I'll have more conversations with friends, but as long as I know the mission is to refine and refine the thing that's truly important to me, the closer I will come to having an anchor for my decisions and my life, and from there I can build a discipline.
 

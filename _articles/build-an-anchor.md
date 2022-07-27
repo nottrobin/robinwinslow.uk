@@ -14,15 +14,15 @@ The reason that's surprising to me is that I'm actually in a very similar situat
 
 It's partly distance. I can think much more clearly about then because I am detached from the struggle. But it's also motivation. I actually care about helping them in a way I'm not sure I really care about helping myself. And that's one of the problems.
 
-Ok that's a bit of a distraction from the main point I can't here to write.
+Ok that's a bit of a distraction from the main point I came here to write.
 
 In both cases, my council for my friends is to focus on what matters. Find out what that is and use it as the foundation to build a way forward from. Really clear away all the other bullshit pressures you're putting on yourself, strip everything back until you find something (or some things) you care about too much to let it be stripped.
 
-Then build up a foundation from that thing. Make that the anchor of your decision making. Is there a direct line from an action to the thing that you care about?
+Then build up a foundation from that thing. Make that the anchor of your decision making. For any given action you're considering, what's the direct line to the thing that you care about?
 
 I couldn't quite see things this clearly until I was presented with helping my friends. But now I see that this should also be my council for myself: Forget my salary, my current job, the skills on my CV, the current family schedule I have to fit into etc. Just, for now, find the things that matter.
 
-Because without an anchor, the possibilities spiral out of control. The consequences of any possible action are infinite, as are the distractions, the number of paths not travelled. I've always been a chaotic person, and I've been trying to work out how to develop routine and discipline. But tonight I'm raising that what I need is to build an anchor.
+Because without an anchor, the possibilities spiral out of control. The consequences of any possible action are infinite, as are the distractions, the number of paths not travelled. I've always been a chaotic person, and I've been trying to work out how to develop routine and discipline. But tonight I'm realising that what I need is to build an anchor.
 
 And "build" is the right word. It needs cultivating, reinforcing daily. Like a fortress. That anchor is my values system, the chosen meaning for my life.
 
@@ -41,6 +41,6 @@ But now within that I can ask - which improvement is most important to me? Some 
 
 This list is obviously incomplete. There's are myriad choices within each, and there are many more I could think of.
 
-But now I have a framework to continue the work. Maybe I'll make a mind map, maybe I'll have more conversations with friends, but as long as I know the mission is to refine and refine the thing that's truly important to me, the closet I will come to having an anchor for my decisions and my life, and from there I can build a discipline.
+But now I have a framework to continue the work. Maybe I'll make a mind map, maybe I'll have more conversations with friends, but as long as I know the mission is to refine and refine the thing that's truly important to me, the closer I will come to having an anchor for my decisions and my life, and from there I can build a discipline.
 
 I don't yet know how helpful this has been or will be. Right now it feels like a guiding light. I guess we'll see how it feels tomorrow.

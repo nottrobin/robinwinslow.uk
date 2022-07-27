@@ -1,5 +1,5 @@
 ---
-date: 2022-07-26 00:00:00+01:00
+date: 2022-07-25T23:00:00+00:00
 description: To build a life within the chaos of infinity, we each need an anchor.
 email_campaign_id: 14c41e4110
 hn_url: https://news.ycombinator.com/item?id=32244930
@@ -11,7 +11,7 @@ I've never been good at self care.
 
 In the last few days I've had a couple of friends reach out to me. They've both been in similar sorts of crises of direction (I'm going to stay deliberately vague on my friends themselves).
 
-The thing that's surprising me is that I think I know how to help them. Obviously I don't know exactly what they need, but the rough shape of the advice I would give them is pretty clear to me.
+What's surprised me is that I think I know how to help them. Obviously I don't know exactly what they need, but the rough shape of the advice I would give them is pretty clear to me.
 
 The reason that's surprising to me is that I'm actually in a very similar situation. I'm at a bit of a crossroads in my career. I don't know exactly what I need, or want. I'm not even sure what my skills and expertise are any more. I'm feeling pretty lost. Why can't I have the clarity and determination about helping myself that I seem to have for helping my friends?
 

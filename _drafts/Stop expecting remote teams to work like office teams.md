@@ -13,4 +13,6 @@ Shortly after the fledgling webteam was formed, it was merged with the design te
 
 As we now emerge from the pandemic, the story throughout the industry and world is one of workers wanting remote flexibility and senior managers and CEOs trying to force them back into the office. Our experience was basically the opposite:
 
-Despite many in our team remaining attached to the office, the mandate came from the top that we had to try to make remote work. Unless the web & design team catastrophically failed at remote productivity through the pandemic, we would not be returning to the office.
+Despite many in our team remaining attached to the office, the mandate came from the top that we had to try to make remote work. Unless the web & design team catastrophically failed at remote work through the pandemic, we would not be returning to the office.
+
+The office was too expensive, the inefficiencies were too great. There was no longer any way to justify it.

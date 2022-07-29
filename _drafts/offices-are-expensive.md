@@ -29,4 +29,4 @@ The biggest benefit of being a remote team was one that honestly hadn't occurred
 
 The other obvious benefit to working remotely is the flexibility we can offer everyone. That can be a little bit of a double edged sword. These challenges I think are really interesting and what I really wanted to write about, but this post is long enough already, so I'll elaborate on that more in a follow up post, hopefully.
 
-But for now, I just wanted to make the point that remote working is much more efficient than office working. And in some really obvious ways. Because there are so many articles out there lately trying to claim the office is somehow more efficient. Which is definitely a counter intuitive claim, and the burden of proof should really be on them to prove it.
+But for now, I just wanted to make the point that remote working is much more efficient than office working. And in some really obvious ways. Because there are so many articles out there lately trying to claim the office is somehow more efficient. Which is definitely a counter intuitive claim, and the burden of proof should really be on them.

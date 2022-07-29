@@ -1,6 +1,6 @@
 ---
 description: dunno yet
-title: Remote work is different from office work
+title: Remote work is different
 ---
 
 While the industry-wide battle over whether to allow working from home rages on, my company remains fully committed to 100% remote. That is not without its problems.

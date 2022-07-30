@@ -20,19 +20,17 @@ layout: wrapper
 <article>
   {{ content }}
 
-  {% if page.tweet_url or page.hn_url %}
-    <hr>
+  <hr>
 
-    <nav class="discuss">
-        Please come and discuss this article
-        {% if page.tweet_url %}
-          <a href="{{ page.tweet_url }}">on Twitter</a>{% if page.hn_url %} or {% else %}.{% endif %}
-        {% endif %}
-        {% if page.hn_url %}
-          <a href="{{ page.hn_url }}">on Hacker News.</a>
-        {% endif %}
-    </nav>
-  {% endif %}
+  <section class="discuss">
+    <script src="https://utteranc.es/client.js"
+      repo="nottrobin/robinwinslow.uk"
+      issue-term="url"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+    </script>
+  </section>
 </article>
 
 <script>

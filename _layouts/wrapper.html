@@ -183,7 +183,7 @@ JavaScript:
     }
 
     hr {
-      margin: 3em 0;
+      margin: 2em 0;
     }
 
     /* Classes */
@@ -289,10 +289,16 @@ JavaScript:
       list-style-type: none;
     }
 
+    .socialise {
+      padding: 1.5em;
+      font-size: 0.8em;
+      float: left;
+    }
+
     .see-the-code {
       padding: 1.5em;
       font-size: 0.8em;
-      text-align: right;
+      float: right;
     }
 
     .discuss {
@@ -704,6 +710,18 @@ JavaScript:
 
 <body>
   {{ content }}
+
+  <footer class="socialise">
+    {% if page.tweet_url or page.hn_url %}
+      🔗 Posted to
+      {% if page.tweet_url %}
+        <a href="{{ page.tweet_url }}">Twitter</a>{% if page.hn_url %} and {% endif %}
+      {% endif %}
+      {% if page.hn_url %}
+        <a href="{{ page.hn_url }}">Hacker News</a>
+      {% endif %}
+    {% endif %}  
+  </footer>
 
   <footer class="see-the-code">
     ☵ See <a href="https://github.com/nottrobin/robinwinslow.uk/commits/main/{{ page.path }}">this page's history</a> or <a href="https://github.com/nottrobin/robinwinslow.uk">all the code</a>

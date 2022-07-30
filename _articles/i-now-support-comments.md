@@ -1,7 +1,10 @@
 ---
-title: I now support comments
-description: Why I've decided to add utterances to my blog
 date: 2022-07-30
+description: Why I've decided to add utterances to my blog
+email_campaign_id: b5447b9e8b
+hn_url: https://news.ycombinator.com/item?id=32290495
+title: I now support comments
+tweet_url: https://twitter.com/nottrobin/status/1553491993032007685
 ---
 
 If you've read my blog, you'll have noticed that I never had a comments section before. This was a deliberate decision, although I maybe didn't think about it quite as deeply as I have some other choices. Instead of comments, I pointed people at Twitter or Hacker News to continue the conversation. As far as I'm aware, not a single person ever took this advice.

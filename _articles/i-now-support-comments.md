@@ -24,7 +24,7 @@ But a number of things lately have led me to reconsider this position:
 - I personally have always actually liked interacting in comments sections. Even back in 2016 I was sad to see the comments sections removed.
 - In a remote and cautious post-pandemic world, I've been craving connection with people. Why shut down one more option?
 - Social media sites (especially Twitter) are toxic places to hold any conversation. They are designed to encourage outrage and divisiveness over civil discussions.
-- Just as it's a small act of revolution against Big Tech to have your own website, similarly we shouldn't let the monopolise social interaction.
+- Just as it's a small act of revolution against Big Tech to have your own website, similarly we shouldn't let them monopolise online social interaction.
 - I've noticed how very different-feeling the comments section on [Richard Murphy's blog](https://www.taxresearch.org.uk/Blog/) is from the responses to his tweets.
 - My friend [Tris](https://twitter.com/0atman) has mentioned many times how positive his experience has been of the comments on [his wildly popular Rust videos on YouTube](https://www.youtube.com/c/NoBoilerplate).
 - My friend [Goulin](https://www.goulin.fr/) mentioned to me that he would have commented on an article in the past if there had been an option to.

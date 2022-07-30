@@ -22,11 +22,11 @@ You'll notice none of these arguments are actually very strong. They explain why
 But a number of things lately have led me to reconsider this position:
 
 - I personally have always actually liked interacting in comments sections. Even back in 2016 I was sad to see the comments sections removed.
-- In a remote and cautious post-pandemic world, I've been craving connection with people. Why shit down one more option?
+- In a remote and cautious post-pandemic world, I've been craving connection with people. Why shut down one more option?
 - Social media sites (especially Twitter) are toxic places to hold any conversation. They are designed to encourage outrage and divisiveness over civil discussions.
 - Just as it's a small act of revolution against Big Tech to have your own website, similarly we shouldn't let the monopolise social interaction.
 - I've noticed how very different-feeling the comments section on [Richard Murphy's blog](https://www.taxresearch.org.uk/Blog/) is from the responses to his tweets.
-- My friend [Tris](https://twitter.com/0atman) has mentioned many times how positive his experience has been of the comments on [his wildly popular YouTube videos](https://www.youtube.com/c/NoBoilerplate).
+- My friend [Tris](https://twitter.com/0atman) has mentioned many times how positive his experience has been of the comments on [his wildly popular Rust videos on YouTube](https://www.youtube.com/c/NoBoilerplate).
 - My friend [Goulin](https://www.goulin.fr/) mentioned to me that he would have commented on an article in the past if there had been an option to.
 - I saw someone using the GitHub-based [Utterances](https://utteranc.es/) on their blog and thought it was pretty neat. I'm not sure who it was now, 'cos I can't find it. It was definitely someone in [our Blog Guild](https://webteam.canonical.com/blog-guild) - I thought it was [Peter Makowski's blog](https://makowski.uk/) but he doesn't seem to have it set up any more, so who knows. Anyway, Utterances looks neat.
 

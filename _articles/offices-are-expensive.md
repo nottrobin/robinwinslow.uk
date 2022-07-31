@@ -28,7 +28,7 @@ And this is before you even considered the personal costs of the commute and the
 
 Suffice it to say, we didn't catastrophically fail at remote working. Our work continued at least at the pace that it had before, and our team continued to grow, excel and have fun.
 
-Canonical still has a London office. It's moving, it'll be much smaller than it was - although it will still be gorgeous I believe. There are still teams that need the office, and it's also nice for us to have it for those who want to meet there, as well as one off meetings and events.
+Canonical still has a London office. It's moving, it'll be much smaller than it was - although it will still be gorgeous I believe. There are still teams that need the office, and it's also nice for us to have it for those who want to meet there, as well as one off team meetings and events.
 
 The biggest benefit of being a remote team was one that honestly hadn't occurred to me before it happened: hiring. Previously we only hired those who could commute to London; now we hire from any country across at least 4 different timezones. The difference this has made in our ability to find really good developers has been immense. It was immediately obvious.
 

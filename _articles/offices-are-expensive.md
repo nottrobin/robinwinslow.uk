@@ -26,7 +26,7 @@ Early in the pandemic, before there was any prospect of the office reopening, it
 
 And this is before you even considered the personal costs of the commute and the lack of flexibility for team members.
 
-Suffice it to say, we didn't catastrophically fail at remote working. Our work continued at at least he pace that it had before, and our team continued to grow, excel and have fun.
+Suffice it to say, we didn't catastrophically fail at remote working. Our work continued at least at the pace that it had before, and our team continued to grow, excel and have fun.
 
 Canonical still has a London office. It's moving, it'll be much smaller than it was - although it will still be gorgeous I believe. There are still teams that need the office, and it's also nice for us to have it for those who want to meet there, as well as one off meetings and events.
 

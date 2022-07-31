@@ -1,6 +1,6 @@
 ---
 title: Offices are expensive
-description: The costs of running an office-based team just couldn't be justified after the pandemic
+description: The obvious costs of running an office-based team just couldn't be justified after the pandemic
 date: 2022-07-31T00:00:00+01:00
 ---
 

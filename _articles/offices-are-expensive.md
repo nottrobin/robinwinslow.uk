@@ -1,7 +1,11 @@
 ---
+date: 2022-07-31 00:00:00+01:00
+description: The obvious costs of running an office-based team just couldn't be justified
+  after the pandemic
+email_campaign_id: 78560e9d06
+hn_url: https://news.ycombinator.com/item?id=32298343
 title: Offices are expensive
-description: The obvious costs of running an office-based team just couldn't be justified after the pandemic
-date: 2022-07-31T00:00:00+01:00
+tweet_url: https://twitter.com/nottrobin/status/1553834918362288128
 ---
 
 *This is one post where that ubiquitous disclaimer is actually needed: These are my personal opinions, they are not the official position of Canonical. All stated facts are simply my impression, pulled from my flawed memory. I haven't checked them with anyone.*

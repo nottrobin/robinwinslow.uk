@@ -1,0 +1,6 @@
+---
+description: Mahnke's majestic mantras
+title: Peter's parting principles
+---
+
+Peter Mahnke has

@@ -1,6 +1,7 @@
 ---
 description: Democracy and free speech are the long game
 title: Is the internet everything we hoped for?
+date: 2022-08-04
 ---
 
 As a teenager in the 90s, I was really excited about the internet. Growing up, I felt that it's ability to connect people and unlock human progress was simply a given.

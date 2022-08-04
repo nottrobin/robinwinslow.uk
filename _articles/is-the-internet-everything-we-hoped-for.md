@@ -1,7 +1,10 @@
 ---
-description: Democracy and free speech are the long game
-title: Is the internet everything we hoped for?
 date: 2022-08-04
+description: Democracy and free speech are the long game
+email_campaign_id: 9505f50b71
+hn_url: https://news.ycombinator.com/item?id=32348834
+title: Is the internet everything we hoped for?
+tweet_url: https://twitter.com/nottrobin/status/1555312463687475201
 ---
 
 As a teenager in the 90s, I was really excited about the internet. Growing up, I felt that it's ability to connect people and unlock human progress was simply a given.

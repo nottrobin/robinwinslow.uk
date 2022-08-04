@@ -13,7 +13,7 @@ And I definitely wasn't alone. The democratising power of the world wide web, an
 
 New exciting companies grew, that did away with the puritanical formalities if the traditional industry. They were going to "think different" and "do no evil". They provided email for free, and put shiny knowledge portals in everyone's pocket.
 
-Then came the ravages of the next couple of decades. It turned out that the price for free services had been [our souls][0]. That "do no evil" apparently meant [building smarter weapons][2]. Silicon valley [corrupts internet policy][3], and [enables massacres][4]. Far from empowering people and bringing peace and prosperity on the world, the internet had created bigger monopolies than ever. It has made us [more divided][6] and created a [mental health crisis][5].
+Then came the ravages of the next couple of decades. It turned out that the price for free services had been [our souls](https://en.m.wikipedia.org/wiki/Facebook%E2%80%93Cambridge_Analytica_data_scandal). That "do no evil" apparently meant [building smarter weapons](https://12ft.io/proxy?q=https://www.ft.com/content/b0ca4b9a-384a-11e8-8b98-2f31af407cc8). Silicon valley [corrupts internet policy](https://www.wired.co.uk/article/w3c-eff-open-standards-web-cory-doctorow), and [enables massacres](https://www.theguardian.com/technology/2021/dec/06/rohingya-sue-facebook-myanmar-genocide-us-uk-legal-action-social-media-violence). Far from empowering people and bringing peace and prosperity on the world, the internet had created bigger monopolies than ever. It has made us [more divided](https://theticker.org/4924/opinions/social-media-heavily-influences-the-countrys-political-divide/) and created a [mental health crisis](https://www.psychologytoday.com/us/blog/darwins-subterranean-world/201707/the-mental-health-crisis-is-upon-the-internet-generation).
 
 From today's rightfully cynical perspective, who could possibly argue that the internet is a force for good?
 
@@ -36,10 +36,3 @@ So I still believe the internet is a democratising force. I still believe in dem
 This isn't to say that the fights don't matter. In a sense, they matter even more - what we're debating and shaping now, in this transformative time in human progress, will shape the future for sure. It is important to [protect encryption](https://www.itpro.co.uk/security/encryption/367240/attacking-end-to-end-encryption-would-do-more-harm-than-good-warn-it), to [break the tech monopolies](https://locusmag.com/2021/07/cory-doctorow-tech-monopolies-and-the-insufficient-necessity-of-interoperability/), to create [a sustainable internet](https://www.infoq.com/news/2021/03/sustainable-internet/). We must [protect free access](https://phys.org/news/2019-11-free-internet-access-basic-human.html), push back against [manipulative algorithms](https://bigthink.com/the-present/social-media-algorithms-manipulate-you/).
 
 I guess what I'm really saying is that digital democracy and free speech are the long game. And maybe, just maybe, we're doing just fine. Let's keep going.
-
-1: https://en.m.wikipedia.org/wiki/Facebook%E2%80%93Cambridge_Analytica_data_scandal
-2: https://12ft.io/proxy?q=https://www.ft.com/content/b0ca4b9a-384a-11e8-8b98-2f31af407cc8
-3: https://www.wired.co.uk/article/w3c-eff-open-standards-web-cory-doctorow
-4: https://www.theguardian.com/technology/2021/dec/06/rohingya-sue-facebook-myanmar-genocide-us-uk-legal-action-social-media-violence
-5: https://www.psychologytoday.com/us/blog/darwins-subterranean-world/201707/the-mental-health-crisis-is-upon-the-internet-generation
-6: https://theticker.org/4924/opinions/social-media-heavily-influences-the-countrys-political-divide/

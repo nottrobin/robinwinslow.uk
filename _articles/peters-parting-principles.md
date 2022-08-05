@@ -1,6 +1,6 @@
 ---
-description: Mahnke's masterful mantras
 title: Peter's parting principles
+description: Mahnke's majestic mantras
 date: 2022-08-05
 ---
 

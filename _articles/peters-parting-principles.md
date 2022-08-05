@@ -25,13 +25,13 @@ Writing things down is powerful, and sorely needed. A meeting with no record is 
 
 - everyone is grateful to you
 - you become the authority on the meeting
-- your understanding of the being becomes the official record of the meeting
+- your understanding of the meeting becomes the official record of the meeting
 
 ## Make friends
 
 > People move in their careers a lot these days, make friends immediately and keep friends after they leave.
 
-This is something Peter was always much better at than me. He showed clearly how being surrounded by friends makes work much more enjoyable.
+This is something Peter was always much better at than me. He showed clearly how being surrounded by friends makes work much more enjoyable. He also knew so many people across the company, and so he was plugged into all the movements within the company and all the gossip. 
 
 And when they left Canonical, he always kept in touch, which had the side effect of giving him useful insight into many other digital teams.
 

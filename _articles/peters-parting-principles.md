@@ -8,9 +8,11 @@ My boss and mentor of over 8 years, Peter Mahnke, moved on from Canonical two mo
 
 Peter has led the web & design team in one form or another for the best part of a decade. He's watched it grow massively in size, responsibilities and ambitions, And every team member still carries a lot of respect and affection for Peter.
 
-On his last day, Peter dropped 10 pearls of wisdom for success and fulfillment at work. I think they are great advice, and really capture the essence of what made him a unique and subtly effective leader.
+On his last day, Peter dropped 10 pearls of wisdom for success and fulfilment at work. I think they are great advice, and really capture the essence of what made him a unique and subtly effective leader.
 
-Here's a link to [his presentation](https://docs.google.com/presentation/d/1-oySTHwbOKI5kKm2oK2CrGZVnJUF1yCPAAbs-oQdtqk/edit?usp=drivesdk) (I've only removed photos). I'm also listing each point below, with a little extra commentary of my own.
+Here's a link to [his presentation](https://docs.google.com/presentation/d/1-oySTHwbOKI5kKm2oK2CrGZVnJUF1yCPAAbs-oQdtqk/edit?usp=drivesdk) (I've only removed photos). I'm also listing each point below, with a little extra commentary of my own:
+
+---
 
 ## Take notes
 
@@ -85,3 +87,7 @@ A continuation of the point above, true growth comes from working through discom
 Focus on people. Give discussions your full attention.
 
 In meetings and when talking to people, try to be truly present. If you're distracted in a meeting, why are you there in the first place? If you don't need to listen in a meeting, it would be better to decline the meeting and focus on your work.
+
+---
+
+I really appreciated this advice. It also really captures Peter's attitude as a colleague and leader: be friendly, talk to everyone, make it fun, be considered, be deliberate

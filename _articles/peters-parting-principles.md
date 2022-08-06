@@ -1,9 +1,9 @@
 ---
-date: 2022-08-05
+title: Peter's parting principles
 description: Mahnke's majestic mantras
+date: 2022-08-05
 email_campaign_id: 1779fc1b2f
 hn_url: https://news.ycombinator.com/item?id=32355952
-title: Peter's parting principles
 tweet_url: https://twitter.com/nottrobin/status/1555548572493369344
 ---
 

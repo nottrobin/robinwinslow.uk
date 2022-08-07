@@ -1,9 +1,10 @@
 ---
-title: Is the internet everything we hoped for?
-description: Democracy and free speech are the long game
 date: 2022-08-04
+description: Democracy and free speech are the long game
+dev_to_url: https://dev.to/nottrobin/is-the-internet-everything-we-hoped-for-3mkd
 email_campaign_id: 9505f50b71
 hn_url: https://news.ycombinator.com/item?id=32348834
+title: Is the internet everything we hoped for?
 tweet_url: https://twitter.com/nottrobin/status/1555312463687475201
 ---
 

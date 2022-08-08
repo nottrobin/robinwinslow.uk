@@ -1,11 +1,13 @@
 ---
-title: Programming principles
-description: Some principles that I hold in high regard for solving problems well in programming
-date: 2022-06-14T00:00:00+01:00
-email_campaign_id: c9f6b6d2bf
 cross_posts:
-    "Twitter": https://twitter.com/nottrobin/status/1536656713675378688
-    "Hacker News": https://news.ycombinator.com/item?id=31736907
+  DEV: https://dev.to/nottrobin/programming-principles-jo1
+  Hacker News: https://news.ycombinator.com/item?id=31736907
+  Twitter: https://twitter.com/nottrobin/status/1536656713675378688
+date: 2022-06-14 00:00:00+01:00
+description: Some principles that I hold in high regard for solving problems well
+  in programming
+email_campaign_id: c9f6b6d2bf
+title: Programming principles
 ---
 
 This is a list of principles that I respect for trying to write good software.

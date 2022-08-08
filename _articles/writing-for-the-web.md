@@ -1,11 +1,13 @@
 ---
-title: Writing for the web
-description: The contents of a talk I'm giving tomorrow on best practices for online writing
-date: 2022-01-13
-email_campaign_id: 31ef92d74b
 cross_posts:
-    "Twitter": https://twitter.com/nottrobin/status/1536996808605450242
-    "Hacker News": https://news.ycombinator.com/item?id=31638929
+  DEV: https://dev.to/nottrobin/writing-for-the-web-1kj0
+  Hacker News: https://news.ycombinator.com/item?id=31638929
+  Twitter: https://twitter.com/nottrobin/status/1536996808605450242
+date: 2022-01-13
+description: The contents of a talk I'm giving tomorrow on best practices for online
+  writing
+email_campaign_id: 31ef92d74b
+title: Writing for the web
 ---
 
 Some things to consider when writing content for the information superhighway.

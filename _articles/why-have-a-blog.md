@@ -1,12 +1,13 @@
 ---
-title: Why have a blog?
-description: Laying out the goals & principles for my site
-date: 2020-11-16
-email_campaign_id: f0316e4fef
 cross_posts:
-    "Twitter": https://twitter.com/nottrobin/status/1328496460493709312
-    "Hacker News": https://news.ycombinator.com/item?id=31653748
+  DEV: https://dev.to/nottrobin/why-have-a-blog-496m
+  Hacker News: https://news.ycombinator.com/item?id=31653748
+  Twitter: https://twitter.com/nottrobin/status/1328496460493709312
+date: 2020-11-16
+description: Laying out the goals & principles for my site
+email_campaign_id: f0316e4fef
 redirect_from: /2020/11/16/why-have-a-blog/
+title: Why have a blog?
 ---
 
 I've had this blog now for about 8 years. Wow that sounds like a long time.

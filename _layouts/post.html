@@ -19,23 +19,25 @@ layout: wrapper
 
 <article>
   {{ content }}
-
-  <hr>
-
-  <section class="discuss">
-    <script src="https://giscus.app/client.js"
-        data-repo="nottrobin/robinwinslow.uk"
-        data-repo-id="MDEwOlJlcG9zaXRvcnk4OTY5ODE3"
-        data-category="Discuss blog articles"
-        data-category-id="DIC_kwDOAIjeWc4CQj-4"
-        data-mapping="pathname"
-        data-reactions-enabled="0"
-        data-theme="light"
-        data-loading="lazy"
-        async>
-    </script>
-  </section>
 </article>
+
+<address class="author">
+  By <a href="https://twitter.com/nottrobin">@nottrobin</a>
+</address>
+
+<section class="discuss">
+  <script src="https://giscus.app/client.js"
+      data-repo="nottrobin/robinwinslow.uk"
+      data-repo-id="MDEwOlJlcG9zaXRvcnk4OTY5ODE3"
+      data-category="Discuss blog articles"
+      data-category-id="DIC_kwDOAIjeWc4CQj-4"
+      data-mapping="pathname"
+      data-reactions-enabled="0"
+      data-theme="light"
+      data-loading="lazy"
+      async>
+  </script>
+</section>
 
 <script>
   /**
@@ -87,10 +89,6 @@ layout: wrapper
 
   toggleHeadings();
 </script>
-
-<address class="author">
-  By <a href="https://twitter.com/nottrobin">@nottrobin</a>
-</address>
 
 <form class="subscribe" action="https://robinwinslow.us11.list-manage.com/subscribe/post?u=465b74a47b8be795fe29b8415&amp;id=8853044bbe" method="post">
   <label for="email">Get notified about new posts</label>

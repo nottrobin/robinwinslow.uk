@@ -11,7 +11,7 @@ layout: wrapper
   <time datetime="{{ page.date | date: '%F' }}">{{ page.date | date_to_long_string: "ordinal" }}</time>
   <p class="cross-posts">
     {% if page.cross_posts %}
-      Also posted to: 
+      Posted to: 
       {% for post in page.cross_posts %}
         <a href="{{ post[1] }}">{{ post[0] }}</a>{% if forloop.last == false %}; {% endif %}
       {% endfor %}

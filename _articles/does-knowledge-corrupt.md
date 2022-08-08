@@ -1,10 +1,13 @@
 ---
-date: 2022-07-11 00:00:00+01:00
-description: Journalism, nihilism and postmodernism.
-email_campaign_id: 2422c96c46
-hn_url: https://news.ycombinator.com/item?id=32061088
 title: Does knowledge corrupt?
-tweet_url: https://twitter.com/nottrobin/status/1546586510589247488
+description: Journalism, nihilism and postmodernism.
+date: 2022-07-11 00:00:00+01:00
+email_campaign_id: 2422c96c46
+cross_posts:
+    "Twitter": https://twitter.com/nottrobin/status/1546586510589247488
+    "Hacker News": https://news.ycombinator.com/item?id=32061088
+redirect_from:
+    /2022-07-09-21-11-13
 ---
 
 Media is a lens, a filter on the world. This very much includes news media.

@@ -120,9 +120,16 @@ JavaScript:
       display: none;
     }
 
-    article, section {
-      margin: auto;
+    article {
+      margin: 3em auto;
       padding: 3em 5em 2em 5em;
+      max-width: 38em;
+      background-color: white;
+    }
+
+    section {
+      margin: 2em auto;
+      padding: 2em 3em;
       max-width: 38em;
       background-color: white;
     }
@@ -188,9 +195,9 @@ JavaScript:
 
     /* Classes */
     .article-header {
-      margin: auto;
+      margin: 3em auto;
       max-width: 60em;
-      padding: 3em 1em;
+      padding: 0 1em;
       text-align: center;
     }
 
@@ -220,6 +227,15 @@ JavaScript:
 
     .title p {
       margin-top: 0.25em;
+    }
+
+    .cross-posts {
+      font-size: 0.8em;
+      font-style: italic;
+      color: #999;
+    }
+    .cross-posts a, .cross-posts a:visited, .cross-posts a:active {
+      color: #777;
     }
 
     .subscribe {
@@ -704,18 +720,6 @@ JavaScript:
 
 <body>
   {{ content }}
-
-  <footer class="socialise">
-    {% if page.tweet_url or page.hn_url %}
-      🔗 Posted to
-      {% if page.tweet_url %}
-        <a href="{{ page.tweet_url }}">Twitter</a>{% if page.hn_url %} and {% endif %}
-      {% endif %}
-      {% if page.hn_url %}
-        <a href="{{ page.hn_url }}">Hacker News</a>
-      {% endif %}
-    {% endif %}  
-  </footer>
 
   <footer class="see-the-code">
     ☵ See <a href="https://github.com/nottrobin/robinwinslow.uk/commits/main/{{ page.path }}">this page's history</a> or <a href="https://github.com/nottrobin/robinwinslow.uk">all the code</a>

@@ -1,11 +1,11 @@
 ---
-date: 2022-02-19
-description: I've finally removed Google Analytics from my site
-email_campaign_id: 8585cb34ad
-hn_url: https://news.ycombinator.com/item?id=31638829
-layout: post
 title: Freedom from the tyranny of metrics
-tweet_url: https://twitter.com/nottrobin/status/1536996738128658432
+description: I've finally removed Google Analytics from my site
+date: 2022-02-19
+email_campaign_id: 8585cb34ad
+cross_posts:
+    "Twitter": https://twitter.com/nottrobin/status/1536996738128658432
+    "Hacker News": https://news.ycombinator.com/item?id=31638829
 ---
 
 A terrible tragedy hast befallen my most beloved domain:

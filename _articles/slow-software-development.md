@@ -1,11 +1,11 @@
 ---
-date: 2022-06-14 04:52:53+01:00
-description: Software development could do with slowing down and thinking a bit harder
-email_campaign_id: 24dc68312c
-hn_url: https://news.ycombinator.com/item?id=31736881
 title: Slow software development
-tweet_url: https://twitter.com/nottrobin/status/1536655769361342468
-updated: 2022-06-14 04:52:53+01:00
+description: Software development could do with slowing down and thinking a bit harder
+date: 2022-06-14 04:52:53+01:00
+email_campaign_id: 24dc68312c
+cross_posts:
+    "Twitter": https://twitter.com/nottrobin/status/1536655769361342468
+    "Hacker News": https://news.ycombinator.com/item?id=31736881
 ---
 
 I've been trying to write this piece for a while. For some reason I'd decided that it needed a lot of research or careful consideration, but it really doesn't. I don't need to have tons of sources. If I think of some I can always come and add them later - that's the beauty of the dynamic web.

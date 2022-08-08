@@ -1,13 +1,12 @@
 ---
-date: 2021-02-17
-description: An overview of regex and how to use it, from a few different angles.
-  Including appropriate warnings like 'avoid regex'.
-email_campaign_id: 36c424d2fb
-hn_url: https://news.ycombinator.com/item?id=31750620
-layout: post
-redirect_from: /how-to-regex
 title: Regex basics
-tweet_url: https://twitter.com/nottrobin/status/1362449254296518660
+description: An overview of regex and how to use it, from a few different angles. Including appropriate warnings like 'avoid regex'.
+date: 2021-02-17
+email_campaign_id: 36c424d2fb
+cross_posts:
+    "Twitter": https://twitter.com/nottrobin/status/1362449254296518660
+    "Hacker News": https://news.ycombinator.com/item?id=31750620
+redirect_from: /how-to-regex
 ---
 
 In my team we  run "masterclasses" every couple of weeks, where someone in the team presents a topic to the rest of the team.

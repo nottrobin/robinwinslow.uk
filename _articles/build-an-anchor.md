@@ -1,10 +1,12 @@
 ---
-date: 2022-07-25T23:00:00+00:00
+cross_posts:
+  DEV: https://dev.to/nottrobin/build-an-anchor-1fg5
+  Hacker News: https://news.ycombinator.com/item?id=32244930
+  Twitter: https://twitter.com/nottrobin/status/1552059399270645761
+date: 2022-07-25 23:00:00+00:00
 description: To build a life within the chaos of infinity, we each need an anchor.
 email_campaign_id: 14c41e4110
-hn_url: https://news.ycombinator.com/item?id=32244930
 title: Build an anchor
-tweet_url: https://twitter.com/nottrobin/status/1552059399270645761
 ---
 
 I've never been good at self care.

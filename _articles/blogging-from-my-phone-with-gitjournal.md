@@ -1,13 +1,13 @@
 ---
+cross_posts:
+  DEV: https://dev.to/nottrobin/blogging-from-my-phone-with-gitjournal-4ein
+  Hacker News: https://news.ycombinator.com/item?id=31638482
+  Twitter: https://twitter.com/nottrobin/status/1536996717068951553
 date: 2022-06-05 22:56:54+01:00
 description: GitJournal is a great way to publish to a GitHub-hosted Jekyll blog from
   an Android phone
 email_campaign_id: 323c50b765
-hn_url: https://news.ycombinator.com/item?id=31638482
-layout: post
-modified: 2022-06-05 23:30:21+01:00
 title: Blogging from my phone with GitJournal
-tweet_url: https://twitter.com/nottrobin/status/1536996717068951553
 ---
 
 I've been looking for a way to publish blog posts easily from my phone. I'm sure I would write a lot more if I could quickly jot down a post e.g. while lying on the floor next to my son's cot waiting for him to go to sleep.

@@ -1,11 +1,15 @@
 ---
+title: Publish early, publish often
+description: Why publishing unpolished, quick drafts may be a good strategy
+date: 2020-11-14 02:58
+cross_posts:
+  DEV: https://dev.to/nottrobin/publish-early-publish-often-363
+  Hacker News: https://news.ycombinator.com/item?id=32385445
+  Twitter: https://twitter.com/nottrobin/status/1556674488816787456
+email_campaign_id: 247398dec5
 redirect_from: /2020/11/14/publish-early-publish-often/
-published: true
-title: 'Publish early, publish often'
-description: 'Why publishing unpolished, quick drafts may be a good strategy'
-layout: post
-date: '2020-11-14 02:58'
 ---
+
 This may fly in the face of conventional wisdom.
 
 # What bloggers will tell you

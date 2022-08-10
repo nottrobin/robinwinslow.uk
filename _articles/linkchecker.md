@@ -1,15 +1,18 @@
 ---
-redirect_from: /2013/10/03/linkchecker/
-title: How to use unix linkchecker to thoroughly check any site
-date: 2013-10-03 00:00:00 Z
-tags:
-- dev
-- back-end
-- canonical
+date: 2013-10-03 00:00:00
 description: I just discovered the unix linkchecker tool. It's a very useful and thorough
   tool for checking websites that more people should use.
 image_url: https://assets.ubuntu.com/v1/3e3f1fcb-linkchecker+logo.png?w=230
 layout: post
+posted_to:
+  domain: https://dev.to/nottrobin/how-to-use-unix-linkchecker-to-thoroughly-check-any-site-74n
+  medium.com: https://medium.com/@nottrobin/how-to-use-unix-linkchecker-to-thoroughly-check-any-site-50134f3aeba0
+redirect_from: /2013/10/03/linkchecker/
+tags:
+- dev
+- backend
+- canonical
+title: How to use unix linkchecker to thoroughly check any site
 ---
 
 If you want to a tool to crawl through your site looking for 404 or 500 errors, there are online tools (e.g. The W3C's [online link checker](http://validator.w3.org/checklink)), browser plugins for [Firefox](https://chrome.google.com/webstore/detail/check-my-links/ojkcdipcgfaekbeaelaapakgnjflfglf?hl=en-GB) and [Chrome](https://chrome.google.com/webstore/detail/check-my-links/ojkcdipcgfaekbeaelaapakgnjflfglf?hl=en-GB), or windows programs like [Xenu's Link Sleuth](http://home.snafu.de/tilman/xenulink.html).

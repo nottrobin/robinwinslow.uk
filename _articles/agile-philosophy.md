@@ -1,15 +1,18 @@
 ---
-redirect_from: /2014/01/10/agile-philosophy/
-title: 'Agile philosophy: A summary'
-date: 2014-01-10 00:00:00 Z
-tags:
-- dev
-- canonical
+date: 2014-01-10 00:00:00
 description: This is a short description of what Agile philosophy is all about, distinct
   from any Agile methodologies (like Scrum or Kanban). I wrote this in September of
   2012.
 image_url: https://assets.ubuntu.com/v1/938f7a5b-agile.png?w=230&h=160&mode=fill&bg=0000
 layout: post
+published_to:
+  dev.to: https://dev.to/nottrobin/agile-philosophy-a-summary-4o
+  medium.com: https://medium.com/@nottrobin/agile-philosophy-a-summary-b964c64a8a8c
+redirect_from: /2014/01/10/agile-philosophy/
+tags:
+- dev
+- canonical
+title: 'Agile philosophy: A summary'
 ---
 
 Following are some guidelines about Agile philosophy that I wrote for my team back in September 2012.

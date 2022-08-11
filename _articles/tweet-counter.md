@@ -15,7 +15,7 @@ tags:
 title: 'Tweet-counter: A module to calculate the length of a tweet'
 ---
 
-I just published a new Python package: [![PyPI version](https://badge.fury.io/py/tweet-counter.svg)](https://pypi.org/project/tweet-counter/) ([repo](https://github.com/nottrobin/tweet-counter)).
+I just published a new Python package: [![tweet-counter](https://img.shields.io/pypi/v/tweet-counter?label=tweet-counter)](https://pypi.org/project/tweet-counter/) ([repo](https://github.com/nottrobin/tweet-counter)).
 
 If you want to automate posting of tweet using Python, it's pretty important to know if your tweet exceeds the 280-character limit.
 

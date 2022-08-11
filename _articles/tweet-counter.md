@@ -1,12 +1,18 @@
 ---
+cross_posts:
+  DEV: https://dev.to/nottrobin/tweet-counter-a-module-to-calculate-the-length-of-a-tweet-4eon
+  Hacker News: https://news.ycombinator.com/item?id=32424293
+  Twitter: https://twitter.com/nottrobin/status/1557695935563571208
 date: 2022-08-10
-description: Count the number of "characters" in a tweet, according to Twitter's character counting rules
+description: Count the number of "characters" in a tweet, according to Twitter's character
+  counting rules
+email_campaign_id: 4f557b85c9
 tags:
 - python
 - cli
 - showdev
 - devjournal
-title: "Tweet-counter: A module to calculate the length of a tweet"
+title: 'Tweet-counter: A module to calculate the length of a tweet'
 ---
 
 If you want to automate posting of tweet using Python, it's pretty important to know if your tweet exceeds the 280-character limit.

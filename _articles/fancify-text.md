@@ -1,8 +1,14 @@
 ---
-title: New fancify-text Python module
-description: I made a module from from code I found on the  internets
 date: 2022-08-10
-tags: ["python", "cli", "showdev", "devjournal"]
+description: I made a module from from code I found on the  internets
+published_to:
+  dev.to: https://dev.to/nottrobin/new-fancify-text-python-module-2ea1
+tags:
+- python
+- cli
+- showdev
+- devjournal
+title: New fancify-text Python module
 ---
 
 I just made a new Python module and CLI tool called [fancify-text](https://pypi.org/project/fancify-text/) for transforming text into fancy unicode representations:

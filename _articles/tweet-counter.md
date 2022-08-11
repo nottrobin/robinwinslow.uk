@@ -6,7 +6,7 @@ tags:
 - cli
 - showdev
 - devjournal
-title: Tweet-counter: A module to calculate the length of a tweet
+title: "Tweet-counter: A module to calculate the length of a tweet"
 ---
 
 If you want to automate posting of tweet using Python, it's pretty important to know if your tweet exceeds the 280-character limit.

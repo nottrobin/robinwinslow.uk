@@ -7,6 +7,10 @@ tags:
 - opensource
 - webdev
 - ethics
+cross_posts:
+  DEV: https://twitter.com/nottrobin/status/1558229090896793600
+  Hacker News: https://news.ycombinator.com/item?id=32445035
+  Twitter: https://twitter.com/nottrobin/status/1558229090896793600
 ---
 
 Although [other search engines are available](https://ahrefs.com/blog/alternative-search-engines/), eveybody knows that [Google is all that really matters](https://www.oberlo.co.uk/statistics/search-engine-market-share#:~:text=Handling%20over%2090%25%20of%20all,done%20through%20the%20internet%20giant.). That's why there's [a $40 billion industry](https://www.globenewswire.com/en/news-release/2022/07/07/2475626/28124/en/Agencies-SEO-Services-Global-Market-Report-2022-Surge-in-Smartphone-and-Internet-Usage-Driving-Growth.html) dedicated to reading tea-leaves to discern how Google's mysterious search algorithm will behave.

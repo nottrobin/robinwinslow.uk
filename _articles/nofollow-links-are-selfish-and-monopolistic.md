@@ -1,6 +1,6 @@
 ---
-title: "Nofollow" links are selfish and monopolistic
-description: PageRank was a beautiful idea. Then nofollow ruined it.
+title: '"Nofollow" links are selfish and monopolistic'
+description: 'PageRank was a beautiful idea. Then nofollow ruined it.'
 date: 2022-08-13
 tags:
 - devjournal

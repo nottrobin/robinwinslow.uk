@@ -92,7 +92,7 @@ Under successive Conservative governments, and even the under New Labour to a le
 
 Times they are [a-changing somewhat](https://positivemoney.org/2020/04/major-breakthrough-on-public-money-creation-the-bank-of-england-will-directly-finance-government-coronavirus-spending/):
 
-> UK central bank becomes first in the world to adopt direct monetary financing to fund government spending during the coronavirus crisis”_
+> UK central bank becomes first in the world to adopt direct monetary financing to fund government spending during the coronavirus crisis
 
 I think it’s quite possible that the rise in acceptance of MMT (even though it’s still not mainstream) genuinely helped governments across the world justify spending large amounts of money on COVID measures and relief. Of course it could have been better, but it could also have been much worse.
 

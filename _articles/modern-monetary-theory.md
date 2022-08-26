@@ -1,8 +1,14 @@
 ---
-title: Modern Monetary Theory
-description: Government should spend until there's full employment. Anything less is theft.
-tags: devjournal, money, economy, justice
+cross_posts:
+  DEV: https://dev.to/nottrobin/modern-monetary-theory-492p
+  Hacker News: https://news.ycombinator.com/item?id=32601666
+  Twitter: https://twitter.com/nottrobin/status/1562954021056307201
 date: 2022-08-26
+description: Government should spend until there's full employment. Anything less
+  is theft.
+email_campaign_id: 3c3a1c266a
+tags: devjournal, money, economy, justice
+title: Modern Monetary Theory
 ---
 
 _This is written from a UK perspective, as I’m British. It's basically notes for a talk I'm going to give tomorrow, and probably the largest block of the audience is from the UK. But the points here apply to any country with its own central bank, and **especially** to the US Federal Reserve._

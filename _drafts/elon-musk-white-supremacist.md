@@ -2,7 +2,7 @@ I want to be very clear: I don't like calling people "racist", "fascist", "white
 
 However, at the same time, we mustn't mince our words. We should be specific and direct and hard hitting with what we see to be the truth. Status quo bias and social pressure can easily deflect us from making important inquiry. This is actually just another way of saying the same thing: ad hominem attacks like "you're racist" can be just that sort of social pressure that shuts down inquiry.
 
-Having said this, I have called people racist in discussions. Partly this might be exactly this sort of failing on my part - I got upset enough that I lashed out and wasn't receptive enough to hearing the other person's point of view. However, when I do it I do try to mean something quite specific by it. And I don't mean it to be a killing blow or general insult.
+Having said this, I have definitely said people's points are racist in discussions. Partly this might be exactly this sort of failing on my part - I got upset enough that I lashed out and wasn't receptive enough to hearing the other person's point of view. However, when I do it I do try to mean something quite specific by it. And I don't mean it to be a killing blow or general insult.
 
 Two quick definitions:
 

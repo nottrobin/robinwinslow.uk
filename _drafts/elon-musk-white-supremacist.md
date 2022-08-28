@@ -77,7 +77,7 @@ I will concede, and did concede, that mass immigration may well be destabilising
 
 But [mass immigration is coming](https://www.heraldscotland.com/politics/19850946.neil-mackays-big-read-mass-migration-coming-future-scotland-asian-says-leading-migration-expert-dr-parag-khanna/). This is unavoidable. If you fill up Western nations with white babies, all you're going to do is cause greater resource conflict within those nations. This will not stabilise anything.
 
-Which basically puts all the weight of this whole, hugely costly and dangerous idea of having more Western babies, on the second point. That only American magnates can generate growth and therefore we need more of their babies.
+Which basically puts all the weight of justifying this whole, hugely costly and dangerous idea of having more Western babies, on the second point. That only American magnates can generate growth and therefore we need more of their babies.
 
 I'm not gonna bother trying to explain how growth and inequality are also huge threats to climate change here. The core point is that this idea that for some reason native-born Americans or Europeans are central to the planet's economic health is about as clearly white supremacist as anything I can think of.
 
@@ -89,4 +89,4 @@ It's important to point out that this migration in no way puts existing white pe
 
 In other words, Elon Musk believes there's something special about white people that means they must remain dominant in rich countries for "civilisation" to continue.
 
-How would you describe that opinion?
+How would you describe that belief?

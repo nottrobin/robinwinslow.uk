@@ -60,8 +60,8 @@ Literally the only other conclusion I can possibly reach is that he believes tha
 
 I got into an argument in the replies to Elon's tweet which basically confirmed this for me. Although many of the tweets are deleted now, so I can't go back and check, my memory of the points that were made to me was this:
 
-a) US hegemony is the foundation for world peace, so destabilise the USA at your peril; and
-b) Rich white nations generate economic growth and therefore progress, the implication being that *only* they can do this
+1. US hegemony is the foundation for world peace, so destabilise the USA at your peril; and
+2. Rich white nations generate economic growth and therefore progress, the implication being that *only* they can do this
 
 Of course I don't know if Elon would identify with these arguments specifically, but given that I can't see any better ones for his position, let's assume he does.
 

@@ -17,7 +17,7 @@ And so, when discussing good policy or whatever, we should all remain aware that
 
 (And often it might not be pure "racism", in the sense of being *only* about race, but a general bias that perpetuates the sort of privilege that a particular race tends to enjoy).
 
-Also, before I launch into Elon Musk, remember that here I'm not actually debating with Elon. Clearly he's not going to read this. So I don't think I need worry too much about offending him or not giving him the space to air his views.
+Also, before I launch into Elon Musk, remember that here I'm not actually debating with Elon. Clearly he's not going to read this. So I don't think I need worry too much about offending him or not giving him the space to air his views. To us mere mortals Elon Musk is more akin to a force of nature that we must choose how to best react to.
 
 OK on to Elon.
 

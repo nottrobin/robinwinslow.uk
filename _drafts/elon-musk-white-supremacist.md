@@ -1,3 +1,9 @@
+---
+title: Is Elon Musk a white supremacist?
+description: A thorough examination
+date: 2022-08-28
+---
+
 I want to be very clear: I don't like calling people "racist", "fascist", "white supremacist" etc. I see it all the time and I think it's usually incredibly counter productive. It's basically name-calling and it immediately shuts down debate. If we are to achieve real lasting progress it needs to be as democratic and peaceful as possible. For this, we need to try very hard to have hard conversations respectfully, and try to see each other's point of view.
 
 However, at the same time, we mustn't mince our words. We should be specific and direct and hard hitting with what we see to be the truth. Status quo bias and social pressure can easily deflect us from making important inquiry. This is actually just another way of saying the same thing: ad hominem attacks like "you're racist" can be just that sort of social pressure that shuts down inquiry.

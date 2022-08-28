@@ -40,7 +40,7 @@ The global population is set to grow until 2100, to about 10 or 11 billion, befo
 
 Deliberately increasing the birth rate now is actually incredibly dangerous. While, unlike some, I actually believe we shouldn't have much trouble feeding and looking after 10 billion people on this planet within the next century of technological progress, the strain on the environment is much more of a concern.
 
-The fact that more developed nations with better healthcare have a natural tendency to have lower birth rates is basically our only hope. It's also helpful that most of the new births will be in counties with much lower emissions per person is also very helpful.
+The fact that more developed nations with better education for women and healthcare have a natural tendency to have lower birth rates is basically our only hope. It's also helpful that most of the new births will be in counties with much lower emissions per person is also very helpful.
 
 Through technological and social progress we can slow and stop population growth, which, coupled with radical societal changes to develop more sustainable societies, gives us a chance to reach a sustainable future existence without mass extinction events.
 

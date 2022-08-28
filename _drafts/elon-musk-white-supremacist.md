@@ -166,6 +166,4 @@ It's important to point out that this migration in no way puts existing white pe
 
 In other words, Elon Musk believes there's something special about white people that means they must remain dominant in rich countries for "civilisation" to continue.
 
-Hope would you describe that opinion? in rich countries for "civilisation" to continue.
-
-Hope would you describe that opinion?
+How would you describe that opinion?

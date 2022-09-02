@@ -1,7 +1,12 @@
 ---
-title: Is Elon Musk a white supremacist?
-description: A thorough examination
+cross_posts:
+  DEV: https://dev.to/nottrobin/is-elon-musk-a-white-supremacist-2g83
+  Hacker News: https://news.ycombinator.com/item?id=32689085
+  Twitter: https://twitter.com/nottrobin/status/1565651770570833922
 date: 2022-08-28
+description: A thorough examination
+email_campaign_id: 4a507c2a57
+title: Is Elon Musk a white supremacist?
 ---
 
 I want to be very clear: I don't like calling people "racist", "fascist", "white supremacist" etc. I see it all the time and I think it's usually incredibly counter productive. It's basically name-calling and it immediately shuts down debate. If we are to achieve real lasting progress it needs to be as democratic and peaceful as possible. For this, we need to try very hard to have hard conversations respectfully, and try to see each other's point of view.

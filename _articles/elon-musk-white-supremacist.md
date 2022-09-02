@@ -35,8 +35,8 @@ This actually gives me more confidence in labeling him a white supremacist, beca
 
 Here's why I think he might be a white supremacist:
 
-"Population collapse due to low birth rates is a much bigger risk to civilization than global warming"
-[Elon Musk, 26 August 2022](https://twitter.com/elonmusk/status/1563020169160851456?t=FBaPgJWJm4BAtWV0ciZqXg&s=19)
+> "Population collapse due to low birth rates is a much bigger risk to civilization than global warming"  
+> [Elon Musk, 26 August 2022](https://twitter.com/elonmusk/status/1563020169160851456?t=FBaPgJWJm4BAtWV0ciZqXg&s=19)
 
 (I've had it suggested that Elon Musk is just an online troll and so he might only say this to cause a reaction without meaning it. But actually he's been [very consistent on this](https://www.cnbc.com/amp/2021/12/07/elon-musk-civilization-will-crumble-if-we-dont-have-more-children.html), and his "collapse of civilisation" wording couldn't be more serious.)
 

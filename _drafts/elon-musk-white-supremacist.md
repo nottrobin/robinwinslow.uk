@@ -50,7 +50,7 @@ The fact that more developed nations with better education for women and healthc
 
 Through technological and social progress we can slow and stop population growth, which, coupled with radical societal changes to develop more sustainable societies, gives us a chance to reach a sustainable future existence without mass extinction events.
 
-Which leads inescapably to the question: Why on earth would Elon Musk, global thinker who founded a ground breaking car company as a solution to global warming, think increasing birth rates is a good idea?
+Which leads inescapably to the question: Why on earth would Elon Musk, global thinker who owns a ground breaking car company as a solution to global warming, think increasing birth rates is a good idea?
 
 Well, he's clearly not talking about all birth rates. He's talking about countries where birth rates are below the replacement rate of 2.1 births per woman, which are the mostly white rich developed nations. And China. But let's be clear, he means the USA, with a current birth rate of 1.7 births per woman.
 

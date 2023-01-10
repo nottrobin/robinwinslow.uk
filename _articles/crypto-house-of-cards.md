@@ -3,7 +3,7 @@ cross_posts:
   DEV: https://dev.to/nottrobin/does-crypto-expose-the-emperors-clothes-of-the-financial-services-industry-5b0
   Hacker News: https://news.ycombinator.com/item?id=34333172
   Twitter: https://twitter.com/nottrobin/status/1612961101016170497
-date: 2022-01-10
+date: 2023-01-10
 description: What will the crypto house of cards bring down with it?
 email_campaign_id: da6cd2a6e7
 title: Does crypto expose the emperor's clothes of the financial services industry?

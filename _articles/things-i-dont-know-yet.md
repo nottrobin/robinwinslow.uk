@@ -1,7 +1,13 @@
 ---
-title: Things I don't know yet
-description: These are technologies are mentioned a lot nowadays, and I'd like to know them better
+cross_posts:
+  DEV: https://dev.to/nottrobin/things-i-dont-know-yet-4nii
+  Hacker News: https://news.ycombinator.com/item?id=34566831
+  Twitter: https://twitter.com/nottrobin/status/1619645078196174849
 date: 2023-01-29
+description: These are technologies are mentioned a lot nowadays, and I'd like to
+  know them better
+email_campaign_id: ff88f6a234
+title: Things I don't know yet
 ---
 
 I've been in the same job for a long time, and using, broadly, the same tech stack. Some of this tech still sounds modern and relevant (Kubernetes, Docker, Typescript etc.), other bits not so much.

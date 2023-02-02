@@ -1,7 +1,11 @@
 ---
-title: GPT could centralise power online like nothing we've seen
-description: Microsoft has its talons deep in OpenAI, and may become the engine of the next era of tech monopolies
+cross_posts:
+  Hacker News: https://news.ycombinator.com/item?id=34629126
 date: 2023-02-02
+description: Microsoft has its talons deep in OpenAI, and may become the engine of
+  the next era of tech monopolies
+email_campaign_id: 3b6d2d6657
+title: GPT could centralise power online like nothing we've seen
 ---
 
 When I was doing my Computer Science degree in around 2005, I passionately believed in the huge potential of the internet for the growth of humanity and democracy.

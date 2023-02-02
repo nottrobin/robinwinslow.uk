@@ -47,21 +47,17 @@ GPT is quite clearly revolutionary. This technology to automate creating deeply 
 
 OpenAI, the creators and owners of GPT and DALL-E, were set up in 2016 with [a clear mission](https://web.archive.org/web/20230120023614/openai.com/about/):
 
-
-    to ensure that artificial general intelligence benefits all of humanity.
+> to ensure that artificial general intelligence benefits all of humanity.
 
 In their [introductory blog post](https://web.archive.org/web/20151226085652/https://openai.com/blog/introducing-openai/), they introduced OpenAI as a non-profit company who would share their products “freely” with the world (emphasis mine):
 
-
-    … it'll be important to have a leading research institution which can prioritize a good outcome for all **over its own self-interest**.
-
-
-    We're hoping to grow OpenAI into such an institution. As a non-profit, our aim is to build **value for everyone** rather than shareholders. Researchers will be strongly encouraged to **publish their work**, whether as papers, blog posts, or code, and **our patents (if any) will be shared with the world**. We'll freely collaborate with others across many institutions and expect to work with companies to research and deploy new technologies.
+> … it'll be important to have a leading research institution which can prioritize a good outcome for all **over its own self-interest**.
+> 
+> We're hoping to grow OpenAI into such an institution. As a non-profit, our aim is to build **value for everyone** rather than shareholders. Researchers will be strongly encouraged to **publish their work**, whether as papers, blog posts, or code, and **our patents (if any) will be shared with the world**. We'll freely collaborate with others across many institutions and expect to work with companies to research and deploy new technologies.
 
 Oh my how that all changed in 2019. [From Wikipedia](https://en.wikipedia.org/w/index.php?title=OpenAI&oldid=1134721429):
 
-
-    In 2019, OpenAI did not publicly release GPT-3's precursor model, **breaking from OpenAI's previous open-source practices**, citing concerns that the model would perpetuate fake news. OpenAI eventually released a version of[ GPT-2](https://en.wikipedia.org/wiki/GPT-2) that was [8% of the original model's size](https://www.technologyreview.com/2019/08/29/133218/openai-released-its-fake-news-ai-gpt-2/). In the same year, **OpenAI restructured to be [a for-profit company](https://techcrunch.com/2019/03/11/openai-shifts-from-nonprofit-to-capped-profit-to-attract-capital/?)**. In 2020, **Microsoft announced the company had exclusive licensing of GPT-3** for Microsoft's products and services following a multi-billion dollar investment in OpenAI. The agreement permits OpenAI to offer a public-facing API such that users can send text to GPT-3 to receive the model's output, but **[only Microsoft will have access to GPT-3's source code](https://www.technologyreview.com/2020/09/23/1008729/openai-is-giving-microsoft-exclusive-access-to-its-gpt-3-language-model/)**.
+> In 2019, OpenAI did not publicly release GPT-3's precursor model, **breaking from OpenAI's previous open-source practices**, citing concerns that the model would perpetuate fake news. OpenAI eventually released a version of[ GPT-2](https://en.wikipedia.org/wiki/GPT-2) that was [8% of the original model's size](https://www.technologyreview.com/2019/08/29/133218/openai-released-its-fake-news-ai-gpt-2/). In the same year, **OpenAI restructured to be [a for-profit company](https://techcrunch.com/2019/03/11/openai-shifts-from-nonprofit-to-capped-profit-to-attract-capital/?)**. In 2020, **Microsoft announced the company had exclusive licensing of GPT-3** for Microsoft's products and services following a multi-billion dollar investment in OpenAI. The agreement permits OpenAI to offer a public-facing API such that users can send text to GPT-3 to receive the model's output, but **[only Microsoft will have access to GPT-3's source code](https://www.technologyreview.com/2020/09/23/1008729/openai-is-giving-microsoft-exclusive-access-to-its-gpt-3-language-model/)**.
 
 As soon as OpenAI created something of worth, it was immediately coopted by the biggest tech monopoly out there, and turned into a profit machine. The march to profit from GPT now looks like an unstoppable juggernaut.
 

@@ -19,7 +19,7 @@ But for some reason I don't hear as much chatter about HTTP/3 as I used to HTTP/
 
 [My site](https://robinwinslow.uk) is [already on HTTP/3](https://http3check.net/?host=https%3A%2F%2Frobinwinslow.uk), courtesy of [CloudFlare](https://www.cloudflare.com/en-gb/), whom I believe are running [the nginx-quic custom build](https://quic.nginx.org/) of NGINX. This immediately brings HTTP/3 to around 20% of the internet, [according to Cloudflare](https://blog.cloudflare.com/application-security/). However, of course, this is only from the edge to the client. Most of the sites behind Cloudflare's cache will not be on HTTP/3.
 
-Apart from that, [Wikipedia says that](https://en.wikipedia.org/w/index.php?title=HTTP/3&oldid=1136355726#Server) Caddy (0.1%), LiteSpeed (5%) and Microsoft IIS (3%) all support HTTP/3 out of the box. But one particularly tech stack is conspicuously absent here: Kubernetes.
+Apart from that, [Wikipedia says that](https://en.wikipedia.org/w/index.php?title=HTTP/3&oldid=1136355726#Server) Caddy (0.1%), LiteSpeed (5%) and Microsoft IIS (3%) all support HTTP/3 out of the box. But one particular tech stack is conspicuously absent here: Kubernetes.
 
 For example, [ubuntu.com](https://ubuntu.com) (which I work on during my day job) [still doesn't support HTTP/3](https://http3check.net/?host=https%3A%2F%2Fubuntu.com). This is because getting it into Kubernetes [seems to be taking a while](https://github.com/kubernetes/ingress-nginx/issues/4760). It sounds like it won't land until NGINX merge it into their stable release.
 

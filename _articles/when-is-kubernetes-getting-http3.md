@@ -1,7 +1,12 @@
 ---
-title: When is Kubernetes getting HTTP/3?
-description: HTTP/3 is rolling out across much of the internet. When will one of the biggest hosting platforms get support?
+cross_posts:
+  DEV: https://dev.to/nottrobin/when-is-kubernetes-getting-http3-2632
+  Hacker News: https://news.ycombinator.com/item?id=34643200
 date: 2023-02-02
+description: HTTP/3 is rolling out across much of the internet. When will one of the
+  biggest hosting platforms get support?
+email_campaign_id: bd08cbd14b
+title: When is Kubernetes getting HTTP/3?
 ---
 
 The standard for HTTP/3, [RFC 9114](https://datatracker.ietf.org/doc/html/rfc9114), was published as a proposed standard in June 2022. This is significant:

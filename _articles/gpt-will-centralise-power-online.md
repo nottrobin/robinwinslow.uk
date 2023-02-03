@@ -1,6 +1,7 @@
 ---
 cross_posts:
   Hacker News: https://news.ycombinator.com/item?id=34629126
+  DEV: https://dev.to/nottrobin/gpt-could-centralise-power-online-like-nothing-weve-seen-4hk0
 date: 2023-02-02
 description: Microsoft has its talons deep in OpenAI, and may become the engine of
   the next era of tech monopolies

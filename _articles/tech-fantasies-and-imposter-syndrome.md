@@ -5,7 +5,7 @@ cross_posts:
 description: Software is opaque, unknowable. This leads to a lot of pretence, pressure and imposter syndrome. There are some remedies.
 email_campaign_id: 79940808df
 title: Tech fantasies and impostor syndrome
-date: 2023-06-07 23:46
+date: 2023-06-07
 ---
 
 I'd be curious how old-school engineers feel, but to me it seems like software engineering has unique epistemological challenges.

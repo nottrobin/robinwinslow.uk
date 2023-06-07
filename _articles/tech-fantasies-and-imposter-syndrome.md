@@ -2,12 +2,12 @@
 cross_posts:
   DEV: https://dev.to/nottrobin/tech-fantasies-and-impostor-syndrome-3602
   Hacker News: https://news.ycombinator.com/item?id=36234743
-date: 2022-06-07 23:46
 description: Software is opaque; unknowable. This leads to a lot of pretence, pressure
   and imposter syndrome. There are some remedies.
 email_campaign_id: 79940808df
 layout: post
 title: Tech fantasies and impostor syndrome
+date: 2023-06-07 23:46
 ---
 
 I'd be curious how old-school engineers feel, but to me it seems like software engineering has unique epistemological challenges.

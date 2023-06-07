@@ -2,7 +2,7 @@
 cross_posts:
   DEV: https://dev.to/nottrobin/tech-fantasies-and-impostor-syndrome-3602
   Hacker News: https://news.ycombinator.com/item?id=36234743
-description: "Software is opaque; unknowable. This leads to a lot of pretence, pressure and imposter syndrome. There are some remedies."
+description: Software is opaque, unknowable. This leads to a lot of pretence, pressure and imposter syndrome. There are some remedies.
 email_campaign_id: 79940808df
 title: Tech fantasies and impostor syndrome
 date: 2023-06-07 23:46

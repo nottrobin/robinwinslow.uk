@@ -5,7 +5,6 @@ cross_posts:
 description: Software is opaque; unknowable. This leads to a lot of pretence, pressure
   and imposter syndrome. There are some remedies.
 email_campaign_id: 79940808df
-layout: post
 title: Tech fantasies and impostor syndrome
 date: 2023-06-07 23:46
 ---

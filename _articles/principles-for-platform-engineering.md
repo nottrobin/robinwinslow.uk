@@ -1,6 +1,10 @@
 ---
+cross_posts:
+  DEV: https://dev.to/nottrobin/principles-for-platform-engineering-5fp6
+  Hacker News: https://news.ycombinator.com/item?id=36235445
 date: 2023-06-08
 description: Some guiding principles for creating platform tools for DevSecOps enablement
+email_campaign_id: a78aefc4de
 title: Principles for platform engineering
 ---
 

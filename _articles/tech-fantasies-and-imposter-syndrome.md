@@ -2,10 +2,10 @@
 cross_posts:
   DEV: https://dev.to/nottrobin/tech-fantasies-and-impostor-syndrome-3602
   Hacker News: https://news.ycombinator.com/item?id=36234743
+date: 2023-06-07
 description: Software is opaque, unknowable. This leads to a lot of pretence, pressure and imposter syndrome. There are some remedies.
 email_campaign_id: 79940808df
 title: Tech fantasies and impostor syndrome
-date: 2023-06-07
 ---
 
 I'd be curious how old-school engineers feel, but to me it seems like software engineering has unique epistemological challenges.
@@ -32,18 +32,18 @@ And for more senior people in organisations this problem is exacerbated from bot
 
 There are of course remedies to this. These are good practices in work in general, in human interaction in general, but because of the unique epistemological challenges of the tech industry, I believe they're absolutely essential in tech:
 
-- Under promise: Try to understand everything you can as deeply as you can, but then overestimate your ignorance. Imagine all the things that could go wrong and then add some extra space beyond that. Introduce scepticism early about your ability to meet targets where there's any uncertainty.
-- Have contingency plans: Think about what will happen if you don't deliver on a target, and take that possibility seriously. Decide what you would do in that situation.
-- Collaborate: Where possible, work together with other people. Do pair programming. Share the way that problems have been solved, and solve them together.
-- Over-communicate: Write down as much as possible about the process of doing the work. Share decisions and discussions widely.
-- Keep solutions small and simple: Given the ease with which complexity can spiral out of control, out of concievability, in tech, the more you can break down work, the more you can deliver small, atomic units, the more likely to are to be able to deliver predictably.
-- Be humble: Talk very openly about the things you don't know. Encourage others to do the same.
-- Believe people: If someone tells you something is hard, believe them. If anyone ever says something "should be easy" call it out.
-- No blame, systems thinking: When something goes wrong, do not blame individuals for it. If you see others doing it, call it out. If you allow blame to be thrown around, people will respond by putting up walls of pretence. So instead, focus on what system can be put in place to avoid that thing going wrong again.
-- Demo: Share and demonstrate work as deeply as possible. Get as technical as possible in describing the work.
-- Gather evidence, make things tangible: Do everything you can to create clarity over what the software is doing:
+- *Under promise*: Try to understand everything you can as deeply as you can, but then overestimate your ignorance. Imagine all the things that could go wrong and then add some extra space beyond that. Introduce scepticism early about your ability to meet targets where there's any uncertainty.
+- *Have contingency plans*: Think about what will happen if you don't deliver on a target, and take that possibility seriously. Decide what you would do in that situation.
+- *Collaborate*: Where possible, work together with other people. Do pair programming. Share the way that problems have been solved, and solve them together.
+- *Over-communicate*: Write down as much as possible about the process of doing the work. Share decisions and discussions widely.
+- *Keep solutions small and simple*: Given the ease with which complexity can spiral out of control, out of concievability, in tech, the more you can break down work, the more you can deliver small, atomic units, the more likely to are to be able to deliver predictably.
+- *Be humble*: Talk very openly about the things you don't know. Encourage others to do the same.
+- *Believe people*: If someone tells you something is hard, believe them. If anyone ever says something "should be easy" call it out.
+- *No blame, systems thinking*: When something goes wrong, do not blame individuals for it. If you see others doing it, call it out. If you allow blame to be thrown around, people will respond by putting up walls of pretence. So instead, focus on what system can be put in place to avoid that thing going wrong again.
+- *Demo*: Share and demonstrate work as deeply as possible. Get as technical as possible in describing the work.
+- *Gather evidence, make things tangible*: Do everything you can to create clarity over what the software is doing:
   - Write a concise set of clearly understood high-level tests that can really exhibit the health of a project.
   - Create a small number of key dashboards displaying health metrics for the software, and make sure people see them regularly in their daily work.
   - Know what impact given pieces of work are expected to have and check the work afterwards.
 
-These are just some ideas, but overall the important thing is to encourage transparency, honesty, humility and understanding. Realise that the team is going on a journey of discovery together, and they need to be supportive to achieve success.
+These are just some ideas, but overall the important thing is to encourage transparency, honesty, humility and understanding. Realise that the team is going on a journey of discovery together, and they need to support each other to have any hope of keeping a handle on the complexity.

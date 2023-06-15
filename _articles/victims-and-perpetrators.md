@@ -1,7 +1,11 @@
 ---
-title: Victims and abusers
-description: It may not be helpful to cast all abusers as scheming psychopaths
+cross_posts:
+  DEV: https://dev.to/nottrobin/victims-and-abusers-333j
+  Hacker News: https://news.ycombinator.com/item?id=36347305
 date: 2023-06-15
+description: It may not be helpful to cast all abusers as scheming psychopaths
+email_campaign_id: 27fa122de4
+title: Victims and abusers
 ---
 
 The literature on supporting victims of domestic abuse is unequivocal about condemning abusers. E.g. this from Reducing the Risk's ["supporting friends and family" page](https://reducingtherisk.org.uk/supporting-friends-and-family/):

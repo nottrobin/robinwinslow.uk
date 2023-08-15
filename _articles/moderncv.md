@@ -70,25 +70,7 @@ cp template.tex yourname.tex  # Make a copy
 code yourname.tex  # I like to use VSCode for editing, but you do you
 ```
 
-The file has liberal comments to explain to you how to make changes to it. You may want to change the settings at the top of the file for the font size, font style, margins, colour etc.
-
-```latex
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
-
-% moderncv themes
-\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
-
-% adjust the page margins
-\usepackage[scale=0.75]{geometry}
-\setlength{\footskip}{149.60005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
-```
-
-Then the first thing you should probably do after that is go down to where it says "John Doe" and change it to your name:
+The first thing you should probably do is go down to where it says "John Doe" and change it to your name:
 
 ``` latex
 \name{John}{Doe}
@@ -108,4 +90,32 @@ rm yourname.pdf
 latexmk -pdf ./yourname.tex
 ```
 
-I'm not going to explain all of how to edit the `.tex` file, as it's mostly explained inline. You can also learn more about LaTeX format [on Overleaf](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) or [on freecodecamp.org](https://www.freecodecamp.org/news/learn-latex-full-course/).
+## Customising
+
+If you're happy with the theme, you can simply make changes to the pieces of content, move them around to suit your information, and you're done. But if you want to make deeper changes, that's also possible.
+
+The file has liberal comments to explain to you how to make changes to it.
+
+```latex
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+\setlength{\footskip}{149.60005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+```
+
+First it's worth playing around with the different themes. Try switching between "casual", "classic", "banking", "oldstyle" and "fancy".
+
+The actual themes are defined in the `moderncvstyle*.sty` files. You can make changes to these or create new styles of your own if you like - for example, [the "classic" style with the "banking" header](https://tex.stackexchange.com/questions/176391/merging-banking-and-classic-style-in-moderncv).
+
+You may well also want to change the margins. This can be done by changing the `\usepackage[scale=0.75]{geometry}` line. That number represents the amount of you page you want to dedicate to the text (`0.75` by default), so to reduce the margins, change the number towards `1`. I personally chose `0.85`.
+
+I'm not going to explain all of how to edit the `.tex` file, as it's mostly explained inline. You can also learn more about LaTeX format itself [on Overleaf](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) or [on freecodecamp.org](https://www.freecodecamp.org/news/learn-latex-full-course/).

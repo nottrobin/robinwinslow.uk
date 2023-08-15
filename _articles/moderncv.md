@@ -12,7 +12,9 @@ title: How to build and customise ModernCV on Ubuntu 23.04
 
 ![ModernCV and Cover Letter Template](https://writelatex.s3.amazonaws.com/published_ver/26392.jpeg?X-Amz-Expires=14400&X-Amz-Date=20230815T110239Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWJBOALPNFPV7PVH5/20230815/us-east-1/s3/aws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=56535697d39c813a3cea934c56bcfd9f183db74ff170817e8deb4ad71039668b)
 
-You can edit it directly and for free [on Overleaf](https://www.overleaf.com/latex/templates/moderncv-and-cover-letter-template/sttkgjcysttn), but the version on there is not as customisable as the full source code. So here I'm going to write down how to download, build and customise the original source code on Ubuntu, as I do it.
+You can edit it directly and for free [on Overleaf](https://www.overleaf.com/latex/templates/moderncv-and-cover-letter-template/sttkgjcysttn), and if you're a beginner this is probably the way to go.
+
+But the version on there is not as customisable as the full source code. So here I'm going to write down how to download, build and customise the original source code on Ubuntu 23.04, as I do it.
 
 ## Prerequisites
 
@@ -95,8 +97,15 @@ Then the first thing you should probably do after that is go down to where it sa
 Once you've made a couple of changes, try building and opening your CV:
 
 ``` bash
-latexmk -pdf ./robinwinslowmorris.tex
-xdg-open robinwinslowmorris.pdf
+latexmk -pdf ./yourname.tex
+xdg-open yourname.pdf
+```
+
+To compile your CV again, you'll need to delete the old PDF first:
+
+``` bash
+rm yourname.pdf
+latexmk -pdf ./yourname.tex
 ```
 
 I'm not going to explain all of how to edit the `.tex` file, as it's mostly explained inline. You can also learn more about LaTeX format [on Overleaf](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) or [on freecodecamp.org](https://www.freecodecamp.org/news/learn-latex-full-course/).

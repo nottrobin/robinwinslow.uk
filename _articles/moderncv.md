@@ -10,7 +10,7 @@ title: How to build and customise ModernCV on Ubuntu 23.04
 
 [ModernCV](https://github.com/moderncv) is a customisable LaTeX CV template for creating your résumé.
 
-![ModernCV and Cover Letter Template](https://writelatex.s3.amazonaws.com/published_ver/26392.jpeg?X-Amz-Expires=14400&X-Amz-Date=20230815T110239Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWJBOALPNFPV7PVH5/20230815/us-east-1/s3/aws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=56535697d39c813a3cea934c56bcfd9f183db74ff170817e8deb4ad71039668b)
+![ModernCV styles](../images/moderncv-styles.png)
 
 You can edit it directly and for free [on Overleaf](https://www.overleaf.com/latex/templates/moderncv-and-cover-letter-template/sttkgjcysttn), and if you're a beginner this is probably the way to go.
 

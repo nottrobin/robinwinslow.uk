@@ -8,7 +8,7 @@ email_campaign_id: b6f8d559b3
 title: How to build and customise ModernCV on Ubuntu 23.04
 ---
 
-[ModernCV](https://github.com/moderncv) is a customisable LaTeX CV template for creating your résumé.
+[ModernCV](https://github.com/moderncv) is a customisable LaTeX CV template for creating your résumé, with 5 basic themes.
 
 ![ModernCV styles](../images/moderncv-styles.png)
 

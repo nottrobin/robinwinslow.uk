@@ -38,7 +38,7 @@ Now clone the ModernCV project and build the template CV to check it's working:
 
 ``` bash
 git clone https://github.com/moderncv/moderncv  # Get the code
-cv moderncv  # Enter the project
+cd moderncv  # Enter the project
 latexmk -pdf ./template.tex  # Build the template
 ```
 

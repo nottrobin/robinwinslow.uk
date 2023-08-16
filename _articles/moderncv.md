@@ -12,7 +12,7 @@ title: How to build and customise ModernCV on Ubuntu 23.04
 
 ![ModernCV styles](../images/moderncv-styles.png)
 
-You can edit it directly and for free [on Overleaf](https://www.overleaf.com/latex/templates/moderncv-and-cover-letter-template/sttkgjcysttn), and if you're a beginner this is probably the way to go.
+You can edit it directly and for free [on Overleaf](https://www.overleaf.com/latex/templates/moderncv-and-cover-letter-template/sttkgjcysttn), and if you're a beginner this is probably the way to go. There are also [many other CV templates available on Overleaf](https://www.overleaf.com/latex/templates/tagged/cv), although personally I find ModernCV the most elegant overall.
 
 But the version on there is not as customisable as the full source code. So here I'm going to write down how to download, build and customise the original source code on Ubuntu 23.04, as I do it.
 

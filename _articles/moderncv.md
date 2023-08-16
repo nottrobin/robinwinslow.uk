@@ -114,8 +114,75 @@ The file has liberal comments to explain to you how to make changes to it.
 
 First it's worth playing around with the different themes. Try switching between "casual", "classic", "banking", "oldstyle" and "fancy".
 
-The actual themes are defined in the `moderncvstyle*.sty` files. You can make changes to these or create new styles of your own if you like - for example, [the "classic" style with the "banking" header](https://tex.stackexchange.com/questions/176391/merging-banking-and-classic-style-in-moderncv).
+It's worth reading the comments which explain a lot about how to customise ModernCV. You can also learn more about LaTeX format itself [on Overleaf](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) or [on freecodecamp.org](https://www.freecodecamp.org/news/learn-latex-full-course/).
 
-You may well also want to change the margins. This can be done by changing the `\usepackage[scale=0.75]{geometry}` line. That number represents the amount of you page you want to dedicate to the text (`0.75` by default), so to reduce the margins, change the number towards `1`. I personally chose `0.85`.
+## Tips and tricks
 
-I'm not going to explain all of how to edit the `.tex` file, as it's mostly explained inline. You can also learn more about LaTeX format itself [on Overleaf](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) or [on freecodecamp.org](https://www.freecodecamp.org/news/learn-latex-full-course/).
+I've now finished [my CV](https://github.com/nottrobin/moderncv/releases/download/robinwinslowmorris-v1.0/robinwinslowmorris.pdf) (for now), and I ended up doing a fair bit of customisation to do so. Here's some of what I learned.
+
+### Customising in general
+
+In general, the code behind ModernCV is very involved. It's probably not worth reaching in and customising the bits that aren't intended to be customised.
+
+### Special characters
+
+All special characters need escaping in LaTeX, or they will break the build. The most common ones that tripped me up are `&` and `#`. These need escaping (`\$` and `\#`) every time you want to use them.
+
+### Changing margins
+
+I personally find the margins around the content to be too large. It reduces how much text you can fit on a single page.
+
+Margins can be changed within the `\usepackage[scale=0.75]{geometry}` line. That number represents the amount of you page you want to dedicate to the text (`0.75` by default), so to reduce the margins, change the number towards `1`. I personally chose `0.85`.
+
+If you further want to increase the amount of text per page, you could change the text size in the overall document with the `\documentclass[11pt,a4paper,sans]{moderncv}` line. However, I decided `11pt` was just about right for me.
+
+### Adding plain paragraphs
+
+My CV has 3 paragraphs of introduction just below the header, before the first section. For a single paragraph, you can simply write this text directly under the title:
+
+``` latex
+\makecvtitle
+
+Lorem ipsum dolor set amet
+
+\section{Experience}
+```
+
+However, if you want to add multiple paragraphs they will, by default, have no vertical space in between them, which doesn't look great.
+
+You can add whitespace in LaTeX [in various ways](https://www.overleaf.com/learn/latex/Line_breaks_and_blank_spaces) (e.g. `\hspace{1cm}`), but the method I chose was to change the `\parskip` size (which ModernCV has set to 0 for its own formatting reasons):
+
+``` latex
+\makecvtitle
+
+\setlength{\parskip}{6pt}  % Change paragraph spacing for the following text
+
+Paragraph one
+
+Paragraph two
+
+Paragraph three
+
+\setlength{\parskip}{0pt}  % Change it back, for the rest of the document
+
+\section{Experience}
+```
+
+
+
+### Highlighting links
+
+Links can be created in the document using [the standard LaTeX `\href` command](https://www.overleaf.com/learn/latex/Hyperlinks). However, these aren't highlighted at all by default in ModernCV, making it very hard to know which links can be clicked. There are various ways to add colours, underlines and other styling to links. I played around with these a lot. Personally the solution I thought was most elegant was to add a light grey underline to all links. I achieved that by adding the following code somewhere above the `\begin{document}` line in my `.tex` file:
+
+``` latex
+% Add light grey underline to links
+\usepackage{hyperref,soul}
+\setulcolor{lightgray}
+\let\oldhref\href
+\renewcommand{\href}[2]{\oldhref{#1}{\hrefstyle{#2}}}
+\newcommand{\hrefstyle}[1]{\ul{\mbox{#1}}}
+```
+
+### Switching headers
+
+The top-level theme files are fairly simple to change. These are defined in the `moderncvstyle*.sty` files (e.g. `moderncvstylecasual.sty`). You can try mixing and matching the different headers (e.g. `\moderncvhead[\moderncvstyleheadoptions]{2}`, around line 54) and footers, and switching them from left to right alignment (`\ExecuteOptions{right,symbols}`, around line 26). For example, others have tried mixing [the "classic" style with the "banking" header](https://tex.stackexchange.com/questions/176391/merging-banking-and-classic-style-in-moderncv).

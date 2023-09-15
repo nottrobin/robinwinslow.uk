@@ -253,26 +253,26 @@ As always with all of my personal code, feel free to copy it and use it however 
 <pre><code>
 {
     "lineItems": [
-        {% for li in order.lineItems %}
-            {% if forloop.first != true %},{% endif %}
+        {%- for li in order.lineItems %}
+            {%- if forloop.first != true %},{% endif %}
         {
             "contract": {
                 {% comment %}rest of contract omitted{% endcomment %}
                 "id": {{ li.contract.id | json }}
             },
             "customAttributes": [
-                {% for ca in li.customAttributes %}
-                    {% if forloop.first != true %},{% endif %}
+                {%- for ca in li.customAttributes %}
+                    {%- if forloop.first != true %},{% endif %}
                     {
                         "key":{{ ca.key | json }},
                         "value":{{ ca.value | json }}
                     }
-                {% endfor %}
+                {%- endfor %}
             ],
 
             "discountAllocations": [
-                {% for da in li.discountAllocations %}
-                    {% if forloop.first != true %},{% endif %}
+                {%- for da in li.discountAllocations %}
+                    {%- if forloop.first != true %},{% endif %}
                     "allocatedAmountSet": {
                         "presentmentMoney" : {
                             "amount": {{ da.allocatedAmountSet.presentmentMoney.amount | json }},
@@ -283,7 +283,7 @@ As always with all of my personal code, feel free to copy it and use it however 
                             "currencyCode": {{ da.allocatedAmountSet.shopMoney.currencyCode | json }}
                         }
                     }
-                {% endfor %}
+                {%- endfor %}
             ],
 
             "discountedTotalSet": {
@@ -308,13 +308,13 @@ As always with all of my personal code, feel free to copy it and use it however 
                 }
             },
             "duties": [
-                {% for duty in li.duties %}
-                {% if forloop.first != true %},{% endif %}
+                {%- for duty in li.duties %}
+                {%- if forloop.first != true %},{% endif %}
                 {
                     {% comment %}rest of duties omitted{% endcomment %}
                     "id": {{ duty.id | json }}
                 }
-                {% endfor %}
+                {%- endfor %}
             ],
             "fulfillableQuantity": {{ li.fulfillableQuantity | json }},
 
@@ -328,13 +328,13 @@ As always with all of my personal code, feel free to copy it and use it however 
                 "productBased": {{ li.fulfillmentService.productBased | json }},
                 "serviceName": {{ li.fulfillmentService.serviceName | json }},
                 "shippingMethods": [
-                    {% for sm in li.fulfillmentService.shippingMethods %}
-                        {% if forloop.first != true %},{% endif %}
+                    {%- for sm in li.fulfillmentService.shippingMethods %}
+                        {%- if forloop.first != true %},{% endif %}
                         {
                             "code": {{ sm.code | json }},
                             "label": {{ sm.label | json }}
                         }
-                    {% endfor %}
+                    {%- endfor %}
                 ],
                 "type": {{ li.fulfillmentService.type | json }}
 
@@ -392,8 +392,8 @@ As always with all of my personal code, feel free to copy it and use it however 
             "sku": {{ li.sku | json }},
 
             "taxLines": [
-                {% for tl in li.taxLines %}
-                    {% if forloop.first != true %},{% endif %}
+                {%- for tl in li.taxLines %}
+                    {%- if forloop.first != true %},{% endif %}
                     {
                         "priceSet": {
                             "presentmentMoney" : {
@@ -409,7 +409,7 @@ As always with all of my personal code, feel free to copy it and use it however 
                         "ratePercentage": {{ tl.ratePercentage | json }},
                         "title": {{ tl.title | json }}
                     }
-                {% endfor %}
+                {%- endfor %}
             ],
             "taxable":{{ li.taxable | json }},
             "title":{{ li.title | json }},
@@ -451,7 +451,16 @@ As always with all of my personal code, feel free to copy it and use it however 
 
             "variant": {
                 {% comment %}rest of variant omitted {% endcomment %}
-                "title": {{ li.variant.title | json }}
+                "title": {{ li.variant.title | json }},
+                "selectedOptions": [
+                    {%- for option in li.variant.selectedOptions %}
+                        {%- if forloop.first != true %},{% endif %}
+                        {
+                            "name": {{ option.name | json }},
+                            "value": {{ option.value | json }}
+                        }
+                    {%- endfor %}
+                ]
             },
 
             "variantTitle": {{ li.variantTitle | json }},

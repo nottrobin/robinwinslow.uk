@@ -1,6 +1,10 @@
 ---
+cross_posts:
+  DEV: https://dev.to/nottrobin/inspecting-the-order-data-available-to-shopifys-flow-app-41f9
+  Hacker News: https://news.ycombinator.com/item?id=37522842
 date: 2023-09-15
-description: A Flow email template for inspecting all Shopify data available for a given order
+description: A Flow email template for inspecting all Shopify data available for a
+  given order
 email_campaign_id: b6f8d559b3
 title: Inspecting the order data available to Shopify's Flow app
 ---

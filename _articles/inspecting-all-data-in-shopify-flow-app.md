@@ -24,8 +24,10 @@ So it is incredibly helpful to have an example representation of what all the av
 ```
 <!-- If only this worked -->
 <pre><code>
+{%- raw %}
 {{ shop | json }}
 {{ order | json }}
+{%- endraw %}
 </code></pre>
 ```
 
@@ -48,6 +50,7 @@ So I've just spent a good while writing out an email tempalte for Shopify Flow t
 As always with all of my personal code, feel free to copy it and use it however you wish:
 
 ``` liquid
+{%- raw %}
 <h4>Shop</h4>
 
 <pre><code>
@@ -458,6 +461,7 @@ As always with all of my personal code, feel free to copy it and use it however 
     ]
 }
 </code></pre>
+{%- endraw %}
 ```
 
 Or [find it on my GitHub](https://github.com/nottrobin/v20-email/blob/main/display-data.liquid).

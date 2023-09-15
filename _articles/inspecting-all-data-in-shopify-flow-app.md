@@ -21,15 +21,15 @@ I'm sure anyone who is trying to do this same thing would have the same challeng
 
 So it is incredibly helpful to have an example representation of what all the available Liquid variable contain. I had initially assumed that this would be as simple as doing something like:
 
+{% raw %}
 ```
 <!-- If only this worked -->
 <pre><code>
-{%- raw %}
 {{ shop | json }}
 {{ order | json }}
-{%- endraw %}
 </code></pre>
 ```
+{% endraw %}
 
 And submitting an order to get an email with a full representation of the information structure for an order. Unfortunately this doesn't work because these are in fact complex objects that make expensive API calls in the back-end in response to getters.
 
@@ -49,8 +49,8 @@ So I've just spent a good while writing out an email tempalte for Shopify Flow t
 
 As always with all of my personal code, feel free to copy it and use it however you wish:
 
+{% raw %}
 ``` liquid
-{%- raw %}
 <h4>Shop</h4>
 
 <pre><code>
@@ -470,7 +470,7 @@ As always with all of my personal code, feel free to copy it and use it however 
     ]
 }
 </code></pre>
-{%- endraw %}
 ```
+{% endraw %}
 
 Or [find it on my GitHub](https://github.com/nottrobin/v20-email/blob/main/display-data.liquid).

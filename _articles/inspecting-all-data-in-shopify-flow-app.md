@@ -37,7 +37,7 @@ Helpfully, this is explained in detail [in the Shopify Flow documentation](https
 
 > #### Caution
 >
-> You can't output a list/array or object in Liquid by calling the list or object directly, such as entering `{{ order.lineItems }}`. This limit is put in place because GraphQL can return excessive amounts of data, which would cause your workflow to fail. In addition, when new fields are introduced, it could break some workflows.
+> You can't output a list/array or object in Liquid by calling the list or object directly, such as entering {% raw %}`{{ order.lineItems }}`{% endraw %}. This limit is put in place because GraphQL can return excessive amounts of data, which would cause your workflow to fail. In addition, when new fields are introduced, it could break some workflows.
 >
 > Instead of calling lists and objects directly, you should loop over list and include only the fields that you want.
 

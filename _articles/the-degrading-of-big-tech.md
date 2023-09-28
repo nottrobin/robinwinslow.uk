@@ -28,7 +28,7 @@ In the long term, I hope this is a positive development. I hope we learn our les
 
 But that will take years or decades. In the mean time, we have lost and continue to lose a huge amount. These platforms aren't just manipulative monopolies, they are also the fabric of society. And as they unravel, we are all poorer. Our ability to communicate and participate in democracy is greatly degraded.
 
-I suppose the conclusion I'm building to is that, in a healthy society, this would be regulated. Yes, we shouldn't be letting these monopolies develop in the first place. But once that have developed, and they become effectively privately owned public infrastructure, they then shouldn't be allowed to do real damage to their platforms without public oversight.
+I suppose the conclusion I'm building to is that, in a healthy society, this would be regulated. Yes, we shouldn't be letting these monopolies develop in the first place. But once they have developed, and they become effectively privately owned public infrastructure, they then shouldn't be allowed to do real damage to their platforms without public oversight.
 
 Unfortunately the obvious analogy might be to the "too big to fail" banks in the financial crisis. But it doesn't have to be that way. Following the financial crash, the administrations chose to give lots of money to the banks, with very few strings attached. But they didn't have to do that. They could have created public funds to help people, or better yet to nationalise the banks like in the 1930s.
 

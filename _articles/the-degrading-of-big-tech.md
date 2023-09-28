@@ -26,7 +26,7 @@ The same sort of thing is true of Reddit. Reddit was such a source of internet-c
 
 In the long term, I hope this is a positive development. I hope we learn our lessons, that [ActivityPub](https://en.wikipedia.org/wiki/ActivityPub) and Bluesky's [AT protocol](https://atproto.com/) resolve their differences and standardise, that over time people realise that the [Fediverse](https://en.wikipedia.org/wiki/Fediverse) is the answer. I hope we get to an online social world that is both standardised and decentralised - i.e. where you can reliably follow any person or brand on any platform through a shared public protocol.
 
-But that will take years or decades. In the mean time, we have lost and continue to lose a huge amount. These platforms weren't just manipulative monopolies, they are also the fabric of society. And as they unravel, we are all poorer. Our ability to communicate and participate in democracy is greatly degraded.
+But that will take years or decades. In the mean time, we have lost and continue to lose a huge amount. These platforms aren't just manipulative monopolies, they are also the fabric of society. And as they unravel, we are all poorer. Our ability to communicate and participate in democracy is greatly degraded.
 
 I suppose the conclusion I'm building to is that, in a healthy society, this would be regulated. Yes, we shouldn't be letting these monopolies develop in the first place. But once that have developed, and they become effectively privately owned public infrastructure, they then shouldn't be allowed to do real damage to their platforms without public oversight.
 

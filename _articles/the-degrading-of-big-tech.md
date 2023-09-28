@@ -1,7 +1,11 @@
 ---
-title: The degrading of big tech
-description: A mismanagment of big tech monopolies is impoverishing the world
+cross_posts:
+  DEV: https://dev.to/nottrobin/the-degrading-of-big-tech-5bgh
+  Hacker News: https://news.ycombinator.com/item?id=37690088
 date: 2023-09-28
+description: A mismanagment of big tech monopolies is impoverishing the world
+email_campaign_id: c2e786ac48
+title: The degrading of big tech
 ---
 
 I just had a thought - or maybe it's more accurate to say that a months-long thought process just crystallised into something. So I'm going to do a quick stream-of-consciousness post about it and hope it's useful in some way and isn't pure brain-crack.

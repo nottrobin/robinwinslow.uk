@@ -3,7 +3,7 @@ cross_posts:
   DEV: https://dev.to/nottrobin/the-degrading-of-big-tech-5bgh
   Hacker News: https://news.ycombinator.com/item?id=37690088
 date: 2023-09-28
-description: A mismanagment of big tech monopolies is impoverishing the world
+description: The mismanagment of big tech monopolies is impoverishing the world. We should do something about it.
 email_campaign_id: c2e786ac48
 title: The degrading of big tech
 ---

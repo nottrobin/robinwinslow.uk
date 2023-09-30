@@ -8,8 +8,6 @@ email_campaign_id: c2e786ac48
 title: The degrading of big tech
 ---
 
-I just had a thought - or maybe it's more accurate to say that a months-long thought process just crystallised into something. So I'm going to do a quick stream-of-consciousness post about it and hope it's useful in some way and isn't pure brain-crack.
-
 I'm sure I'm not the only one feeling the effects of ~~Twitter's~~ X's [enshittification](https://en.wikipedia.org/wiki/Enshittification), followed by [Reddit's](https://medium.com/@mikegrindle/reddit-and-the-enshittification-of-social-media-659d41b5ab73) . People mostly younger than me probably feel the same [about TikTok](https://www.wired.com/story/tiktok-platforms-cory-doctorow/), a story which, along with [that of Amazon](https://doctorow.medium.com/how-monopoly-enshittified-amazon-83f42a585c3c), helped Cory Doctorow solidify the term. Even before Twitter was bought by the Muskrat, ~~Facebook's~~ Meta's downfall was [strongly predicted](https://onezero.medium.com/the-last-days-of-myspace-7bd197173603) (and continues to play out before our eyes), and I personally feel Google is going through a slower, decades-long enshittification since about 2010.
 
 My initial perspective on this was filled with schadenfreude. X is quite clearly imploding (albeit a bit slower than some anticipated), and is already a shadow of its former self and in obvious decline, losing the richest man in the world at least tens of billions in the process, directly through his micro-mismanagement. That's satisfying.

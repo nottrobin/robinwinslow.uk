@@ -1,7 +1,12 @@
 ---
-title: My favourite leftist, economics and tech podcasts
-description: This is the cream of my painstakingly curated daily diet of podcasts. I hope it might be helpful to others with similar interests.
+cross_posts:
+  DEV: https://dev.to/nottrobin/my-favourite-leftist-economics-and-tech-podcasts-4m30
+  Hacker News: https://news.ycombinator.com/item?id=38139530
 date: 2023-11-04
+description: This is the cream of my painstakingly curated daily diet of podcasts.
+  I hope it might be helpful to others with similar interests.
+email_campaign_id: 14292aee17
+title: My favourite leftist, economics and tech podcasts
 ---
 
 I listen to a lot of podcasts these days. I listen on my headphones while doing the washing up or in the car on the way to pick up the kids from school and nursery. I find them very comforting.

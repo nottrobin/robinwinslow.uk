@@ -1,7 +1,11 @@
 ---
-title: What's wrong with coding tests and how to do them right
+cross_posts:
+  DEV: https://dev.to/nottrobin/whats-wrong-with-coding-tests-and-how-to-do-them-right-1h0b
+  Hacker News: https://news.ycombinator.com/item?id=38648962
+date: 2023-11-18 09:46
 description: Ideas for improving coding tests, and some thoughts on how we got here
-date: "2023-11-18 09:46"
+email_campaign_id: 521492653f
+title: What's wrong with coding tests and how to do them right
 ---
 
 Live coding tests are extremely common when hiring software engineers. And online coding tests with tight timeframes are just as common.

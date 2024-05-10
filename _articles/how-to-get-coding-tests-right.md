@@ -8,26 +8,36 @@ email_campaign_id: 521492653f
 title: What's wrong with coding tests and how to do them right
 ---
 
-Live coding tests are extremely common when hiring software engineers. And online coding tests with tight timeframes are just as common.
+Live coding tests are extremely common when hiring software engineers, and online coding tests with tight timeframes are just as common.
 
-I'm far from the first person to mention how bad high-pressure coding tests are (e.g. [1][1], [2][2], [3][3], [4][4], [5][5], [6][6], [7][7]). But much like [open-plan offices](https://www.sciencedirect.com/science/article/abs/pii/S0272494408000728), high-stress coding tests seem to stubbornly persist despite [clear research findings](http://chrisparnin.me/pdf/stress_FSE_20.pdf) warning against them:
+I'm far from the first person to mention how bad high-pressure coding tests generally are (e.g. [1][1], [2][2], [3][3], [4][4], [5][5], [6][6], [7][7]). But much like [open-plan offices](https://www.sciencedirect.com/science/article/abs/pii/S0272494408000728), high-stress coding tests seem to stubbornly persist despite [clear research findings](http://chrisparnin.me/pdf/stress_FSE_20.pdf) warning against them:
 
 > Interviewers may be filtering out qualified candidates by confounding assessment of problem-solving ability with unnecessary stress.
 > ...
 > Our study raises key questions about the validity and equity of a core procedure used for making hiring decisions across the software industry. 
 
-And it's not just job candidate who aren't happy. Software developer jobs may be [objectively the hardest roles to fill](https://www.dice.com/career-advice/28-hardest-to-fill-technology-jobs-include-software-developer-engineer), with hiring managers [also bemoaning](https://www.quora.com/Why-aren-t-developers-passing-coding-tests-despite-being-given-lots-of-study-resources-What-gives-They-look-like-seniors-principals-on-paper-then-fail) how poorly many experienced developers perform on coding tests.
+It's not just job candidate who aren't happy. Software developer jobs may be [objectively the hardest roles to fill](https://www.dice.com/career-advice/28-hardest-to-fill-technology-jobs-include-software-developer-engineer), with hiring managers [also bemoaning](https://www.quora.com/Why-aren-t-developers-passing-coding-tests-despite-being-given-lots-of-study-resources-What-gives-They-look-like-seniors-principals-on-paper-then-fail) how poorly many experienced developers perform on coding tests.
+
+I believe many standard coding tests are woefully broken, and lead to companies hiring poor candidates and missing out on great ones.
+
+(Jump straight to [my recommendations](#recommendations) or [my subjective philosophical and historical analysis](#the-big-picture))
 
 # Ideas for improving coding tests
 
-For the last couple of years in my previous role, there was a significant focus on hiring inside the company. I had the opportunity to research and think deeply about effective ways to hire good developers, and I have some thoughts.
+For the last couple of years in my previous role, there was a significant focus on hiring inside the company. I had the opportunity to research and think deeply about effective ways to hire good developers, although I only got to have minimal impact over the actual process.
+
+Here are my well-researched thoughts:
+
 ## Reducing pressure
 
+_Performing under pressure is not a useful skill for software engineers_
+
 The most obvious flaw with coding tests is that many of them put candidates under a lot of pressure. Different people will respond differently to different sorts of pressure, but there are two things that we can be pretty sure will cause some anxiety in many people:
+
 - Performing in front of an interviewer
 - Performing under tight time pressure
 
-Testing a candidates' performance under a particular type of pressure could be perfectly valid if that was a clear requirement for the job. I would argue that for almost all development teams, this is not a key requirements. And if it is a requirement, it probably shouldn't be. A high-pressure working environment should be an undesirable temporary state for a software team that they should be working to resolve as quickly as possible, and hence, there's very little value to making this a key requirement for permanent employees.
+Testing a candidates' performance under a particular type of pressure could be perfectly valid, if that was a clear requirement for the job. I would argue that for almost all development teams, this is not a key requirements. And if it is a requirement, it probably shouldn't be. A high-pressure working environment should be an undesirable temporary state for a software team that they should be working to resolve as quickly as possible, and hence, there's very little value to making this a key requirement for permanent employees.
 
 If you think about the actual process of programming, very little of it is high-stress. It's usually a solitary activity where you have and need a lot of time to consider the shape of a problem and try out many different solutions. The sort of person who is good at this type of problem solving may very likely be the exact opposite to the sort of person who performs well under stress.
 
@@ -36,7 +46,10 @@ Studies show that anxiety hugely effects performance. I believe this is a key re
 Therefore our goal should be to try to reduce any possible source of anxiety when testing software engineers. To achieve this, I would recommend only using at-home technical tests that developers can do in their own time without a tight timeframe.
 
 This doesn't completely negate the use of standard coding test tools like [HackerRank](https://www.hackerrank.com/) or [DevSkiller](https://devskiller.com/), but since both require setting a time limit (I think), I would suggest making this time limit something extra-generous like 1 day or more, instead of the much more common hour-or-two time limit.
+
 ## Targeting the right skills
+
+_Test for the actual job requirements_
 
 The next obvious question is what sort of exercises should we be setting to find the candidates we really need?
 
@@ -64,6 +77,7 @@ It's also worth considering the skills you're testing around the actual challeng
 - potentially even how they discuss changes on a PR, whether they get defensive etc.
 
 ## Making efficient use of time
+
 Another key reason why people hate coding tests is that they ask engineers to invest a lot of time for a job they likely won't get anyway.
 
 I certainly don't have a silver bullet for this one. It's natural that employers want to do as much vetting up-front as possible to avoid a costly bad hire, and the more of that effort they can push onto the candidate the better for them, so they can spend their limited resources on pushing more candidates through the pipeline. And it's natural for the candidates to not want to do that work for free.
@@ -78,21 +92,30 @@ We should also do anything we can to reduce any set-up costs for the assignment.
 
 ## Recommendations
 
-Taking all these points into account, my preferred type of technical tests would be centred around PRs into an open-source GitHub repository. For example, I really liked [the assignment I did a while back](https://www.linkedin.com/posts/robin-winslow-morris_tech-sector-job-interviews-assess-anxiety-activity-7100914498588286976-y4RL?utm_source=share&utm_medium=member_desktop) for [Deepset AI](https://www.deepset.ai/).
+Taking all these points into account, my preferred type of technical tests would be either:
 
-It's also important that the work you get them to do is something very close to the work they would actually be doing in the job.
+- Ask them to submit a pull request to an open source GitHub repository (other code hosts are available); or
+- Ask them to review an existing pull request (this will naturally take up less of their time)
 
-By doing a test within an actual project on a code hosting platform, you get to test the engineer's skills within that platform, in the version control technology, in how they communicate when submitting code. If you like you can have some discussions about the code right there in the platform.
+You can then discuss the code with them as in-depth as you'd like. You could even do a code review as an early stage in your hiring process, and then have them submit their own PR at a later stage in the process.
 
-This is about the closest you can possibly get to watching a prospective developer doing their actual job.
+Either way, I believe there's huge benefit to tests centred around pull-requests into an open-source GitHub repository. It's also important that the assignment is something very close to the work they would actually be doing in the job.
 
-If you don't want to take up too much of their time, instead of having them create a PR themselves, you could have them review an existing one. This should be pretty time efficient, but still tests a lot of their knowledge. You could even do a code review as an early stage in your hiring process, and then have them submit their own PR at a later stage in the process.
-# The big picture
-Okay now I've made my recommendations, I'd like to explore the broader attitudes and philosophies behind all this a bit. If you've made it down this far, perhaps you have an appetite for a little bit more exploration.
+For example, I really liked [the assignment I did a while back](https://www.linkedin.com/posts/robin-winslow-morris_tech-sector-job-interviews-assess-anxiety-activity-7100914498588286976-y4RL?utm_source=share&utm_medium=member_desktop) for [Deepset AI](https://www.deepset.ai/).
 
-## How did this happen?
+By doing a test within an actual project on a code hosting platform, you get to test the engineer's skills:
 
-A big looming question over all this is: How did we get here? Why are we in this state where so many hiring processes are so chronically broken?
+- within that platform
+- in the version control technology
+- in how they communicate around code
+
+I believe this is the most time-efficient way to get an impression of how a prospective developer would perform their actual job.
+
+If both sides are comfortable investing more time than this (so maybe in the very final stages), you can do actual pair programming on existing code problem together. You might even ask them to come into an office to do this. But this requires too much commitment to be a general-purpose assignment for a whole batch of candidates.
+
+# How did we get here?
+
+This is a big looming question over all this is. Why are we in this state where so many hiring processes are so chronically broken, given how much that must be costing companies?
 
 I believe this all stems from a sort of tech exceptionalism, an idea that the point of hiring developers is to find the true geniuses, the worthy ones, in a sort of initiation ceremony.
 
@@ -104,9 +127,13 @@ To me, this is the only way in which these high-pressure algorithmic brain-tease
 
 ## The antidote
 
-Of course this worldview isn't at all accurate. The IQ test is [not a very good predictor](https://www.youtube.com/watch?v=03JZfssM8XY) of most other skills. There are many many different sorts of "intelligence", and using generalised tests as a stand-in for actually assessing these skills directly is not only ineffective, but it will [introduce a lot of bias](https://plumblearning.org/2023/04/20/the-bias-of-iq-testing-a-critical-look-at-the-history-development-and-implications).
+Of course the above worldview isn't at all accurate.
 
-The best way to assess people for a job will always be to get as close as you can to letting them actually do the job. Coding tests, as with all sorts of hiring, will be most effective if they tries their best to test for what's actually needed in the day-to-day job.
+The IQ test is [not a very good predictor](https://www.youtube.com/watch?v=03JZfssM8XY) of most other skills. There are many many different sorts of "intelligence", and using generalised tests as a stand-in for actually assessing these skills directly is not only ineffective, but it will [introduce a lot of bias](https://www.tutor2u.net/psychology/reference/gould-1982).
+
+The best way to assess people for a job will always be to get as close as you can to letting them actually do the job.
+
+Coding tests, as with all sorts of hiring, will be most effective if they test for what's actually needed in the day-to-day job.
 
 [1]: https://garrettdimon.com/journal/posts/live-coding-interviews
 [2]: https://medium.com/swlh/why-you-should-never-consent-to-a-coding-test-in-an-interview-8e22f5078c7f

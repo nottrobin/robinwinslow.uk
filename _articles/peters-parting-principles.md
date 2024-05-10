@@ -11,7 +11,7 @@ cross_posts:
 
 My boss and mentor of over 8 years, Peter Mahnke, moved on from Canonical two months ago.
 
-Peter has led the web & design team in one form or another for the best part of a decade. He's watched it grow massively in size, responsibilities and ambitions, And every team member still carries a lot of respect and affection for Peter.
+Peter has led the web & design team in one form or another for the best part of a decade. He's watched it grow massively in size, responsibilities and ambitions, and every team member still carries a lot of respect and affection for Peter.
 
 On his last day, Peter dropped 10 pearls of wisdom for success and fulfilment at work. I think they are great advice, and really capture the essence of what made him a unique and subtly effective leader.
 
@@ -57,9 +57,9 @@ I believe as humans we're most fulfilled when we're exploring and learning. Ther
 
 This is one I've been feeling and seeing more and more. What matters in the long run is not breakneck productivity, it is careful, well thought-out solutions to problems that form a solid foundation. Our industry has been brought up on "move fast and break things", but that has never been the way to build lasting value.
 
-Slowing down, working at a manageable pace is good for our mental and physical health, but is also the way to build lasting value.
+Slowing down and working at a manageable pace is good for our mental and physical health, but is also the way to build lasting value.
 
-## What rules
+## What rules?
 
 > There are no ‘rules’, be willing to change the way you work and the way you think.
 
@@ -95,4 +95,4 @@ In meetings and when talking to people, try to be truly present. If you're distr
 
 ---
 
-I really appreciated this advice. It also really captures Peter's attitude as a colleague and leader: be friendly, talk to everyone, make it fun, be considered, be deliberate
+I really appreciated this advice. It also really captures Peter's attitude as a colleague and leader: Be friendly, talk to everyone, make it fun, be considered, be deliberate

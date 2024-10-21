@@ -9,3 +9,4 @@ vendor/
 /env3/
 node_modules/
 .jekyll-cache/
+.venv

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_articles/publishing-my-work.md",
+                "file": "_articles/agile-philosophy.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_articles/publishing-my-work.md",
+                "file": "_articles/agile-philosophy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_articles/publishing-my-work.md",
+                "file": "_articles/agile-philosophy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_articles/publishing-my-work.md"
+                "file": "_articles/agile-philosophy.md"
               }
             }
           }
@@ -148,8 +148,13 @@
   },
   "active": "e0601f489dd3eff7",
   "lastOpenFiles": [
-    "_articles/_template.md",
+    "_articles/adding-cache-headers-to-django.md",
+    "_articles/a-terminal-users-thought-process.md",
+    "_articles/a-sneak-preview.md",
+    "_articles/a-seachange-in-front-end-best-practice.md",
+    "_articles/a-rant-about-buffering.md",
+    "_articles/a-blogs-existential-quest.md",
     "_articles/publishing-my-work.md",
-    "_articles/a-blogs-existential-quest.md"
+    "_articles/_template.md"
   ]
 }

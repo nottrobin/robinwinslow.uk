@@ -6,6 +6,7 @@ description: My statement for my paper candidacy for the Green Party in the Bice
   South division in the May 1st local elections
 email_campaign_id: 0c51c74c6a
 title: I'm a Bicester South "paper candidate" for the Green Party!
+redirect_from: "/Paper candidate statement"
 ---
 
 Hi everyone 👋

@@ -1,12 +1,13 @@
 ---
 cross_posts:
+  DEV: https://dev.to/nottrobin/im-a-bicester-south-paper-candidate-for-the-green-party-53e5
   Hacker News: https://news.ycombinator.com/item?id=43754819
 date: 2025-04-21
 description: My statement for my paper candidacy for the Green Party in the Bicester
   South division in the May 1st local elections
 email_campaign_id: 0c51c74c6a
+redirect_from: /Paper candidate statement
 title: I'm a Bicester South "paper candidate" for the Green Party!
-redirect_from: "/Paper candidate statement"
 ---
 
 Hi everyone 👋

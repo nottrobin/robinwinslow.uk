@@ -1,7 +1,11 @@
 ---
-title: Paper candidate statement
+cross_posts:
+  Hacker News: https://news.ycombinator.com/item?id=43754819
 date: 2025-04-21
-description: My statement for my paper candidacy for the Green Party in the Bicester South division in the May 1st local elections
+description: My statement for my paper candidacy for the Green Party in the Bicester
+  South division in the May 1st local elections
+email_campaign_id: 0c51c74c6a
+title: Paper candidate statement
 ---
 
 Hi everyone 👋
@@ -28,4 +32,3 @@ There you have it - if you see my name on the ballot paper on 1st May, those thi
 
 Have a wonderful evening ⭐  
 Robin
-

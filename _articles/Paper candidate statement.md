@@ -1,6 +1,7 @@
 ---
 title: Paper candidate statement
 date: 2025-04-21
+description: My statement for my paper candidacy for the Green Party in the Bicester South division in the May 1st local elections
 ---
 
 Hi everyone 👋

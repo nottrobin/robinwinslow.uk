@@ -6,14 +6,13 @@ description: My statement for my paper candidacy for the Green Party in the Bice
   South division in the May 1st local elections
 email_campaign_id: 0c51c74c6a
 title: I'm a Bicester South "paper candidate" for the Green Party!
-redirect_from: "/Paper candidate statement"
 ---
 
 Hi everyone 👋
 
-If you live in Bicester South, Graven Hill or Ambrosden, you'll see my name on the ballot paper on May 1st, for the Green Party.
+If you live in "Bicester South" (Langford Village, Graven Hill or Ambrosden), you'll see my name on the ballot paper on May 1st, for [the Green Party](https://www.greenoxfordshire.com/).
 
-I'm a "paper candidate", which means we aren't campaigning - I don't have the time. No-one is expected to have heard of me, & we strongly expect I'll lose. I'm just there so that people who want to vote Green can signal their support.
+I'm a "[paper candidate](https://en.wikipedia.org/wiki/Paper_candidate)", which means we aren't campaigning - I don't have the time. No-one is expected to have heard of me, & we strongly expect I'll lose. I'm just there so that people who want to vote Green can signal their support.
 
 However, in the tiny off-chance that I did somehow win, I am committed to carrying out the role - so I thought I might as well put out *one* post about how I might be as a councillor:
 

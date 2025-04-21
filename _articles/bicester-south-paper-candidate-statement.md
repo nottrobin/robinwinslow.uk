@@ -15,7 +15,7 @@ If you live in "Bicester South" (Langford Village, Graven Hill or Ambrosden), yo
 
 I'm a "[paper candidate](https://en.wikipedia.org/wiki/Paper_candidate)", which means we aren't campaigning - I don't have the time. No-one is expected to have heard of me, & we strongly expect I'll lose. I'm just there so that people who want to vote Green can signal their support.
 
-However, in the tiny off-chance that I did somehow win, I am committed to carrying out the role - so I thought I might as well put out *one* post about how I might be as a councillor:
+However, on the tiny off-chance that I did somehow win, I am committed to carrying out the role - so I thought I might as well put out *one* post about how I might be as a councillor:
 
 Firstly, I have no experience in government or public service, so I'd very much be learning on the job. I'd try to approach everything critically as I learn, questioning things that should be questioned.
 

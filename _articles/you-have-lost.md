@@ -1,6 +1,6 @@
 ---
 date: 2025-05-20
-description: 
+description: "A searing attack on Lineker's BBC assassins, from someone who really knows what he's talking about."
 title: "\"You have lost\": Owen Jones' searing message to the BBC"
 ---
 

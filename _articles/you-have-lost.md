@@ -1,7 +1,12 @@
 ---
+cross_posts:
+  DEV: https://dev.to/nottrobin/you-have-lost-owen-jones-searing-message-to-the-bbc-1od
+  Hacker News: https://news.ycombinator.com/item?id=44046893
 date: 2025-05-20
-description: "A searing attack on Lineker's BBC assassins, from someone who really knows what he's talking about."
-title: "\"You have lost\": Owen Jones' searing message to the BBC"
+description: A searing attack on Lineker's BBC assassins, from someone who really
+  knows what he's talking about.
+email_campaign_id: 3fb0d24005
+title: '"You have lost": Owen Jones'' searing message to the BBC'
 ---
 
 Yesterday, the courageous Gary Lineker was finally forced to [resign from the BBC](https://www.youtube.com/watch?v=IBa9Ox7iJnw), after heroically staving off pro-Israel attacks for months.

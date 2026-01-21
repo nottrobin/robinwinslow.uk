@@ -42,7 +42,7 @@ I'd like to know more about Grafana, and especially Loki. We use Graylog for log
 
 Rust has really matured as a language. It's now officially in the Linux kernel, and is used is more and more places. I have close friends raving about it.
 
-I really don't even know the basic syntax, so I'd really like to learn it, at last to the point of knowing how to install the core tooling and write and compile a basic script.
+I really don't even know the basic syntax, so I'd really like to learn it, at least to the point of knowing how to install the core tooling and write and compile a basic script.
 
 ### Helm
 
